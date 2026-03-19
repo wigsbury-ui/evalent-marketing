@@ -150,11 +150,11 @@ export default function EvalDemo() {
 
       <div className="grid md:grid-cols-2 gap-0 border border-gray-200 rounded-2xl overflow-hidden bg-white items-start">
         <div className="p-6 border-r border-gray-200">
-          <div className="flex items-center gap-2 mb-1">
+          <div className="bg-navy px-6 py-3 -mx-6 -mt-6 mb-4 flex items-center gap-2 rounded-t-2xl">
             <span className="w-2 h-2 bg-green-400 rounded-full" />
-            <span className="text-sm font-bold text-navy">Your writing</span>
+            <span className="text-sm font-bold text-white">Your writing</span>
           </div>
-          <p className="text-xs text-gray-500 mb-4">Write at least 80 words to unlock the AI evaluation.</p>
+          <p className="text-xs text-gray-500 mb-4">Write at least 80 words to unlock the Evalent evaluation.</p>
           <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 mb-3">
             <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-1.5">WRITING PROMPT</div>
             <p className="text-sm text-navy leading-relaxed italic">{PROMPTS[grade]}</p>
@@ -178,10 +178,10 @@ export default function EvalDemo() {
         </div>
 
         <div className="p-6" ref={resultRef}>
-          <div className="flex items-center gap-2 mb-1">
-            <span className={`w-2 h-2 rounded-full ${state === 'done' ? 'bg-green-400' : state === 'loading' ? 'bg-yellow-400 animate-pulse' : 'bg-gray-300'}`} />
-            <span className="text-sm font-bold text-navy">
-              {state === 'done' ? `Evaluation complete — ${band}` : state === 'loading' ? 'Evaluating...' : 'AI evaluation'}
+          <div className="bg-navy px-6 py-3 -mx-6 -mt-6 mb-4 flex items-center gap-2 rounded-t-2xl">
+            <span className={`w-2 h-2 rounded-full ${state === 'done' ? 'bg-green-400' : state === 'loading' ? 'bg-yellow-400 animate-pulse' : 'bg-gray-400'}`} />
+            <span className="text-sm font-bold text-white">
+              {state === 'done' ? `Evaluation complete — ${band}` : state === 'loading' ? 'Evaluating...' : 'Evalent evaluation'}
             </span>
           </div>
           <p className="text-xs text-gray-500 mb-4">

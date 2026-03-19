@@ -18,7 +18,7 @@ export default function DemoPage() {
             LIVE EVALENT EVALUATION
           </div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
-            See the AI evaluate<br/>
+            See Evalent evaluate<br/>
             <span className="text-blue-300">your writing — right now</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed">
