@@ -148,8 +148,8 @@ export default function Home() {
               </p>
               <div className="space-y-2 mb-6">
                 {[
-                  'Calibrated to each school's grade level and curriculum',
-                  'Commentary references the student's actual words',
+                  "Calibrated to each school's grade level and curriculum",
+                  "Commentary references the student's actual words",
                   'Honest bands: Excellent, Good, Developing, Beginning',
                   'Strengths and development areas identified',
                 ].map(item => (
