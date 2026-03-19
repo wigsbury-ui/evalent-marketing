@@ -1,57 +1,71 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
-  const { essay, grade, curric } = await req.json()
-  if (!essay || !grade || !curric) {
-    return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
-  }
+  try {
+    const { essay, grade, curric } = await req.json()
 
-  const gradeNum = parseInt(grade.replace('G', ''))
+    if (!essay || !grade || !curric) {
+      return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
+    }
 
-  const system = `You are Evalent's writing evaluator for international school admissions.
+    const apiKey = process.env.ANTHROPIC_API_KEY
+    if (!apiKey) {
+      return NextResponse.json({ error: 'ANTHROPIC_API_KEY not configured' }, { status: 500 })
+    }
+
+    const gradeNum = parseInt(grade.replace('G', ''))
+
+    const systemPrompt = `You are Evalent's writing evaluator for international school admissions.
 
 GRADE: ${gradeNum} (age ~${gradeNum + 5}-${gradeNum + 6}). Calibrate ALL judgements to this age level.
 CURRICULUM: ${curric}.
 
 RUBRIC (grade-level calibrated):
-- Excellent (4.0): Fully addresses task, clear structure, strong vocabulary for age, well-supported arguments, very few errors. Exceeds grade expectations.
-- Good (3.0): Addresses task well, organised paragraphs, good vocabulary for age, some supporting detail, minor errors. Meets or exceeds expectations.
-- Developing (2.0): Partially addresses task, inconsistent structure, basic vocabulary, limited detail, noticeable errors. Below expectations.
-- Limited (1.0): Minimal engagement, weak structure, very limited vocabulary, significant errors. Well below expectations.
+- Excellent (4.0): Fully addresses task, clear structure, strong vocabulary for age, well-supported arguments, very few errors.
+- Good (3.0): Addresses task well, organised paragraphs, good vocabulary for age, some supporting detail, minor errors.
+- Developing (2.0): Partially addresses task, inconsistent structure, basic vocabulary, limited detail, noticeable errors.
+- Limited (1.0): Minimal engagement, weak structure, very limited vocabulary, significant errors.
 
-CALIBRATION RULES:
-1. Grade 3-5 student with clear paragraphs, a position, reasons and conclusion = Good (3.0) minimum.
-2. Judge vocabulary relative to age — do NOT apply secondary school standards to primary pupils.
-3. Connective language (whilst, however, therefore) at primary level is a genuine strength.
-4. Two well-developed paragraphs with clear position at Grade 4 = Good (3.0) at minimum.
-5. Award Developing ONLY if the response genuinely lacks structure or fails to address the task.
+CRITICAL: Grade 3-5 students writing clear paragraphs with a position and reasons = Good (3.0) minimum. Do NOT apply secondary standards to primary pupils.
 
-COMMENTARY: Write 3-4 sentences. Reference the student's actual words or phrases. Evaluate both content (relevance, depth, examples) and writing quality (organisation, sentence control, vocabulary, accuracy). Write in fluent British English. Be warm but precise.
+Write 3-4 sentences of commentary referencing the student's actual words. Evaluate both content and writing quality. Write in British English.
 
-Return ONLY valid JSON:
-{"band":"Excellent"|"Good"|"Developing"|"Limited","score":number,"task":number,"organisation":number,"vocabulary":number,"accuracy":number,"commentary":"string","strengths":"item1\nitem2","develop":"item1\nitem2"}`
+Return ONLY valid JSON with no markdown wrapping:
+{"band":"Excellent","score":3.0,"task":80,"organisation":75,"vocabulary":70,"accuracy":85,"commentary":"...","strengths":"point 1\npoint 2","develop":"point 1\npoint 2"}`
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': process.env.ANTHROPIC_API_KEY!,
-      'anthropic-version': '2023-06-01',
-    },
-    body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 1000,
-      system,
-      messages: [{ role: 'user', content: essay }],
-    }),
-  })
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: essay }],
+      }),
+    })
 
-  const data = await response.json()
-  const raw = data.content?.[0]?.text ?? '{}'
-  try {
-    const result = JSON.parse(raw.replace(/```json|```/g, '').trim())
+    const data = await response.json()
+
+    // Surface any Anthropic errors
+    if (data.error) {
+      return NextResponse.json({ error: data.error.message || 'Anthropic API error', type: data.error.type }, { status: 500 })
+    }
+
+    const raw = data?.content?.[0]?.text ?? ''
+    if (!raw) {
+      return NextResponse.json({ error: 'Empty response from AI', data }, { status: 500 })
+    }
+
+    // Clean and parse
+    const cleaned = raw.replace(/```json\n?/g, '').replace(/```/g, '').trim()
+    const result = JSON.parse(cleaned)
     return NextResponse.json(result)
-  } catch {
-    return NextResponse.json({ error: 'Parse error', raw }, { status: 500 })
+
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message ?? 'Unknown error' }, { status: 500 })
   }
 }
