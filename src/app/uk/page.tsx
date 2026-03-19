@@ -46,17 +46,7 @@ export default function Page() {
           <p className="text-blue-300 text-base leading-relaxed max-w-xl mx-auto mb-2">
             Structured, evidence-based reports aligned to the British National Curriculum. Year 4 to Year 11 — in under 5 minutes per candidate.
           </p>
-          <div className="mt-8 max-w-2xl mx-auto">
-            <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/1164569992?badge=0&autopause=0&player_id=0&app_id=58479"
-                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                title="Evalent — How it works"
-              />
-            </div>
-          </div>
+
           <div className="mt-6">
             <HeroTrialButton />
           </div>
@@ -64,6 +54,17 @@ export default function Page() {
       </section>
 
       <section className="py-14 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto mb-10">
+          <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1164569992?badge=0&autopause=0&player_id=0&app_id=58479"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              title="Evalent — How it works"
+            />
+          </div>
+        </div>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div>
             <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE UK INDEPENDENT SCHOOL CONTEXT</div>
