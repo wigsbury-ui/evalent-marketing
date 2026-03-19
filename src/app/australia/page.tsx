@@ -1,4 +1,5 @@
 import Nav from '@/components/Nav'
+import CountryNav from '@/components/CountryNav'
 import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
@@ -10,56 +11,57 @@ export const metadata = {
 
 export default function Page() {
   const challenges = [
-    {
-      title: 'NAPLAN is a population measure, not an admissions tool',
-      desc: 'NAPLAN results arrive late, measure a narrow band of skills, and were never designed for school-to-school entry decisions. Many Australian independent schools have no structured alternative for assessing candidates who have not yet sat NAPLAN.',
-    },
-    {
-      title: 'Mid-year and out-of-cycle enrolments are hard to assess',
-      desc: 'A family arriving from interstate or overseas cannot sit a scheduled assessment day. Evalent sends a link — the student completes it from wherever they are, whenever suits them, within a 72-hour window.',
-    },
-    {
-      title: 'International enrolments require a comparable baseline',
-      desc: 'Australian independent schools attract families from Southeast Asia, the Middle East, and Europe. Comparing an application from a student schooled in Singapore to one from regional New South Wales requires a common assessment — which Evalent provides.',
-    },
-    {
-      title: 'Scholarship assessment is resource-intensive',
-      desc: 'Most Australian private schools run scholarship programmes with significant logistical overhead. Evalent streamlines the first-pass assessment, so your scholarship committee focuses on the shortlist, not the full applicant pool.',
-    },
+    { title: 'NAPLAN is a population measure, not an admissions tool', desc: 'NAPLAN results arrive late, measure a narrow band of skills, and were never designed for school-to-school entry decisions. Many Australian independent schools have no structured alternative for assessing candidates who have not yet sat NAPLAN.' },
+    { title: 'Mid-year and out-of-cycle enrolments are hard to assess', desc: 'A family arriving from interstate or overseas cannot sit a scheduled assessment day. Evalent sends a link — the student completes it from wherever they are, within a 72-hour window.' },
+    { title: 'International enrolments require a comparable baseline', desc: 'Australian independent schools attract families from Southeast Asia, the Middle East, and Europe. Comparing an application from Singapore to one from regional New South Wales requires a common assessment — which Evalent provides.' },
+    { title: 'Scholarship assessment is resource-intensive', desc: 'Most Australian private schools run scholarship programmes with significant logistical overhead. Evalent streamlines the first-pass assessment so your scholarship committee focuses on the shortlist.' },
   ]
 
   const differences = [
-    ['ACARA general capabilities', 'Reports reference the Australian Curriculum’s seven general capabilities: literacy, numeracy, ICT, critical and creative thinking, personal and social, ethical understanding, and intercultural understanding.'],
-    ['Year labels, not Grade labels', 'The platform uses Australian Year group naming throughout. Year 4, Year 7, Year 10 — not Grade 4, Grade 7.'],
+    ['ACARA general capabilities', 'Reports reference the Australian Curriculum’s seven general capabilities, familiar to any Australian educator.'],
+    ['Year labels throughout', 'The platform uses Australian Year group naming. Year 4, Year 7, Year 10 — not Grade labels.'],
     ['Primary / secondary framing', 'Foundation–Year 6 and Years 7–10 are assessed and reported with different expectations, consistent with the ACARA band structure.'],
-    ['Proficiency strand language', 'Maths reports reference ACARA’s four proficiency strands: understanding, fluency, problem-solving, and reasoning — familiar to any Australian educator.'],
-    ['No UK or US terminology', 'Key Stage, SATs, Common Core, and GCSE language are explicitly excluded. Your assessors see reports written for an Australian school context.'],
-    ['Remote-first design', 'Australia’s geography makes remote assessment essential, not optional. Evalent was built for secure, unsupervised completion on any device, anywhere.'],
+    ['Proficiency strand language', 'Maths reports reference ACARA’s four proficiency strands: understanding, fluency, problem-solving, and reasoning.'],
+    ['No UK or US terminology', 'Key Stage, SATs, Common Core, and GCSE language are explicitly excluded. Your assessors see reports written for an Australian context.'],
+    ['Remote-first design', 'Australia’s geography makes remote assessment essential. Evalent was built for secure, unsupervised completion on any device, anywhere.'],
   ]
 
   const faqs = [
-    ['Can we use Evalent alongside ACER scholarship tests?', 'Yes. Evalent and ACER tests serve different purposes. ACER provides norm-referenced scholarship ranking; Evalent provides criterion-referenced entry profiling. Many schools use Evalent for general enrolment assessment and ACER specifically for scholarship selection.'],
-    ['Is Evalent suitable for boarding school applicants?', 'Particularly well-suited. Boarding applicants often cannot attend assessment days in person. Evalent’s remote-first model means a student in rural Queensland or from a family based in Singapore can complete the same structured assessment as a local day applicant.'],
-    ['What year groups are covered?', 'Year 4 through Year 10. Year 3 (Prep/Year 3) entry is on the roadmap.'],
-    ['Can we configure our own entry thresholds?', 'Yes. Each school sets its own pass thresholds per domain per year group. Evalent recommends starting at 55% and adjusting based on your cohort data after the first intake.'],
-    ['Does Evalent cover IGCSE pathway readiness?', 'For Year 10 entry, the report includes academic maturity indicators relevant to senior secondary pathway readiness, including for schools that offer IB, ATAR, or IGCSE routes.'],
+    ['Can we use Evalent alongside ACER scholarship tests?', 'Yes. ACER provides norm-referenced scholarship ranking; Evalent provides criterion-referenced entry profiling. Many schools use Evalent for general enrolment and ACER specifically for scholarship selection.'],
+    ['Is Evalent suitable for boarding school applicants?', 'Particularly well-suited. Boarding applicants often cannot attend assessment days in person. Evalent’s remote-first model means a student in rural Queensland or based in Singapore completes the same assessment as a local day applicant.'],
+    ['What year groups are covered?', 'Year 4 through Year 10. Year 3 entry is on the roadmap.'],
+    ['Can we configure our own entry thresholds?', 'Yes. Each school sets its own pass thresholds per domain per year group.'],
+    ['Does Evalent cover senior secondary pathway readiness?', 'For Year 10 entry, the report includes academic maturity indicators relevant to ATAR, IB, and IGCSE pathway readiness.'],
   ]
 
   return (
     <div className="min-h-screen">
       <Nav />
+      <CountryNav />
 
-      <section className="bg-navy py-16 px-6 text-center">
+      <section className="bg-navy py-14 px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <div className="text-4xl mb-4">🇦🇺</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             Admissions assessment<br/>
             <span className="text-blue-300">built for Australian independent schools.</span>
           </h1>
-          <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            ACARA-aligned reports covering English, Mathematics, Reasoning and Mindset. Structured evidence for every admissions decision — from Year 4 entry to Year 10, including remote and international applicants.
+          <p className="text-blue-300 text-base leading-relaxed max-w-xl mx-auto mb-2">
+            ACARA-aligned reports from Year 4 to Year 10. Structured evidence for local and international applicants alike — delivered in under 5 minutes.
           </p>
-          <HeroTrialButton />
+          <div className="mt-8 max-w-2xl mx-auto">
+            <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/1164569992?badge=0&autopause=0&player_id=0&app_id=58479"
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="Evalent — How it works"
+              />
+            </div>
+          </div>
+          <div className="mt-6">
+            <HeroTrialButton />
+          </div>
         </div>
       </section>
 
@@ -69,7 +71,7 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE AUSTRALIAN CONTEXT</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Australia’s independent schools are geographically spread and globally connected. Assessment needs to match.</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Australian independent and private schools face a specific combination of challenges: a highly mobile domestic population, significant international enrolment, large geographic catchments, and an increasing expectation from families that the admissions process reflects the school’s academic standards.
+              Australian independent and private schools face a specific combination of challenges: a highly mobile domestic population, significant international enrolment, large geographic catchments, and increasing family expectation that the admissions process reflects the school’s academic standards.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Evalent is built for this context. A family relocating from Melbourne to Brisbane can complete the assessment from their current address. A student applying from Singapore receives the same structured experience as a local applicant. Every report uses Australian curriculum language and Year group labels throughout.

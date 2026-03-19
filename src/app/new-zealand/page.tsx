@@ -1,4 +1,5 @@
 import Nav from '@/components/Nav'
+import CountryNav from '@/components/CountryNav'
 import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
@@ -10,36 +11,24 @@ export const metadata = {
 
 export default function Page() {
   const challenges = [
-    {
-      title: 'No national admissions assessment standard',
-      desc: 'New Zealand has no equivalent to Common Entrance or SSAT. Each independent school designs its own admissions process. Evalent gives you a structured, consistent assessment that is immediately credible to families and professionally documented for governance purposes.',
-    },
-    {
-      title: 'The NZC is competency-based, not content-based',
-      desc: 'Generic assessment tools built for British or American curricula fail to reflect the inquiry-based, competency-oriented philosophy of New Zealand schooling. Evalent’s NZC configuration uses the language of the key competencies and the values the curriculum names explicitly.',
-    },
-    {
-      title: 'Families are making significant financial commitments',
-      desc: 'New Zealand independent school fees represent a substantial family investment. These families expect the school’s admissions process to match the quality of the education they are paying for. A rigorous, professional assessment signals that standard.',
-    },
-    {
-      title: 'International enrolments need a consistent baseline',
-      desc: 'New Zealand independent schools attract families from Asia, the Pacific, and further afield. A student applying from Hong Kong, South Korea, or the United Kingdom can complete the same Evalent assessment as a local applicant, on any device, from anywhere.',
-    },
+    { title: 'No national admissions assessment standard', desc: 'New Zealand has no equivalent to Common Entrance or SSAT. Each independent school designs its own admissions process. Evalent gives you a structured, consistent assessment that is immediately credible to families and professionally documented for governance purposes.' },
+    { title: 'The NZC is competency-based, not content-based', desc: 'Generic assessment tools built for British or American curricula fail to reflect the inquiry-based, competency-oriented philosophy of New Zealand schooling. Evalent’s NZC configuration uses the language of the key competencies and the values the curriculum names explicitly.' },
+    { title: 'Families are making significant financial commitments', desc: 'New Zealand independent school fees represent a substantial family investment. These families expect the school’s admissions process to match the quality of the education they are paying for. A rigorous, professional assessment signals that standard.' },
+    { title: 'International enrolments need a consistent baseline', desc: 'New Zealand independent schools attract families from Asia, the Pacific, and further afield. A student applying from Hong Kong, South Korea, or the UK can complete the same Evalent assessment as a local applicant, on any device, from anywhere.' },
   ]
 
   const differences = [
-    ['NZC key competencies', 'Reports reference the five key competencies of the New Zealand Curriculum: thinking; using language, symbols and texts; managing self; relating to others; and participating and contributing.'],
-    ['NZC values framing', 'The mindset and values elements of Evalent’s report draw on the eight values named in the NZC: excellence, innovation, diversity, equity, community, ecological sustainability, integrity, and respect.'],
-    ['Year labels and level mapping', 'The platform uses NZC Year group naming and curriculum level mapping: Year 4–6 (Level 2–3), Year 7–8 (Level 4), Year 9–10 (Level 5). No Grade labels, no Key Stage references.'],
-    ['Mana-enhancing language', 'Evalent’s NZC evaluation approach is asset-focused and mana-enhancing — the report describes what the student can do and where growth is possible, consistent with culturally responsive practice in New Zealand schooling.'],
+    ['NZC key competencies', 'Reports reference all five key competencies: thinking; using language, symbols and texts; managing self; relating to others; and participating and contributing.'],
+    ['NZC values framing', 'The mindset and values elements draw on the eight NZC values: excellence, innovation, diversity, equity, community, ecological sustainability, integrity, and respect.'],
+    ['Year labels and level mapping', 'Year group naming and NZC curriculum level mapping throughout. No Grade labels, no Key Stage references.'],
+    ['Mana-enhancing language', 'Evalent’s NZC evaluation approach is asset-focused and mana-enhancing — describing what the student can do and where growth is possible.'],
     ['No deficit framing', 'Reports do not describe students as failing or below standard. They describe evidence of capability and areas for further development, consistent with New Zealand’s holistic assessment philosophy.'],
-    ['Student agency awareness', 'The mindset section of the report assesses readiness to engage as an active, self-directed learner — a quality the NZC places at the centre of its vision for the educated New Zealander.'],
+    ['Student agency', 'The mindset section assesses readiness to engage as an active, self-directed learner — a quality the NZC places at the centre of its vision for the educated New Zealander.'],
   ]
 
   const faqs = [
-    ['Which New Zealand schools is Evalent suited to?', 'State-integrated and fully independent schools from Year 4 entry upward. Evalent is particularly used by schools with selective entry, boarding school programmes, and schools that attract international students.'],
-    ['How does Evalent relate to the NZC?', 'Evalent is not a curriculum delivery tool. It is an admissions assessment tool built to be consistent with the NZC’s values, language, and philosophy. Reports will feel familiar to any New Zealand educator.'],
+    ['Which New Zealand schools is Evalent suited to?', 'State-integrated and fully independent schools from Year 4 entry upward. Particularly used by schools with selective entry, boarding programmes, and schools attracting international students.'],
+    ['How does Evalent relate to the NZC?', 'Evalent is an admissions assessment tool built to be consistent with the NZC’s values, language, and philosophy. It is not a curriculum delivery tool.'],
     ['What year groups are covered?', 'Year 4 through Year 10. Year 3 entry is on the roadmap.'],
     ['Can we use Evalent for overseas applicants?', 'Yes. The assessment is delivered via a secure link that can be sent to any email address in any country. The student completes it on any device within a 72-hour window.'],
     ['Does Evalent support te reo Māori?', 'Not yet. English-medium assessment only at this stage. Te reo Māori support is on the product roadmap.'],
@@ -48,18 +37,31 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <Nav />
+      <CountryNav />
 
-      <section className="bg-navy py-16 px-6 text-center">
+      <section className="bg-navy py-14 px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <div className="text-4xl mb-4">🇳🇿</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             Admissions assessment<br/>
             <span className="text-blue-300">built for New Zealand independent schools.</span>
           </h1>
-          <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
+          <p className="text-blue-300 text-base leading-relaxed max-w-xl mx-auto mb-2">
             NZC-aligned reports using key competency and values framing. Structured, mana-enhancing assessment from Year 4 to Year 10 — for local and international applicants alike.
           </p>
-          <HeroTrialButton />
+          <div className="mt-8 max-w-2xl mx-auto">
+            <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/1164569992?badge=0&autopause=0&player_id=0&app_id=58479"
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="Evalent — How it works"
+              />
+            </div>
+          </div>
+          <div className="mt-6">
+            <HeroTrialButton />
+          </div>
         </div>
       </section>
 
@@ -72,7 +74,7 @@ export default function Page() {
               The New Zealand Curriculum is built around a vision of young people who are confident, connected, actively involved, and lifelong learners. Most admissions assessment tools were built to measure academic performance against a narrow content syllabus — which is not what the NZC is about, and not what New Zealand independent schools are looking for.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Evalent’s New Zealand configuration assesses the academic domains your school cares about — English, Mathematics, Reasoning — but does so through an NZC lens. The writing evaluation assesses the qualities the NZC describes: clarity of thinking, ability to use language purposefully, and capacity to structure and present ideas.
+              Evalent’s New Zealand configuration assesses the academic domains your school cares about — English, Mathematics, Reasoning — but does so through an NZC lens. The writing evaluation assesses the qualities the NZC describes: clarity of thinking, purposeful use of language, and capacity to structure and present ideas.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               The mindset and values section draws explicitly on the NZC’s eight values, providing a structured, documented lens on the kind of learner you are welcoming into your school community.

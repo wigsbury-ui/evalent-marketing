@@ -1,4 +1,5 @@
 import Nav from '@/components/Nav'
+import CountryNav from '@/components/CountryNav'
 import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
@@ -10,36 +11,24 @@ export const metadata = {
 
 export default function Page() {
   const challenges = [
-    {
-      title: 'Assessors are classroom teachers with full timetables',
-      desc: 'Most UK prep and senior schools rely on heads of year or subject leads to review applications. These are experienced professionals, but they are not full-time admissions staff. Every hour spent reviewing a thin application file is an hour taken from teaching.',
-    },
-    {
-      title: 'CE and scholarship papers are not entry-level tools',
-      desc: 'Common Entrance serves a specific pathway. For non-CE entry, or for prep school admissions at Year 3–6, there is no equivalent standard. Schools either use ad hoc tests or rely entirely on school reports and interviews.',
-    },
-    {
-      title: 'Parental expectation of rigour is rising',
-      desc: 'Families paying independent school fees expect a professional admissions process. An assessment that arrives as a handwritten paper or a generic online quiz does not signal the standards the school markets itself on.',
-    },
-    {
-      title: 'Supporting evidence for difficult decisions',
-      desc: 'When a borderline candidate is declined, schools need more than a hunch. A structured written record of the assessment and recommendation protects the school and gives something concrete to communicate to families.',
-    },
+    { title: 'Assessors are classroom teachers with full timetables', desc: 'Most UK prep and senior schools rely on heads of year or subject leads to review applications. These are experienced professionals, but they are not full-time admissions staff. Every hour spent reviewing a thin application file is an hour taken from teaching.' },
+    { title: 'CE and scholarship papers are not entry-level tools', desc: 'Common Entrance serves a specific pathway. For non-CE entry, or for prep school admissions at Year 3–6, there is no equivalent standard. Schools either use ad hoc tests or rely entirely on school reports and interviews.' },
+    { title: 'Parental expectation of rigour is rising', desc: 'Families paying independent school fees expect a professional admissions process. An assessment that arrives as a handwritten paper or a generic online quiz does not signal the standards the school markets itself on.' },
+    { title: 'Supporting evidence for difficult decisions', desc: 'When a borderline candidate is declined, schools need more than a hunch. A structured written record of the assessment and recommendation protects the school and gives something concrete to communicate to families.' },
   ]
 
   const differences = [
-    ['KS2, KS3 and KS4 language', 'Reports use Key Stage attainment framing throughout. A Year 6 entry report reads differently from a Year 9 one. No generic language, no American or IB terminology.'],
+    ['KS2, KS3 and KS4 language', 'Reports use Key Stage attainment framing throughout. A Year 6 entry report reads differently from a Year 9 one.'],
     ['Year labels, not Grade labels', 'The platform uses Year groups automatically when set to British curriculum. Your assessors see Year 7, Year 8 — not Grade 7.'],
-    ['PEE writing framework', 'Extended writing is evaluated against Point-Evidence-Explanation structure, which is the standard your English department teaches and expects.'],
-    ['Formal register assessment', 'British independent schools expect formal academic register. Evalent marks informal register as a development area, consistent with your school’s own expectations.'],
+    ['PEE writing framework', 'Extended writing is evaluated against Point-Evidence-Explanation structure, the standard your English department teaches.'],
+    ['Formal register assessment', 'British independent schools expect formal academic register. Evalent marks informal register as a development area.'],
     ['IGCSE pathway indicators at KS4', 'For Year 10 and Year 11 entry, the report includes readiness indicators for GCSE and IGCSE-level demands.'],
-    ['No CE overlap', 'Evalent is not a CE preparation tool. It is a pre-entry assessment that works alongside or instead of CE for schools that need a structured alternative.'],
+    ['No CE overlap', 'Evalent is not a CE preparation tool. It is a pre-entry assessment that works alongside or instead of CE.'],
   ]
 
   const faqs = [
     ['Do UK independent schools actually use this?', 'Yes. Prep schools and senior schools both use Evalent for entry at Year 3 through Year 11. It is particularly useful for mid-year entry, sixth form feeder assessment, and schools that do not sit Common Entrance.'],
-    ['Can we use Evalent alongside our existing interview process?', 'Absolutely. Most schools use Evalent as a structured first stage before interview. The report gives the interviewer something concrete to explore, rather than going in blind.'],
+    ['Can we use Evalent alongside our existing interview process?', 'Absolutely. Most schools use Evalent as a structured first stage before interview. The report gives the interviewer something concrete to explore rather than going in blind.'],
     ['Is the assessment supervised or unsupervised?', 'Evalent is designed as a secure, remote assessment. The student takes it at home or at school via a unique link. Question order is randomised to reduce sharing. Schools can choose to invigilate if preferred.'],
     ['What year groups are covered?', 'Year 4 through Year 11. Year 3 entry is on the roadmap.'],
     ['How does Evalent handle SEND candidates?', 'Extended time and other reasonable adjustments can be configured per student in the dashboard before the assessment link is sent.'],
@@ -48,18 +37,31 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <Nav />
+      <CountryNav />
 
-      <section className="bg-navy py-16 px-6 text-center">
+      <section className="bg-navy py-14 px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <div className="text-4xl mb-4">🇬🇧</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             Admissions assessment<br/>
             <span className="text-blue-300">built for UK independent schools.</span>
           </h1>
-          <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            Structured, evidence-based reports aligned to the British National Curriculum. From prep school entry at Year 4 to senior school at Year 11 — in under 5 minutes per candidate.
+          <p className="text-blue-300 text-base leading-relaxed max-w-xl mx-auto mb-2">
+            Structured, evidence-based reports aligned to the British National Curriculum. Year 4 to Year 11 — in under 5 minutes per candidate.
           </p>
-          <HeroTrialButton />
+          <div className="mt-8 max-w-2xl mx-auto">
+            <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/1164569992?badge=0&autopause=0&player_id=0&app_id=58479"
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="Evalent — How it works"
+              />
+            </div>
+          </div>
+          <div className="mt-6">
+            <HeroTrialButton />
+          </div>
         </div>
       </section>
 

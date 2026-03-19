@@ -1,4 +1,5 @@
 import Nav from '@/components/Nav'
+import CountryNav from '@/components/CountryNav'
 import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
@@ -10,56 +11,57 @@ export const metadata = {
 
 export default function Page() {
   const challenges = [
-    {
-      title: 'Standardised tests are not designed for K–12 admissions',
-      desc: 'SSAT and ISEE are widely used but expensive, time-consuming, and not available on demand. For many independent schools — especially at lower school entry — they are disproportionate tools for the decision at hand.',
-    },
-    {
-      title: 'Admissions officers are evaluating writing without writing samples',
-      desc: 'Most applications include a short personal statement from a parent, not the student. Evalent gives every applicant a timed, structured writing task and evaluates it against grade-level expectations — before the applicant ever sets foot on campus.',
-    },
-    {
-      title: 'AP and honors tracking starts with entry decisions',
-      desc: 'At grades 9–10, the question is not just whether to admit — it is where to place the student. Evalent’s report includes explicit AP and honors readiness indicators that inform both the admissions and placement decisions simultaneously.',
-    },
-    {
-      title: 'Documentation for accreditation and governance',
-      desc: 'Independent school accreditation bodies increasingly expect documented, consistent admissions practices. A structured, reproducible assessment with an audit trail is a more defensible record than interview notes.',
-    },
+    { title: 'Standardised tests are not designed for K–12 admissions', desc: 'SSAT and ISEE are widely used but expensive, time-consuming, and not available on demand. For many independent schools — especially at lower school entry — they are disproportionate tools for the decision at hand.' },
+    { title: 'Admissions officers are evaluating writing without writing samples', desc: 'Most applications include a short personal statement from a parent, not the student. Evalent gives every applicant a timed, structured writing task evaluated against grade-level expectations before the applicant ever sets foot on campus.' },
+    { title: 'AP and honors tracking starts with entry decisions', desc: 'At grades 9–10, the question is not just whether to admit — it is where to place the student. Evalent’s report includes explicit AP and honors readiness indicators that inform both decisions simultaneously.' },
+    { title: 'Documentation for accreditation and governance', desc: 'Independent school accreditation bodies increasingly expect documented, consistent admissions practices. A structured, reproducible assessment with an audit trail is a more defensible record than interview notes.' },
   ]
 
   const differences = [
     ['Common Core ELA and Math alignment', 'Every question and rubric is mapped to CCSS grade-level expectations. Your admissions team and faculty will recognise the language and the standards.'],
-    ['Thesis-driven writing evaluation', 'American schools teach — and expect — a clear thesis, supporting evidence, and a synthesising conclusion. Evalent evaluates extended writing against this structure explicitly.'],
+    ['Thesis-driven writing evaluation', 'American schools teach a clear thesis, supporting evidence, and a synthesising conclusion. Evalent evaluates extended writing against this structure explicitly.'],
     ['Elementary / Middle / High school framing', 'Reports distinguish between school levels automatically. A Grade 5 elementary report reads differently from a Grade 9 high school one.'],
-    ['AP and honors readiness at Grade 9–10', 'At upper school entry, the report includes a section on academic independence and analytical writing quality, with a clear statement on advanced track readiness.'],
-    ['Text-based evidence assessment', 'Close reading and evidence-based argument are central to American ELA. Evalent specifically evaluates whether students ground their writing in specific, cited examples.'],
-    ['College and career readiness language', 'Reports use the language American educators use — not British Key Stage or IB Learner Profile terminology. Your assessors see language they recognise.'],
+    ['AP and honors readiness at Grade 9–10', 'At upper school entry, the report includes a section on analytical writing quality with a clear statement on advanced track readiness.'],
+    ['Text-based evidence assessment', 'Close reading and evidence-based argument are central to American ELA. Evalent evaluates whether students ground their writing in specific, cited examples.'],
+    ['College and career readiness language', 'Reports use the language American educators use — not British Key Stage or IB Learner Profile terminology.'],
   ]
 
   const faqs = [
-    ['Is this a replacement for the SSAT or ISEE?', 'Evalent serves a different purpose. SSAT and ISEE are norm-referenced, third-party tests typically used for selective secondary entry. Evalent is a school-administered, criterion-referenced assessment for any entry point from Grade 3 upward. Many schools use both: Evalent for initial screening, SSAT for final selection.'],
-    ['Does Evalent meet NAIS admission standards?', 'Evalent is designed to support best practice in independent school admissions as described by NAIS: structured, evidence-based, documented, and respectful of the whole child. It is not a compliance tool but it does produce the kind of documented record that accreditation reviewers look for.'],
+    ['Is this a replacement for the SSAT or ISEE?', 'Evalent serves a different purpose. SSAT and ISEE are norm-referenced third-party tests for selective secondary entry. Evalent is a school-administered, criterion-referenced assessment for any entry point from Grade 3 upward. Many schools use both: Evalent for initial screening, SSAT for final selection.'],
+    ['Does Evalent meet NAIS admission standards?', 'Evalent supports best practice in independent school admissions as described by NAIS: structured, evidence-based, documented, and respectful of the whole child. It produces the kind of documented record that accreditation reviewers look for.'],
     ['Can we use Evalent for both lower school and upper school entry?', 'Yes. Grades 3–10 are all covered. Each grade has its own calibrated assessment.'],
-    ['What about students with IEPs or 504 plans?', 'Extended time and other accommodations can be configured per student before the link is sent. Contact us if you have specific accommodation requirements.'],
-    ['How does the writing evaluation work?', 'Students complete an extended writing task — typically 8–12 sentences, responding to an age-appropriate prompt. Evalent’s AI evaluates the response against four criteria: task completion, organisation, vocabulary, and accuracy. The assessor receives both a band rating and a written commentary.'],
+    ['What about students with IEPs or 504 plans?', 'Extended time and other accommodations can be configured per student before the link is sent.'],
+    ['How does the writing evaluation work?', 'Students complete an extended writing task responding to an age-appropriate prompt. Evalent’s AI evaluates the response against four criteria: task completion, organisation, vocabulary, and accuracy. The assessor receives both a band rating and written commentary.'],
   ]
 
   return (
     <div className="min-h-screen">
       <Nav />
+      <CountryNav />
 
-      <section className="bg-navy py-16 px-6 text-center">
+      <section className="bg-navy py-14 px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <div className="text-4xl mb-4">🇺🇸</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             Admissions assessment<br/>
             <span className="text-blue-300">built for US independent schools.</span>
           </h1>
-          <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            Common Core-aligned reports covering English, Mathematics, Reasoning and Mindset. Structured evidence for every admissions decision — from Grade 3 entry to AP-track placement at Grade 10.
+          <p className="text-blue-300 text-base leading-relaxed max-w-xl mx-auto mb-2">
+            Common Core-aligned reports from Grade 3 to Grade 10. Structured evidence for every admissions decision — including AP-track placement at Grade 9–10.
           </p>
-          <HeroTrialButton />
+          <div className="mt-8 max-w-2xl mx-auto">
+            <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/1164569992?badge=0&autopause=0&player_id=0&app_id=58479"
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="Evalent — How it works"
+              />
+            </div>
+          </div>
+          <div className="mt-6">
+            <HeroTrialButton />
+          </div>
         </div>
       </section>
 
@@ -69,7 +71,7 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE US INDEPENDENT SCHOOL CONTEXT</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">US independent schools are data-literate. Their admissions process often is not.</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              American independent schools invest heavily in academic programmes, faculty development, and student outcomes measurement. But the evidence gathered during the admissions process — the point at which the school’s entire future cohort is selected — is often thinner than the data collected in a single semester of student performance.
+              American independent schools invest heavily in academic programmes, faculty development, and student outcomes measurement. But the evidence gathered during admissions — the point at which the school’s entire future cohort is selected — is often thinner than the data collected in a single semester of student performance.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               A parent statement, a school transcript, and a campus visit tell you something. They do not tell you how the student writes under time pressure, how they approach an unfamiliar reasoning problem, or how their academic profile compares to your school’s entrance expectations. Evalent fills that gap.
