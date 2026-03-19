@@ -8,18 +8,17 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
   const [step, setStep]       = useState(1)
   const [grades, setGrades]   = useState<string[]>(['Grade 5','Grade 7'])
   const [curric, setCurric]   = useState('IB')
-  const [counter, setCounter] = useState(10)
   const [form, setForm]       = useState({ school:'', name:'', role:'Head of Admissions', email:'' })
 
-  // lock body scroll while open
   useEffect(() => {
     if (open) document.body.style.overflow = 'hidden'
     else document.body.style.overflow = ''
     return () => { document.body.style.overflow = '' }
   }, [open])
 
-  // reset on close
-  useEffect(() => { if (!open) { setStep(1); setForm({ school:'', name:'', role:'Head of Admissions', email:'' }) } }, [open])
+  useEffect(() => {
+    if (!open) { setStep(1); setForm({ school:'', name:'', role:'Head of Admissions', email:'' }) }
+  }, [open])
 
   const toggleGrade = (g: string) =>
     setGrades(prev => prev.includes(g) ? prev.filter(x => x !== g) : [...prev, g])
@@ -31,10 +30,6 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
         ;(el as HTMLElement).style.width = ['76%','68%','91%','80%'][i]
       })
     }, 100)
-    if (n === 4) {
-      let c = 10
-      const iv = setInterval(() => { c--; setCounter(c); if (c <= 7) clearInterval(iv) }, 400)
-    }
   }
 
   if (!open) return null
@@ -42,13 +37,9 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      {/* Backdrop */}
       <div className="absolute inset-0 bg-navy/80 backdrop-blur-sm" onClick={onClose} />
-
-      {/* Modal */}
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-xl max-h-[90vh] overflow-y-auto">
 
-        {/* Header */}
         <div className="bg-navy px-6 py-4 rounded-t-2xl flex items-center justify-between">
           <div>
             <div className="text-sm font-black text-white">Start your free trial</div>
@@ -62,26 +53,23 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
         </div>
 
         <div className="px-6 pb-6 pt-5">
-
-          {/* Trust pills */}
           <div className="flex flex-wrap gap-2 mb-5">
             {['10 free reports','No credit card','Set up in 5 min','Cancel any time'].map(t => (
               <span key={t} className="inline-flex items-center gap-1 bg-green-50 border border-green-200 text-green-700 text-[10px] font-bold px-2.5 py-1 rounded-full">
-                <span className="text-green-500">✓</span>{t}
+                <span>✓</span>{t}
               </span>
             ))}
           </div>
 
-          {/* Progress */}
           <div className="relative flex mb-6">
             <div className="absolute top-5 left-6 right-6 h-0.5"
               style={{ background: `linear-gradient(90deg, #002ec1 ${prog}%, #dbeafe ${prog}%)` }} />
             {['Your school','Setup','Preview','Live'].map((label, i) => (
               <div key={i} className="flex-1 flex flex-col items-center relative">
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold border-2 z-10 transition-all ${
-                  i+1 < step  ? 'bg-green-500 border-green-500 text-white'
-                : i+1 === step ? 'bg-brand border-brand text-white'
-                : 'bg-white border-gray-200 text-gray-400'}`}>
+                  i+1 < step ? 'bg-green-500 border-green-500 text-white'
+                  : i+1 === step ? 'bg-brand border-brand text-white'
+                  : 'bg-white border-gray-200 text-gray-400'}`}>
                   {i+1 < step ? '✓' : i+1}
                 </div>
                 <div className={`text-xs font-semibold mt-2 ${i+1===step?'text-brand':i+1<step?'text-green-600':'text-gray-400'}`}>{label}</div>
@@ -89,7 +77,6 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
             ))}
           </div>
 
-          {/* Step 1 */}
           {step === 1 && (
             <div>
               <h3 className="text-base font-bold text-navy mb-1">Tell us about your school</h3>
@@ -124,14 +111,12 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
                     className="border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand"/>
                 </div>
               </div>
-              <button onClick={()=>advance(2)}
-                className="w-full bg-brand text-white text-sm font-bold py-3 rounded-xl hover:bg-blue-800 transition-colors">
+              <button onClick={()=>advance(2)} className="w-full bg-brand text-white text-sm font-bold py-3 rounded-xl hover:bg-blue-800 transition-colors">
                 Continue →
               </button>
             </div>
           )}
 
-          {/* Step 2 */}
           {step === 2 && (
             <div>
               <h3 className="text-base font-bold text-navy mb-1">Grades and curriculum</h3>
@@ -155,14 +140,12 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
                   </button>
                 ))}
               </div>
-              <button onClick={()=>advance(3)}
-                className="w-full bg-brand text-white text-sm font-bold py-3 rounded-xl hover:bg-blue-800 transition-colors">
+              <button onClick={()=>advance(3)} className="w-full bg-brand text-white text-sm font-bold py-3 rounded-xl hover:bg-blue-800 transition-colors">
                 Continue →
               </button>
             </div>
           )}
 
-          {/* Step 3 */}
           {step === 3 && (
             <div>
               <h3 className="text-base font-bold text-navy mb-1">Here&apos;s your report</h3>
@@ -170,7 +153,7 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
               <div className="border border-gray-200 rounded-xl overflow-hidden mb-4">
                 <div className="bg-navy px-4 py-3">
                   <div className="text-sm font-bold text-white">{form.school||'Your school'} — Admissions Report</div>
-                  <div className="text-xs text-blue-300 mt-0.5">Applicant: Alex Chen &middot; {grades[0]||'Grade 7'} &middot; {curric} &middot; Generated in 3m 08s</div>
+                  <div className="text-xs text-blue-300 mt-0.5">Alex Chen &middot; {grades[0]||'Grade 7'} &middot; {curric} &middot; Generated in 3m 08s</div>
                 </div>
                 <div className="p-4">
                   <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold px-3 py-1.5 rounded-full mb-3">✓ Ready to admit</div>
@@ -190,36 +173,30 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
                   <div className="flex-1 py-1.5 rounded-lg border-2 border-red-200 bg-red-50 text-red-700 text-xs font-bold text-center">✕ Do not admit</div>
                 </div>
               </div>
-              <button onClick={()=>advance(4)}
-                className="w-full bg-brand text-white text-sm font-bold py-3 rounded-xl hover:bg-blue-800 transition-colors">
+              <button onClick={()=>advance(4)} className="w-full bg-brand text-white text-sm font-bold py-3 rounded-xl hover:bg-blue-800 transition-colors">
                 This looks great — activate my trial →
               </button>
             </div>
           )}
 
-          {/* Step 4 */}
           {step === 4 && (
             <div className="text-center py-4">
               <div className="w-14 h-14 bg-green-50 border border-green-200 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl text-green-600">✓</div>
               <h3 className="text-xl font-black text-navy mb-2">You&apos;re live{form.name ? `, ${form.name.split(' ')[0]}` : ''}!</h3>
-              <p className="text-sm text-gray-500 mb-5 leading-relaxed">
-                Your first assessment link has been sent. The report and one-click decision email arrive automatically when your applicant completes it.
-              </p>
+              <p className="text-sm text-gray-500 mb-5 leading-relaxed">Your first assessment link has been sent. The report arrives automatically when your applicant completes it.</p>
               <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-left text-xs mb-5">
                 <div className="font-bold text-navy text-sm mb-2">Next steps</div>
                 <div className="space-y-1.5 text-gray-500">
-                  <div className="flex items-start gap-2"><span className="text-brand font-bold">→</span> Complete account setup at app.evalent.io</div>
-                  <div className="flex items-start gap-2"><span className="text-brand font-bold">→</span> Register your first real student</div>
-                  <div className="flex items-start gap-2"><span className="text-brand font-bold">→</span> Your report arrives automatically on submission</div>
+                  <div>→ Complete account setup at app.evalent.io</div>
+                  <div>→ Register your first real student</div>
+                  <div>→ Report arrives automatically on submission</div>
                 </div>
               </div>
               <div className="flex gap-3 justify-center">
-                <a href="https://app.evalent.io/signup"
-                  className="bg-brand text-white text-sm font-bold px-6 py-3 rounded-xl hover:bg-blue-800 transition-colors">
-                  Complete account setup →
+                <a href="https://app.evalent.io/signup" className="bg-brand text-white text-sm font-bold px-6 py-3 rounded-xl hover:bg-blue-800 transition-colors">
+                  Complete setup →
                 </a>
-                <button onClick={onClose}
-                  className="border border-gray-200 text-gray-500 text-sm font-semibold px-5 py-3 rounded-xl hover:bg-gray-50 transition-colors">
+                <button onClick={onClose} className="border border-gray-200 text-gray-500 text-sm font-semibold px-5 py-3 rounded-xl hover:bg-gray-50 transition-colors">
                   Close
                 </button>
               </div>

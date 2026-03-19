@@ -1,3 +1,4 @@
+import HeroTrialButton from '@/components/HeroTrialButton'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import RegistrationDemo from '@/components/features/RegistrationDemo'
@@ -24,6 +25,7 @@ export default function Page() {
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
             Add a student’s name, email, grade, and curriculum. Evalent sends the assessment link instantly, tracks whether it has been opened, and notifies you the moment the report is ready.
           </p>
+          <HeroTrialButton />
         </div>
       </section>
 

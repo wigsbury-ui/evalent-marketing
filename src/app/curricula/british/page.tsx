@@ -1,3 +1,4 @@
+import HeroTrialButton from '@/components/HeroTrialButton'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -48,6 +49,7 @@ export default function BritishPage() {
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
             Evalent’s British configuration uses Key Stage attainment language, PEE writing framing, and formal register expectations — from KS2 primary entry through to KS4 GCSE pathway.
           </p>
+          <HeroTrialButton />
         </div>
       </section>
 

@@ -1,3 +1,4 @@
+import HeroTrialButton from '@/components/HeroTrialButton'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -48,6 +49,7 @@ export default function AmericanPage() {
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
             Common Core-aligned evaluation, thesis-driven writing assessment, and AP/honours pathway readiness indicators at Grade 9–10 — calibrated to how American educators actually think about student progression.
           </p>
+          <HeroTrialButton />
         </div>
       </section>
 

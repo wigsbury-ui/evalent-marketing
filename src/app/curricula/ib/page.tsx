@@ -1,3 +1,4 @@
+import HeroTrialButton from '@/components/HeroTrialButton'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -48,6 +49,7 @@ export default function IBPage() {
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
             Evalent assessments for IB schools use Learner Profile attributes, ATL skill clusters, and programme-appropriate language at every grade level — PYP for Grades 3–5, MYP for Grades 6–10.
           </p>
+          <HeroTrialButton />
         </div>
       </section>
 
