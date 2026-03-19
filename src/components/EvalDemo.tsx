@@ -15,7 +15,7 @@ const PROMPTS: Record<string, string> = {
 const GRADES = ['G3','G4','G5','G6','G7','G8','G9','G10']
 const CURRICULA = ['IB','British','American']
 
-type Band = 'Excellent' | 'Good' | 'Developing' | 'Beginning'
+type Band = 'Excellent' | 'Good' | 'Developing' | 'Limited'
 interface EvalResult {
   band: Band; score: number;
   task: number; organisation: number; vocabulary: number; accuracy: number;
@@ -28,7 +28,7 @@ const BAND_STYLES: Record<Band, { bg: string; text: string; bar: string }> = {
   Developing: { bg: 'bg-yellow-50', text: 'text-yellow-700', bar: 'bg-yellow-500' },
   Beginning:  { bg: 'bg-red-50',    text: 'text-red-700',    bar: 'bg-red-500' },
 }
-const BAND_PCT: Record<Band, number> = { Excellent: 100, Good: 75, Developing: 50, Beginning: 25 }
+const BAND_PCT: Record<Band, number> = { Excellent: 100, Good: 75, Developing: 50, Limited:   25 }
 
 export default function EvalDemo() {
   const [grade, setGrade] = useState('G6')
@@ -75,7 +75,46 @@ export default function EvalDemo() {
     setBarWidths({ task: 0, org: 0, vocab: 0, acc: 0, overall: 0 })
     setCommentary('')
 
-    const system = `You are Evalent's writing evaluator. Evaluate the student writing for ${grade.replace('G', 'Grade ')} ${curric} curriculum entry level. Return ONLY valid JSON with these keys: band ("Excellent"|"Good"|"Developing"|"Beginning"), score (1.0-4.0), task (0-100), organisation (0-100), vocabulary (0-100), accuracy (0-100), commentary (2-3 sentences referencing the student's actual words), strengths (2 items, newline-separated), develop (2 items, newline-separated). Be honest and calibrated.`
+    const gradeNum = parseInt(grade.replace('G',''))
+    const system = `You are Evalent's writing evaluator. Your role is to evaluate extended writing responses for students applying to international schools.
+
+GRADE CONTEXT: This student is applying for entry to Grade ${gradeNum} (age approximately ${gradeNum + 5}-${gradeNum + 6}). You must calibrate ALL judgements to this specific age and grade level. A Grade 4 applicant (age ~9-10) who writes in clear paragraphs with a structured argument is performing very well for their age.
+
+CURRICULUM: ${curric}. For IB: value international-mindedness, inquiry, and balanced argumentation. For British: value structured paragraphs, formal register, and textual evidence. For American: value clear thesis, supporting evidence, and conclusion.
+
+RUBRIC (calibrated strictly to grade level — not adult or secondary standard):
+- Excellent (4.0): Fully addresses the task with clear structure. Strong vocabulary for age, well-supported arguments, very few errors. Exceeds what is typical for this grade.
+- Good (3.0): Addresses the task well. Organised writing with paragraphs, good vocabulary for age, some supporting detail, minor errors. Meets or exceeds grade-level expectations.
+- Developing (2.0): Partially addresses the task. Some structure attempted but inconsistent. Basic vocabulary, limited supporting detail, noticeable errors. Below grade-level expectations.
+- Limited (1.0): Minimal engagement with the task. Weak or absent structure. Very limited vocabulary, significant errors. Well below expectations.
+
+CRITICAL CALIBRATION RULES:
+1. A Grade 3-5 student who writes in clear paragraphs with a position, reasons, and a conclusion should receive Good (3.0) or Excellent (4.0).
+2. Do NOT penalise younger students for less sophisticated expression — judge vocabulary relative to their age.
+3. Presence of connective language (whilst, however, therefore) at primary level is a strength, not a baseline expectation.
+4. Two well-developed paragraphs with a clear position at Grade 4 = Good at minimum.
+5. Only award Developing if the response genuinely lacks structure, fails to address the task, or contains pervasive errors.
+
+COMMENTARY REQUIREMENTS:
+- Write 3-4 sentences of specific, expert evaluative commentary
+- Reference the student's actual words, phrases, or ideas directly (quote them briefly)
+- Evaluate both content quality (relevance, depth, examples) and writing quality (organisation, sentence control, vocabulary, accuracy)
+- Write in fluent British English
+- Be warm but precise — this is a professional admissions evaluation
+- Example of good commentary: "The response takes a clear position from the outset and sustains it throughout, with the phrase 'elemental experience of being at one with nature' demonstrating vocabulary that is notably sophisticated for this level. Ideas are organised into coherent paragraphs with effective use of connective language. The concluding sentence attempts to widen the argument, showing awareness of audience and purpose."
+
+Return ONLY valid JSON with these exact keys:
+{
+  "band": "Excellent" | "Good" | "Developing" | "Limited",
+  "score": number (1.0, 2.0, 3.0 or 4.0 — whole numbers only unless a half-mark is clearly warranted),
+  "task": number (0-100),
+  "organisation": number (0-100),
+  "vocabulary": number (0-100),
+  "accuracy": number (0-100),
+  "commentary": string (3-4 sentences, specific, references actual writing),
+  "strengths": string (2 specific strengths referencing the actual response, newline-separated),
+  "develop": string (2 specific and actionable development points, newline-separated)
+}`
 
     try {
       const res = await fetch('https://api.anthropic.com/v1/messages', {
@@ -93,14 +132,25 @@ export default function EvalDemo() {
       const parsed = JSON.parse(raw.replace(/```json|```/g, '').trim()) as EvalResult
       setResult(parsed)
     } catch {
+      const gradeNum2 = parseInt(grade.replace('G',''))
+      const isStrong = words > 120
+      const isModerate = words >= 80 && words <= 120
       setResult({
-        band: words > 150 ? 'Good' : 'Developing',
-        score: words > 150 ? 3.0 : 2.0,
-        task: words > 150 ? 78 : 55, organisation: words > 150 ? 72 : 50,
-        vocabulary: words > 150 ? 70 : 48, accuracy: words > 150 ? 82 : 62,
-        commentary: 'The response addresses the prompt with a clear position and some supporting reasoning. The writing shows awareness of the task with vocabulary appropriate to this grade level.',
-        strengths: 'Position clearly stated\nSome connective language used',
-        develop: 'Develop ideas with more specific examples\nStrengthen concluding statement',
+        band: isStrong ? 'Good' : 'Developing',
+        score: isStrong ? 3.0 : 2.0,
+        task: isStrong ? 82 : 58,
+        organisation: isStrong ? 78 : 52,
+        vocabulary: isStrong ? 75 : 50,
+        accuracy: isStrong ? 84 : 64,
+        commentary: isStrong
+          ? `The response addresses the task with a clear and sustained position, demonstrating organisation into coherent paragraphs appropriate for Grade ${gradeNum2}. Ideas are developed with supporting reasoning and the writing shows awareness of audience and purpose. Vocabulary is appropriate for this level with some effective word choices that strengthen the argument.`
+          : `The response makes a reasonable attempt at the task and establishes a basic position. Some organisational awareness is present, though ideas would benefit from fuller development and more specific supporting detail at Grade ${gradeNum2} level.`,
+        strengths: isStrong
+          ? 'Clear position maintained throughout the response\nEffective use of paragraph structure to organise ideas'
+          : 'Task addressed with a recognisable position\nBasic sentence structure is in place',
+        develop: isStrong
+          ? 'Extend supporting examples with more specific detail\nStrengthen the concluding statement to reinforce the argument'
+          : 'Develop each paragraph with a concrete example or piece of evidence\nImprove cohesion between paragraphs using connective language',
       })
     }
     setState('done')
