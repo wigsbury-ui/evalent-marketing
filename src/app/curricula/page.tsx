@@ -1,3 +1,4 @@
+import HeroTrialButton from '@/components/HeroTrialButton'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -63,6 +64,16 @@ export default function CurriculaPage() {
           <p className="text-blue-300 text-lg leading-relaxed">
             Same rigorous assessment. Same automated pipeline. But the evaluation language, writing expectations, and report framing match what your students are actually taught.
           </p>
+          <div className="mt-6 flex flex-col items-center gap-2">
+            <HeroTrialButton />
+            <div className="flex items-center gap-3 text-[11px] text-blue-300/70">
+              <span>✓ 10 free reports</span>
+              <span>·</span>
+              <span>✓ No credit card</span>
+              <span>·</span>
+              <span>✓ 5 minute setup</span>
+            </div>
+          </div>
         </div>
       </section>
 
