@@ -54,7 +54,7 @@ export default function EvalDemo() {
   }
 
   const words = essay.trim() ? essay.trim().split(/\s+/).length : 0
-  const ready = words >= 80
+  const ready = words >= 50
 
   useEffect(() => {
     if (state === 'done' && result) {
@@ -154,7 +154,7 @@ export default function EvalDemo() {
             <span className="w-2 h-2 bg-green-400 rounded-full" />
             <span className="text-sm font-bold text-white">Your writing</span>
           </div>
-          <p className="text-xs text-gray-500 mb-4">Write at least 80 words to unlock the Evalent evaluation.</p>
+          <p className="text-xs text-gray-500 mb-4">Write at least 50 words to unlock the Evalent evaluation.</p>
           <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 mb-3">
             <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-1.5">WRITING PROMPT</div>
             <p className="text-sm text-navy leading-relaxed italic">{PROMPTS[grade]}</p>
@@ -166,14 +166,14 @@ export default function EvalDemo() {
             className="w-full border border-gray-200 rounded-xl p-3 text-sm text-navy font-sans resize-none outline-none min-h-44 leading-relaxed focus:border-brand transition-colors"
           />
           <div className={`text-xs text-right mt-1 mb-3 ${ready ? 'text-green-600 font-semibold' : 'text-gray-400'}`}>
-            {words} word{words !== 1 ? 's' : ''}{!ready ? ` — ${80 - words} more to evaluate` : ' — ready'}
+            {words} word{words !== 1 ? 's' : ''}{!ready ? ` — ${50 - words} more to evaluate` : ' — ready'}
           </div>
           <button
             onClick={evaluate}
             disabled={!ready || state === 'loading'}
             className={`w-full py-3 rounded-xl text-sm font-bold transition-all ${ready && state !== 'loading' ? 'bg-brand text-white hover:bg-blue-800' : 'bg-gray-100 text-gray-400 cursor-not-allowed'}`}
           >
-            {state === 'loading' ? 'Evaluating...' : ready ? 'Evaluate my writing →' : `${80 - words} more words needed`}
+            {state === 'loading' ? 'Evaluating...' : ready ? 'Evaluate my writing →' : `${50 - words} more words needed`}
           </button>
         </div>
 
