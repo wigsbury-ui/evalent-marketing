@@ -2,9 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import DecisionsDemo from '@/components/features/DecisionsDemo'
 
-export const metadata = {
-  title: 'Decision Workflow — Evalent Features',
-}
+export const metadata = { title: 'Decision Workflow — Evalent Features' }
 
 export default function Page() {
   return (
@@ -20,9 +18,9 @@ export default function Page() {
       <section className="py-12 px-4 bg-gray-50"><DecisionsDemo /></section>
       <section className="py-12 px-6 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-center">
-          <div key="To record decision"><div className="text-3xl font-black text-navy tracking-tight">1 click</div><div className="text-sm text-gray-500 mt-1">To record decision</div></div>
-          <div key="Portal logins needed"><div className="text-3xl font-black text-navy tracking-tight">0</div><div className="text-sm text-gray-500 mt-1">Portal logins needed</div></div>
-          <div key="Audit trail"><div className="text-3xl font-black text-navy tracking-tight">100%</div><div className="text-sm text-gray-500 mt-1">Audit trail</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">1 click</div><div className="text-sm text-gray-500 mt-1">To record decision</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">0</div><div className="text-sm text-gray-500 mt-1">Portal logins needed</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">100%</div><div className="text-sm text-gray-500 mt-1">Audit trail</div></div>
         </div>
       </section>
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">

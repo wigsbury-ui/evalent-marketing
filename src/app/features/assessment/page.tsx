@@ -2,9 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import AssessmentDemo from '@/components/features/AssessmentDemo'
 
-export const metadata = {
-  title: 'The Assessment — Evalent Features',
-}
+export const metadata = { title: 'The Assessment — Evalent Features' }
 
 export default function Page() {
   return (
@@ -20,9 +18,9 @@ export default function Page() {
       <section className="py-12 px-4 bg-gray-50"><AssessmentDemo /></section>
       <section className="py-12 px-6 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-center">
-          <div key="Total assessment time"><div className="text-3xl font-black text-navy tracking-tight">45 min</div><div className="text-sm text-gray-500 mt-1">Total assessment time</div></div>
-          <div key="Domains assessed"><div className="text-3xl font-black text-navy tracking-tight">4</div><div className="text-sm text-gray-500 mt-1">Domains assessed</div></div>
-          <div key="Browser-based"><div className="text-3xl font-black text-navy tracking-tight">Any device</div><div className="text-sm text-gray-500 mt-1">Browser-based</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">45 min</div><div className="text-sm text-gray-500 mt-1">Total assessment time</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">4</div><div className="text-sm text-gray-500 mt-1">Domains assessed</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">Any device</div><div className="text-sm text-gray-500 mt-1">Browser-based</div></div>
         </div>
       </section>
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">

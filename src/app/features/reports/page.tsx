@@ -2,9 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ReportsDemo from '@/components/features/ReportsDemo'
 
-export const metadata = {
-  title: 'Report Generation — Evalent Features',
-}
+export const metadata = { title: 'Report Generation — Evalent Features' }
 
 export default function Page() {
   return (
@@ -20,9 +18,9 @@ export default function Page() {
       <section className="py-12 px-4 bg-gray-50"><ReportsDemo /></section>
       <section className="py-12 px-6 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-center">
-          <div key="Submission to report"><div className="text-3xl font-black text-navy tracking-tight"><5 min</div><div className="text-sm text-gray-500 mt-1">Submission to report</div></div>
-          <div key="Automatic"><div className="text-3xl font-black text-navy tracking-tight">100%</div><div className="text-sm text-gray-500 mt-1">Automatic</div></div>
-          <div key="Every report"><div className="text-3xl font-black text-navy tracking-tight">School-branded</div><div className="text-sm text-gray-500 mt-1">Every report</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">&lt;5 min</div><div className="text-sm text-gray-500 mt-1">Submission to report</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">100%</div><div className="text-sm text-gray-500 mt-1">Automatic</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">Branded</div><div className="text-sm text-gray-500 mt-1">Every report</div></div>
         </div>
       </section>
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">

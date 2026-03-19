@@ -2,9 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import DashboardDemo from '@/components/features/DashboardDemo'
 
-export const metadata = {
-  title: 'Assessment Dashboard — Evalent Features',
-}
+export const metadata = { title: 'Assessment Dashboard — Evalent Features' }
 
 export default function Page() {
   return (
@@ -20,9 +18,9 @@ export default function Page() {
       <section className="py-12 px-4 bg-gray-50"><DashboardDemo /></section>
       <section className="py-12 px-6 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-center">
-          <div key="Real-time updates"><div className="text-3xl font-black text-navy tracking-tight">Live</div><div className="text-sm text-gray-500 mt-1">Real-time updates</div></div>
-          <div key="Status categories"><div className="text-3xl font-black text-navy tracking-tight">6</div><div className="text-sm text-gray-500 mt-1">Status categories</div></div>
-          <div key="To view full report"><div className="text-3xl font-black text-navy tracking-tight">1 click</div><div className="text-sm text-gray-500 mt-1">To view full report</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">Live</div><div className="text-sm text-gray-500 mt-1">Real-time updates</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">6</div><div className="text-sm text-gray-500 mt-1">Status categories</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">1 click</div><div className="text-sm text-gray-500 mt-1">To view full report</div></div>
         </div>
       </section>
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">

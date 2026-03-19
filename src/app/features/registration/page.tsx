@@ -2,9 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import RegistrationDemo from '@/components/features/RegistrationDemo'
 
-export const metadata = {
-  title: 'Student Registration — Evalent Features',
-}
+export const metadata = { title: 'Student Registration — Evalent Features' }
 
 export default function Page() {
   return (
@@ -20,9 +18,9 @@ export default function Page() {
       <section className="py-12 px-4 bg-gray-50"><RegistrationDemo /></section>
       <section className="py-12 px-6 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-center">
-          <div key="From add to link sent"><div className="text-3xl font-black text-navy tracking-tight">60s</div><div className="text-sm text-gray-500 mt-1">From add to link sent</div></div>
-          <div key="All grade levels"><div className="text-3xl font-black text-navy tracking-tight">G3–G10</div><div className="text-sm text-gray-500 mt-1">All grade levels</div></div>
-          <div key="Curricula supported"><div className="text-3xl font-black text-navy tracking-tight">3</div><div className="text-sm text-gray-500 mt-1">Curricula supported</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">60s</div><div className="text-sm text-gray-500 mt-1">From add to link sent</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">G3–G10</div><div className="text-sm text-gray-500 mt-1">All grade levels</div></div>
+          <div><div className="text-3xl font-black text-navy tracking-tight">3</div><div className="text-sm text-gray-500 mt-1">Curricula supported</div></div>
         </div>
       </section>
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">
