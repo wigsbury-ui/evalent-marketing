@@ -12,6 +12,7 @@ export default function Nav() {
         </Link>
         <div className="hidden md:flex items-center gap-7 text-sm text-gray-500">
           <Link href="/features" className="hover:text-navy transition-colors">Features</Link>
+          <Link href="/demo" className="hover:text-navy transition-colors font-semibold text-brand">Try the AI</Link>
           <Link href="/curricula" className="hover:text-navy transition-colors">Curricula</Link>
           <Link href="/pricing" className="hover:text-navy transition-colors">Pricing</Link>
           <a href="https://app.evalent.io/login" className="hover:text-navy transition-colors">Sign in</a>
@@ -31,6 +32,7 @@ export default function Nav() {
       {open && (
         <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-3 text-sm">
           <Link href="/features" className="block text-gray-600">Features</Link>
+          <Link href="/demo" className="block text-brand font-semibold">Try the AI ✦</Link>
           <Link href="/curricula" className="block text-gray-600">Curricula</Link>
           <Link href="/pricing" className="block text-gray-600">Pricing</Link>
           <a href="https://app.evalent.io/login" className="block text-gray-600">Sign in</a>
