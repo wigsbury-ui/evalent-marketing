@@ -1,5 +1,4 @@
 import Nav from '@/components/Nav'
-import CountryNav from '@/components/CountryNav'
 import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
@@ -37,7 +36,6 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <Nav />
-      <CountryNav />
 
       <section className="bg-navy py-14 px-6 text-center">
         <div className="max-w-2xl mx-auto">
