@@ -55,11 +55,8 @@ function Dropdown({ label, href, links, extraItem }: {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(o => !o)}
-        className="hover:text-navy transition-colors flex items-center gap-1 text-sm text-gray-500">
-        {href
-          ? <Link href={href} onClick={e => e.stopPropagation()} className="hover:text-navy">{label}</Link>
-          : label
-        }
+        className="hover:text-navy transition-colors flex items-center gap-1 text-sm text-gray-500 cursor-pointer select-none">
+        {label}
         {chevron}
       </button>
 
