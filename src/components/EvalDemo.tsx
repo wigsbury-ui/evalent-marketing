@@ -37,11 +37,7 @@ export default function EvalDemo() {
   const gradeLabel = (g: string, c: string = curric) => {
     const n = parseInt(g.replace('G', ''))
     return c === 'British' ? `Year ${n + 1}` : `Grade ${n}`
-  }
-
-  const gradeLabel = (g: string) => {
-    const n = parseInt(g.replace('G', ''))
-    if (curric === 'British') return `Year ${n + 1}`
+  }`
     return `Grade ${n}`
   }
   const [essay, setEssay] = useState('')
