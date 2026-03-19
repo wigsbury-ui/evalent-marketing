@@ -5,15 +5,37 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Report Generation — Evalent Features',
-  description: 'From assessment submission to a professional, school-branded PDF report in under 5 minutes. Scores, AI narrative, and recommendation included.',
+  description: 'From assessment submission to a professional, school-branded PDF report in under 5 minutes. Scores, narrative, and recommendation included.',
 }
 
 export default function Page() {
+  const reportItems = [
+    'Domain scores: English, Mathematics, Reasoning (% vs your threshold)',
+    'Writing band: Excellent / Good / Developing / Limited with commentary',
+    'Evalent recommendation: Ready to admit, Admit with support, Borderline, Not yet ready',
+    "Student's actual written responses, verbatim",
+    'Mindset and values lens summary',
+    'School-branded cover page with student reference',
+  ]
+
+  const bands = [
+    { band: 'Ready to admit',               cls: 'border-green-300 bg-green-50',   tc: 'text-green-700', icon: '✓', desc: 'All core domains meet your school’s entrance threshold and mindset score is strong. No significant concerns identified.' },
+    { band: 'Ready to admit with support',   cls: 'border-blue-200 bg-blue-50',    tc: 'text-blue-700',  icon: '≈', desc: 'Core domains meet threshold but one area suggests the student will benefit from structured academic support in their first term.' },
+    { band: 'Borderline — further review',cls: 'border-yellow-200 bg-yellow-50',tc: 'text-yellow-700',icon: '?',     desc: 'One or more domains are below threshold. The report flags which and by how much. An interview or further assessment is recommended.' },
+    { band: 'Not yet ready',                  cls: 'border-red-200 bg-red-50',      tc: 'text-red-700',   icon: '✕', desc: 'Multiple domains are significantly below threshold. The report supports a clear, defensible decision with enough detail to explain to families.' },
+  ]
+
+  const faqs = [
+    ['Can we add our school logo to the report?', 'Yes. Your school name and logo are configured once in your Evalent settings and appear automatically on every report.'],
+    ['Can thresholds be set differently per grade?', 'Yes. Each grade level has its own configurable threshold. A Grade 3 entry and Grade 10 entry have different expectations by design.'],
+    ['Is the writing commentary always accurate?', "Evalent's writing evaluation is calibrated to grade level and curriculum. It is a structured starting point that saves your assessors significant time, not a replacement for professional judgement."],
+    ['Can we share reports with parents?', 'Reports are designed to be parent-readable when needed. They explain the domains assessed and what the recommendation means without jargon.'],
+  ]
+
   return (
     <div className="min-h-screen">
       <Nav />
 
-      {/* HERO */}
       <section className="bg-navy py-16 px-6 text-center">
         <div className="max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">FEATURE 4 OF 5</div>
@@ -27,42 +49,34 @@ export default function Page() {
         </div>
       </section>
 
-      {/* EXPLAINER + VIDEO */}
       <section className="py-14 px-6 bg-white border-b border-gray-100">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHAT YOU RECEIVE</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Not just scores — a complete admissions picture</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              The Evalent report is designed to give your assessors everything they need to make a confident, defensible decision. It goes beyond raw percentages to include domain-level commentary, the student’s actual written responses, and a clear recommendation calibrated to your school’s own entrance thresholds.
+              The Evalent report is designed to give your assessors everything they need to make a confident, defensible decision. It goes beyond raw percentages to include domain-level commentary, the student&apos;s actual written responses, and a clear recommendation calibrated to your school&apos;s entrance thresholds.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
-              Reports are school-branded — they look like they came from your institution, not from a third-party platform. This makes them suitable to share with parents when a decision needs to be explained.
+              Reports are school-branded and look like they came from your institution. This makes them suitable to share with parents when a decision needs to be explained.
             </p>
             <div className="space-y-2">
-              {[
-                'Domain scores: English, Mathematics, Reasoning (% vs your threshold)',
-                'Writing band: Excellent / Good / Developing / Limited with commentary',
-                'Evalent recommendation: Ready to admit, Admit with support, Borderline, Not yet ready',
-                'Student’s actual written responses, verbatim',
-                'Mindset and values lens summary',
-                'School-branded cover page with student reference',
-              ].map(item => (
+              {reportItems.map(item => (
                 <div key={item} className="flex items-start gap-2 text-xs text-gray-700">
                   <span className="text-green-500 font-bold flex-shrink-0 mt-0.5">✓</span>{item}
                 </div>
               ))}
             </div>
           </div>
-                      <div className="relative">
+            <div className="relative">
               <div className="bg-navy rounded-2xl overflow-hidden aspect-video flex items-center justify-center group cursor-pointer relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-navy via-blue-900 to-[#002ec1] opacity-90"/>
-                <div className="absolute inset-0 opacity-10" style={backgroundImage:'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize:'32px 32px'}/>
+                <div className="absolute inset-0 bg-gradient-to-br from-navy via-blue-900 to-[#002ec1] opacity-90" />
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
                 <div className="relative text-center z-10">
                   <div className="w-16 h-16 bg-white/20 border-2 border-white/40 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-white/30 transition-all">
-                    <svg className="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <svg className="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                   </div>
-                  <div className="text-white font-bold text-sm mb-1">Watch: Report Generation</div>
+                  <div className="text-white font-bold text-sm mb-1">Report Generation</div>
                   <div className="text-blue-300 text-xs">2 min walkthrough</div>
                 </div>
               </div>
@@ -71,7 +85,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* DEMO */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto mb-8 text-center">
           <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">LIVE DEMO</div>
@@ -81,21 +94,15 @@ export default function Page() {
         <ReportsDemo />
       </section>
 
-      {/* RECOMMENDATION BANDS */}
       <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">RECOMMENDATION BANDS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-2">What the recommendation means</h2>
-            <p className="text-gray-500 text-sm max-w-xl mx-auto">Recommendations are calculated against your school’s own thresholds — not against national norms. Every band has a clear meaning.</p>
+            <p className="text-gray-500 text-sm max-w-xl mx-auto">Recommendations are calculated against your school&apos;s own thresholds — not national norms.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
-            {[
-              { band: 'Ready to admit', cls: 'border-green-300 bg-green-50', tc: 'text-green-700', desc: 'All core domains meet your school’s entrance threshold and mindset score is strong. No significant concerns identified.', icon: '✓' },
-              { band: 'Ready to admit with support', cls: 'border-blue-200 bg-blue-50', tc: 'text-blue-700', desc: 'Core domains meet threshold but one area — typically English — suggests the student will benefit from structured academic support in their first term.', icon: '≈' },
-              { band: 'Borderline — further review', cls: 'border-yellow-200 bg-yellow-50', tc: 'text-yellow-700', desc: 'One or more domains are below threshold by a meaningful margin. The report flags which domains and by how much. An interview or further assessment is recommended.', icon: '?' },
-              { band: 'Not yet ready', cls: 'border-red-200 bg-red-50', tc: 'text-red-700', desc: 'Multiple domains are significantly below threshold. The report supports a clear, defensible decision and provides enough detail to explain the outcome to parents if needed.', icon: '✕' },
-            ].map((b) => (
+            {bands.map((b) => (
               <div key={b.band} className={`border-2 rounded-2xl p-5 ${b.cls}`}>
                 <div className="flex items-center gap-2 mb-2">
                   <span className={`text-sm font-black ${b.tc}`}>{b.icon} {b.band}</span>
@@ -107,26 +114,19 @@ export default function Page() {
         </div>
       </section>
 
-      {/* STATS */}
       <section className="py-10 px-6 bg-navy">
         <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6 text-center">
           <div><div className="text-3xl font-black text-white">&lt;5 min</div><div className="text-sm text-blue-300 mt-1">Submission to report</div></div>
           <div><div className="text-3xl font-black text-white">100%</div><div className="text-sm text-blue-300 mt-1">Automatic</div></div>
-          <div><div className="text-3xl font-black text-white">School-branded</div><div className="text-sm text-blue-300 mt-1">Every report</div></div>
+          <div><div className="text-3xl font-black text-white">Branded</div><div className="text-sm text-blue-300 mt-1">Every report</div></div>
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-black text-navy tracking-tight mb-6">Common questions</h2>
           <div className="space-y-4">
-            {[
-              ['Can we add our school logo to the report?', 'Yes. Your school name and logo are configured once in your Evalent settings and appear automatically on every report.'],
-              ['Can thresholds be set differently per grade?', 'Yes. Each grade level has its own configurable threshold in the dashboard. A Grade 3 entry and a Grade 10 entry have different expectations by design.'],
-              ['Is the writing commentary always accurate?', 'Evalent’s writing evaluation is calibrated to grade level and curriculum. It is not a replacement for professional judgement — it is a structured starting point that saves your assessors significant time.'],
-              ['Can we share reports with parents?', 'Reports are designed to be parent-readable when needed. They explain the domains assessed and what the recommendation means without jargon.'],
-            ].map(([q, a]) => (
+            {faqs.map(([q, a]) => (
               <div key={q} className="border border-gray-200 rounded-xl p-4">
                 <div className="text-sm font-bold text-navy mb-1.5">{q}</div>
                 <div className="text-sm text-gray-600 leading-relaxed">{a}</div>

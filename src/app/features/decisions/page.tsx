@@ -9,11 +9,39 @@ export const metadata = {
 }
 
 export default function Page() {
+  const featureGrid = [
+    { label: 'No portal login',        desc: 'Works from any inbox, any device' },
+    { label: 'Full report in email',   desc: 'Scores, band, and commentary included' },
+    { label: 'Instant dashboard update', desc: 'Reflected in real time on completion' },
+    { label: 'Permanent audit log',    desc: 'Timestamped and attributed to assessor' },
+  ]
+
+  const decisions = [
+    { label: 'Admit',                       cls: 'border-green-300 bg-green-50',   tc: 'text-green-800',  desc: 'The student meets entrance criteria across all domains. The offer process can begin immediately.' },
+    { label: 'Admit with academic support',  cls: 'border-blue-200 bg-blue-50',    tc: 'text-blue-800',   desc: 'Suitable for admission but will benefit from targeted support. This flag travels with the applicant record through to enrolment.' },
+    { label: 'Waitlist',                     cls: 'border-yellow-200 bg-yellow-50', tc: 'text-yellow-800', desc: 'A potential candidate but a place is not currently available. Can be moved to Admit at any time.' },
+    { label: 'Do not admit',                 cls: 'border-red-200 bg-red-50',       tc: 'text-red-800',    desc: 'The assessment profile does not meet entrance criteria. The report provides evidence to explain the decision to families if required.' },
+  ]
+
+  const auditLog = [
+    { time: '09:14:22', event: 'Report generated',      detail: 'Sara Ahmed · Grade 7 · IB',           status: 'auto' },
+    { time: '09:14:28', event: 'Report email sent',     detail: 'To: sarah.principal@diacademy.ae',    status: 'auto' },
+    { time: '10:31:07', event: 'Email opened',          detail: 'By: sarah.principal@diacademy.ae',    status: 'tracked' },
+    { time: '10:31:44', event: 'Decision recorded: Admit', detail: 'By: sarah.principal@diacademy.ae', status: 'decision' },
+    { time: '10:31:44', event: 'Dashboard updated',     detail: 'Status: Decision made · Admit',          status: 'auto' },
+  ]
+
+  const faqs = [
+    ['What if the assessor never clicks a button?', 'A follow-up reminder is sent after 48 hours. The dashboard flags unactioned reports. You can reassign the decision to another assessor if needed.'],
+    ['Can a decision be changed after clicking?', 'Yes — decisions can be amended by a school admin user from the dashboard. The audit log records both the original and the amendment with timestamps.'],
+    ['Can we add notes to the decision?', 'Free-text notes can be added to any applicant record from the dashboard and are stored alongside the decision in the audit log.'],
+    ["What happens to the applicant's data after a decision?", 'Data is retained according to your school’s configured retention period. Evalent supports GDPR-compliant deletion requests at any time.'],
+  ]
+
   return (
     <div className="min-h-screen">
       <Nav />
 
-      {/* HERO */}
       <section className="bg-navy py-16 px-6 text-center">
         <div className="max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">FEATURE 5 OF 5</div>
@@ -22,46 +50,40 @@ export default function Page() {
             <span className="text-blue-300">Decision recorded. Done.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            When the report is ready, your assessor receives an email with the full summary and four decision buttons. Admit, Admit with support, Waitlist, or Do not admit — one click, no login, and the decision is permanently recorded.
+            When the report is ready, your assessor receives an email with the full summary and four decision buttons. One click, no login, and the decision is permanently recorded.
           </p>
         </div>
       </section>
 
-      {/* EXPLAINER + VIDEO */}
       <section className="py-14 px-6 bg-white border-b border-gray-100">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHY IT MATTERS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">The lowest-friction decision process in admissions</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Most admissions workflows require an assessor to: log into a portal, find the student, read the report, navigate to a decision screen, and record the outcome. That’s five steps — and most assessors are busy teachers or heads of department who find every additional click a reason to delay.
+              Most admissions workflows require an assessor to log into a portal, find the student, read the report, navigate to a decision screen, and record the outcome. That&apos;s five steps — and most assessors are busy teachers who find every additional click a reason to delay.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
-              Evalent reduces this to one step. The report summary is in the email. The decision buttons are in the email. The assessor never needs to leave their inbox. The decision is recorded, timestamped, and reflected in the dashboard the moment they click.
+              Evalent reduces this to one step. The report summary is in the email. The decision buttons are in the email. The assessor never leaves their inbox. The decision is recorded the moment they click.
             </p>
             <div className="grid grid-cols-2 gap-3">
-              {[
-                { label: 'No portal login', desc: 'Works from any inbox, any device' },
-                { label: 'Full report in email', desc: 'Scores, band, and commentary included' },
-                { label: 'Instant dashboard update', desc: 'Reflected in real time on completion' },
-                { label: 'Permanent audit log', desc: 'Timestamped and attributed to assessor' },
-              ].map(f => (
+              {featureGrid.map(f => (
                 <div key={f.label} className="bg-gray-50 border border-gray-100 rounded-xl p-3">
-                  <div className="text-xs font-bold text-navy mb-0.5">{✓} {f.label}</div>
+                  <div className="text-xs font-bold text-navy mb-0.5">✓ {f.label}</div>
                   <div className="text-xs text-gray-500">{f.desc}</div>
                 </div>
               ))}
             </div>
           </div>
-                      <div className="relative">
+            <div className="relative">
               <div className="bg-navy rounded-2xl overflow-hidden aspect-video flex items-center justify-center group cursor-pointer relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-navy via-blue-900 to-[#002ec1] opacity-90"/>
-                <div className="absolute inset-0 opacity-10" style={backgroundImage:'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize:'32px 32px'}/>
+                <div className="absolute inset-0 bg-gradient-to-br from-navy via-blue-900 to-[#002ec1] opacity-90" />
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
                 <div className="relative text-center z-10">
                   <div className="w-16 h-16 bg-white/20 border-2 border-white/40 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-white/30 transition-all">
-                    <svg className="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <svg className="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                   </div>
-                  <div className="text-white font-bold text-sm mb-1">Watch: Decision Workflow</div>
+                  <div className="text-white font-bold text-sm mb-1">Decision Workflow</div>
                   <div className="text-blue-300 text-xs">90 sec walkthrough</div>
                 </div>
               </div>
@@ -70,7 +92,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* DEMO */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto mb-8 text-center">
           <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">LIVE DEMO</div>
@@ -80,7 +101,6 @@ export default function Page() {
         <DecisionsDemo />
       </section>
 
-      {/* DECISION OPTIONS */}
       <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
@@ -88,12 +108,7 @@ export default function Page() {
             <h2 className="text-2xl font-black text-navy tracking-tight">Four outcomes. All covered.</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
-            {[
-              { label: 'Admit', cls: 'border-green-300 bg-green-50', tc: 'text-green-800', desc: 'The student meets your school’s entrance criteria across all domains. The offer process can begin immediately. The decision is logged and the applicant record is updated.' },
-              { label: 'Admit with academic support', cls: 'border-blue-200 bg-blue-50', tc: 'text-blue-800', desc: 'The student is suitable for admission but will benefit from targeted support — most commonly in English. This flag travels with the applicant record through to enrolment.' },
-              { label: 'Waitlist', cls: 'border-yellow-200 bg-yellow-50', tc: 'text-yellow-800', desc: 'The student is a potential candidate but a place is not currently available or a final decision is pending. Waitlisted applicants can be moved to Admit at any time.' },
-              { label: 'Do not admit', cls: 'border-red-200 bg-red-50', tc: 'text-red-800', desc: 'The assessment profile does not meet the school’s entrance criteria. The detailed report provides the evidence base to explain this decision to families if required.' },
-            ].map(d => (
+            {decisions.map(d => (
               <div key={d.label} className={`border-2 rounded-2xl p-5 ${d.cls}`}>
                 <div className={`text-sm font-black mb-2 ${d.tc}`}>{d.label}</div>
                 <div className="text-xs text-gray-700 leading-relaxed">{d.desc}</div>
@@ -103,27 +118,20 @@ export default function Page() {
         </div>
       </section>
 
-      {/* AUDIT TRAIL EXPLAINER */}
       <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
           <div>
-            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">GOVERNANCE & COMPLIANCE</div>
+            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">GOVERNANCE &amp; COMPLIANCE</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Every decision is defensible</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              International schools increasingly face scrutiny over admissions decisions — from parents, from boards, and in some cases from regulatory bodies. Evalent creates a complete, tamper-proof record of every assessment and every decision.
+              International schools increasingly face scrutiny over admissions decisions — from parents, boards, and in some cases regulatory bodies. Evalent creates a complete, tamper-proof record of every assessment and decision.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
-              The audit log records: who assessed, which report they received, which button they clicked, and when. This is exportable and can be retained as long as your school requires.
+              The audit log records who assessed, which report they received, which button they clicked, and when. This is exportable and can be retained as long as your school requires.
             </p>
           </div>
           <div className="space-y-3">
-            {[
-              { time: '09:14:22', event: 'Report generated', detail: 'Sara Ahmed · Grade 7 · IB', status: 'auto' },
-              { time: '09:14:28', event: 'Report email sent', detail: 'To: sarah.principal@diacademy.ae', status: 'auto' },
-              { time: '10:31:07', event: 'Email opened', detail: 'By: sarah.principal@diacademy.ae', status: 'tracked' },
-              { time: '10:31:44', event: 'Decision recorded: Admit', detail: 'By: sarah.principal@diacademy.ae', status: 'decision' },
-              { time: '10:31:44', event: 'Dashboard updated', detail: 'Status: Decision made · Admit', status: 'auto' },
-            ].map((entry, i) => (
+            {auditLog.map((entry, i) => (
               <div key={i} className="flex items-start gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3">
                 <span className="text-[10px] font-mono text-gray-400 w-16 flex-shrink-0 pt-0.5">{entry.time}</span>
                 <div className="flex-1 min-w-0">
@@ -139,7 +147,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* STATS */}
       <section className="py-10 px-6 bg-navy">
         <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6 text-center">
           <div><div className="text-3xl font-black text-white">1 click</div><div className="text-sm text-blue-300 mt-1">To record any decision</div></div>
@@ -148,17 +155,11 @@ export default function Page() {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-black text-navy tracking-tight mb-6">Common questions</h2>
           <div className="space-y-4">
-            {[
-              ['What if the assessor never clicks a button?', 'A follow-up reminder is sent after 48 hours. The dashboard flags unactioned reports. You can reassign the decision to another assessor if needed.'],
-              ['Can a decision be changed after clicking?', 'Yes — decisions can be amended by a school admin user from the dashboard. The audit log records both the original decision and the amendment with timestamps.'],
-              ['Can we add a notes field to the decision?', 'Free-text notes can be added to any applicant record from the dashboard. These are stored alongside the decision in the audit log.'],
-              ['What happens to the applicant’s data after a decision?', 'Data is retained according to your school’s configured retention period. Evalent supports GDPR-compliant deletion requests at any time.'],
-            ].map(([q, a]) => (
+            {faqs.map(([q, a]) => (
               <div key={q} className="border border-gray-200 rounded-xl p-4">
                 <div className="text-sm font-bold text-navy mb-1.5">{q}</div>
                 <div className="text-sm text-gray-600 leading-relaxed">{a}</div>
@@ -168,10 +169,9 @@ export default function Page() {
         </div>
       </section>
 
-      {/* BOTTOM CTA */}
       <section className="bg-navy py-16 px-6 text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-black text-white tracking-tight mb-3">You’ve seen all five features.</h2>
+          <h2 className="text-3xl font-black text-white tracking-tight mb-3">You&apos;ve seen all five features.</h2>
           <p className="text-blue-300 mb-7">10 free reports. No credit card. Set up in 5 minutes.</p>
           <div className="flex gap-3 justify-center flex-wrap">
             <a href="/#trial" className="bg-white text-brand font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors">Start your free trial →</a>
