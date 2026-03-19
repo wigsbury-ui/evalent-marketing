@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #07112e;
+  --blue: #002ec1;
+  --mid: #0d52dd;
+  --light: #e8effe;
+  --green: #059669;
+}
+
+html { scroll-behavior: smooth; }
+body { background: #fff; color: var(--navy); }
