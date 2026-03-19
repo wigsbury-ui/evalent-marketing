@@ -16,36 +16,42 @@ const GRADES = ['G3','G4','G5','G6','G7','G8','G9','G10']
 const CURRICULA = ['IB','British','American']
 
 type Band = 'Excellent' | 'Good' | 'Developing' | 'Limited'
+
 interface EvalResult {
-  band: Band; score: number;
-  task: number; organisation: number; vocabulary: number; accuracy: number;
-  commentary: string; strengths: string; develop: string;
+  band: Band
+  score: number
+  task: number
+  organisation: number
+  vocabulary: number
+  accuracy: number
+  commentary: string
+  strengths: string
+  develop: string
 }
 
 const BAND_STYLES: Record<Band, { bg: string; text: string; bar: string }> = {
   Excellent:  { bg: 'bg-green-50',  text: 'text-green-700',  bar: 'bg-green-500' },
   Good:       { bg: 'bg-blue-50',   text: 'text-blue-700',   bar: 'bg-brand' },
   Developing: { bg: 'bg-yellow-50', text: 'text-yellow-700', bar: 'bg-yellow-500' },
-  Limited:  { bg: 'bg-red-50',    text: 'text-red-700',    bar: 'bg-red-500' },
+  Limited:    { bg: 'bg-red-50',    text: 'text-red-700',    bar: 'bg-red-500' },
 }
-const BAND_PCT: Record<Band, number> = { Excellent: 100, Good: 75, Developing: 50, Limited:   25 }
+
+const BAND_PCT: Record<Band, number> = { Excellent: 100, Good: 75, Developing: 50, Limited: 25 }
 
 export default function EvalDemo() {
   const [grade, setGrade] = useState('G6')
   const [curric, setCurric] = useState('IB')
-
-  const gradeLabel = (g: string, c: string = curric) => {
-    const n = parseInt(g.replace('G', ''))
-    return c === 'British' ? `Year ${n + 1}` : `Grade ${n}`
-  }`
-    return `Grade ${n}`
-  }
   const [essay, setEssay] = useState('')
   const [state, setState] = useState<'idle' | 'loading' | 'done'>('idle')
   const [result, setResult] = useState<EvalResult | null>(null)
   const [commentary, setCommentary] = useState('')
   const [barWidths, setBarWidths] = useState({ task: 0, org: 0, vocab: 0, acc: 0, overall: 0 })
   const resultRef = useRef<HTMLDivElement>(null)
+
+  const gradeLabel = (g: string) => {
+    const n = parseInt(g.replace('G', ''))
+    return curric === 'British' ? `Year ${n + 1}` : `Grade ${n}`
+  }
 
   const words = essay.trim() ? essay.trim().split(/\s+/).length : 0
   const ready = words >= 80
@@ -54,8 +60,10 @@ export default function EvalDemo() {
     if (state === 'done' && result) {
       setTimeout(() => {
         setBarWidths({
-          task: result.task, org: result.organisation,
-          vocab: result.vocabulary, acc: result.accuracy,
+          task: result.task,
+          org: result.organisation,
+          vocab: result.vocabulary,
+          acc: result.accuracy,
           overall: BAND_PCT[result.band] ?? 75,
         })
         streamCommentary(result.commentary)
@@ -82,7 +90,6 @@ export default function EvalDemo() {
     setBarWidths({ task: 0, org: 0, vocab: 0, acc: 0, overall: 0 })
     setCommentary('')
 
-
     try {
       const res = await fetch('/api/evaluate', {
         method: 'POST',
@@ -94,9 +101,8 @@ export default function EvalDemo() {
       if (!parsed.band) throw new Error('Invalid response')
       setResult(parsed)
     } catch {
-      const gradeNum2 = parseInt(grade.replace('G',''))
+      const gradeNum = parseInt(grade.replace('G', ''))
       const isStrong = words > 120
-      const isModerate = words >= 80 && words <= 120
       setResult({
         band: isStrong ? 'Good' : 'Developing',
         score: isStrong ? 3.0 : 2.0,
@@ -105,14 +111,14 @@ export default function EvalDemo() {
         vocabulary: isStrong ? 75 : 50,
         accuracy: isStrong ? 84 : 64,
         commentary: isStrong
-          ? `The response addresses the task with a clear and sustained position, demonstrating organisation into coherent paragraphs appropriate for Grade ${gradeNum2}. Ideas are developed with supporting reasoning and the writing shows awareness of audience and purpose. Vocabulary is appropriate for this level with some effective word choices that strengthen the argument.`
-          : `The response makes a reasonable attempt at the task and establishes a basic position. Some organisational awareness is present, though ideas would benefit from fuller development and more specific supporting detail at Grade ${gradeNum2} level.`,
+          ? `The response addresses the task with a clear and sustained position, demonstrating paragraph organisation appropriate for Grade ${gradeNum}. Ideas are developed with supporting reasoning and the writing shows awareness of audience and purpose. Vocabulary is appropriate for this level with some effective word choices. This writing profile is consistent with Grade ${gradeNum} entry.`
+          : `The response makes a reasonable attempt at the task and establishes a basic position. Some organisational awareness is present, though ideas would benefit from fuller development at Grade ${gradeNum} level. Further writing development is recommended before entry.`,
         strengths: isStrong
           ? 'Clear position maintained throughout the response\nEffective use of paragraph structure to organise ideas'
           : 'Task addressed with a recognisable position\nBasic sentence structure is in place',
         develop: isStrong
-          ? 'Extend supporting examples with more specific detail\nStrengthen the concluding statement to reinforce the argument'
-          : 'Develop each paragraph with a concrete example or piece of evidence\nImprove cohesion between paragraphs using connective language',
+          ? 'Extend supporting examples with more specific detail\nStrengthen the concluding statement'
+          : 'Develop each paragraph with a concrete example\nImprove cohesion between paragraphs',
       })
     }
     setState('done')
@@ -143,7 +149,6 @@ export default function EvalDemo() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-0 border border-gray-200 rounded-2xl overflow-hidden bg-white items-start">
-        {/* LEFT */}
         <div className="p-6 border-r border-gray-200">
           <div className="flex items-center gap-2 mb-1">
             <span className="w-2 h-2 bg-green-400 rounded-full" />
@@ -172,7 +177,6 @@ export default function EvalDemo() {
           </button>
         </div>
 
-        {/* RIGHT */}
         <div className="p-6" ref={resultRef}>
           <div className="flex items-center gap-2 mb-1">
             <span className={`w-2 h-2 rounded-full ${state === 'done' ? 'bg-green-400' : state === 'loading' ? 'bg-yellow-400 animate-pulse' : 'bg-gray-300'}`} />
@@ -181,13 +185,15 @@ export default function EvalDemo() {
             </span>
           </div>
           <p className="text-xs text-gray-500 mb-4">
-            {state === 'done' ? `${result?.score?.toFixed(1)}/4.0 · ${grade.replace('G','Grade ')} ${curric}` : 'Your evaluation will appear here.'}
+            {state === 'done' ? `${result?.score?.toFixed(1)}/4.0 · ${gradeLabel(grade)} ${curric}` : 'Your evaluation will appear here.'}
           </p>
 
           {state === 'idle' && (
             <div className="flex flex-col items-center justify-center min-h-80 text-center gap-3">
               <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
-                <svg className="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <svg className="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
               <div className="text-sm font-bold text-navy">Your evaluation will appear here</div>
               <div className="text-xs text-gray-400 max-w-48 leading-relaxed">Write your response on the left, then click evaluate</div>
@@ -208,7 +214,6 @@ export default function EvalDemo() {
 
           {state === 'done' && result && (
             <div className="space-y-3">
-              {/* Band + score */}
               <div className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-xl">
                 <div>
                   <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-1">BAND</div>
@@ -228,13 +233,12 @@ export default function EvalDemo() {
                 </div>
               </div>
 
-              {/* Criteria */}
               <div className="grid grid-cols-2 gap-2">
                 {[
-                  { label: 'TASK COMPLETION', val: barWidths.task, color: 'bg-brand' },
-                  { label: 'ORGANISATION',    val: barWidths.org,  color: 'bg-brand' },
+                  { label: 'TASK COMPLETION', val: barWidths.task,  color: 'bg-brand' },
+                  { label: 'ORGANISATION',    val: barWidths.org,   color: 'bg-brand' },
                   { label: 'VOCABULARY',      val: barWidths.vocab, color: 'bg-purple-500' },
-                  { label: 'ACCURACY',        val: barWidths.acc,  color: 'bg-green-500' },
+                  { label: 'ACCURACY',        val: barWidths.acc,   color: 'bg-green-500' },
                 ].map(({ label, val, color }) => (
                   <div key={label} className="bg-gray-50 border border-gray-200 rounded-lg p-2.5">
                     <div className="text-[9px] font-bold text-gray-400 tracking-widest mb-1.5">{label}</div>
@@ -246,16 +250,16 @@ export default function EvalDemo() {
                 ))}
               </div>
 
-              {/* Commentary */}
               <div className="border border-gray-200 rounded-xl overflow-hidden">
                 <div className="text-[10px] font-bold text-gray-400 tracking-widest px-3 py-2 bg-gray-50 border-b border-gray-200">EVALUATOR COMMENTARY</div>
                 <p className="text-sm text-navy leading-relaxed p-3 min-h-14">
                   {commentary}
-                  {commentary.length < (result.commentary.length) && <span className="inline-block w-0.5 h-3.5 bg-brand align-middle ml-0.5 animate-pulse" />}
+                  {commentary.length < (result.commentary.length) && (
+                    <span className="inline-block w-0.5 h-3.5 bg-brand align-middle ml-0.5 animate-pulse" />
+                  )}
                 </p>
               </div>
 
-              {/* Strengths / Develop */}
               <div className="grid grid-cols-2 gap-2">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-3">
                   <div className="text-[9px] font-bold text-green-700 tracking-widest mb-2">STRENGTHS</div>
