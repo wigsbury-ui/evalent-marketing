@@ -4,10 +4,9 @@ import DashboardDemo from '@/components/features/DashboardDemo'
 
 export const metadata = {
   title: 'Assessment Dashboard — Evalent Features',
-  description: 'Track every applicant across every grade in real time. See who has completed, who is in progress, and who needs a reminder.',
 }
 
-export default function DashboardPage() {
+export default function Page() {
   return (
     <div className="min-h-screen">
       <Nav />
@@ -19,10 +18,17 @@ export default function DashboardPage() {
         </div>
       </section>
       <section className="py-12 px-4 bg-gray-50"><DashboardDemo /></section>
+      <section className="py-12 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-center">
+          <div key="Real-time updates"><div className="text-3xl font-black text-navy tracking-tight">Live</div><div className="text-sm text-gray-500 mt-1">Real-time updates</div></div>
+          <div key="Status categories"><div className="text-3xl font-black text-navy tracking-tight">6</div><div className="text-sm text-gray-500 mt-1">Status categories</div></div>
+          <div key="To view full report"><div className="text-3xl font-black text-navy tracking-tight">1 click</div><div className="text-sm text-gray-500 mt-1">To view full report</div></div>
+        </div>
+      </section>
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">
-        <div className="max-w-5xl mx-auto flex justify-between items-center text-sm">
-          <a href="/features/registration" className="text-gray-400 hover:text-brand">← Registration</a>
-          <a href="/features/assessment" className="text-brand font-semibold hover:underline">Next: The Assessment →</a>
+        <div className="max-w-5xl mx-auto flex justify-between items-center">
+          <a href="/features/registration" className="text-gray-400 hover:text-brand text-sm">← Registration</a>
+          <a href="/features/assessment" className="text-brand font-semibold hover:underline text-sm">Next: The Assessment →</a>
         </div>
       </div>
       <Footer />

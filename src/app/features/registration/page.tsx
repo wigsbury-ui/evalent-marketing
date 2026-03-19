@@ -4,10 +4,9 @@ import RegistrationDemo from '@/components/features/RegistrationDemo'
 
 export const metadata = {
   title: 'Student Registration — Evalent Features',
-  description: 'Register students, configure grade thresholds, and send assessment links in seconds.',
 }
 
-export default function RegistrationPage() {
+export default function Page() {
   return (
     <div className="min-h-screen">
       <Nav />
@@ -18,24 +17,18 @@ export default function RegistrationPage() {
           <p className="text-blue-300 text-lg leading-relaxed">Add a student, select their grade, and send their assessment link — all in under 60 seconds.</p>
         </div>
       </section>
-      <section className="py-12 px-4 bg-gray-50">
-        <RegistrationDemo />
-      </section>
+      <section className="py-12 px-4 bg-gray-50"><RegistrationDemo /></section>
       <section className="py-12 px-6 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-center">
-          {[
-            { num: '60s', label: 'From add to link sent' },
-            { num: 'G3–G10', label: 'All grade levels' },
-            { num: '3', label: 'Curricula supported' },
-          ].map(({ num, label }) => (
-            <div key={label}><div className="text-3xl font-black text-navy tracking-tight">{num}</div><div className="text-sm text-gray-500 mt-1">{label}</div></div>
-          ))}
+          <div key="From add to link sent"><div className="text-3xl font-black text-navy tracking-tight">60s</div><div className="text-sm text-gray-500 mt-1">From add to link sent</div></div>
+          <div key="All grade levels"><div className="text-3xl font-black text-navy tracking-tight">G3–G10</div><div className="text-sm text-gray-500 mt-1">All grade levels</div></div>
+          <div key="Curricula supported"><div className="text-3xl font-black text-navy tracking-tight">3</div><div className="text-sm text-gray-500 mt-1">Curricula supported</div></div>
         </div>
       </section>
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">
-        <div className="max-w-4xl mx-auto flex justify-between items-center text-sm">
-          <span className="text-gray-400">Feature 1 of 5</span>
-          <a href="/features/dashboard" className="text-brand font-semibold hover:underline">Next: Assessment Dashboard →</a>
+        <div className="max-w-5xl mx-auto flex justify-between items-center">
+          <span/>
+          <a href="/features/dashboard" className="text-brand font-semibold hover:underline text-sm">Next: Assessment Dashboard →</a>
         </div>
       </div>
       <Footer />

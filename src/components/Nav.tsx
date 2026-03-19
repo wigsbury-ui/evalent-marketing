@@ -20,9 +20,7 @@ export default function Nav() {
         <Link href="/" className="text-lg font-black tracking-tight text-navy">
           EVAL<span className="text-brand italic">ENT</span>
         </Link>
-
         <div className="hidden md:flex items-center gap-7 text-sm text-gray-500">
-          {/* Features dropdown */}
           <div className="relative" onMouseEnter={() => setFeatOpen(true)} onMouseLeave={() => setFeatOpen(false)}>
             <Link href="/features" className="hover:text-navy transition-colors flex items-center gap-1">
               Features
@@ -37,9 +35,7 @@ export default function Nav() {
                   </Link>
                 ))}
                 <div className="border-t border-gray-100 mt-1 pt-1">
-                  <Link href="/features" className="flex items-center gap-1 px-4 py-2 text-xs font-semibold text-brand hover:bg-blue-50 transition-colors">
-                    All features overview →
-                  </Link>
+                  <Link href="/features" className="flex items-center gap-1 px-4 py-2 text-xs font-semibold text-brand hover:bg-blue-50 transition-colors">All features overview →</Link>
                 </div>
               </div>
             )}
@@ -49,18 +45,13 @@ export default function Nav() {
           <Link href="/pricing" className="hover:text-navy transition-colors">Pricing</Link>
           <a href="https://app.evalent.io/login" className="hover:text-navy transition-colors">Sign in</a>
         </div>
-
-        <a href="#trial" className="hidden md:inline-flex bg-brand text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-blue-800 transition-colors">
-          Try free
-        </a>
-
+        <a href="#trial" className="hidden md:inline-flex bg-brand text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-blue-800 transition-colors">Try free</a>
         <button className="md:hidden text-gray-500" onClick={() => setMenuOpen(!menuOpen)}>
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={menuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'} />
           </svg>
         </button>
       </div>
-
       {menuOpen && (
         <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-2 text-sm">
           <Link href="/features" className="block font-semibold text-navy">Features</Link>
