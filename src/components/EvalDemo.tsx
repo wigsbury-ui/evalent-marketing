@@ -139,7 +139,7 @@ export default function EvalDemo() {
         ))}
       </div>
       <div className="flex gap-3 flex-wrap mb-5 items-center">
-        <span className="text-xs font-bold text-gray-400 tracking-widest">ENTERING INTO:</span>
+        <span className="text-xs font-bold text-gray-400 tracking-widest">ENTERING INTO</span>
         {GRADES.map(g => (
           <button key={g} onClick={() => { setGrade(g); setState('idle') }}
             className={`px-3 py-1.5 rounded-full border-2 text-xs font-bold transition-all ${grade === g ? 'border-brand bg-blue-50 text-brand' : 'border-gray-200 text-gray-400 hover:border-brand'}`}>
