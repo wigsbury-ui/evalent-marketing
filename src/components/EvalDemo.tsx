@@ -34,6 +34,11 @@ export default function EvalDemo() {
   const [grade, setGrade] = useState('G6')
   const [curric, setCurric] = useState('IB')
 
+  const gradeLabel = (g: string, c: string = curric) => {
+    const n = parseInt(g.replace('G', ''))
+    return c === 'British' ? `Year ${n + 1}` : `Grade ${n}`
+  }
+
   const gradeLabel = (g: string) => {
     const n = parseInt(g.replace('G', ''))
     if (curric === 'British') return `Year ${n + 1}`
@@ -141,7 +146,7 @@ export default function EvalDemo() {
         ))}
       </div>
 
-      <div className="grid md:grid-cols-2 gap-0 border border-gray-200 rounded-2xl overflow-hidden bg-white">
+      <div className="grid md:grid-cols-2 gap-0 border border-gray-200 rounded-2xl overflow-hidden bg-white items-start">
         {/* LEFT */}
         <div className="p-6 border-r border-gray-200">
           <div className="flex items-center gap-2 mb-1">
@@ -180,7 +185,7 @@ export default function EvalDemo() {
             </span>
           </div>
           <p className="text-xs text-gray-500 mb-4">
-            {state === 'done' ? `${result?.score?.toFixed(1)}/4.0 · ${gradeLabel(grade)} ${curric}` : 'Your evaluation will appear here.'}
+            {state === 'done' ? `${result?.score?.toFixed(1)}/4.0 · ${grade.replace('G','Grade ')} ${curric}` : 'Your evaluation will appear here.'}
           </p>
 
           {state === 'idle' && (
@@ -206,7 +211,7 @@ export default function EvalDemo() {
           )}
 
           {state === 'done' && result && (
-            <div className="overflow-y-auto max-h-[480px] pr-1 space-y-3">
+            <div className="space-y-3">
               {/* Band + score */}
               <div className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-xl">
                 <div>
