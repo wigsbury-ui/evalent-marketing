@@ -26,7 +26,7 @@ const BAND_STYLES: Record<Band, { bg: string; text: string; bar: string }> = {
   Excellent:  { bg: 'bg-green-50',  text: 'text-green-700',  bar: 'bg-green-500' },
   Good:       { bg: 'bg-blue-50',   text: 'text-blue-700',   bar: 'bg-brand' },
   Developing: { bg: 'bg-yellow-50', text: 'text-yellow-700', bar: 'bg-yellow-500' },
-  Beginning:  { bg: 'bg-red-50',    text: 'text-red-700',    bar: 'bg-red-500' },
+  Limited:  { bg: 'bg-red-50',    text: 'text-red-700',    bar: 'bg-red-500' },
 }
 const BAND_PCT: Record<Band, number> = { Excellent: 100, Good: 75, Developing: 50, Limited:   25 }
 
