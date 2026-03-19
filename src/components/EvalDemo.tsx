@@ -149,12 +149,13 @@ export default function EvalDemo() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-0 border border-gray-200 rounded-2xl overflow-hidden bg-white items-start">
-        <div className="p-6 border-r border-gray-200">
-          <div className="flex items-center gap-2 mb-1">
+        <div className="border-r border-gray-200">
+          <div className="bg-navy px-6 py-3 flex items-center gap-2">
             <span className="w-2 h-2 bg-green-400 rounded-full" />
-            <span className="text-sm font-bold text-navy">Your writing</span>
+            <span className="text-sm font-bold text-white">Your writing</span>
           </div>
-          <p className="text-xs text-gray-500 mb-4">Write at least 80 words to unlock the AI evaluation.</p>
+          <div className="p-6 pt-4">
+          <p className="text-xs text-gray-500 mb-4">Write at least 80 words to unlock the Evalent evaluation.</p>
           <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 mb-3">
             <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-1.5">WRITING PROMPT</div>
             <p className="text-sm text-navy leading-relaxed italic">{PROMPTS[grade]}</p>
@@ -181,7 +182,7 @@ export default function EvalDemo() {
           <div className="flex items-center gap-2 mb-1">
             <span className={`w-2 h-2 rounded-full ${state === 'done' ? 'bg-green-400' : state === 'loading' ? 'bg-yellow-400 animate-pulse' : 'bg-gray-300'}`} />
             <span className="text-sm font-bold text-navy">
-              {state === 'done' ? `Evaluation complete — ${band}` : state === 'loading' ? 'Evaluating...' : 'AI evaluation'}
+              {state === 'done' ? `Evaluation complete — ${band}` : state === 'loading' ? 'Evaluating...' : 'Evalent evaluation'}
             </span>
           </div>
           <p className="text-xs text-gray-500 mb-4">
@@ -202,7 +203,7 @@ export default function EvalDemo() {
 
           {state === 'loading' && (
             <div className="flex flex-col items-center justify-center min-h-80 gap-4">
-              <div className="text-sm font-bold text-navy">Reading your response...</div>
+              <div className="text-sm font-bold text-navy">Evalent is reading your response...</div>
               <div className="text-xs text-gray-500">Scoring structure, vocabulary, task completion</div>
               <div className="flex gap-1.5 mt-2">
                 {[0,1,2].map(i => (
@@ -276,7 +277,7 @@ export default function EvalDemo() {
               </div>
 
               <a href="/#trial" className="block text-center bg-brand text-white text-xs font-bold py-3 rounded-xl hover:bg-blue-800 transition-colors mt-1">
-                Use this for real applicants — start free trial →
+                Use Evalent for real applicants — start free trial →
               </a>
             </div>
           )}

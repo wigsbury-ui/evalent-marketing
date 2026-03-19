@@ -138,13 +138,13 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">
                 <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
-                LIVE AI EVALUATION
+                EVALENT EVALUATION
               </div>
               <h2 className="text-3xl font-black text-white tracking-tight mb-3">
-                The AI doesn&apos;t just score.<br/>It reads.
+                Evalent doesn&apos;t just score.<br/>It reads.
               </h2>
               <p className="text-blue-300 text-sm leading-relaxed mb-4">
-                Every extended writing response is evaluated against four criteria — task completion, organisation, vocabulary, and accuracy — with expert commentary written in seconds.
+                Every extended writing response is evaluated against four criteria — task completion, organisation, vocabulary, and accuracy — with expert commentary generated in seconds.
               </p>
               <div className="space-y-2 mb-6">
                 {[
@@ -160,7 +160,7 @@ export default function Home() {
                 ))}
               </div>
               <a href="/demo" className="inline-flex items-center gap-2 bg-white text-brand font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors">
-                Try the AI evaluator live →
+                See Evalent evaluate live →
               </a>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5">

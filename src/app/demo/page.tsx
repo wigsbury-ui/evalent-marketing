@@ -3,8 +3,8 @@ import Footer from '@/components/Footer'
 import EvalDemo from '@/components/EvalDemo'
 
 export const metadata = {
-  title: 'Try the AI Evaluator — Evalent',
-  description: 'See Evalent\'s AI evaluate real student writing in seconds. Choose a grade, write a response, and watch a professional evaluation appear instantly.',
+  title: 'See Evalent Evaluate Your Writing — Evalent',
+  description: 'See Evalent evaluate real student writing in seconds. Choose a grade, write a response, and watch a professional evaluation appear instantly.',
 }
 
 export default function DemoPage() {
@@ -15,14 +15,14 @@ export default function DemoPage() {
         <div className="max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
-            LIVE AI EVALUATION
+            LIVE EVALENT EVALUATION
           </div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
             See the AI evaluate<br/>
             <span className="text-blue-300">your writing — right now</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed">
-            This is exactly what Evalent does for every applicant. Choose a grade, write a response to the prompt, and watch a real AI evaluation appear in seconds.
+            This is exactly what Evalent does for every applicant. Choose a grade, write a response to the prompt, and watch a professional evaluation appear in seconds.
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ export default function DemoPage() {
       </section>
       <section className="py-16 px-6 bg-navy text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-black text-white tracking-tight mb-3">Ready to use this for real applicants?</h2>
+          <h2 className="text-3xl font-black text-white tracking-tight mb-3">Ready to use Evalent for real applicants?</h2>
           <p className="text-blue-300 mb-7">Get 10 free trial reports — no credit card needed.</p>
           <a href="/#trial" className="inline-block bg-white text-brand font-bold text-sm px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
             Start your free trial →

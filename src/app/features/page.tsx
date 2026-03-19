@@ -20,11 +20,11 @@ const features = [
     ],
   },
   {
-    category: 'AI Writing Evaluation',
+    category: 'Evalent Writing Evaluation',
     icon: '★',
     color: 'bg-purple-50 text-purple-700',
     items: [
-      { title: 'Live AI evaluation', desc: 'Extended writing is evaluated by AI against four criteria: task completion, organisation, vocabulary, and accuracy.' },
+      { title: 'Live writing evaluation', desc: 'Extended writing is evaluated by Evalent against four criteria: task completion, organisation, vocabulary, and accuracy.' },
       { title: 'Expert commentary', desc: 'The AI writes evaluative commentary referencing the student\'s actual words — not a template.' },
       { title: 'Honest bands', desc: 'Excellent / Good / Developing / Beginning — calibrated to your grade level and curriculum.' },
       { title: 'Strengths & development', desc: 'Every evaluation identifies specific strengths and two concrete areas to develop.' },
@@ -71,12 +71,12 @@ export default function FeaturesPage() {
           <div className="flex-1">
             <div className="inline-flex items-center gap-2 bg-white border border-blue-200 text-brand text-xs font-bold tracking-widest px-3 py-1 rounded-full mb-3">
               <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
-              NEW — LIVE AI EVALUATION DEMO
+              NEW — LIVE EVALENT EVALUATION
             </div>
-            <h2 className="text-2xl font-black text-navy tracking-tight mb-2">See the AI evaluator in action</h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">Don&apos;t take our word for it. Write something — anything — and watch the AI evaluate it in real time. Choose your grade and curriculum first.</p>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-2">See Evalent evaluate writing in action</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4">Don&apos;t take our word for it. Write something — anything — and watch Evalent evaluate it in real time. Choose your grade and curriculum first.</p>
             <Link href="/demo" className="inline-flex items-center gap-2 bg-brand text-white font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-blue-800 transition-colors">
-              Try the live evaluator →
+              See Evalent evaluate →
             </Link>
           </div>
           <div className="md:w-72 bg-white border border-blue-200 rounded-xl p-4 text-sm">
