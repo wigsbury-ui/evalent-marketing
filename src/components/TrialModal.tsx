@@ -40,10 +40,10 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
       <div className="absolute inset-0 bg-navy/80 backdrop-blur-sm" onClick={onClose} />
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-xl max-h-[90vh] overflow-y-auto">
 
-        <div className="bg-white px-6 py-4 rounded-t-2xl flex items-center justify-between border-b border-gray-100">
-          <div>
-            <div className="text-sm font-black text-navy">Start your free trial</div>
-            <div className="text-xs text-gray-400 mt-0.5">10 free reports &middot; No credit card &middot; 5 minute setup</div>
+        <div className="bg-white px-6 py-5 rounded-t-2xl flex items-center justify-between border-b border-gray-100">
+          <div className="flex-1 text-center">
+            <div className="text-xl font-black text-navy mb-0.5">Start your free trial</div>
+            <div className="text-sm text-gray-400">10 free reports &middot; No credit card &middot; 5 minute setup</div>
           </div>
           <button onClick={onClose} className="text-gray-400 hover:text-navy transition-colors ml-4 flex-shrink-0">
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
