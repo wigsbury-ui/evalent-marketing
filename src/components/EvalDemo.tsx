@@ -33,6 +33,12 @@ const BAND_PCT: Record<Band, number> = { Excellent: 100, Good: 75, Developing: 5
 export default function EvalDemo() {
   const [grade, setGrade] = useState('G6')
   const [curric, setCurric] = useState('IB')
+
+  const gradeLabel = (g: string) => {
+    const n = parseInt(g.replace('G', ''))
+    if (curric === 'British') return `Year ${n + 1}`
+    return `Grade ${n}`
+  }
   const [essay, setEssay] = useState('')
   const [state, setState] = useState<'idle' | 'loading' | 'done'>('idle')
   const [result, setResult] = useState<EvalResult | null>(null)
@@ -117,20 +123,20 @@ export default function EvalDemo() {
   return (
     <div className="max-w-5xl mx-auto">
       <div className="flex gap-3 flex-wrap mb-3 items-center">
-        <span className="text-xs font-bold text-gray-400 tracking-widest">GRADE</span>
-        {GRADES.map(g => (
-          <button key={g} onClick={() => { setGrade(g); setState('idle') }}
-            className={`px-3 py-1.5 rounded-full border-2 text-xs font-bold transition-all ${grade === g ? 'border-brand bg-blue-50 text-brand' : 'border-gray-200 text-gray-400 hover:border-brand'}`}>
-            {g.replace('G', 'Grade ')}
-          </button>
-        ))}
-      </div>
-      <div className="flex gap-3 flex-wrap mb-5 items-center">
         <span className="text-xs font-bold text-gray-400 tracking-widest">CURRICULUM</span>
         {CURRICULA.map(c => (
           <button key={c} onClick={() => { setCurric(c); setState('idle') }}
             className={`px-3 py-1.5 rounded-full border-2 text-xs font-bold transition-all ${curric === c ? 'border-brand bg-blue-50 text-brand' : 'border-gray-200 text-gray-400 hover:border-brand'}`}>
             {c}
+          </button>
+        ))}
+      </div>
+      <div className="flex gap-3 flex-wrap mb-5 items-center">
+        <span className="text-xs font-bold text-gray-400 tracking-widest">GRADE</span>
+        {GRADES.map(g => (
+          <button key={g} onClick={() => { setGrade(g); setState('idle') }}
+            className={`px-3 py-1.5 rounded-full border-2 text-xs font-bold transition-all ${grade === g ? 'border-brand bg-blue-50 text-brand' : 'border-gray-200 text-gray-400 hover:border-brand'}`}>
+            {gradeLabel(g)}
           </button>
         ))}
       </div>
@@ -174,7 +180,7 @@ export default function EvalDemo() {
             </span>
           </div>
           <p className="text-xs text-gray-500 mb-4">
-            {state === 'done' ? `${result?.score?.toFixed(1)}/4.0 · ${grade.replace('G','Grade ')} ${curric}` : 'Your evaluation will appear here.'}
+            {state === 'done' ? `${result?.score?.toFixed(1)}/4.0 · ${gradeLabel(grade)} ${curric}` : 'Your evaluation will appear here.'}
           </p>
 
           {state === 'idle' && (
