@@ -20,6 +20,15 @@ export default function Footer() {
             </div>
           </div>
           <div>
+            <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Schools by country</div>
+            <div className="space-y-2 text-sm text-blue-200">
+              <Link href="/uk" className="block hover:text-white transition-colors">UK Independent Schools</Link>
+              <Link href="/usa" className="block hover:text-white transition-colors">US Independent Schools</Link>
+              <Link href="/australia" className="block hover:text-white transition-colors">Australian Independent Schools</Link>
+              <Link href="/new-zealand" className="block hover:text-white transition-colors">New Zealand Schools</Link>
+            </div>
+          </div>
+          <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Company</div>
             <div className="space-y-2 text-sm text-blue-200">
               <a href="mailto:hello@evalent.io" className="block hover:text-white transition-colors">Contact</a>
