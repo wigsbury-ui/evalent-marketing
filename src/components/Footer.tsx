@@ -5,11 +5,16 @@ export default function Footer() {
     <footer className="bg-navy text-white py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+
+          {/* Brand column */}
           <div>
-            <img src="/evalent-logo-white.png" alt="Evalent" className="h-7 w-auto mb-1" />
-            <p className="text-blue-300 text-sm leading-relaxed mb-3">Admissions Intelligence for international schools.</p>
-            <p className="text-blue-400 text-xs leading-relaxed">Payments processed by Paddle as Merchant of Record.</p>
+            <img src="/evalent-logo-white.png" alt="Evalent" className="h-12 w-auto mb-4" />
+            <p className="text-blue-300 text-sm leading-relaxed">
+              AI-powered admissions assessments for international and independent schools. Structured reports, automated scoring, and one-click decisions — in under 5 minutes per candidate.
+            </p>
           </div>
+
+          {/* Product */}
           <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Product</div>
             <div className="space-y-2 text-sm text-blue-200">
@@ -19,6 +24,8 @@ export default function Footer() {
               <Link href="/demo" className="block hover:text-white transition-colors">See Evalent in action</Link>
             </div>
           </div>
+
+          {/* Schools by country */}
           <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Schools by country</div>
             <div className="space-y-2 text-sm text-blue-200">
@@ -28,20 +35,21 @@ export default function Footer() {
               <Link href="/new-zealand" className="block hover:text-white transition-colors">New Zealand Schools</Link>
             </div>
           </div>
+
+          {/* Company + Platform combined */}
           <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Company</div>
-            <div className="space-y-2 text-sm text-blue-200">
+            <div className="space-y-2 text-sm text-blue-200 mb-6">
               <a href="mailto:hello@evalent.io" className="block hover:text-white transition-colors">Contact</a>
               <a href="mailto:partners@evalent.io" className="block hover:text-white transition-colors">Partners</a>
             </div>
-          </div>
-          <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Platform</div>
             <div className="space-y-2 text-sm text-blue-200">
               <a href="https://app.evalent.io/login" className="block hover:text-white transition-colors">Sign in</a>
               <a href="https://app.evalent.io/signup" className="block hover:text-white transition-colors">Start free trial</a>
             </div>
           </div>
+
         </div>
 
         <div className="border-t border-white/10 pt-6">
