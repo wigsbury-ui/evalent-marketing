@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="text-lg font-black mb-3">EVAL<span className="text-brand-mid italic">ENT</span></div>
+            <img src="/evalent-logo-white.png" alt="Evalent" className="h-7 w-auto mb-1" />
             <p className="text-blue-300 text-sm leading-relaxed mb-3">Admissions Intelligence for international schools.</p>
             <p className="text-blue-400 text-xs leading-relaxed">Payments processed by Paddle as Merchant of Record.</p>
           </div>
