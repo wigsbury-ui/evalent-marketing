@@ -92,7 +92,7 @@ export default function Nav() {
               alt="Evalent"
               width={132}
               height={32}
-              className="h-8 w-auto"
+              className="h-5 w-auto"
               priority
             />
           </Link>
