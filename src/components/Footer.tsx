@@ -4,11 +4,11 @@ export default function Footer() {
   return (
     <footer className="bg-navy text-white py-16 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 items-start">
 
-          {/* Brand column */}
+          {/* Brand column — logo sits above, text starts where other headers start */}
           <div>
-            <img src="/evalent-logo-white.png" alt="Evalent" className="h-12 w-auto mb-4" />
+            <img src="/evalent-logo-white.png" alt="Evalent" className="h-12 w-auto mb-6" />
             <p className="text-blue-300 text-sm leading-relaxed">
               AI-powered admissions assessments for international and independent schools. Structured reports, automated scoring, and one-click decisions — in under 5 minutes per candidate.
             </p>
@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company + Platform combined */}
+          {/* Company + Platform */}
           <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Company</div>
             <div className="space-y-2 text-sm text-blue-200 mb-6">
