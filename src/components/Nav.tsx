@@ -90,9 +90,9 @@ export default function Nav() {
             <Image
               src="/evalent-logo.png"
               alt="Evalent"
-              width={132}
+              width={280}
               height={32}
-              className="h-5 w-auto"
+              className="h-8 w-auto"
               priority
             />
           </Link>
