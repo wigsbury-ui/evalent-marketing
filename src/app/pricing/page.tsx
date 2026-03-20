@@ -30,7 +30,7 @@ export default function Pricing() {
                   <div key={f} className="flex items-center gap-2"><span className="text-green-500 font-bold">✓</span>{f}</div>
                 ))}
               </div>
-              <a href="#trial" className={`block text-center text-sm font-bold py-3 rounded-xl transition-colors ${plan.popular ? 'bg-brand text-white hover:bg-blue-800' : 'bg-gray-50 text-navy border border-gray-200 hover:bg-gray-100'}`}>
+              <a href="https://app.evalent.io/signup" className={`block text-center text-sm font-bold py-3 rounded-xl transition-colors ${plan.popular ? 'bg-brand text-white hover:bg-blue-800' : 'bg-gray-50 text-navy border border-gray-200 hover:bg-gray-100'}`}>
                 Start free trial
               </a>
             </div>
