@@ -6,7 +6,7 @@ export default function Footer() {
 
       {/* Rotating watermark — sits behind all content */}
       <div
-        className="absolute top-0 right-[-200px] pointer-events-none"
+        className="absolute top-0 pointer-events-none" style={{ right: '15%' }}
         aria-hidden="true"
       >
         <img
