@@ -60,7 +60,7 @@ export default function Home() {
       <TrialSection />
 
       {/* FLOW */}
-      <section id="flow" className="py-16 px-6 bg-white">
+      <section id="flow" className="py-16 px-6 bg-white scroll-mt-4">
         <div className="max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">ZERO ADMIN OVERHEAD</div>
           <h2 className="text-4xl font-black text-navy tracking-tight mb-3">The report arrives.<br/>You click one button. Done.</h2>
