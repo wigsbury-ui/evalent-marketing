@@ -32,7 +32,7 @@ export default function TrialSection() {
   const prog = ((step - 1) / 3) * 100
 
   return (
-    <section id="trial" className="bg-blue-50 py-16 px-6">
+    <section id="trial" className="bg-blue-50 py-16 px-6 scroll-mt-4">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-white border border-blue-200 rounded-full px-4 py-1.5 text-xs font-bold text-brand-mid mb-4">
