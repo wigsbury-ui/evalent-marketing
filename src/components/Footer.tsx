@@ -4,17 +4,18 @@ export default function Footer() {
   return (
     <footer className="bg-navy text-white py-16 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 items-start">
 
-          {/* Brand column — logo sits above, text starts where other headers start */}
-          <div>
-            <img src="/evalent-logo-white.png" alt="Evalent" className="h-12 w-auto mb-6" />
-            <p className="text-blue-300 text-sm leading-relaxed">
-              AI-powered admissions assessments for international and independent schools. Structured reports, automated scoring, and one-click decisions — in under 5 minutes per candidate.
-            </p>
-          </div>
+        {/* Logo sits above the columns */}
+        <div className="mb-8">
+          <img src="/evalent-logo-white.png" alt="Evalent" className="h-12 w-auto mb-4" />
+          <p className="text-blue-300 text-sm leading-relaxed max-w-xs">
+            AI-powered admissions assessments for international and independent schools. Structured reports, automated scoring, and one-click decisions — in under 5 minutes per candidate.
+          </p>
+        </div>
 
-          {/* Product */}
+        {/* 4 equal columns — all starting from the same top line */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+
           <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Product</div>
             <div className="space-y-2 text-sm text-blue-200">
@@ -25,7 +26,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Schools by country */}
           <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Schools by country</div>
             <div className="space-y-2 text-sm text-blue-200">
@@ -36,13 +36,15 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company + Platform */}
           <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Company</div>
-            <div className="space-y-2 text-sm text-blue-200 mb-6">
+            <div className="space-y-2 text-sm text-blue-200">
               <a href="mailto:hello@evalent.io" className="block hover:text-white transition-colors">Contact</a>
               <a href="mailto:partners@evalent.io" className="block hover:text-white transition-colors">Partners</a>
             </div>
+          </div>
+
+          <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Platform</div>
             <div className="space-y-2 text-sm text-blue-200">
               <a href="https://app.evalent.io/login" className="block hover:text-white transition-colors">Sign in</a>
