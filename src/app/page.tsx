@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from '@/components/Nav'
 import VideoModal from '@/components/VideoModal'
 import Footer from '@/components/Footer'
@@ -7,6 +7,7 @@ import TrialSection from '@/components/TrialSection'
 import Link from 'next/link'
 
 export default function Home() {
+  const [videoOpen, setVideoOpen] = useState(false)
   return (
     <div className="min-h-screen">
       <Nav />
@@ -297,6 +298,7 @@ export default function Home() {
         </div>
       </section>
 
+      <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
       <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
       <Footer />
     </div>
