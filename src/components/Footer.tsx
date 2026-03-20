@@ -2,23 +2,47 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-navy text-white py-16 px-6">
-      <div className="max-w-6xl mx-auto">
+    <footer className="bg-navy text-white py-16 px-6 relative overflow-hidden">
 
-        {/* Logo — sits above everything */}
+      {/* Rotating watermark — sits behind all content */}
+      <div
+        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+        aria-hidden="true"
+      >
+        <img
+          src="/mark_white.svg"
+          alt=""
+          style={{
+            width: '600px',
+            height: '600px',
+            opacity: 0.04,
+            animation: 'spin-slow 60s linear infinite',
+          }}
+        />
+      </div>
+
+      {/* Keyframe injection */}
+      <style>{`
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to   { transform: rotate(360deg); }
+        }
+      `}</style>
+
+      <div className="relative z-10 max-w-6xl mx-auto">
+
+        {/* Logo */}
         <img src="/evalent-logo-white.png" alt="Evalent" className="h-12 w-auto mb-10" />
 
-        {/* 4 columns — all starting from the same line */}
+        {/* 4 columns */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
 
-          {/* Col 1 — SEO description */}
           <div>
             <p className="text-blue-300 text-sm leading-relaxed">
               AI-powered admissions assessments for international and independent schools. Structured reports, automated scoring, and one-click decisions — in under 5 minutes per candidate.
             </p>
           </div>
 
-          {/* Col 2 — Product */}
           <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Product</div>
             <div className="space-y-2 text-sm text-blue-200">
@@ -29,7 +53,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 3 — Country */}
           <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Schools by country</div>
             <div className="space-y-2 text-sm text-blue-200">
@@ -40,7 +63,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 4 — Company + Platform */}
           <div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Company</div>
             <div className="space-y-2 text-sm text-blue-200 mb-6">
