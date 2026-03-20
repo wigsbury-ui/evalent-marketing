@@ -1,4 +1,7 @@
+'use client'
+import React from 'react'
 import Nav from '@/components/Nav'
+import VideoModal from '@/components/VideoModal'
 import Footer from '@/components/Footer'
 import TrialSection from '@/components/TrialSection'
 import Link from 'next/link'
@@ -26,9 +29,9 @@ export default function Home() {
             <a href="#trial" className="bg-white text-brand font-bold text-sm px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors">
               Start your free trial →
             </a>
-            <a href="#flow" className="bg-transparent text-white font-medium text-sm px-7 py-3.5 rounded-xl border border-white/30 hover:border-white/60 transition-colors">
+            <button onClick={() => setVideoOpen(true)} className="bg-transparent text-white font-medium text-sm px-7 py-3.5 rounded-xl border border-white/30 hover:border-white/60 transition-colors">
               See how it works
-            </a>
+            </button>
           </div>
           <div className="mt-8 flex gap-5 justify-center flex-wrap">
             {['10 free reports','No credit card','Ready in 5 minutes','Zero admin overhead'].map(item => (
@@ -294,6 +297,7 @@ export default function Home() {
         </div>
       </section>
 
+      <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
       <Footer />
     </div>
   )
