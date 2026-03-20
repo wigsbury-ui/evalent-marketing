@@ -6,7 +6,7 @@ export default function Footer() {
 
       {/* Rotating watermark — sits behind all content */}
       <div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+        className="absolute top-0 right-[-100px] pointer-events-none"
         aria-hidden="true"
       >
         <img
@@ -16,7 +16,8 @@ export default function Footer() {
             width: '600px',
             height: '600px',
             opacity: 0.04,
-            animation: 'spin-slow 60s linear infinite',
+            animation: 'spin-slow 120s linear infinite',
+            transformOrigin: 'center center',
           }}
         />
       </div>
