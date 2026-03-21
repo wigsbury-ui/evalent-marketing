@@ -81,6 +81,7 @@ export default function AmericanPage() {
               title="Evalent — American Curriculum"
             />
           </div>
+          <p className="text-center text-xs text-gray-400 mt-2">Watch this 2-minute walkthrough</p>
         </div>
       </section>
 

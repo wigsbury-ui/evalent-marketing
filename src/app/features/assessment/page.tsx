@@ -95,6 +95,7 @@ export default function Page() {
               title="Evalent — The Assessment"
             />
           </div>
+          <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second walkthrough</p>
         </div>
       </section>
 

@@ -64,6 +64,7 @@ export default function Page() {
               title="Evalent — How it works"
             />
           </div>
+          <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second overview</p>
         </div>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div>
