@@ -57,7 +57,7 @@ export default function VideoModal({ open, onClose }: Props) {
     <div
       ref={overlayRef}
       className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-12"
-      style={{ background: 'rgba(7,17,46,0.90)' }}
+      style={{ background: 'rgba(7,17,46,0.55)' }}
       onClick={e => { if (e.target === overlayRef.current) onClose() }}
     >
       <div className="relative w-full max-w-4xl">
