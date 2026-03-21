@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 
-const FALLBACK_URL = 'https://player.vimeo.com/video/1164569992?autoplay=1&badge=0&byline=0&title=0'
+const FALLBACK_URL = 'https://player.vimeo.com/video/1175812373?autoplay=1&badge=0&byline=0&title=0'
 
 interface Props {
   open: boolean
