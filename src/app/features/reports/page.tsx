@@ -70,20 +70,15 @@ export default function Page() {
               ))}
             </div>
           </div>
-            <div className="relative">
-              <div className="bg-navy rounded-2xl overflow-hidden aspect-video flex items-center justify-center group cursor-pointer relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-navy via-blue-900 to-[#002ec1] opacity-90" />
-                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
-                <div className="relative text-center z-10">
-                  <div className="w-16 h-16 bg-white/20 border-2 border-white/40 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-white/30 transition-all">
-                    <svg className="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                  </div>
-                  <div className="text-white font-bold text-sm mb-1">Report Generation</div>
-                  <div className="text-blue-300 text-xs">2 min walkthrough</div>
-                </div>
-              </div>
-              <div className="mt-3 text-center text-xs text-gray-400">Video walkthrough coming soon</div>
-            </div>
+                      <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1175800177?badge=0&autopause=0&player_id=0&app_id=58479"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              title="Evalent — Report Generation"
+            />
+          </div>
         </div>
       </section>
 
