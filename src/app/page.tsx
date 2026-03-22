@@ -85,6 +85,9 @@ export default function Home() {
           <p className="text-center text-xs text-gray-400 mt-3">Watch this 2-minute overview to see Evalent in action</p>
         </div>
       </section>
+      {/* TRIAL */}
+      <TrialSection />
+
       {/* PROBLEM SECTION */}
       <section className="py-20 px-6 bg-navy relative overflow-hidden">
         {/* Subtle grid pattern */}
@@ -173,8 +176,6 @@ export default function Home() {
       </section>
 
 
-      {/* TRIAL */}
-      <TrialSection />
 
       {/* FLOW */}
       <section id="flow" className="py-16 px-6 bg-white scroll-mt-4">
