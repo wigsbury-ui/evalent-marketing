@@ -33,7 +33,7 @@ export default function Page() {
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
-          <h2 className="text-center text-lg font-bold text-navy mt-4">The school that responds first often wins</h2>
+          <h2 className="text-center text-xl font-bold text-navy mt-4">The school that responds first often wins</h2>
           <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Families applying to multiple schools make decisions quickly. Evalent compresses the admissions timeline at every stage — from five-minute report generation to one-click decisions from the assessor's inbox. Faster cycles mean higher yield, without your team working any harder.</p>
         </div>
       </section>

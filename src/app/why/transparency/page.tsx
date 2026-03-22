@@ -33,7 +33,7 @@ export default function Page() {
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
-          <h2 className="text-center text-lg font-bold text-navy mt-4">Complete visibility from registration to decision</h2>
+          <h2 className="text-center text-xl font-bold text-navy mt-4">Complete visibility from registration to decision</h2>
           <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Evalent gives every member of your admissions team a real-time view of every applicant at every stage. Every action is logged, every decision attributed, and every piece of evidence permanently stored. Nothing happens in the dark, and nothing can be quietly changed.</p>
         </div>
       </section>

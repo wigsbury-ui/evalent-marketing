@@ -33,7 +33,7 @@ export default function Page() {
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
-          <h2 className="text-center text-lg font-bold text-navy mt-4">Why every admissions decision needs to be evidenced</h2>
+          <h2 className="text-center text-xl font-bold text-navy mt-4">Why every admissions decision needs to be evidenced</h2>
           <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Families challenge decisions. Governors ask questions. Accreditation reviewers expect documentation. Evalent gives your school a structured, reproducible assessment record that stands up to scrutiny — because every score, every report, and every decision is documented against criteria your school defines and owns.</p>
         </div>
       </section>
