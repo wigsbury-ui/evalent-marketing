@@ -18,6 +18,14 @@ const CURRICULA_LINKS = [
   { href: '/curricula/american', label: 'American', desc: 'Common Core · Grades 3–10' },
 ]
 
+const WHY_LINKS = [
+  { href: '/why/evaluation', label: 'Intelligent Evaluation', desc: 'AI-powered, rubric-based scoring' },
+  { href: '/why/wellbeing', label: 'Student Wellbeing', desc: 'Calm, supported assessment experience' },
+  { href: '/why/transparency', label: 'Transparency', desc: 'Full audit trail, every decision documented' },
+  { href: '/why/defensibility', label: 'Defensibility', desc: 'Evidence-based, accreditation-ready records' },
+  { href: '/why/conversion', label: 'Conversion & Speed', desc: 'Faster decisions, higher yield' },
+]
+
 const SCHOOLS_LINKS = [
   { href: '/uk',          label: 'United Kingdom', desc: 'British National Curriculum · Years 4–11' },
   { href: '/usa',         label: 'United States',  desc: 'Common Core · Grades 3–10' },
@@ -100,9 +108,10 @@ export default function Nav() {
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-6 text-sm text-gray-500">
             <Dropdown label="Features" links={FEATURE_LINKS} extraItem={{ href: '/features', label: 'All features' }} />
-            <Link href="/demo" className="hover:text-navy transition-colors font-semibold text-brand">See Evalent in action</Link>
+            <Dropdown label="Why Evalent" links={WHY_LINKS} extraItem={{ href: '/why', label: 'All benefits' }} />
+          <Link href="/demo" className="hover:text-navy transition-colors font-semibold text-brand">See Evalent in action</Link>
             <Dropdown label="Curricula" links={CURRICULA_LINKS} extraItem={{ href: '/curricula', label: 'All curricula' }} />
-            <Dropdown label="Schools" links={SCHOOLS_LINKS} />
+            <Dropdown label="Countries" links={SCHOOLS_LINKS} />
             <Link href="/pricing" className="hover:text-navy transition-colors">Pricing</Link>
             <a href="https://app.evalent.io/login" className="hover:text-navy transition-colors">Sign in</a>
           </div>
@@ -130,12 +139,16 @@ export default function Nav() {
             {FEATURE_LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className="block pl-3 text-gray-500">→ {label}</Link>
             ))}
-            <Link href="/demo" className="block text-brand font-semibold pt-1">See Evalent in action</Link>
+            <div className="font-semibold text-navy pt-1">Why Evalent</div>
+        {WHY_LINKS.map(({ href, label }) => (
+          <Link key={href} href={href} className="block pl-3 text-gray-500">→ {label}</Link>
+        ))}
+        <Link href="/demo" className="block text-brand font-semibold pt-1">See Evalent in action</Link>
             <Link href="/curricula" className="block font-semibold text-navy pt-1">Curricula</Link>
             {CURRICULA_LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className="block pl-3 text-gray-500">→ {label}</Link>
             ))}
-            <div className="font-semibold text-navy pt-1">Schools</div>
+            <div className="font-semibold text-navy pt-1">Countries</div>
             {SCHOOLS_LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className="block pl-3 text-gray-500">→ {label}</Link>
             ))}
