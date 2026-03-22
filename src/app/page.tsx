@@ -71,10 +71,6 @@ export default function Home() {
       </section>
       {/* LOGO SLIDER */}
       <LogoSlider />
-            <div className="text-xs text-blue-400 mt-1 leading-tight">{label}</div>
-          </div>
-        ))}
-      </div>
 
       {/* HERO VIDEO */}
       <section className="px-6 py-12 bg-white border-t border-gray-100">
