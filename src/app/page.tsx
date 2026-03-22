@@ -84,8 +84,24 @@ export default function Home() {
         ))}
       </div>
 
+      {/* HERO VIDEO */}
+      <section className="px-6 py-12 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-black text-navy tracking-tight text-center mb-6">Two minutes. The complete picture.</h2>
+          <div className="rounded-2xl overflow-hidden relative shadow-xl w-full" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1175812373?badge=0&autopause=0&player_id=0&app_id=58479"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              title="Evalent — Admissions Intelligence"
+            />
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-3">Watch this 2-minute overview to see Evalent in action</p>
+        </div>
+      </section>
 
-            {/* PROBLEM SECTION */}
+      {/* PROBLEM SECTION */}
       <section className="py-16 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
