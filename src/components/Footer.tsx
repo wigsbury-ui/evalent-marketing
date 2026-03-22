@@ -67,7 +67,7 @@ export default function Footer() {
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Company</div>
             <div className="space-y-2 text-sm text-blue-200 mb-6">
               <a href="mailto:hello@evalent.io" className="block hover:text-white transition-colors">Contact</a>
-              <a href="mailto:partners@evalent.io" className="block hover:text-white transition-colors">Partners</a>
+              <a href="/partners" className="block hover:text-white transition-colors">Partner Programme</a>
             </div>
             <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Platform</div>
             <div className="space-y-2 text-sm text-blue-200">
