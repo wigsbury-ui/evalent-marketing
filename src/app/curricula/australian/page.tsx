@@ -19,9 +19,9 @@ export default function AustralianPage() {
     ['Year 10', 'ACARA Lower Sec.', '~60 min', '52 items'],
   ]
   const differences = [
-    ['ACARA general capabilities language', 'Reports use language aligned to the Australian Curriculum's general capabilities framework — literacy, numeracy, critical and creative thinking, and personal and social capability — where evidenced in the student's work.'],
+    ['ACARA general capabilities language', 'Reports use language aligned to the Australian Curriculum&apos;s general capabilities framework — literacy, numeracy, critical and creative thinking, and personal and social capability — where evidenced in the student&apos;s work.'],
     ['Year group labels throughout', 'Year labels are used throughout — Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or report. Primary and lower secondary framing is applied automatically based on year group.'],
-    ['NAPLAN is not a comparison point', 'Evalent is a criterion-referenced admissions assessment, not a population measure. Scores are expressed against your school's entry thresholds, not national percentiles or NAPLAN bands.'],
+    ['NAPLAN is not a comparison point', 'Evalent is a criterion-referenced admissions assessment, not a population measure. Scores are expressed against your school&apos;s entry thresholds, not national percentiles or NAPLAN bands.'],
     ['Writing evaluated against Australian standards', 'Extended writing tasks are evaluated for task completion, organisation, vocabulary, and accuracy — using language consistent with Australian Curriculum achievement standards at the appropriate year level.'],
     ['Senior pathway readiness at Year 10', 'For Year 10 entry, the report includes academic maturity indicators relevant to ATAR, IB, and IGCSE pathway readiness — giving your admissions team evidence for both the entry decision and initial subject pathway placement.'],
     ['No offshore terminology', 'Key Stage language, SATs references, Common Core, and any UK or US-specific framing are excluded. What you receive reflects Australian schooling norms throughout.'],
@@ -30,7 +30,7 @@ export default function AustralianPage() {
     ['What year groups are covered?', 'Year 4 through Year 10. Each year group has its own calibrated question set. Year 3 entry is on the product roadmap.'],
     ['How does Evalent relate to NAPLAN?', 'NAPLAN is a population measure designed to track national performance trends. Evalent is a school-administered criterion-referenced assessment built for entry decisions. They serve different purposes — many schools use both.'],
     ['How does Evalent compare to ACER assessments?', 'ACER provides norm-referenced scholarship ranking. Evalent provides criterion-referenced entry profiling. Many schools use Evalent for general enrolment and ACER specifically for scholarship selection.'],
-    ['Is Evalent suitable for boarding school applicants?', 'Particularly well-suited. Boarding applicants often cannot attend assessment days in person. Evalent's remote-first model means a student in rural Queensland or based overseas completes the same structured assessment as a local day applicant.'],
+    ['Is Evalent suitable for boarding school applicants?', 'Particularly well-suited. Boarding applicants often cannot attend assessment days in person. Evalent&apos;s remote-first model means a student in rural Queensland or based overseas completes the same structured assessment as a local day applicant.'],
     ['Can we configure our own thresholds?', 'Yes. Each school sets its own pass thresholds per domain per year group. Evalent reflects your standards, not a national benchmark.'],
     ['Does Evalent use Year or Grade labels?', 'Year labels throughout — Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or the report.'],
   ]

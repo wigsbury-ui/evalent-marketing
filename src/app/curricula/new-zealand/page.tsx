@@ -19,10 +19,10 @@ export default function NZCPage() {
     ['Year 10', 'NZC Level 5', '~60 min', '52 items'],
   ]
   const differences = [
-    ['Key competency language in reports', 'The five NZC key competencies — Thinking; Using Language, Symbols and Texts; Managing Self; Relating to Others; Participating and Contributing — are referenced in the written commentary where genuinely evidenced in the student's work.'],
+    ['Key competency language in reports', 'The five NZC key competencies — Thinking; Using Language, Symbols and Texts; Managing Self; Relating to Others; Participating and Contributing — are referenced in the written commentary where genuinely evidenced in the student&apos;s work.'],
     ['NZC curriculum level framing', 'Assessment and reporting is structured around NZC curriculum levels rather than year-group attainment targets. Levels 2 through 5 are covered, mapping automatically to the appropriate year group.'],
     ['Writing evaluated through an NZC lens', 'Extended writing tasks are evaluated for clarity of thinking, purposeful use of language, and the capacity to structure and present ideas — the qualities the NZC describes as central to literate, capable learners.'],
-    ['Values-informed mindset section', 'The Mindset section draws on the NZC's eight values — excellence, innovation, inquiry, curiosity, diversity, equity, community, and integrity — providing a structured lens on the kind of learner you are welcoming into your school.'],
+    ['Values-informed mindset section', 'The Mindset section draws on the NZC&apos;s eight values — excellence, innovation, inquiry, curiosity, diversity, equity, community, and integrity — providing a structured lens on the kind of learner you are welcoming into your school.'],
     ['Asset-focused, growth-oriented tone', 'Reports describe what the student demonstrates and where further development is possible — reflecting the NZC's vision of confident, connected, actively involved, and lifelong learners.'],
     ['No offshore terminology', 'Key Stage language, SATs references, NAPLAN framing, Common Core, and ACARA terminology are excluded. Reports use Year labels throughout and reflect New Zealand schooling norms.'],
   ]
