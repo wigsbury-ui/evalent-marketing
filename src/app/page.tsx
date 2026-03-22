@@ -5,7 +5,6 @@ import VideoModal from '@/components/VideoModal'
 import Footer from '@/components/Footer'
 import TrialSection from '@/components/TrialSection'
 import Link from 'next/link'
-import LogoSlider from '@/components/LogoSlider'
 
 export default function Home() {
   const [videoOpen, setVideoOpen] = useState(false)
@@ -69,8 +68,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* LOGO SLIDER */}
-      <LogoSlider />
 
       {/* HERO VIDEO */}
       <section className="px-6 py-12 bg-white border-t border-gray-100">
