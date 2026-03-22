@@ -8,7 +8,7 @@ const PROMPTS: Record<string, string> = {
   G6: "Many people say that the internet has made life better. Others disagree. What do you think? Write a response explaining your view, using at least two specific examples.",
   G7: "Some scientists believe that humans are the biggest threat to life on Earth. Do you agree? Write a structured response that considers more than one point of view.",
   G8: "Should schools teach students how to manage money and personal finances? Write an argument either for or against this idea, using evidence and clear reasoning.",
-  G9: "To what extent do you agree that social media has had a negative impact on young people's mental health? Write a structured essay presenting both sides before reaching a conclusion.",
+  G9: "To what extent do you agree that social media has had a negative impact on young people’s mental health? Write a structured essay presenting both sides before reaching a conclusion.",
   G10: "Evaluate the claim that economic development and environmental protection cannot coexist. In your response, consider evidence from both sides and reach a clear, justified conclusion.",
 }
 
@@ -29,14 +29,15 @@ interface EvalResult {
   develop: string
 }
 
-const BAND_STYLES: Record<Band, { bg: string; text: string; bar: string }> = {
-  Excellent:  { bg: 'bg-green-50',  text: 'text-green-700',  bar: 'bg-green-500' },
-  Good:       { bg: 'bg-blue-50',   text: 'text-blue-700',   bar: 'bg-brand' },
-  Developing: { bg: 'bg-yellow-50', text: 'text-yellow-700', bar: 'bg-yellow-500' },
-  Limited:    { bg: 'bg-red-50',    text: 'text-red-700',    bar: 'bg-red-500' },
+const BAND_CONFIG: Record<Band, { label: string; color: string; textColor: string; borderColor: string; dotColor: string }> = {
+  Excellent: { label: 'Excellent', color: '#f0fdf4', textColor: '#15803d', borderColor: '#bbf7d0', dotColor: '#22c55e' },
+  Good:      { label: 'Good',      color: '#eff6ff', textColor: '#1d4ed8', borderColor: '#bfdbfe', dotColor: '#3b82f6' },
+  Developing:{ label: 'Developing',color: '#fffbeb', textColor: '#b45309', borderColor: '#fde68a', dotColor: '#f59e0b' },
+  Limited:   { label: 'Limited',   color: '#fff1f2', textColor: '#be123c', borderColor: '#fecdd3', dotColor: '#f43f5e' },
 }
 
-const BAND_PCT: Record<Band, number> = { Excellent: 100, Good: 75, Developing: 50, Limited: 25 }
+const DOMAIN_COLORS = ['#002ec1', '#002ec1', '#7c3aed', '#059669']
+const BRAND = '#002ec1'
 
 export default function EvalDemo() {
   const [grade, setGrade] = useState('G6')
@@ -45,7 +46,7 @@ export default function EvalDemo() {
   const [state, setState] = useState<'idle' | 'loading' | 'done'>('idle')
   const [result, setResult] = useState<EvalResult | null>(null)
   const [commentary, setCommentary] = useState('')
-  const [barWidths, setBarWidths] = useState({ task: 0, org: 0, vocab: 0, acc: 0, overall: 0 })
+  const [barWidths, setBarWidths] = useState({ task: 0, org: 0, vocab: 0, acc: 0 })
   const resultRef = useRef<HTMLDivElement>(null)
 
   const gradeLabel = (g: string) => {
@@ -59,13 +60,7 @@ export default function EvalDemo() {
   useEffect(() => {
     if (state === 'done' && result) {
       setTimeout(() => {
-        setBarWidths({
-          task: result.task,
-          org: result.organisation,
-          vocab: result.vocabulary,
-          acc: result.accuracy,
-          overall: BAND_PCT[result.band] ?? 75,
-        })
+        setBarWidths({ task: result.task, org: result.organisation, vocab: result.vocabulary, acc: result.accuracy })
         streamCommentary(result.commentary)
         resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }, 200)
@@ -87,9 +82,8 @@ export default function EvalDemo() {
     if (!ready || state === 'loading') return
     setState('loading')
     setResult(null)
-    setBarWidths({ task: 0, org: 0, vocab: 0, acc: 0, overall: 0 })
+    setBarWidths({ task: 0, org: 0, vocab: 0, acc: 0 })
     setCommentary('')
-
     try {
       const res = await fetch('/api/evaluate', {
         method: 'POST',
@@ -125,163 +119,223 @@ export default function EvalDemo() {
   }
 
   const band = result?.band ?? 'Good'
-  const bandStyle = BAND_STYLES[band] ?? BAND_STYLES.Good
+  const bandConfig = BAND_CONFIG[band] ?? BAND_CONFIG.Good
+  const domainData = [
+    { label: 'Task completion', val: barWidths.task,  color: DOMAIN_COLORS[0] },
+    { label: 'Organisation',   val: barWidths.org,   color: DOMAIN_COLORS[1] },
+    { label: 'Vocabulary',     val: barWidths.vocab, color: DOMAIN_COLORS[2] },
+    { label: 'Accuracy',       val: barWidths.acc,   color: DOMAIN_COLORS[3] },
+  ]
 
   return (
-    <div className="max-w-5xl mx-auto">
-      <div className="flex gap-3 flex-wrap mb-3 items-center">
-        <span className="text-xs font-bold text-white/40 tracking-widest">CURRICULUM</span>
-        {CURRICULA.map(c => (
-          <button key={c} onClick={() => { setCurric(c); setState('idle') }}
-            className={`px-3 py-1.5 rounded-full border-2 text-xs font-bold transition-all ${curric === c ? 'border-brand bg-brand text-white' : 'border-white/20 text-white/50 hover:border-white/60 hover:text-white'}`}>
-            {c}
-          </button>
-        ))}
-      </div>
-      <div className="flex gap-3 flex-wrap mb-5 items-center">
-        <span className="text-xs font-bold text-white/40 tracking-widest">ENTERING INTO</span>
-        {GRADES.map(g => (
-          <button key={g} onClick={() => { setGrade(g); setState('idle') }}
-            className={`px-3 py-1.5 rounded-full border-2 text-xs font-bold transition-all ${grade === g ? 'border-brand bg-brand text-white' : 'border-white/20 text-white/50 hover:border-white/60 hover:text-white'}`}>
-            {gradeLabel(g)}
-          </button>
-        ))}
-      </div>
+    <section style={{ background: '#ffffff', paddingTop: '96px', paddingBottom: '96px', borderTop: '1px solid #f0f0f0' }}>
+      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 24px' }}>
 
-      <div className="grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden bg-white items-start">
-        <div className="p-6">
-          <div className="bg-navy px-6 py-3 -mx-6 -mt-6 mb-4 flex items-center gap-2 rounded-t-2xl">
-            <span className="w-2 h-2 bg-green-400 rounded-full" />
-            <span className="text-sm font-bold text-white">Your writing</span>
+        {/* Header row */}
+        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '48px', marginBottom: '56px', flexWrap: 'wrap' }}>
+          <div style={{ flex: '1', minWidth: '280px' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#eef2ff', color: BRAND, fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', padding: '6px 14px', borderRadius: '100px', marginBottom: '20px', textTransform: 'uppercase' as const }}>
+              <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: BRAND, display: 'inline-block' }} />
+              Live demo
+            </div>
+            <h2 style={{ fontFamily: 'Figtree, sans-serif', fontSize: 'clamp(36px, 4vw, 52px)', fontWeight: 800, lineHeight: 1.1, color: '#07112e', margin: '0 0 16px', letterSpacing: '-0.02em' }}>
+              See it evaluate.<br />
+              <span style={{ color: BRAND }}>Right now.</span>
+            </h2>
+            <p style={{ fontSize: '17px', color: '#4b5563', lineHeight: 1.65, margin: 0, maxWidth: '380px' }}>
+              Write any response — 50 words or more — and watch Evalent score it across four criteria in seconds.
+            </p>
           </div>
-          <p className="text-xs text-gray-500 mb-4">Write at least 50 words to unlock the Evalent evaluation.</p>
-          <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 mb-3">
-            <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-1.5">WRITING PROMPT</div>
-            <p className="text-sm text-navy leading-relaxed italic">{PROMPTS[grade]}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', minWidth: '260px', paddingTop: '88px' }}>
+            {[
+              { icon: '◆', label: 'Four scored domains', sub: 'Task, Organisation, Vocabulary, Accuracy' },
+              { icon: '◈', label: 'Calibrated to grade & curriculum', sub: 'IB, British and American standards' },
+              { icon: '◉', label: 'Expert commentary generated', sub: 'References the student’s actual words' },
+            ].map(item => (
+              <div key={item.label} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#eef2ff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: BRAND, fontSize: '14px', flexShrink: 0 }}>
+                  {item.icon}
+                </div>
+                <div>
+                  <div style={{ fontSize: '13px', fontWeight: 700, color: '#07112e', marginBottom: '2px' }}>{item.label}</div>
+                  <div style={{ fontSize: '12px', color: '#6b7280' }}>{item.sub}</div>
+                </div>
+              </div>
+            ))}
           </div>
-          <textarea
-            value={essay}
-            onChange={e => { setEssay(e.target.value); if (state === 'done') setState('idle') }}
-            placeholder="Write your response here..."
-            className="w-full border border-gray-200 rounded-xl p-3 text-sm text-navy font-sans resize-none outline-none min-h-44 leading-relaxed focus:border-brand transition-colors"
-          />
-          <div className={`text-xs text-right mt-1 mb-3 ${ready ? 'text-green-600 font-semibold' : 'text-gray-400'}`}>
-            {words} word{words !== 1 ? 's' : ''}{!ready ? ` — ${50 - words} more to evaluate` : ' — ready'}
-          </div>
-          <button
-            onClick={evaluate}
-            disabled={!ready || state === 'loading'}
-            className={`w-full py-3 rounded-xl text-sm font-bold transition-all ${ready && state !== 'loading' ? 'bg-brand text-white hover:bg-blue-800' : 'bg-gray-100 text-gray-400 cursor-not-allowed'}`}
-          >
-            {state === 'loading' ? 'Evaluating...' : ready ? 'Evaluate my writing →' : `${50 - words} more words needed`}
-          </button>
         </div>
 
-        <div className="p-6" ref={resultRef}>
-          <div className="bg-navy px-6 py-3 -mx-6 -mt-6 mb-4 flex items-center gap-2 rounded-t-2xl">
-            <span className={`w-2 h-2 rounded-full ${state === 'done' ? 'bg-green-400' : state === 'loading' ? 'bg-yellow-400 animate-pulse' : 'bg-gray-400'}`} />
-            <span className="text-sm font-bold text-white">
-              {state === 'done' ? `Evaluation complete — ${band}` : state === 'loading' ? 'Evaluating...' : 'Evalent evaluation'}
-            </span>
+        {/* Selectors */}
+        <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap', alignItems: 'center', marginBottom: '24px', padding: '16px 24px', background: '#f9fafb', borderRadius: '16px', border: '1px solid #e5e7eb' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '11px', fontWeight: 700, color: '#9ca3af', letterSpacing: '0.08em', textTransform: 'uppercase' as const, whiteSpace: 'nowrap' as const }}>Curriculum</span>
+            {CURRICULA.map(c => (
+              <button key={c} onClick={() => { setCurric(c); setState('idle') }} style={{ padding: '5px 14px', borderRadius: '100px', border: `2px solid ${curric === c ? BRAND : '#d1d5db'}`, background: curric === c ? BRAND : 'white', color: curric === c ? 'white' : '#6b7280', fontSize: '12px', fontWeight: 700, cursor: 'pointer', transition: 'all 0.15s' }}>{c}</button>
+            ))}
           </div>
-          <p className="text-xs text-gray-500 mb-4">
-            {state === 'done' ? `${result?.score?.toFixed(1)}/4.0 · ${gradeLabel(grade)} ${curric}` : 'Your evaluation will appear here.'}
-          </p>
+          <div style={{ width: '1px', height: '32px', background: '#e5e7eb', flexShrink: 0 }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '11px', fontWeight: 700, color: '#9ca3af', letterSpacing: '0.08em', textTransform: 'uppercase' as const, whiteSpace: 'nowrap' as const }}>Entering into</span>
+            {GRADES.map(g => (
+              <button key={g} onClick={() => { setGrade(g); setState('idle') }} style={{ padding: '5px 14px', borderRadius: '100px', border: `2px solid ${grade === g ? BRAND : '#d1d5db'}`, background: grade === g ? BRAND : 'white', color: grade === g ? 'white' : '#6b7280', fontSize: '12px', fontWeight: 700, cursor: 'pointer', transition: 'all 0.15s' }}>{gradeLabel(g)}</button>
+            ))}
+          </div>
+        </div>
 
-          {state === 'idle' && (
-            <div className="flex flex-col items-center justify-center min-h-80 text-center gap-3">
-              <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
-                <svg className="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div className="text-sm font-bold text-navy">Your evaluation will appear here</div>
-              <div className="text-xs text-gray-400 max-w-48 leading-relaxed">Write your response on the left, then click evaluate</div>
+        {/* Main widget */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', border: '1.5px solid #e2e8f0', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 40px rgba(0,0,0,0.06)', background: 'white' }}>
+
+          {/* LEFT col */}
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={{ padding: '14px 24px', background: '#07112e', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#4ade80', display: 'inline-block' }} />
+              <span style={{ fontSize: '12px', fontWeight: 700, color: 'white', letterSpacing: '0.05em' }}>Your writing</span>
             </div>
-          )}
-
-          {state === 'loading' && (
-            <div className="flex flex-col items-center justify-center min-h-80 gap-4">
-              <div className="text-sm font-bold text-navy">Reading your response...</div>
-              <div className="text-xs text-gray-500">Scoring structure, vocabulary, task completion</div>
-              <div className="flex gap-1.5 mt-2">
-                {[0,1,2].map(i => (
-                  <div key={i} className="w-2 h-2 bg-brand rounded-full animate-bounce" style={{ animationDelay: `${i * 0.15}s` }} />
-                ))}
+            <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+              <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '14px 16px', marginBottom: '14px' }}>
+                <div style={{ fontSize: '10px', fontWeight: 800, color: '#94a3b8', letterSpacing: '0.12em', marginBottom: '8px', textTransform: 'uppercase' as const }}>Writing prompt — {gradeLabel(grade)} {curric}</div>
+                <p style={{ fontSize: '13px', color: '#07112e', lineHeight: 1.6, margin: 0, fontStyle: 'italic' }}>{PROMPTS[grade]}</p>
               </div>
+              <textarea
+                value={essay}
+                onChange={e => { setEssay(e.target.value); if (state === 'done') setState('idle') }}
+                placeholder="Write your response here..."
+                style={{ width: '100%', boxSizing: 'border-box' as const, border: `1.5px solid ${ready ? '#86efac' : '#e2e8f0'}`, borderRadius: '12px', padding: '14px 16px', fontSize: '14px', color: '#07112e', fontFamily: 'Figtree, sans-serif', resize: 'none' as const, outline: 'none', minHeight: '160px', lineHeight: 1.65, transition: 'border-color 0.2s', background: 'white' }}
+              />
+              <div style={{ fontSize: '12px', color: ready ? '#16a34a' : '#94a3b8', fontWeight: ready ? 700 : 400, marginTop: '8px', marginBottom: '14px' }}>
+                {words} word{words !== 1 ? 's' : ''}{!ready ? ` — ${50 - words} more needed` : ' ✓ ready to evaluate'}
+              </div>
+              <button onClick={evaluate} disabled={!ready || state === 'loading'} style={{ width: '100%', padding: '14px', borderRadius: '12px', border: 'none', background: ready && state !== 'loading' ? BRAND : '#f1f5f9', color: ready && state !== 'loading' ? 'white' : '#94a3b8', fontSize: '14px', fontWeight: 800, cursor: ready && state !== 'loading' ? 'pointer' : 'not-allowed', transition: 'all 0.2s', letterSpacing: '0.01em', fontFamily: 'Figtree, sans-serif' }}>
+                {state === 'loading' ? 'Evaluating...' : ready ? 'Evaluate my writing →' : `${50 - words} more words to unlock`}
+              </button>
             </div>
-          )}
+          </div>
 
-          {state === 'done' && result && (
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-xl">
-                <div>
-                  <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-1">BAND</div>
-                  <span className={`text-xs font-black px-2.5 py-1 rounded-full ${bandStyle.bg} ${bandStyle.text}`}>{band}</span>
-                </div>
-                <div className="w-px h-9 bg-gray-200" />
-                <div>
-                  <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-1">SCORE</div>
-                  <span className="text-xl font-black text-navy">{result.score.toFixed(1)}</span>
-                  <span className="text-xs text-gray-400"> /4.0</span>
-                </div>
-                <div className="flex-1">
-                  <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-1.5">OVERALL</div>
-                  <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div className={`h-full rounded-full transition-all duration-1000 ${bandStyle.bar}`} style={{ width: `${barWidths.overall}%` }} />
+          {/* RIGHT col */}
+          <div style={{ display: 'flex', flexDirection: 'column', borderLeft: '1.5px solid #e2e8f0' }} ref={resultRef}>
+            <div style={{ padding: '14px 24px', background: '#07112e', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', display: 'inline-block', background: state === 'done' ? '#4ade80' : state === 'loading' ? '#fbbf24' : '#64748b', transition: 'background 0.3s' }} />
+              <span style={{ fontSize: '12px', fontWeight: 700, color: 'white', letterSpacing: '0.05em' }}>
+                {state === 'done' ? 'Evaluation complete' : state === 'loading' ? 'Evaluating…' : 'Evalent evaluation'}
+              </span>
+              {state === 'done' && result && (
+                <span style={{ marginLeft: 'auto', padding: '2px 10px', borderRadius: '100px', background: bandConfig.color, color: bandConfig.textColor, fontSize: '11px', fontWeight: 800 }}>{band}</span>
+              )}
+            </div>
+            <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+
+              {state === 'idle' && (
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '320px', gap: '16px', textAlign: 'center' as const }}>
+                  <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: '#eef2ff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={BRAND} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                      <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '15px', fontWeight: 700, color: '#07112e', marginBottom: '6px' }}>Your evaluation will appear here</div>
+                    <div style={{ fontSize: '13px', color: '#94a3b8', lineHeight: 1.5 }}>Write at least 50 words on the left,<br />then click evaluate</div>
                   </div>
                 </div>
-              </div>
+              )}
 
-              <div className="grid grid-cols-2 gap-2">
-                {[
-                  { label: 'TASK COMPLETION', val: barWidths.task,  color: 'bg-brand' },
-                  { label: 'ORGANISATION',    val: barWidths.org,   color: 'bg-brand' },
-                  { label: 'VOCABULARY',      val: barWidths.vocab, color: 'bg-purple-500' },
-                  { label: 'ACCURACY',        val: barWidths.acc,   color: 'bg-green-500' },
-                ].map(({ label, val, color }) => (
-                  <div key={label} className="bg-gray-50 border border-gray-200 rounded-lg p-2.5">
-                    <div className="text-[9px] font-bold text-gray-400 tracking-widest mb-1.5">{label}</div>
-                    <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden mb-1">
-                      <div className={`h-full rounded-full transition-all duration-700 ${color}`} style={{ width: `${val}%` }} />
+              {state === 'loading' && (
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '320px', gap: '12px' }}>
+                  <div style={{ display: 'flex', gap: '6px' }}>
+                    {[0, 1, 2].map(i => (
+                      <div key={i} style={{ width: '8px', height: '8px', borderRadius: '50%', background: BRAND, animation: 'bounce 0.9s infinite', animationDelay: `${i * 0.18}s` }} />
+                    ))}
+                  </div>
+                  <div style={{ fontSize: '14px', fontWeight: 700, color: '#07112e' }}>Reading your response…</div>
+                  <div style={{ fontSize: '12px', color: '#94a3b8' }}>Scoring structure, vocabulary, task completion</div>
+                  <style>{`@keyframes bounce { 0%,80%,100%{transform:scale(.6)} 40%{transform:scale(1)} }`}</style>
+                </div>
+              )}
+
+              {state === 'done' && result && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '14px 16px', background: bandConfig.color, border: `1px solid ${bandConfig.borderColor}`, borderRadius: '12px' }}>
+                    <div>
+                      <div style={{ fontSize: '10px', fontWeight: 800, color: bandConfig.textColor, letterSpacing: '0.1em', textTransform: 'uppercase' as const, opacity: 0.7 }}>Band</div>
+                      <div style={{ fontSize: '18px', fontWeight: 900, color: bandConfig.textColor, lineHeight: 1 }}>{band}</div>
                     </div>
-                    <div className="text-xs font-bold text-navy">{Math.round(val)}%</div>
+                    <div style={{ width: '1px', height: '36px', background: bandConfig.borderColor }} />
+                    <div>
+                      <div style={{ fontSize: '10px', fontWeight: 800, color: bandConfig.textColor, letterSpacing: '0.1em', textTransform: 'uppercase' as const, opacity: 0.7 }}>Score</div>
+                      <div style={{ fontSize: '18px', fontWeight: 900, color: bandConfig.textColor, lineHeight: 1 }}>{result.score.toFixed(1)}<span style={{ fontSize: '12px', opacity: 0.6 }}>/4.0</span></div>
+                    </div>
+                    <div style={{ flex: 1, paddingLeft: '4px' }}>
+                      <div style={{ fontSize: '10px', fontWeight: 800, color: bandConfig.textColor, letterSpacing: '0.1em', textTransform: 'uppercase' as const, opacity: 0.7, marginBottom: '6px' }}>Overall</div>
+                      <div style={{ height: '5px', background: bandConfig.borderColor, borderRadius: '100px', overflow: 'hidden' }}>
+                        <div style={{ height: '100%', width: `${band === 'Excellent' ? 95 : band === 'Good' ? 75 : band === 'Developing' ? 50 : 25}%`, background: bandConfig.textColor, borderRadius: '100px', transition: 'width 0.8s cubic-bezier(0.4,0,0.2,1)' }} />
+                      </div>
+                    </div>
                   </div>
-                ))}
-              </div>
 
-              <div className="border border-gray-200 rounded-xl overflow-hidden">
-                <div className="text-[10px] font-bold text-gray-400 tracking-widest px-3 py-2 bg-gray-50 border-b border-gray-200">EVALUATOR COMMENTARY</div>
-                <p className="text-sm text-navy leading-relaxed p-3 min-h-14">
-                  {commentary}
-                  {commentary.length < (result.commentary.length) && (
-                    <span className="inline-block w-0.5 h-3.5 bg-brand align-middle ml-0.5 animate-pulse" />
-                  )}
-                </p>
-              </div>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                    {domainData.map(({ label, val, color }) => (
+                      <div key={label} style={{ padding: '10px 12px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '10px' }}>
+                        <div style={{ fontSize: '10px', fontWeight: 800, color: '#94a3b8', letterSpacing: '0.08em', marginBottom: '8px', textTransform: 'uppercase' as const }}>{label}</div>
+                        <div style={{ height: '4px', background: '#e2e8f0', borderRadius: '100px', overflow: 'hidden', marginBottom: '6px' }}>
+                          <div style={{ height: '100%', width: `${val}%`, background: color, borderRadius: '100px', transition: 'width 0.7s cubic-bezier(0.4,0,0.2,1)' }} />
+                        </div>
+                        <div style={{ fontSize: '13px', fontWeight: 800, color: '#07112e' }}>{Math.round(val)}%</div>
+                      </div>
+                    ))}
+                  </div>
 
-              <div className="grid grid-cols-2 gap-2">
-                <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                  <div className="text-[9px] font-bold text-green-700 tracking-widest mb-2">STRENGTHS</div>
-                  {result.strengths.split('\n').filter(Boolean).map((s, i) => (
-                    <div key={i} className="text-xs text-green-800 mb-1 leading-tight">+ {s.trim()}</div>
-                  ))}
+                  <div style={{ border: '1px solid #e2e8f0', borderRadius: '10px', overflow: 'hidden' }}>
+                    <div style={{ padding: '8px 14px', background: '#f8fafc', borderBottom: '1px solid #e2e8f0', fontSize: '10px', fontWeight: 800, color: '#94a3b8', letterSpacing: '0.1em', textTransform: 'uppercase' as const }}>Evaluator commentary</div>
+                    <p style={{ padding: '12px 14px', margin: 0, fontSize: '13px', color: '#374151', lineHeight: 1.65, minHeight: '56px' }}>
+                      {commentary}
+                      {commentary.length < result.commentary.length && (
+                        <span style={{ display: 'inline-block', width: '2px', height: '14px', background: BRAND, verticalAlign: 'middle', marginLeft: '2px', animation: 'blink 0.8s infinite' }} />
+                      )}
+                    </p>
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                    <div style={{ padding: '10px 12px', background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '10px' }}>
+                      <div style={{ fontSize: '10px', fontWeight: 800, color: '#15803d', letterSpacing: '0.08em', marginBottom: '8px', textTransform: 'uppercase' as const }}>Strengths</div>
+                      {result.strengths.split('\n').filter(Boolean).map((s, i) => (
+                        <div key={i} style={{ fontSize: '11px', color: '#166534', marginBottom: '4px', lineHeight: 1.45 }}>+ {s.trim()}</div>
+                      ))}
+                    </div>
+                    <div style={{ padding: '10px 12px', background: '#fffbeb', border: '1px solid #fde68a', borderRadius: '10px' }}>
+                      <div style={{ fontSize: '10px', fontWeight: 800, color: '#b45309', letterSpacing: '0.08em', marginBottom: '8px', textTransform: 'uppercase' as const }}>To develop</div>
+                      {result.develop.split('\n').filter(Boolean).map((s, i) => (
+                        <div key={i} style={{ fontSize: '11px', color: '#92400e', marginBottom: '4px', lineHeight: 1.45 }}>→ {s.trim()}</div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <a href="/#trial" style={{ display: 'block', textAlign: 'center' as const, padding: '13px', borderRadius: '12px', background: BRAND, color: 'white', fontSize: '13px', fontWeight: 800, textDecoration: 'none', letterSpacing: '0.01em' }}>
+                    Use this for real applicants — start free trial →
+                  </a>
+                  <style>{`@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }`}</style>
                 </div>
-                <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
-                  <div className="text-[9px] font-bold text-amber-700 tracking-widest mb-2">TO DEVELOP</div>
-                  {result.develop.split('\n').filter(Boolean).map((s, i) => (
-                    <div key={i} className="text-xs text-amber-800 mb-1 leading-tight">→ {s.trim()}</div>
-                  ))}
-                </div>
-              </div>
+              )}
 
-              <a href="/#trial" className="block text-center bg-brand text-white text-xs font-bold py-3 rounded-xl hover:bg-blue-800 transition-colors mt-1">
-                Use this for real applicants — start free trial →
-              </a>
             </div>
-          )}
+          </div>
         </div>
+
+        {/* Stats strip */}
+        <div style={{ display: 'flex', gap: '32px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', marginTop: '40px', paddingTop: '32px', borderTop: '1px solid #f0f0f0' }}>
+          {[
+            { stat: '45 min',    label: 'Assessment window' },
+            { stat: '4 domains', label: 'Scored simultaneously' },
+            { stat: '< 2 sec',   label: 'Evaluation time' },
+            { stat: '6 bands',   label: 'Recommendation tiers' },
+          ].map(item => (
+            <div key={item.label} style={{ textAlign: 'center' as const }}>
+              <div style={{ fontSize: '22px', fontWeight: 900, color: '#07112e', letterSpacing: '-0.02em', lineHeight: 1.1 }}>{item.stat}</div>
+              <div style={{ fontSize: '12px', color: '#94a3b8', marginTop: '3px' }}>{item.label}</div>
+            </div>
+          ))}
+        </div>
+
       </div>
-    </div>
+    </section>
   )
 }
