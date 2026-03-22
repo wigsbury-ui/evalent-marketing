@@ -13,6 +13,13 @@ const FEATURE_LINKS = [
 ]
 
 const CURRICULA_LINKS = [
+  { href: '/curricula/ib', label: 'IB', desc: 'PYP & MYP · Grades 3–10' },
+  { href: '/curricula/british', label: 'British', desc: 'KS2, KS3 & KS4 · Years 4–11' },
+  { href: '/curricula/american', label: 'American', desc: 'Common Core · Grades 3–10' },
+  { href: '/curricula/australian', label: 'Australian', desc: 'ACARA · Years 4–10' },
+  { href: '/curricula/new-zealand', label: 'New Zealand', desc: 'NZC · Years 4–10' },
+]
+const CURRICULA_LINKS_OLD = [
   { href: '/curricula/ib',       label: 'IB',       desc: 'PYP & MYP · Grades 3–10' },
   { href: '/curricula/british',  label: 'British',  desc: 'KS2, KS3 & KS4 · Years 4–11' },
   { href: '/curricula/american', label: 'American', desc: 'Common Core · Grades 3–10' },
