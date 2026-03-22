@@ -9,7 +9,7 @@ const FORMS = {
 export default function AssessmentDemo() {
   const [active, setActive] = useState<'g6' | 'g8' | null>(null)
   const [name, setName] = useState('')
-  const [lang, setLang] = useState<'en-GB' | 'en-US'>('en-GB')
+  const [lang, setLang] = useState('UK')
 
   function getUrl(key: 'g6' | 'g8') {
     const form = FORMS[key]
