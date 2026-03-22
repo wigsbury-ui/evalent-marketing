@@ -18,22 +18,20 @@ export default function NZCPage() {
     ['Year 9',  'NZC Level 5', '~55 min', '50 items'],
     ['Year 10', 'NZC Level 5', '~60 min', '52 items'],
   ]
-
   const differences = [
-    ['Key competency language in reports', 'The five NZC key competencies — Thinking; Using Language, Symbols and Texts; Managing Self; Relating to Others; Participating and Contributing — are referenced in the written commentary where genuinely evidenced in the student\'s work.'],
+    ['Key competency language in reports', 'The five NZC key competencies — Thinking; Using Language, Symbols and Texts; Managing Self; Relating to Others; Participating and Contributing — are referenced in the written commentary where genuinely evidenced in the student's work.'],
     ['NZC curriculum level framing', 'Assessment and reporting is structured around NZC curriculum levels rather than year-group attainment targets. Levels 2 through 5 are covered, mapping automatically to the appropriate year group.'],
     ['Writing evaluated through an NZC lens', 'Extended writing tasks are evaluated for clarity of thinking, purposeful use of language, and the capacity to structure and present ideas — the qualities the NZC describes as central to literate, capable learners.'],
-    ['Values-informed mindset section', 'The Mindset section draws on the NZC\'s eight values — excellence, innovation, inquiry, curiosity, diversity, equity, community, and integrity — providing a structured lens on the kind of learner you are welcoming into your school.'],
-    ['Asset-focused, growth-oriented tone', 'Reports describe what the student demonstrates and where further development is possible — reflecting the NZC\'s vision of confident, connected, actively involved, and lifelong learners.'],
+    ['Values-informed mindset section', 'The Mindset section draws on the NZC's eight values — excellence, innovation, inquiry, curiosity, diversity, equity, community, and integrity — providing a structured lens on the kind of learner you are welcoming into your school.'],
+    ['Asset-focused, growth-oriented tone', 'Reports describe what the student demonstrates and where further development is possible — reflecting the NZC's vision of confident, connected, actively involved, and lifelong learners.'],
     ['No offshore terminology', 'Key Stage language, SATs references, NAPLAN framing, Common Core, and ACARA terminology are excluded. Reports use Year labels throughout and reflect New Zealand schooling norms.'],
   ]
-
   const faqs = [
     ['What year groups are covered?', 'Year 4 through Year 10. Each year group has its own calibrated question set mapped to the appropriate NZC curriculum level. Year 3 entry is on the product roadmap.'],
     ['How does the NZC level mapping work?', 'Year 4 maps to NZC Level 2, Years 5–6 to Level 3, Years 7–8 to Level 4, and Years 9–10 to Level 5. The assessment content and report language reflect the appropriate level automatically.'],
     ['Can we use Evalent for international students applying to NZ schools?', 'Yes. The assessment link can be sent to any email address worldwide. Students complete it on any device, making it well-suited for families applying from overseas or from other regions of New Zealand.'],
     ['Is there a national admissions standard Evalent aligns to?', 'New Zealand has no national independent school admissions standard. Evalent provides the structured, documented assessment record that individual schools need to make consistent, evidenced decisions against their own entry criteria.'],
-    ['Can we set our own entry thresholds?', 'Yes. You configure your school\'s entrance thresholds by year group and by domain. Evalent reflects your standards, not a national benchmark.'],
+    ['Can we set our own entry thresholds?', 'Yes. You configure your school's entrance thresholds by year group and by domain. Evalent reflects your standards, not a national benchmark.'],
     ['Does Evalent use Year or Grade labels?', 'Year labels throughout — Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or report.'],
   ]
 
@@ -81,30 +79,17 @@ export default function NZCPage() {
               ))}
             </div>
           </div>
-                    <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1175969395?badge=0&autopause=0&player_id=0&app_id=58479"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — New Zealand Curriculum"
-            />
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-2">Watch this 2-minute walkthrough</p>
-          </div>
-              <div className="bg-white rounded-xl p-3 border border-teal-100">
-                <div className="text-xl font-black text-navy">5</div>
-                <div className="text-xs text-gray-500 mt-0.5">Key competencies</div>
-              </div>
-              <div className="bg-white rounded-xl p-3 border border-teal-100">
-                <div className="text-xl font-black text-navy">8</div>
-                <div className="text-xs text-gray-500 mt-0.5">NZC values referenced</div>
-              </div>
-              <div className="bg-white rounded-xl p-3 border border-teal-100">
-                <div className="text-xl font-black text-navy">&lt;5 min</div>
-                <div className="text-xs text-gray-500 mt-0.5">Report delivery</div>
-              </div>
+          <div>
+            <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/1175969395?badge=0&autopause=0&player_id=0&app_id=58479"
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="Evalent — New Zealand Curriculum"
+              />
             </div>
+            <p className="text-center text-xs text-gray-400 mt-2">Watch this 2-minute walkthrough</p>
           </div>
         </div>
       </section>

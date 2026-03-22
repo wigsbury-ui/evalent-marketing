@@ -18,21 +18,19 @@ export default function AustralianPage() {
     ['Year 9',  'ACARA Lower Sec.', '~55 min', '50 items'],
     ['Year 10', 'ACARA Lower Sec.', '~60 min', '52 items'],
   ]
-
   const differences = [
-    ['ACARA general capabilities language', 'Reports use language aligned to the Australian Curriculum\'s general capabilities framework — literacy, numeracy, critical and creative thinking, and personal and social capability — where evidenced in the student\'s work.'],
+    ['ACARA general capabilities language', 'Reports use language aligned to the Australian Curriculum's general capabilities framework — literacy, numeracy, critical and creative thinking, and personal and social capability — where evidenced in the student's work.'],
     ['Year group labels throughout', 'Year labels are used throughout — Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or report. Primary and lower secondary framing is applied automatically based on year group.'],
-    ['NAPLAN is not a comparison point', 'Evalent is a criterion-referenced admissions assessment, not a population measure. Scores are expressed against your school\'s entry thresholds, not national percentiles or NAPLAN bands.'],
-    ['Writing evaluated against Australian standards', 'Extended writing tasks are evaluated for task completion, organisation, vocabulary, and accuracy — using language and expectations consistent with Australian Curriculum achievement standards at the appropriate year level.'],
+    ['NAPLAN is not a comparison point', 'Evalent is a criterion-referenced admissions assessment, not a population measure. Scores are expressed against your school's entry thresholds, not national percentiles or NAPLAN bands.'],
+    ['Writing evaluated against Australian standards', 'Extended writing tasks are evaluated for task completion, organisation, vocabulary, and accuracy — using language consistent with Australian Curriculum achievement standards at the appropriate year level.'],
     ['Senior pathway readiness at Year 10', 'For Year 10 entry, the report includes academic maturity indicators relevant to ATAR, IB, and IGCSE pathway readiness — giving your admissions team evidence for both the entry decision and initial subject pathway placement.'],
     ['No offshore terminology', 'Key Stage language, SATs references, Common Core, and any UK or US-specific framing are excluded. What you receive reflects Australian schooling norms throughout.'],
   ]
-
   const faqs = [
     ['What year groups are covered?', 'Year 4 through Year 10. Each year group has its own calibrated question set. Year 3 entry is on the product roadmap.'],
     ['How does Evalent relate to NAPLAN?', 'NAPLAN is a population measure designed to track national performance trends. Evalent is a school-administered criterion-referenced assessment built for entry decisions. They serve different purposes — many schools use both.'],
     ['How does Evalent compare to ACER assessments?', 'ACER provides norm-referenced scholarship ranking. Evalent provides criterion-referenced entry profiling. Many schools use Evalent for general enrolment and ACER specifically for scholarship selection.'],
-    ['Is Evalent suitable for boarding school applicants?', 'Particularly well-suited. Boarding applicants often cannot attend assessment days in person. Evalent\'s remote-first model means a student in rural Queensland or based overseas completes the same structured assessment as a local day applicant.'],
+    ['Is Evalent suitable for boarding school applicants?', 'Particularly well-suited. Boarding applicants often cannot attend assessment days in person. Evalent's remote-first model means a student in rural Queensland or based overseas completes the same structured assessment as a local day applicant.'],
     ['Can we configure our own thresholds?', 'Yes. Each school sets its own pass thresholds per domain per year group. Evalent reflects your standards, not a national benchmark.'],
     ['Does Evalent use Year or Grade labels?', 'Year labels throughout — Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or the report.'],
   ]
@@ -81,30 +79,17 @@ export default function AustralianPage() {
               ))}
             </div>
           </div>
-                    <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1175969866?badge=0&autopause=0&player_id=0&app_id=58479"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Australian Curriculum"
-            />
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-2">Watch this 2-minute walkthrough</p>
-          </div>
-              <div className="bg-white rounded-xl p-3 border border-green-100">
-                <div className="text-xl font-black text-navy">ACARA</div>
-                <div className="text-xs text-gray-500 mt-0.5">Aligned language</div>
-              </div>
-              <div className="bg-white rounded-xl p-3 border border-green-100">
-                <div className="text-xl font-black text-navy">Your</div>
-                <div className="text-xs text-gray-500 mt-0.5">Thresholds, not NAPLAN</div>
-              </div>
-              <div className="bg-white rounded-xl p-3 border border-green-100">
-                <div className="text-xl font-black text-navy">&lt;5 min</div>
-                <div className="text-xs text-gray-500 mt-0.5">Report delivery</div>
-              </div>
+          <div>
+            <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/1175969866?badge=0&autopause=0&player_id=0&app_id=58479"
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="Evalent — Australian Curriculum"
+              />
             </div>
+            <p className="text-center text-xs text-gray-400 mt-2">Watch this 2-minute walkthrough</p>
           </div>
         </div>
       </section>
