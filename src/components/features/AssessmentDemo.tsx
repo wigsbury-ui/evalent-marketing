@@ -16,6 +16,8 @@ export default function AssessmentDemo() {
     const params = new URLSearchParams()
     if (name.trim()) params.set('student_first_name', name.trim())
     params.set('meta_language_locale', lang)
+    params.set('voice', lang)
+    params.set('meta_programme', lang)
     params.set('demo', 'true')
     return 'https://form.jotform.com/' + form.id + '?' + params.toString()
   }
