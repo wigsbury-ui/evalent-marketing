@@ -26,7 +26,7 @@ export default function Home() {
             style={{
               width: '1200px',
               height: '1200px',
-              opacity: 0.06,
+              opacity: 0.03,
               animation: 'spin-slow-hero 240s linear infinite',
               transformOrigin: 'center center',
             }}
