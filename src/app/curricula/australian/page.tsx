@@ -81,16 +81,17 @@ export default function AustralianPage() {
               ))}
             </div>
           </div>
-          <div className="bg-green-50 border border-green-100 rounded-2xl p-6">
-            <div className="text-xs font-bold text-green-700 uppercase tracking-widest mb-4">Australian Curriculum Overview</div>
-            <div className="text-sm text-gray-600 leading-relaxed mb-4">
-              Unlike NAPLAN, Evalent is not a national benchmarking tool. It is a school-administered assessment that each institution calibrates to its own academic entry expectations — providing consistent, documented evidence for every admissions decision.
-            </div>
-            <div className="grid grid-cols-2 gap-3 text-center">
-              <div className="bg-white rounded-xl p-3 border border-green-100">
-                <div className="text-xl font-black text-navy">Y4–Y10</div>
-                <div className="text-xs text-gray-500 mt-0.5">All entry years</div>
-              </div>
+                    <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1175969866?badge=0&autopause=0&player_id=0&app_id=58479"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              title="Evalent — Australian Curriculum"
+            />
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-2">Watch this 2-minute walkthrough</p>
+          </div>
               <div className="bg-white rounded-xl p-3 border border-green-100">
                 <div className="text-xl font-black text-navy">ACARA</div>
                 <div className="text-xs text-gray-500 mt-0.5">Aligned language</div>
