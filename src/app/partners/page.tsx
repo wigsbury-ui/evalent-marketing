@@ -1,12 +1,29 @@
+'use client'
+import { useState } from 'react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
-export const metadata = {
-  title: 'Partner Programme \u2014 Evalent',
-  description: 'Earn attractive commission by introducing independent and international schools to Evalent. Join the Evalent partner programme.',
-}
-
 export default function PartnersPage() {
+
+  const [form, setForm] = useState({ name: '', email: '', company: '', linkedin: '', message: '' })
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setStatus('loading')
+    try {
+      const res = await fetch('/api/partner-enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error()
+      setStatus('success')
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <div className="min-h-screen">
       <Nav />
@@ -30,7 +47,7 @@ export default function PartnersPage() {
             Evalent partners earn attractive commission for introducing independent and international schools to the platform. Multiple programme tiers to suit how you work.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <a href="mailto:partners@evalent.io" className="bg-white text-brand font-bold text-sm px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors">
+            <a href="#apply" className="bg-white text-brand font-bold text-sm px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors">
               Apply to join &rarr;
             </a>
             <a href="https://app.evalent.io/partner/login" className="bg-transparent text-white font-medium text-sm px-7 py-3.5 rounded-xl border border-white/30 hover:border-white/60 transition-colors">
@@ -60,7 +77,7 @@ export default function PartnersPage() {
                   'Attractive commission across multiple tiers',
                   'Dedicated partner portal to track clicks and earnings',
                   'Free trial means schools can say yes immediately',
-                  'Global market \u2014 no geographic restrictions',
+                  'Global market — no geographic restrictions',
                   'Monthly payouts with full transparency',
                   'Dedicated account manager from day one',
                 ].map(item => (
@@ -108,7 +125,6 @@ export default function PartnersPage() {
             <p className="text-gray-500 text-sm max-w-xl mx-auto">From occasional referrals to deep commercial partnerships. Every tier comes with portal access, tracking, and monthly payouts.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
-
             <div className="rounded-2xl p-6 border-2 border-gray-200 bg-white">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center text-base font-black bg-gray-100 text-gray-600">&nearr;</div>
@@ -120,7 +136,6 @@ export default function PartnersPage() {
                 <div className="text-xs text-gray-600">Educators, consultants, and advisors who occasionally recommend tools to schools.</div>
               </div>
             </div>
-
             <div className="rounded-2xl p-6 border-2 border-brand bg-white">
               <div className="inline-block bg-brand text-white text-[10px] font-black px-2.5 py-1 rounded-full tracking-widest mb-3">MOST POPULAR</div>
               <div className="flex items-center gap-3 mb-3">
@@ -133,7 +148,6 @@ export default function PartnersPage() {
                 <div className="text-xs text-gray-600">EdTech resellers, regional distributors, and managed service providers.</div>
               </div>
             </div>
-
             <div className="rounded-2xl p-6 border-2 border-gray-200 bg-white">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center text-base font-black bg-gray-100 text-gray-600">&#9670;</div>
@@ -145,7 +159,6 @@ export default function PartnersPage() {
                 <div className="text-xs text-gray-600">High-volume introducers and strategic partners with strong school network access.</div>
               </div>
             </div>
-
             <div className="rounded-2xl p-6 border-2 border-gray-200 bg-white">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center text-base font-black bg-gray-100 text-gray-600">&#9675;</div>
@@ -157,9 +170,8 @@ export default function PartnersPage() {
                 <div className="text-xs text-gray-600">Educators with newsletters, podcasts, LinkedIn audiences, or active school communities.</div>
               </div>
             </div>
-
           </div>
-          <p className="text-center text-xs text-gray-400 mt-5">Need something bespoke? We offer a Custom tier for unusual arrangements. <a href="mailto:partners@evalent.io" className="text-brand hover:underline">Email us to discuss.</a></p>
+          <p className="text-center text-xs text-gray-400 mt-5">Need something bespoke? We offer a Custom tier for unusual arrangements. <a href="#apply" className="text-brand hover:underline">Apply below and tell us more.</a></p>
         </div>
       </section>
 
@@ -174,7 +186,7 @@ export default function PartnersPage() {
             <div>
               <div className="text-4xl font-black text-gray-100 mb-3">01</div>
               <div className="text-sm font-bold text-navy mb-2">Apply to join</div>
-              <div className="text-xs text-gray-500 leading-relaxed">Email partners@evalent.io with a short note about who you are and how you work with schools. We respond within 2 business days.</div>
+              <div className="text-xs text-gray-500 leading-relaxed">Fill in the form below with your details and a note about how you work with schools. We respond within 2 business days.</div>
             </div>
             <div>
               <div className="text-4xl font-black text-gray-100 mb-3">02</div>
@@ -204,7 +216,6 @@ export default function PartnersPage() {
             <p className="text-gray-500 text-sm">Schools choose based on their annual assessment volume. Higher plans generate proportionally higher commission.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-4">
-
             <div className="bg-white rounded-2xl border-2 border-gray-200 p-6">
               <div className="text-base font-black text-navy mb-1">Essentials</div>
               <div className="text-2xl font-black text-brand mb-0.5">$2,900</div>
@@ -212,7 +223,6 @@ export default function PartnersPage() {
               <div className="text-xs font-bold text-gray-500 mb-3">100 assessments</div>
               <p className="text-xs text-gray-500 leading-relaxed">Ideal for smaller schools or those running one intake cycle per year.</p>
             </div>
-
             <div className="bg-white rounded-2xl border-2 border-brand p-6">
               <div className="inline-block bg-brand text-white text-[10px] font-black px-2.5 py-1 rounded-full tracking-widest mb-3">MOST COMMON</div>
               <div className="text-base font-black text-navy mb-1">Professional</div>
@@ -221,7 +231,6 @@ export default function PartnersPage() {
               <div className="text-xs font-bold text-gray-500 mb-3">250 assessments</div>
               <p className="text-xs text-gray-500 leading-relaxed">For schools with multiple year groups or two intake cycles. The most common tier.</p>
             </div>
-
             <div className="bg-white rounded-2xl border-2 border-gray-200 p-6">
               <div className="text-base font-black text-navy mb-1">Enterprise</div>
               <div className="text-2xl font-black text-brand mb-0.5">$9,500</div>
@@ -229,7 +238,6 @@ export default function PartnersPage() {
               <div className="text-xs font-bold text-gray-500 mb-3">500+ assessments</div>
               <p className="text-xs text-gray-500 leading-relaxed">Large schools, school groups, or those running assessments across multiple campuses.</p>
             </div>
-
           </div>
           <p className="text-center text-xs text-gray-400 mt-4">Full plan details at <a href="/pricing" className="text-brand hover:underline">evalent.io/pricing</a></p>
         </div>
@@ -266,27 +274,100 @@ export default function PartnersPage() {
             </div>
             <div className="border border-gray-200 rounded-xl p-4">
               <div className="text-sm font-bold text-navy mb-1.5">I want a custom arrangement. Is that possible?</div>
-              <div className="text-sm text-gray-600 leading-relaxed">Yes. We offer a Custom partner tier for arrangements that don&apos;t fit the standard tiers &mdash; for example, embedding Evalent into a larger managed admissions service. Email partners@evalent.io to discuss.</div>
+              <div className="text-sm text-gray-600 leading-relaxed">Yes. We offer a Custom partner tier for arrangements that don&apos;t fit the standard tiers &mdash; for example, embedding Evalent into a larger managed admissions service. Apply below and tell us more.</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-navy py-16 px-6 text-center">
+      {/* APPLY FORM */}
+      <section id="apply" className="bg-navy py-16 px-6">
         <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-black text-white tracking-tight mb-3">Ready to become a partner?</h2>
-          <p className="text-blue-300 text-sm mb-8 leading-relaxed">
-            Email us with a short introduction and we&apos;ll get back to you within 2 business days.
-          </p>
-          <div className="flex gap-3 justify-center flex-wrap">
-            <a href="mailto:partners@evalent.io" className="bg-white text-brand font-bold text-sm px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors">
-              Email partners@evalent.io &rarr;
-            </a>
-            <a href="https://app.evalent.io/partner/login" className="bg-transparent text-white font-medium text-sm px-7 py-3.5 rounded-xl border border-white/30 hover:border-white/60 transition-colors">
-              Partner portal login
-            </a>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-black text-white tracking-tight mb-3">Apply to become a partner</h2>
+            <p className="text-blue-300 text-sm leading-relaxed">Fill in your details and we&apos;ll be in touch within 2 business days.</p>
           </div>
+
+          {status === 'success' ? (
+            <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div className="text-base font-bold text-navy mb-2">Application received</div>
+              <div className="text-sm text-gray-600">We&apos;ll review your application and get back to you within 2 business days.</div>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 space-y-5">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-gray-500 mb-1.5 tracking-wide">FULL NAME <span className="text-red-500">*</span></label>
+                  <input
+                    type="text"
+                    required
+                    value={form.name}
+                    onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
+                    placeholder="Sarah Ahmed"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-navy outline-none focus:border-brand transition-colors"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-gray-500 mb-1.5 tracking-wide">EMAIL ADDRESS <span className="text-red-500">*</span></label>
+                  <input
+                    type="email"
+                    required
+                    value={form.email}
+                    onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
+                    placeholder="sarah@example.com"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-navy outline-none focus:border-brand transition-colors"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-gray-500 mb-1.5 tracking-wide">COMPANY / ORGANISATION</label>
+                <input
+                  type="text"
+                  value={form.company}
+                  onChange={e => setForm(f => ({ ...f, company: e.target.value }))}
+                  placeholder="Independent Schools Consulting Ltd"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-navy outline-none focus:border-brand transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-gray-500 mb-1.5 tracking-wide">LINKEDIN PROFILE URL</label>
+                <input
+                  type="url"
+                  value={form.linkedin}
+                  onChange={e => setForm(f => ({ ...f, linkedin: e.target.value }))}
+                  placeholder="https://linkedin.com/in/yourname"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-navy outline-none focus:border-brand transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-gray-500 mb-1.5 tracking-wide">HOW DO YOU WORK WITH SCHOOLS?</label>
+                <textarea
+                  value={form.message}
+                  onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
+                  placeholder="Tell us a little about your background and how you interact with admissions teams..."
+                  rows={4}
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-navy outline-none focus:border-brand transition-colors resize-none"
+                />
+              </div>
+              {status === 'error' && (
+                <div className="text-xs text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+                  Something went wrong. Please try again or reach out directly.
+                </div>
+              )}
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                className="w-full bg-brand text-white font-bold text-sm py-4 rounded-xl hover:bg-blue-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                {status === 'loading' ? 'Sending...' : 'Submit application →'}
+              </button>
+            </form>
+          )}
         </div>
       </section>
 
