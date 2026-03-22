@@ -50,20 +50,6 @@ export default function DemoPage() {
         </div>
         <EvalDemo />
       </section>
-      <section className="py-12 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-3xl mx-auto grid md:grid-cols-3 gap-6 text-center">
-          {[
-            { num: '<5s', label: 'To evaluate any response' },
-            { num: '4', label: 'Criteria scored independently' },
-            { num: 'G3–G10', label: 'All grade levels covered' },
-          ].map(({ num, label }) => (
-            <div key={label}>
-              <div className="text-3xl font-black text-navy tracking-tight">{num}</div>
-              <div className="text-sm text-gray-500 mt-1">{label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
       <section className="py-16 px-6 bg-navy text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-black text-white tracking-tight mb-3">Ready to use Evalent for real applicants?</h2>
