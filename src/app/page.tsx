@@ -359,7 +359,7 @@ export default function Home() {
             { quote: 'We used to spend 3–4 hours on borderline applications. Now we have structured data in minutes. The one-click decision email is the thing everyone comments on.', name: 'Sarah Al-Rashid', role: 'Head of Admissions, Dubai', initials: 'SA', avatar: '/avatars/sarah.svg' },
             { quote: 'The automated reminders have saved our admin team hours every cycle. Students get chased, we get notified if they do not complete. Zero involvement from us.', name: 'Michael Kwan', role: 'Deputy Principal, Singapore', initials: 'MK', avatar: '/avatars/michael.svg' },
             { quote: 'The reports are professional enough to share with parents when we need to explain a decision. That alone has reduced our appeals significantly.', name: 'Fatima Omar', role: 'Admissions Director, Doha', initials: 'FO', avatar: '/avatars/fatima.svg' },
-          ].map(({ quote, name, role, initials }) => (
+          ].map(({ quote, name, role, initials, avatar }: { quote: string; name: string; role: string; initials: string; avatar?: string }) => (
             <div key={name} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
               <p className="text-sm text-gray-700 leading-relaxed mb-5">&ldquo;{quote}&rdquo;</p>
               <div className="flex items-center gap-3">
