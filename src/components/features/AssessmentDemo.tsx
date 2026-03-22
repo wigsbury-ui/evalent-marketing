@@ -41,11 +41,11 @@ export default function AssessmentDemo() {
             <label className="block text-xs font-medium text-gray-600 mb-1">Voice and language</label>
             <select
               value={lang}
-              onChange={e => { setLang(e.target.value as 'en-GB' | 'en-US'); setActive(null) }}
+              onChange={e => { setLang(e.target.value); setActive(null) }}
               className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white"
             >
-              <option value="en-GB">🇬🇧 British English</option>
-              <option value="en-US">🇺🇸 American English</option>
+              <option value="UK">🇬🇧 British English</option>
+              <option value="US">🇺🇸 American English</option>
             </select>
           </div>
         </div>
