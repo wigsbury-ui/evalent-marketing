@@ -99,13 +99,16 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto mb-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">LIVE DEMO</div>
-          <h2 className="text-2xl font-black text-navy tracking-tight mb-2">Experience it from the student&apos;s perspective</h2>
-          <p className="text-gray-500 text-sm">Use the section tabs to explore each part of the assessment. The timer is live.</p>
+      
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">TRY IT YOURSELF</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-2">The real assessment. Right here.</h2>
+            <p className="text-gray-500 text-sm max-w-lg mx-auto leading-relaxed">Grade 6 uses our animated avatar. Grade 8 uses a real person. Both are the actual assessment your applicants complete. When you submit, you&apos;ll be invited to start your free trial.</p>
+          </div>
+          <AssessmentDemo />
         </div>
-        <AssessmentDemo />
       </section>
 
       <section className="py-14 px-6 bg-white border-t border-gray-100">
