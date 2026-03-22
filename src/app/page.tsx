@@ -250,88 +250,9 @@ export default function Home() {
       </section>
 
 
-      {/* AI EVAL TEASER */}
-      <section className="py-16 px-6 bg-navy">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">
-                <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
-                EVALENT EVALUATION
-              </div>
-              <h2 className="text-3xl font-black text-white tracking-tight mb-3">
-                Evalent doesn&apos;t just score.<br/>It reads.
-              </h2>
-              <p className="text-blue-300 text-sm leading-relaxed mb-4">
-                Every extended writing response is evaluated against four criteria — task completion, organisation, vocabulary, and accuracy — with expert commentary generated in seconds.
-              </p>
-              <div className="space-y-2 mb-6">
-                {[
-                  "Calibrated to each school's grade level and curriculum",
-                  "Commentary references the student's actual words",
-                  'Honest bands: Excellent, Good, Developing, Beginning',
-                  'Strengths and development areas identified',
-                ].map(item => (
-                  <div key={item} className="flex items-start gap-2 text-sm text-blue-200">
-                    <span className="text-green-400 mt-0.5 flex-shrink-0">✓</span>
-                    {item}
-                  </div>
-                ))}
-              </div>
-              <a href="/demo" className="inline-flex items-center gap-2 bg-white text-brand font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors">
-                See Evalent evaluate live →
-              </a>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
-              <div className="bg-navy/80 rounded-xl p-3 mb-3 border border-white/10">
-                <div className="text-[10px] font-bold text-blue-400 tracking-widest mb-1.5">WRITING PROMPT — GRADE 7 IB</div>
-                <p className="text-xs text-blue-200 leading-relaxed italic">"Some scientists believe that humans are the biggest threat to life on Earth. Do you agree?"</p>
-              </div>
-              <div className="space-y-2">
-                {[
-                  { label: 'BAND', val: 'Good', extra: '3.0 / 4.0', bg: 'bg-blue-500/20', tc: 'text-blue-300' },
-                ].map(item => (
-                  <div key={item.label} className="flex items-center justify-between bg-white/5 rounded-lg px-3 py-2">
-                    <span className="text-[10px] font-bold text-blue-400 tracking-widest">{item.label}</span>
-                    <div className="flex items-center gap-2">
-                      <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${item.bg} ${item.tc}`}>{item.val}</span>
-                      <span className="text-xs text-blue-300">{item.extra}</span>
-                    </div>
-                  </div>
-                ))}
-                {[
-                  { label: 'TASK COMPLETION', pct: 82, color: '#3b82f6' },
-                  { label: 'ORGANISATION',    pct: 75, color: '#3b82f6' },
-                  { label: 'VOCABULARY',      pct: 78, color: '#8b5cf6' },
-                  { label: 'ACCURACY',        pct: 88, color: '#10b981' },
-                ].map(({ label, pct, color }) => (
-                  <div key={label} className="bg-white/5 rounded-lg px-3 py-2">
-                    <div className="flex justify-between mb-1">
-                      <span className="text-[9px] font-bold text-blue-400 tracking-widest">{label}</span>
-                      <span className="text-[10px] font-bold text-white">{pct}%</span>
-                    </div>
-                    <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full rounded-full" style={{ width: `${pct}%`, background: color }} />
-                    </div>
-                  </div>
-                ))}
-                <div className="bg-white/5 rounded-lg px-3 py-2.5">
-                  <div className="text-[9px] font-bold text-blue-400 tracking-widest mb-1.5">COMMENTARY</div>
-                  <p className="text-xs text-blue-200 leading-relaxed">The response takes a clear position and develops it with relevant examples. Use of subject-specific language is appropriate for Grade 7 level...</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* EVAL DEMO */}
-      <section className="py-14 px-6 bg-navy border-t border-white/10">
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-black text-white tracking-tight mb-2">Try it yourself — right now</h2>
-            <p className="text-blue-300 text-sm">Choose a grade, write a response, and watch Evalent evaluate it in seconds.</p>
-          </div>
           <EvalDemo />
         </div>
       </section>
