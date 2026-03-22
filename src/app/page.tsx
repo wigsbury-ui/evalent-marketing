@@ -5,6 +5,7 @@ import VideoModal from '@/components/VideoModal'
 import Footer from '@/components/Footer'
 import TrialSection from '@/components/TrialSection'
 import Link from 'next/link'
+import EvalDemo from '@/components/EvalDemo'
 
 export default function Home() {
   const [videoOpen, setVideoOpen] = useState(false)
@@ -321,6 +322,17 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* EVAL DEMO */}
+      <section className="py-14 px-6 bg-navy border-t border-white/10">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-black text-white tracking-tight mb-2">Try it yourself — right now</h2>
+            <p className="text-blue-300 text-sm">Choose a grade, write a response, and watch Evalent evaluate it in seconds.</p>
+          </div>
+          <EvalDemo />
         </div>
       </section>
 
