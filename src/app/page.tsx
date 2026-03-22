@@ -111,19 +111,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-          {/* Full width video */}
-          <div>
-            <p className="text-center text-xs text-gray-400 mb-3 font-medium uppercase tracking-widest">See it in two minutes</p>
-            <div className="rounded-2xl overflow-hidden relative shadow-xl w-full" style={{ paddingTop: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/1175812373?badge=0&autopause=0&player_id=0&app_id=58479"
-                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                title="Evalent — Admissions Intelligence"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
