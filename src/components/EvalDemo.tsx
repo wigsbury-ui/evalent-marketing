@@ -130,26 +130,26 @@ export default function EvalDemo() {
   return (
     <div className="max-w-5xl mx-auto">
       <div className="flex gap-3 flex-wrap mb-3 items-center">
-        <span className="text-xs font-bold text-gray-400 tracking-widest">CURRICULUM</span>
+        <span className="text-xs font-bold text-white/40 tracking-widest">CURRICULUM</span>
         {CURRICULA.map(c => (
           <button key={c} onClick={() => { setCurric(c); setState('idle') }}
-            className={`px-3 py-1.5 rounded-full border-2 text-xs font-bold transition-all ${curric === c ? 'border-brand bg-blue-50 text-brand' : 'border-gray-200 text-gray-400 hover:border-brand'}`}>
+            className={`px-3 py-1.5 rounded-full border-2 text-xs font-bold transition-all ${curric === c ? 'border-brand bg-brand text-white' : 'border-white/20 text-white/50 hover:border-white/60 hover:text-white'}`}>
             {c}
           </button>
         ))}
       </div>
       <div className="flex gap-3 flex-wrap mb-5 items-center">
-        <span className="text-xs font-bold text-gray-400 tracking-widest">ENTERING INTO</span>
+        <span className="text-xs font-bold text-white/40 tracking-widest">ENTERING INTO</span>
         {GRADES.map(g => (
           <button key={g} onClick={() => { setGrade(g); setState('idle') }}
-            className={`px-3 py-1.5 rounded-full border-2 text-xs font-bold transition-all ${grade === g ? 'border-brand bg-blue-50 text-brand' : 'border-gray-200 text-gray-400 hover:border-brand'}`}>
+            className={`px-3 py-1.5 rounded-full border-2 text-xs font-bold transition-all ${grade === g ? 'border-brand bg-brand text-white' : 'border-white/20 text-white/50 hover:border-white/60 hover:text-white'}`}>
             {gradeLabel(g)}
           </button>
         ))}
       </div>
 
-      <div className="grid md:grid-cols-2 gap-0 border border-gray-200 rounded-2xl overflow-hidden bg-white items-start">
-        <div className="p-6 border-r border-gray-200">
+      <div className="grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden bg-white items-start">
+        <div className="p-6">
           <div className="bg-navy px-6 py-3 -mx-6 -mt-6 mb-4 flex items-center gap-2 rounded-t-2xl">
             <span className="w-2 h-2 bg-green-400 rounded-full" />
             <span className="text-sm font-bold text-white">Your writing</span>
