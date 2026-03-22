@@ -75,7 +75,7 @@ export default function CurriculaPage() {
               Most assessment platforms apply a single rubric to every student. Evalent does not. A Grade 7 IB student is evaluated with MYP vocabulary and ATL skill framing. A Year 8 British student is assessed against KS3 attainment targets. An American Grade 9 student is evaluated for AP-pathway readiness. The difference matters — for report accuracy, and for the confidence your assessors can place in it.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 xl:grid-cols-5 gap-6">
             {CURRICULA.map((c) => (
               <Link key={c.slug} href={`/curricula/${c.slug}`}
                 className={`border-2 rounded-2xl p-6 hover:shadow-md transition-all group ${c.colour}`}>
