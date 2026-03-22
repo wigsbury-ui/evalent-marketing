@@ -202,37 +202,37 @@ export default function Home() {
           </div>
 
           {/* Email mockup */}
-          <div className="border border-gray-200 rounded-2xl overflow-hidden">
-            <div className="bg-gray-100 px-4 py-2 flex items-center gap-2 border-b border-gray-200">
+          <div className="border border-gray-700 rounded-2xl overflow-hidden bg-[#0f0f1f]">
+            <div className="bg-[#1a1a2e] px-4 py-2 flex items-center gap-2 border-b border-gray-700">
               <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
               <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
               <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
-              <div className="flex-1 bg-white rounded px-3 py-1 text-xs text-gray-400">Admissions report ready — Alex Chen, Grade 7 · from reports@evalent.io</div>
+              <div className="flex-1 bg-[#0d0d1a] rounded px-3 py-1 text-xs text-gray-500">Admissions report ready — Alex Chen, Grade 7 · from reports@evalent.io</div>
             </div>
-            <div className="p-8">
-              <div className="flex items-center justify-between mb-5 pb-5 border-b border-gray-100">
-                <div className="text-base font-black text-navy">EVAL<span className="text-brand italic">ENT</span></div>
+            <div className="p-8 bg-[#0f0f1f]">
+              <div className="flex items-center justify-between mb-5 pb-5 border-b border-gray-700">
+                <div className="text-base font-black text-white">EVAL<span className="text-brand italic">ENT</span></div>
                 <div className="bg-navy text-white text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wide">REPORT READY</div>
               </div>
-              <div className="text-xs text-gray-400 mb-1">To: sarah.ahmed@diacademy.ae · Grade 7 Entry</div>
-              <div className="text-xl font-black text-navy mb-3 tracking-tight">Admissions report: Alex Chen</div>
-              <p className="text-sm text-gray-600 mb-5">Hi Sarah — Alex's Grade 7 assessment is complete. Use the buttons below to record your decision instantly. No login required.</p>
-              <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
+              <div className="text-xs text-gray-500 mb-1">To: sarah.ahmed@diacademy.ae · Grade 7 Entry</div>
+              <div className="text-xl font-black text-white mb-3 tracking-tight">Admissions report: Alex Chen</div>
+              <p className="text-sm text-gray-400 mb-5">Hi Sarah — Alex's Grade 7 assessment is complete. Use the buttons below to record your decision instantly. No login required.</p>
+              <div className="bg-[#1a1a2e] border border-gray-700 rounded-xl p-4 mb-4">
                 <div className="flex items-center justify-between mb-3">
-                  <div className="text-sm font-bold text-navy">Alex Chen · Grade 7 · IB</div>
+                  <div className="text-sm font-bold text-white">Alex Chen · Grade 7 · IB</div>
                   <div className="bg-green-50 text-green-700 text-xs font-bold px-3 py-1 rounded-full">✓ Ready to admit</div>
                 </div>
                 {[['English','76'],['Mathematics','68'],['Reasoning','91'],['Mindset','80%']].map(([label, pct]) => (
                   <div key={label} className="flex items-center gap-2 mb-1.5">
-                    <span className="text-xs text-gray-400 w-16">{label}</span>
-                    <div className="flex-1 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                    <span className="text-xs text-gray-500 w-16">{label}</span>
+                    <div className="flex-1 h-1.5 bg-gray-700 rounded-full overflow-hidden">
                       <div className="h-full bg-brand rounded-full" style={{width: pct.includes('%') ? pct : pct+'%'}} />
                     </div>
-                    <span className="text-xs font-bold text-navy w-7 text-right">{pct.includes('%') ? pct : pct+'%'}</span>
+                    <span className="text-xs font-bold text-white w-7 text-right">{pct.includes('%') ? pct : pct+'%'}</span>
                   </div>
                 ))}
               </div>
-              <div className="text-xs font-bold text-gray-400 tracking-widest mb-3">RECORD YOUR DECISION — ONE CLICK, NO LOGIN REQUIRED</div>
+              <div className="text-xs font-bold text-gray-500 tracking-widest mb-3">RECORD YOUR DECISION — ONE CLICK, NO LOGIN REQUIRED</div>
               <div className="grid grid-cols-4 gap-2">
                 {[
                   ['✓ Admit','border-green-200 bg-green-50 text-green-700'],
