@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <circle cx="40" cy="40" r="40" fill="#0f2744"/>
+  <!-- hair -->
+  <ellipse cx="40" cy="22" rx="14" ry="10" fill="#1a1a1a"/>
+  <path d="M26 22 Q26 18 40 17 Q54 18 54 22 L56 28 Q52 24 40 23 Q28 24 24 28Z" fill="#1a1a1a"/>
+  <!-- face -->
+  <ellipse cx="40" cy="33" rx="13" ry="14" fill="#c8956c"/>
+  <!-- eyes -->
+  <ellipse cx="35" cy="30" rx="2" ry="1.5" fill="#1a1a1a"/>
+  <ellipse cx="45" cy="30" rx="2" ry="1.5" fill="#1a1a1a"/>
+  <!-- smile -->
+  <path d="M35 37 Q40 41 45 37" fill="none" stroke="#8b5e3c" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- collar / suit -->
+  <path d="M18 65 Q18 54 40 51 Q62 54 62 65 L80 80 L0 80Z" fill="#162d4f"/>
+  <!-- shirt -->
+  <path d="M36 51 L40 58 L44 51" fill="white"/>
+  <!-- tie -->
+  <path d="M40 52 L38 57 L40 63 L42 57Z" fill="#c0392b"/>
+</svg>
