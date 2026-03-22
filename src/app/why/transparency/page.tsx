@@ -33,6 +33,8 @@ export default function Page() {
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
+          <h2 className="text-center text-lg font-bold text-navy mt-4">Complete visibility from registration to decision</h2>
+          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Evalent gives every member of your admissions team a real-time view of every applicant at every stage. Every action is logged, every decision attributed, and every piece of evidence permanently stored. Nothing happens in the dark, and nothing can be quietly changed.</p>
         </div>
       </section>
 
@@ -55,23 +57,6 @@ export default function Page() {
               <h3 className="text-sm font-bold text-navy mb-2">Exportable records</h3>
               <p className="text-sm text-gray-600 leading-relaxed">Admission data can be exported to CSV at any point. Schools can retain records for as long as their governance requirements demand.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-10 px-6 bg-navy">
-        <div className="max-w-3xl mx-auto grid grid-cols-3 gap-6 text-center">
-          <div>
-            <div className="text-3xl font-black text-white">Full</div>
-            <div className="text-sm text-blue-300 mt-1">Audit trail</div>
-          </div>
-          <div>
-            <div className="text-3xl font-black text-white">0</div>
-            <div className="text-sm text-blue-300 mt-1">Anonymous decisions</div>
-          </div>
-          <div>
-            <div className="text-3xl font-black text-white">CSV</div>
-            <div className="text-sm text-blue-300 mt-1">Export available</div>
           </div>
         </div>
       </section>

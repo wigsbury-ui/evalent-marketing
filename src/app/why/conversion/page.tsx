@@ -33,6 +33,8 @@ export default function Page() {
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
+          <h2 className="text-center text-lg font-bold text-navy mt-4">The school that responds first often wins</h2>
+          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Families applying to multiple schools make decisions quickly. Evalent compresses the admissions timeline at every stage — from five-minute report generation to one-click decisions from the assessor's inbox. Faster cycles mean higher yield, without your team working any harder.</p>
         </div>
       </section>
 
@@ -55,23 +57,6 @@ export default function Page() {
               <h3 className="text-sm font-bold text-navy mb-2">Faster cycles improve conversion</h3>
               <p className="text-sm text-gray-600 leading-relaxed">Families making school choices respond to speed. A school that delivers a decision in 48 hours converts at a higher rate than one that takes two weeks. Evalent gives your admissions team the tools to respond faster without working harder.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-10 px-6 bg-navy">
-        <div className="max-w-3xl mx-auto grid grid-cols-3 gap-6 text-center">
-          <div>
-            <div className="text-3xl font-black text-white">&lt;5 min</div>
-            <div className="text-sm text-blue-300 mt-1">Submission to report</div>
-          </div>
-          <div>
-            <div className="text-3xl font-black text-white">1 click</div>
-            <div className="text-sm text-blue-300 mt-1">Decision recorded</div>
-          </div>
-          <div>
-            <div className="text-3xl font-black text-white">Auto</div>
-            <div className="text-sm text-blue-300 mt-1">Reminders sent</div>
           </div>
         </div>
       </section>
