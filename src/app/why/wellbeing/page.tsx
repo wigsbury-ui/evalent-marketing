@@ -21,6 +21,20 @@ export default function Page() {
           <HeroTrialButton />
         </div>
       </section>
+      <section className="px-6 bg-white pt-10 pb-2">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1175948689?badge=0&autopause=0&player_id=0&app_id=58479"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              title="Evalent — Wellbeing"
+            />
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
+        </div>
+      </section>
 
       <section className="py-14 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
