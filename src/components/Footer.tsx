@@ -50,7 +50,6 @@ export default function Footer() {
               <Link href="/features" className="block hover:text-white transition-colors">Features</Link>
               <Link href="/curricula" className="block hover:text-white transition-colors">Curricula</Link>
               <Link href="/pricing" className="block hover:text-white transition-colors">Pricing</Link>
-              <Link href="/demo" className="block hover:text-white transition-colors">See Evalent in action</Link>
             </div>
           </div>
 

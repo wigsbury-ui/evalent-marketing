@@ -109,7 +109,6 @@ export default function Nav() {
           <div className="hidden md:flex items-center gap-6 text-sm text-gray-500">
             <Dropdown label="Features" links={FEATURE_LINKS} extraItem={{ href: '/features', label: 'All features' }} />
             <Dropdown label="Why Evalent" links={WHY_LINKS} extraItem={{ href: '/why', label: 'All benefits' }} />
-          <Link href="/demo" className="hover:text-navy transition-colors font-semibold text-brand">See Evalent in action</Link>
             <Dropdown label="Curricula" links={CURRICULA_LINKS} extraItem={{ href: '/curricula', label: 'All curricula' }} />
             <Dropdown label="Countries" links={SCHOOLS_LINKS} />
             <Link href="/pricing" className="hover:text-navy transition-colors">Pricing</Link>
@@ -143,7 +142,6 @@ export default function Nav() {
         {WHY_LINKS.map(({ href, label }) => (
           <Link key={href} href={href} className="block pl-3 text-gray-500">→ {label}</Link>
         ))}
-        <Link href="/demo" className="block text-brand font-semibold pt-1">See Evalent in action</Link>
             <Link href="/curricula" className="block font-semibold text-navy pt-1">Curricula</Link>
             {CURRICULA_LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className="block pl-3 text-gray-500">→ {label}</Link>
