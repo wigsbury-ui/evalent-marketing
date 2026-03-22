@@ -5,6 +5,7 @@ import VideoModal from '@/components/VideoModal'
 import Footer from '@/components/Footer'
 import TrialSection from '@/components/TrialSection'
 import Link from 'next/link'
+import LogoSlider from '@/components/LogoSlider'
 
 export default function Home() {
   const [videoOpen, setVideoOpen] = useState(false)
@@ -68,17 +69,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* STATS */}
-      <div className="bg-[#050e24] grid grid-cols-2 md:grid-cols-4 border-t border-white/10">
-        {[
-          ['0', 'Manual steps to get a report'],
-          ['<5min', 'Assessment to report in inbox'],
-          ['1', 'Click to record a decision'],
-          ['100%', 'Automatic reminder sequence'],
-        ].map(([num, label]) => (
-          <div key={label} className="text-center py-8 px-4 border-r border-white/10 last:border-0">
-            <div className="text-3xl font-black text-white tracking-tight">{num}</div>
+      {/* LOGO SLIDER */}
+      <LogoSlider />
             <div className="text-xs text-blue-400 mt-1 leading-tight">{label}</div>
           </div>
         ))}
