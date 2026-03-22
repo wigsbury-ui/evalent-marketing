@@ -57,6 +57,22 @@ export default function PartnersPage() {
         </div>
       </section>
 
+      {/* PRODUCT VIDEO */}
+      <section className="py-12 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="rounded-2xl overflow-hidden shadow-xl" style={{ paddingTop: '56.25%', position: 'relative' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1175812373?badge=0&autopause=0&player_id=0&app_id=58479"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              title="Evalent — Admissions Intelligence Platform"
+            />
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-3">Two minutes. The complete picture.</p>
+        </div>
+      </section>
+
       {/* WHY PARTNER */}
       <section className="py-16 px-6 bg-white border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
@@ -82,7 +98,8 @@ export default function PartnersPage() {
                   'Dedicated account manager from day one',
                 ].map(item => (
                   <div key={item} className="flex items-start gap-2 text-xs text-gray-700">
-                    <span className="text-brand font-bold flex-shrink-0 mt-0.5">&check;</span>{item}
+                    <svg className="w-3.5 h-3.5 text-brand flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {item}
                   </div>
                 ))}
               </div>
