@@ -46,7 +46,7 @@ export default function AustralianPage() {
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">AUSTRALIAN CURRICULUM</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             Australian assessment.<br/>
-            <span className="text-green-300">Australian language.</span>
+            <span className="text-blue-300">Australian language.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
             Evalent assessments for Australian schools use ACARA general capabilities language, Year group labels, and criterion-referenced scoring calibrated to your school&apos;s own entry standards — Year 4 to Year 10.

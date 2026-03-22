@@ -46,7 +46,7 @@ export default function NZCPage() {
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">NEW ZEALAND CURRICULUM</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             NZC assessment.<br/>
-            <span className="text-teal-300">In NZC language.</span>
+            <span className="text-blue-300">In NZC language.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
             Evalent assessments for New Zealand schools use key competency language, NZC curriculum levels, and a values-informed mindset section — from Year 4 to Year 10.
