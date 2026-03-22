@@ -85,35 +85,93 @@ export default function Home() {
           <p className="text-center text-xs text-gray-400 mt-3">Watch this 2-minute overview to see Evalent in action</p>
         </div>
       </section>
-
       {/* PROBLEM SECTION */}
-      <section className="py-16 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE PROBLEM</div>
-              <h2 className="text-3xl font-black text-navy tracking-tight mb-4">Important decisions.<br/>Thin evidence.</h2>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Every year, independent schools make some of their most consequential decisions — admissions decisions — based on a parent statement, a school report, and a brief interview.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                That evidence does not tell you how a student writes under pressure, how they approach an unfamiliar problem, or whether they are genuinely ready for your school. Evalent fills that gap — with a structured, consistent, documented assessment that produces a professional report in under five minutes.
-              </p>
+      <section className="py-20 px-6 bg-navy relative overflow-hidden">
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }} />
+        <div className="max-w-5xl mx-auto relative z-10">
+          {/* Header */}
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">THE CHALLENGE</div>
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+              The most important decisions<br/>
+              <span className="text-blue-300">run on the thinnest evidence.</span>
+            </h2>
+            <p className="text-blue-300 text-base max-w-2xl mx-auto leading-relaxed">
+              Independent schools invest heavily in academic programmes and student outcomes. But the evidence gathered during admissions — the point that shapes the entire incoming cohort — is often a parent letter, a school report, and a brief impression.
+            </p>
+          </div>
+
+          {/* Before / After contrast */}
+          <div className="grid md:grid-cols-2 gap-5 mb-14">
+            {/* Without */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-7">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 border border-red-400/30 flex items-center justify-center text-red-400 text-sm font-bold">✕</div>
+                <span className="text-sm font-bold text-white/60 uppercase tracking-widest">Without Evalent</span>
+              </div>
+              <div className="space-y-3">
+                {[
+                  "A parent statement written by an adult, not the applicant",
+                  "A school transcript with no common standard",
+                  "A campus visit that rewards confidence over ability",
+                  "No structured writing sample",
+                  "No documented evidence for borderline decisions",
+                ].map(item => (
+                  <div key={item} className="flex items-start gap-3 text-sm text-white/50">
+                    <span className="text-red-400 mt-0.5 flex-shrink-0 font-bold">—</span>
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="space-y-3">
-              {[
-                ['Without Evalent', 'Parent statement + transcript + interview impression', 'bg-red-50 border-red-100 text-red-700'],
-                ['With Evalent', 'Structured assessment + AI report + one-click decision', 'bg-green-50 border-green-100 text-green-700'],
-              ].map(([label, desc, cls]) => (
-                <div key={label} className={`border rounded-xl px-4 py-3 ${cls}`}>
-                  <div className="text-xs font-bold mb-0.5">{label}</div>
-                  <div className="text-xs opacity-75">{desc}</div>
-                </div>
-              ))}
+
+            {/* With Evalent */}
+            <div className="bg-white/10 border border-blue-400/30 rounded-2xl p-7 relative">
+              <div className="absolute -top-3 left-6">
+                <div className="bg-brand text-white text-[10px] font-black px-3 py-1 rounded-full tracking-widest">EVALENT</div>
+              </div>
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-8 h-8 rounded-full bg-green-500/20 border border-green-400/30 flex items-center justify-center text-green-400 text-sm font-bold">✓</div>
+                <span className="text-sm font-bold text-white uppercase tracking-widest">With Evalent</span>
+              </div>
+              <div className="space-y-3">
+                {[
+                  "A timed, structured assessment completed by the applicant",
+                  "Extended writing evaluated by AI against your curriculum",
+                  "Domain scores in English, Maths, and Reasoning",
+                  "A professional report in under five minutes",
+                  "A complete audit trail for every decision",
+                ].map(item => (
+                  <div key={item} className="flex items-start gap-3 text-sm text-blue-100">
+                    <span className="text-green-400 mt-0.5 flex-shrink-0 font-bold">✓</span>
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
+
+          {/* Stats row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              ['0', 'Manual scoring steps'],
+              ['<5 min', 'Assessment to report'],
+              ['1 click', 'To record a decision'],
+              ['100%', 'Automated reminders'],
+            ].map(([num, label]) => (
+              <div key={label} className="bg-white/5 border border-white/10 rounded-xl py-5 px-4 text-center">
+                <div className="text-2xl font-black text-white tracking-tight mb-1">{num}</div>
+                <div className="text-xs text-blue-400 leading-tight">{label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* TRIAL */}
       <TrialSection />
