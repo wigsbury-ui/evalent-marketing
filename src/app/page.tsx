@@ -13,8 +13,32 @@ export default function Home() {
       <Nav />
 
       {/* HERO */}
-      <section className="bg-navy text-white py-20 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
+      <section className="bg-navy text-white py-20 px-6 text-center relative overflow-hidden">
+        {/* Watermark — bottom-left, large, slow spin */}
+        <div
+          className="absolute pointer-events-none"
+          style={{ bottom: '-300px', left: '-200px' }}
+          aria-hidden="true"
+        >
+          <img
+            src="/mark_white.svg"
+            alt=""
+            style={{
+              width: '1200px',
+              height: '1200px',
+              opacity: 0.06,
+              animation: 'spin-slow-hero 240s linear infinite',
+              transformOrigin: 'center center',
+            }}
+          />
+        </div>
+        <style>{`
+          @keyframes spin-slow-hero {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }
+        `}</style>
+        <div className="relative z-10 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-6">
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
             10 FREE TRIAL REPORTS — NO CARD NEEDED
@@ -61,10 +85,10 @@ export default function Home() {
       </div>
 
 
-      {/* PROBLEM SECTION */}
+            {/* PROBLEM SECTION */}
       <section className="py-16 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
             <div>
               <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE PROBLEM</div>
               <h2 className="text-3xl font-black text-navy tracking-tight mb-4">Important decisions.<br/>Thin evidence.</h2>
@@ -74,80 +98,36 @@ export default function Home() {
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 That evidence does not tell you how a student writes under pressure, how they approach an unfamiliar problem, or whether they are genuinely ready for your school. Evalent fills that gap — with a structured, consistent, documented assessment that produces a professional report in under five minutes.
               </p>
-              <div className="space-y-3">
-                {[
-                  ['Without Evalent', 'Parent statement + transcript + interview', 'bg-red-50 border-red-100 text-red-700'],
-                  ['With Evalent', 'Structured assessment + AI report + one-click decision', 'bg-green-50 border-green-100 text-green-700'],
-                ].map(([label, desc, cls]) => (
-                  <div key={label} className={`border rounded-xl px-4 py-3 ${cls}`}>
-                    <div className="text-xs font-bold mb-0.5">{label}</div>
-                    <div className="text-xs opacity-75">{desc}</div>
-                  </div>
-                ))}
-              </div>
             </div>
-            <div>
-              <p className="text-center text-xs text-gray-400 mb-3 font-medium uppercase tracking-widest">See it in two minutes</p>
-              <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
-                <iframe
-                  src="https://player.vimeo.com/video/1175812373?badge=0&autopause=0&player_id=0&app_id=58479"
-                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                  title="Evalent — Admissions Intelligence"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WHO THIS IS FOR */}
-      <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">WHO THIS IS FOR</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight">Built for the people who make admissions decisions.</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-5">
-            {[
-              {
-                role: 'Head of Admissions',
-                icon: '📋',
-                desc: 'You need consistent, structured evidence for every candidate — and decisions that are fast enough to compete for the best applicants.',
-                benefits: ['Structured reports in under 5 minutes', 'One-click decisions from your inbox', 'Automated reminders — no chasing'],
-              },
-              {
-                role: 'Deputy Principal',
-                icon: '🏛️',
-                desc: 'You need an admissions process that is documented, reproducible, and defensible — one that holds up to board scrutiny and accreditation review.',
-                benefits: ['Full audit trail on every decision', 'Criterion-referenced against your standards', 'Export-ready records'],
-              },
-              {
-                role: 'Boarding & International Schools',
-                icon: '🌏',
-                desc: 'Your applicants are spread across time zones and countries. You need an assessment that works remotely — without compromising rigour.',
-                benefits: ['Secure link, any device, anywhere', 'Same structured experience every time', 'IB, British and American curricula'],
-              },
-            ].map(({ role, icon, desc, benefits }) => (
-              <div key={role} className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
-                <div className="text-3xl mb-3">{icon}</div>
-                <h3 className="text-sm font-black text-navy mb-2">{role}</h3>
-                <p className="text-xs text-gray-500 leading-relaxed mb-4">{desc}</p>
-                <div className="space-y-1.5">
-                  {benefits.map(b => (
-                    <div key={b} className="flex items-start gap-2 text-xs text-gray-600">
-                      <span className="text-green-500 font-bold flex-shrink-0">✓</span>{b}
-                    </div>
-                  ))}
+            <div className="space-y-3">
+              {[
+                ['Without Evalent', 'Parent statement + transcript + interview impression', 'bg-red-50 border-red-100 text-red-700'],
+                ['With Evalent', 'Structured assessment + AI report + one-click decision', 'bg-green-50 border-green-100 text-green-700'],
+              ].map(([label, desc, cls]) => (
+                <div key={label} className={`border rounded-xl px-4 py-3 ${cls}`}>
+                  <div className="text-xs font-bold mb-0.5">{label}</div>
+                  <div className="text-xs opacity-75">{desc}</div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+          {/* Full width video */}
+          <div>
+            <p className="text-center text-xs text-gray-400 mb-3 font-medium uppercase tracking-widest">See it in two minutes</p>
+            <div className="rounded-2xl overflow-hidden relative shadow-xl w-full" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/1175812373?badge=0&autopause=0&player_id=0&app_id=58479"
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="Evalent — Admissions Intelligence"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* TRIAL */}
+ */}
       <TrialSection />
 
       {/* FLOW */}
