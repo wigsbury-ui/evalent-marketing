@@ -48,7 +48,7 @@ export default function LogoSlider() {
           display: flex;
           align-items: center;
           gap: 0;
-          animation: slide-logos 60s linear infinite;
+          animation: slide-logos 120s linear infinite;
           width: max-content;
         }
         .logo-track:hover {
@@ -64,8 +64,8 @@ export default function LogoSlider() {
         {items.map((logo, i) => (
           <div
             key={i}
-            className="flex-shrink-0 flex items-center justify-center px-10"
-            style={{ color: 'rgba(148,163,184,0.4)', height: '40px', minWidth: '180px' }}
+            className="flex-shrink-0 flex items-center justify-center px-6"
+            style={{ color: 'rgba(148,163,184,0.2)', height: '52px', minWidth: '200px' }}
             title={logo.name}
             dangerouslySetInnerHTML={{ __html: logo.svg }}
           />
