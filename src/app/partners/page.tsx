@@ -43,7 +43,7 @@ export default function PartnersPage() {
       desc: 'Present Evalent as part of your service offering. Earn a percentage of the school’s first-year subscription.',
       fit: 'EdTech resellers, regional distributors, and managed service providers.',
       icon: '▤',
-      featured: True,
+      featured: true,
     },
     {
       name: 'Senior Partner',
@@ -201,44 +201,44 @@ export default function PartnersPage() {
                 desc: 'Introduce a school and earn a fixed fee when they convert. Simple and low-commitment.',
                 fit: 'Educators, consultants, and advisors who occasionally recommend tools to schools.',
                 icon: '↗',
-                featured: False,
+                featured: false,
               },
               {
                 name: 'Reseller',
                 desc: 'Present Evalent as part of your service offering. Earn a percentage of the school’s first-year subscription.',
                 fit: 'EdTech resellers, regional distributors, and managed service providers.',
                 icon: '▤',
-                featured: True,
+                featured: true,
               },
               {
                 name: 'Senior Partner',
                 desc: 'Our deepest commercial tier. Earn a recurring percentage on every payment the school makes — not just the first year.',
                 fit: 'High-volume introducers and strategic partners with strong school network access.',
                 icon: '◆',
-                featured: False,
+                featured: false,
               },
               {
                 name: 'Influencer',
                 desc: 'You have an audience in the international schools space. Earn commission on conversions from your community.',
                 fit: 'Educators with newsletters, podcasts, LinkedIn audiences, or active school communities.',
                 icon: '○',
-                featured: False,
+                featured: false,
               },
             ].map((tier) => (
-              <div key={tier['name']} className={`rounded-2xl p-6 border-2 ${tier['featured'] ? 'border-brand bg-white' : 'border-gray-200 bg-white'}`}>
-                {tier['featured'] and (
+              <div key={tier.name} className={`rounded-2xl p-6 border-2 ${tier.featured ? 'border-brand bg-white' : 'border-gray-200 bg-white'}`}>
+                {tier.featured && (
                   <div className="inline-block bg-brand text-white text-[10px] font-black px-2.5 py-1 rounded-full tracking-widest mb-3">MOST POPULAR</div>
                 )}
                 <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center text-base font-black ${tier['featured'] ? 'bg-blue-50 text-brand' : 'bg-gray-100 text-gray-600'}`}>
-                    {tier['icon']}
+                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center text-base font-black ${tier.featured ? 'bg-blue-50 text-brand' : 'bg-gray-100 text-gray-600'}`}>
+                    {tier.icon}
                   </div>
-                  <div className="text-base font-black text-navy">{tier['name']}</div>
+                  <div className="text-base font-black text-navy">{tier.name}</div>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed mb-3">{tier['desc']}</p>
+                <p className="text-sm text-gray-600 leading-relaxed mb-3">{tier.desc}</p>
                 <div className="bg-gray-50 rounded-lg px-3 py-2">
                   <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-0.5">BEST FIT</div>
-                  <div className="text-xs text-gray-600">{tier['fit']}</div>
+                  <div className="text-xs text-gray-600">{tier.fit}</div>
                 </div>
               </div>
             ))}
@@ -277,10 +277,10 @@ export default function PartnersPage() {
                 desc: 'When a school you referred converts to a paid plan, your commission is recorded. Track everything in the portal and receive monthly payouts.',
               },
             ].map((item) => (
-              <div key={item['step']} className="relative">
-                <div className="text-4xl font-black text-gray-100 mb-3">{item['step']}</div>
-                <div className="text-sm font-bold text-navy mb-2">{item['title']}</div>
-                <div className="text-xs text-gray-500 leading-relaxed">{item['desc']}</div>
+              <div key={item.step} className="relative">
+                <div className="text-4xl font-black text-gray-100 mb-3">{item.step}</div>
+                <div className="text-sm font-bold text-navy mb-2">{item.title}</div>
+                <div className="text-xs text-gray-500 leading-relaxed">{item.desc}</div>
               </div>
             ))}
           </div>
@@ -310,7 +310,7 @@ export default function PartnersPage() {
                 price_usd: '$5,500',
                 price_gbp: '£4,400',
                 desc: 'For schools with multiple year groups or two intake cycles. The most common tier.',
-                featured: True,
+                featured: true,
               },
               {
                 name: 'Enterprise',
@@ -320,15 +320,15 @@ export default function PartnersPage() {
                 desc: 'Large schools, school groups, or those running assessments across multiple campuses.',
               },
             ].map((plan) => (
-              <div key={plan['name']} className={`bg-white rounded-2xl border-2 p-6 ${plan.get('featured') ? 'border-brand' : 'border-gray-200'}`}>
-                {plan.get('featured') and (
+              <div key={plan.name} className={`bg-white rounded-2xl border-2 p-6 ${plan.featured ? 'border-brand' : 'border-gray-200'}`}>
+                {plan.featured and (
                   <div className="inline-block bg-brand text-white text-[10px] font-black px-2.5 py-1 rounded-full tracking-widest mb-3">MOST COMMON</div>
                 )}
-                <div className="text-base font-black text-navy mb-1">{plan['name']}</div>
-                <div className="text-2xl font-black text-brand mb-0.5">{plan['price_usd']}</div>
-                <div className="text-xs text-gray-400 mb-3">{plan['price_gbp']} / annual</div>
-                <div className="text-xs font-bold text-gray-500 mb-3">{plan['cap']}</div>
-                <p className="text-xs text-gray-500 leading-relaxed">{plan['desc']}</p>
+                <div className="text-base font-black text-navy mb-1">{plan.name}</div>
+                <div className="text-2xl font-black text-brand mb-0.5">{plan.price_usd}</div>
+                <div className="text-xs text-gray-400 mb-3">{plan.price_gbp} / annual</div>
+                <div className="text-xs font-bold text-gray-500 mb-3">{plan.cap}</div>
+                <p className="text-xs text-gray-500 leading-relaxed">{plan.desc}</p>
               </div>
             ))}
           </div>
