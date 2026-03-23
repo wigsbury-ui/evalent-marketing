@@ -56,7 +56,7 @@ const features = [
 
 export default function FeaturesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Nav />
       <section className="bg-navy py-16 px-6 text-center">
         <div className="max-w-2xl mx-auto">

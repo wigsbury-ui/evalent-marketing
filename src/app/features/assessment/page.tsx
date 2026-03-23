@@ -49,7 +49,7 @@ export default function Page() {
   ]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Nav />
 
       <section className="bg-navy py-16 px-6 text-center">
@@ -100,7 +100,7 @@ export default function Page() {
       </section>
 
       
-      <section className="py-14 px-6 bg-white border-t border-gray-100">
+      <section className="hidden md:block py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">TRY IT YOURSELF</div>

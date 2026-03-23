@@ -25,7 +25,7 @@ export default function PartnersPage() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Nav />
 
       {/* HERO */}

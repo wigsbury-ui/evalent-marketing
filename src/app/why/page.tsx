@@ -17,7 +17,7 @@ const BENEFITS = [
 
 export default function Page() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Nav />
 
       <section className="bg-navy py-16 px-6 text-center">
