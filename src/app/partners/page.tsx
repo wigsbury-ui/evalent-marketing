@@ -347,7 +347,7 @@ export default function PartnersPage() {
                   type="text"
                   value={form.company}
                   onChange={e => setForm(f => ({ ...f, company: e.target.value }))}
-                  placeholder="Independent Schools Consulting Ltd"
+                  placeholder="Evalent School Consulting Ltd"
                   className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-navy outline-none focus:border-brand transition-colors"
                 />
               </div>
