@@ -44,7 +44,7 @@ export default function Home() {
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
             10 FREE TRIAL REPORTS — NO CARD NEEDED
           </div>
-          <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-tight mb-5">
+          <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-5">
             Know your applicants.<br/>
             <span className="text-blue-300">Before they arrive.</span>
           </h1>
@@ -71,7 +71,7 @@ export default function Home() {
       </section>
 
       {/* HERO VIDEO */}
-      <section className="px-6 py-12 bg-white border-t border-gray-100">
+      <section className="hidden md:block px-6 py-12 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-black text-navy tracking-tight text-center mb-6">Two minutes. The complete picture.</h2>
           <div className="rounded-2xl overflow-hidden relative shadow-xl w-full" style={{ paddingTop: '56.25%' }}>
@@ -100,7 +100,7 @@ export default function Home() {
           {/* Header */}
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">THE CHALLENGE</div>
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
               The most important decisions<br/>
               <span className="text-blue-300">run on the thinnest evidence.</span>
             </h2>
@@ -182,11 +182,11 @@ export default function Home() {
       <section id="flow" className="py-16 px-6 bg-white scroll-mt-4">
         <div className="max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">ZERO ADMIN OVERHEAD</div>
-          <h2 className="text-4xl font-black text-navy tracking-tight mb-3">The report arrives.<br/>You click one button. Done.</h2>
+          <h2 className="text-3xl font-black text-navy tracking-tight mb-3">The report arrives.<br/>You click one button. Done.</h2>
           <p className="text-gray-500 text-base mb-12 max-w-lg leading-relaxed">Every step from assessment to recorded decision is automatic. You only act when it matters.</p>
 
-          <div className="grid grid-cols-4 gap-0 mb-10 relative">
-            <div className="absolute top-10 left-[12%] right-[12%] h-0.5 bg-gray-100 z-0" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 mb-10 relative">
+            <div className="hidden md:block absolute top-10 left-[12%] right-[12%] h-0.5 bg-gray-100 z-0" />
             {[
               { label: 'Link sent', sub: 'One click from dashboard', icon: '↗', auto: true, bg: 'bg-blue-50' },
               { label: 'Report built', sub: 'AI scores and writes narrative', icon: '★', auto: true, bg: 'bg-blue-50' },
@@ -210,7 +210,7 @@ export default function Home() {
               <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
               <div className="flex-1 bg-[#0d0d1a] rounded px-3 py-1 text-xs text-gray-500">Admissions report ready — Alex Chen, Grade 7 · from reports@evalent.io</div>
             </div>
-            <div className="p-8 bg-[#0f0f1f]">
+            <div className="p-4 md:p-8 bg-[#0f0f1f]">
               <div className="flex items-center justify-between mb-5 pb-5 border-b border-gray-700">
                 <img src="/mark_white.svg" alt="Evalent" style={{ width: "32px", height: "32px", opacity: 1, filter: "brightness(0) invert(1)" }} />
                 <div className="bg-navy text-white text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wide">REPORT READY</div>
@@ -234,7 +234,7 @@ export default function Home() {
                 ))}
               </div>
               <div className="text-xs font-bold text-gray-500 tracking-widest mb-3">RECORD YOUR DECISION — ONE CLICK, NO LOGIN REQUIRED</div>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                 {[
                   ['✓ Admit','border-green-200 bg-green-50 text-green-700'],
                   ['~ With support','border-blue-200 bg-blue-50 text-blue-700'],
@@ -251,7 +251,7 @@ export default function Home() {
 
 
       {/* EVAL DEMO */}
-      <section className="py-14 px-6 bg-white border-t border-gray-100">
+      <section className="hidden md:block py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <EvalDemo />
         </div>
@@ -337,7 +337,7 @@ export default function Home() {
       {/* BOTTOM CTA */}
       <section className="bg-navy py-20 px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl font-black text-white tracking-tight mb-3">10 free reports.<br/>No credit card.</h2>
+          <h2 className="text-3xl font-black text-white tracking-tight mb-3">10 free reports.<br/>No credit card.</h2>
           <p className="text-blue-300 text-base mb-8">Set up in 5 minutes. Use with your next real applicants.</p>
           <a href="#trial" className="inline-block bg-white text-brand font-bold text-sm px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
             Start your free trial →

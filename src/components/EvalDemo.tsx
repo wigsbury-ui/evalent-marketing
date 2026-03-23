@@ -183,7 +183,7 @@ export default function EvalDemo() {
         </div>
 
         {/* Main widget */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', border: '1.5px solid #e2e8f0', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 40px rgba(0,0,0,0.06)', background: 'white' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr', border: '1.5px solid #e2e8f0', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 4px 40px rgba(0,0,0,0.06)', background: 'white' }}>
 
           {/* LEFT col */}
           <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -272,7 +272,7 @@ export default function EvalDemo() {
                     </div>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '8px' }}>
                     {domainData.map(({ label, val, color }) => (
                       <div key={label} style={{ padding: '10px 12px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '10px' }}>
                         <div style={{ fontSize: '10px', fontWeight: 800, color: '#94a3b8', letterSpacing: '0.08em', marginBottom: '8px', textTransform: 'uppercase' as const }}>{label}</div>
@@ -294,7 +294,7 @@ export default function EvalDemo() {
                     </p>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '8px' }}>
                     <div style={{ padding: '10px 12px', background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '10px' }}>
                       <div style={{ fontSize: '10px', fontWeight: 800, color: '#15803d', letterSpacing: '0.08em', marginBottom: '8px', textTransform: 'uppercase' as const }}>Strengths</div>
                       {result.strengths.split('\n').filter(Boolean).map((s, i) => (

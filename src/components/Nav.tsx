@@ -140,7 +140,7 @@ export default function Nav() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-2 text-sm">
+          <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-2 text-sm max-h-[80vh] overflow-y-auto">
             <Link href="/features" className="block font-semibold text-navy">Features</Link>
             {FEATURE_LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className="block pl-3 text-gray-500">→ {label}</Link>
