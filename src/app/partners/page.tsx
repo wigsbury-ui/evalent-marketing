@@ -62,7 +62,7 @@ export default function PartnersPage() {
         <div className="max-w-5xl mx-auto">
           <div className="rounded-2xl overflow-hidden shadow-xl" style={{ paddingTop: '56.25%', position: 'relative' }}>
             <iframe
-              src="https://player.vimeo.com/video/1175812373?badge=0&autopause=0&player_id=0&app_id=58479"
+              src="https://player.vimeo.com/video/1176097774?badge=0&autopause=0&player_id=0&app_id=58479"
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
