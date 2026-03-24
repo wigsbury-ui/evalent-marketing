@@ -1,6 +1,5 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import Link from 'next/link'
 
 export const metadata = {
   title: 'Data Security — Evalent',
@@ -198,16 +197,7 @@ export default function SecurityPage() {
         </div>
       </section>
 
-      {/* Quick nav */}
-      <div className="bg-white border-b border-gray-100 sticky top-16 z-40">
-        <div className="max-w-3xl mx-auto px-6 py-3 flex flex-wrap gap-x-5 gap-y-1">
-          {sections.filter(s => s.id !== 'overview').map(s => (
-            <a key={s.id} href={`#${s.id}`} className="text-xs text-gray-500 hover:text-navy transition-colors">
-              {s.title}
-            </a>
-          ))}
-        </div>
-      </div>
+
 
       {/* Content */}
       <div className="max-w-3xl mx-auto px-6 py-14 space-y-14">
@@ -244,21 +234,7 @@ export default function SecurityPage() {
           </div>
         ))}
 
-        {/* Contact */}
-        <div className="bg-navy rounded-2xl p-8 text-center">
-          <h2 className="text-xl font-black text-white mb-2">Questions about data security?</h2>
-          <p className="text-blue-300 text-sm mb-5 leading-relaxed">
-            We are happy to discuss our security practices with school IT teams, procurement teams, or data protection officers.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="mailto:security@evalent.io" className="inline-block bg-white text-navy font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors">
-              Email security@evalent.io
-            </a>
-            <a href="mailto:hello@evalent.io" className="inline-block bg-white/10 border border-white/20 text-white font-medium text-sm px-6 py-3 rounded-xl hover:bg-white/20 transition-colors">
-              General enquiries
-            </a>
-          </div>
-        </div>
+
 
       </div>
 
