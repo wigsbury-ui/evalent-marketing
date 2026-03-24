@@ -246,7 +246,7 @@ GUIDELINES:
 - Direct partner enquiries to evalent.io/partners
 - For anything not covered here, suggest emailing hello@evalent.io
 - Keep responses concise — 2-3 sentences unless detail is requested
-- Reference specific site pages when relevant (e.g. evalent.io/pricing, evalent.io/partners, evalent.io/security)``
+- Reference specific site pages when relevant (e.g. evalent.io/pricing, evalent.io/partners, evalent.io/security)`
 
 export async function POST(req: NextRequest) {
   const { messages } = await req.json()
