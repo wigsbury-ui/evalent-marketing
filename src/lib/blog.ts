@@ -6,26 +6,23 @@ export type Category =
   | 'product-updates'
   | 'research'
 
-export type Tag = string
-
 export interface Author {
   name: string
   role: string
-  avatar?: string
 }
 
 export interface Post {
+  id: string
   slug: string
   title: string
   excerpt: string
-  content: string        // HTML or markdown string
-  category: Category
-  tags: Tag[]
-  author: Author
-  publishedAt: string    // ISO date string
-  readingTime: number    // minutes
-  coverImage?: string
-  featured?: boolean
+  body: string
+  blog_category: Category
+  tags: string[]
+  cover_image_url: string | null
+  reading_time: number
+  published_at: string
+  created_by: string
 }
 
 export const CATEGORIES: Record<Category, { label: string; description: string; color: string }> = {
@@ -52,7 +49,7 @@ export const CATEGORIES: Record<Category, { label: string; description: string; 
   'product-updates': {
     label: 'Product Updates',
     description: 'New features, improvements and platform announcements',
-    color: 'bg-brand/10 text-brand border-brand/20',
+    color: 'bg-indigo-50 text-indigo-700 border-indigo-200',
   },
   'research': {
     label: 'Research',
@@ -61,62 +58,41 @@ export const CATEGORIES: Record<Category, { label: string; description: string; 
   },
 }
 
-// Sample posts — replace with DB/CMS fetch in production
-export const POSTS: Post[] = [
-  {
-    slug: 'why-writing-tasks-predict-school-readiness',
-    title: 'Why Extended Writing Tasks Predict School Readiness Better Than MCQ',
-    excerpt: 'Multiple choice questions measure knowledge. Extended writing reveals how a student thinks. Here is why the distinction matters for international school admissions.',
-    content: `<p>When admissions teams ask what makes an Evalent report different from a standardised test result, the answer almost always comes back to the writing component...</p>`,
-    category: 'ai-assessment',
-    tags: ['writing assessment', 'MCQ', 'school readiness', 'IB'],
-    author: { name: 'Evalent Research', role: 'Evalent' },
-    publishedAt: '2026-03-15',
-    readingTime: 6,
-    featured: true,
-  },
-  {
-    slug: 'five-admissions-bottlenecks-and-how-to-fix-them',
-    title: 'Five Admissions Bottlenecks That Slow Down Your Pipeline (And How to Fix Them)',
-    excerpt: 'From late assessor responses to untracked applications, these are the five patterns that consistently delay offers — and what you can do about each one.',
-    category: 'admissions-strategy',
-    tags: ['pipeline', 'workflow', 'assessors', 'conversion'],
-    author: { name: 'Evalent Team', role: 'Evalent' },
-    publishedAt: '2026-03-08',
-    readingTime: 5,
-    content: `<p>The average time from enquiry to offer at international schools is 18 days...</p>`,
-  },
-  {
-    slug: 'eal-students-and-assessment-fairness',
-    title: 'Assessing EAL Students Fairly: What the Evidence Says',
-    excerpt: 'Language proficiency and academic ability are not the same thing. This piece looks at how Evalent separates the two in its scoring model.',
-    category: 'international-schools',
-    tags: ['EAL', 'fairness', 'language support', 'IB'],
-    author: { name: 'Evalent Research', role: 'Evalent' },
-    publishedAt: '2026-02-28',
-    readingTime: 7,
-    content: `<p>For schools with a high proportion of EAL applicants...</p>`,
-  },
-]
+const API_BASE = 'https://app.evalent.io/api/blog'
 
-export function getPostsByCategory(category: Category): Post[] {
-  return POSTS.filter(p => p.category === category)
+export async function fetchPosts(params?: {
+  category?: Category
+  search?: string
+}): Promise<Post[]> {
+  try {
+    const url = new URL(API_BASE)
+    if (params?.category) url.searchParams.set('category', params.category)
+    if (params?.search) url.searchParams.set('search', params.search)
+    const res = await fetch(url.toString(), { next: { revalidate: 300 } })
+    if (!res.ok) return []
+    return res.json()
+  } catch {
+    return []
+  }
 }
 
-export function getPostBySlug(slug: string): Post | undefined {
-  return POSTS.find(p => p.slug === slug)
-}
-
-export function searchPosts(query: string): Post[] {
-  const q = query.toLowerCase()
-  return POSTS.filter(p =>
-    p.title.toLowerCase().includes(q) ||
-    p.excerpt.toLowerCase().includes(q) ||
-    p.tags.some(t => t.toLowerCase().includes(q)) ||
-    CATEGORIES[p.category].label.toLowerCase().includes(q)
-  )
+export async function fetchPostBySlug(slug: string): Promise<Post | null> {
+  try {
+    const res = await fetch(`${API_BASE}?slug=${slug}`, { next: { revalidate: 300 } })
+    if (!res.ok) return null
+    return res.json()
+  } catch {
+    return null
+  }
 }
 
 export function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+  return new Date(iso).toLocaleDateString('en-GB', {
+    day: 'numeric', month: 'long', year: 'numeric'
+  })
+}
+
+export function estimateReadingTime(body: string): number {
+  const words = body.replace(/<[^>]+>/g, '').split(/\s+/).length
+  return Math.max(1, Math.round(words / 200))
 }
