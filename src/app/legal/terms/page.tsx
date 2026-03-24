@@ -10,10 +10,24 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <Nav />
-      <div className="max-w-3xl mx-auto px-6 py-16">
+      {/* Hero */}
+      <section className="bg-navy text-white py-16 px-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">
+            LEGAL
+          </div>
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4">
+            Terms of<br />
+            <span className="text-blue-300">Service.</span>
+          </h1>
+          <p className="text-blue-300 text-lg leading-relaxed max-w-2xl">
+            The terms that govern your use of the Evalent platform and services.
+          </p>
+          <p className="text-blue-400 text-sm mt-4">Last updated: March 2026</p>
+        </div>
+      </section>
+      <div className="max-w-3xl mx-auto px-6 py-12">
         <div className="prose prose-sm max-w-none">
-          <h1 className="text-3xl font-black text-navy mb-2">Terms of Service</h1>
-          <p className="text-sm text-gray-400 mb-8">Last updated: 19 March 2026</p>
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">1. About Evalent</h2>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">

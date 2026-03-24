@@ -10,10 +10,24 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <Nav />
-      <div className="max-w-3xl mx-auto px-6 py-16">
+      {/* Hero */}
+      <section className="bg-navy text-white py-16 px-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">
+            LEGAL
+          </div>
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4">
+            Refund<br />
+            <span className="text-blue-300">Policy.</span>
+          </h1>
+          <p className="text-blue-300 text-lg leading-relaxed max-w-2xl">
+            Our policy on refunds, cancellations, and subscription changes.
+          </p>
+          <p className="text-blue-400 text-sm mt-4">Last updated: March 2026</p>
+        </div>
+      </section>
+      <div className="max-w-3xl mx-auto px-6 py-12">
         <div className="prose prose-sm max-w-none">
-          <h1 className="text-3xl font-black text-navy mb-2">Refund Policy</h1>
-          <p className="text-sm text-gray-400 mb-8">Last updated: 19 March 2026</p>
 
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
             All Evalent purchases are processed by <strong>Paddle</strong> as Merchant of Record. Refund requests are handled in accordance with both this policy and <a href="https://www.paddle.com/legal/checkout-buyer-terms" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">Paddle&apos;s Buyer Terms</a>.
