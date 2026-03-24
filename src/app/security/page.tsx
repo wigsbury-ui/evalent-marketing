@@ -240,28 +240,7 @@ export default function SecurityPage() {
               </div>
             )}
 
-            {section.table && (
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm border-collapse">
-                  <thead>
-                    <tr className="border-b border-gray-200">
-                      <th className="text-left text-xs font-bold text-gray-400 uppercase tracking-widest py-2 pr-4">Provider</th>
-                      <th className="text-left text-xs font-bold text-gray-400 uppercase tracking-widest py-2 pr-4">Purpose</th>
-                      <th className="text-left text-xs font-bold text-gray-400 uppercase tracking-widest py-2">Region</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-100">
-                    {section.table.map(row => (
-                      <tr key={row.name}>
-                        <td className="py-3 pr-4 font-medium text-gray-900">{row.name}</td>
-                        <td className="py-3 pr-4 text-gray-600">{row.purpose}</td>
-                        <td className="py-3 text-gray-500">{row.region}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            )}
+
           </div>
         ))}
 
