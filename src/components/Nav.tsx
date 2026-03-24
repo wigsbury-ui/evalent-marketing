@@ -135,6 +135,7 @@ export default function Nav() {
   const isCurricula  = pathname.startsWith('/curricula')
   const isCountries  = ['/uk', '/usa', '/australia', '/new-zealand'].some(p => pathname === p)
   const isPricing    = pathname === '/pricing'
+  const isBlog       = pathname.startsWith('/blog')
 
   return (
     <>
@@ -269,6 +270,12 @@ export default function Nav() {
               </Link>
             ))}
 
+            <Link
+              href="/blog"
+              className={`block pt-1 transition-colors ${isBlog ? 'text-brand font-semibold' : 'text-gray-600'}`}
+            >
+              Blog
+            </Link>
             <Link
               href="/pricing"
               className={`block pt-1 transition-colors ${isPricing ? 'text-brand font-semibold' : 'text-gray-600'}`}
