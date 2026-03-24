@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Figtree } from 'next/font/google'
 import './globals.css'
+import { EvalentChat } from '@/components/EvalentChat'
 
 const figtree = Figtree({ subsets: ['latin'], variable: '--font-figtree' })
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={figtree.variable}>
-      <body className="font-sans antialiased overflow-x-hidden">{children}</body>
+      <body className="font-sans antialiased overflow-x-hidden">{children}<EvalentChat /></body>
     </html>
   )
 }
