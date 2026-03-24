@@ -82,7 +82,8 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <span className="text-xs text-blue-400">&copy; 2026 Evalent Ltd. All rights reserved.</span>
             <div className="flex flex-wrap gap-x-5 gap-y-2">
-              <Link href="/legal/terms" className="text-xs text-blue-400 hover:text-white transition-colors">Terms of Service</Link>
+              <Link href="/security" className="text-xs text-blue-400 hover:text-white transition-colors">Data Security</Link>
+                <Link href="/legal/terms" className="text-xs text-blue-400 hover:text-white transition-colors">Terms of Service</Link>
               <Link href="/legal/privacy" className="text-xs text-blue-400 hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/legal/refunds" className="text-xs text-blue-400 hover:text-white transition-colors">Refund Policy</Link>
               <Link href="/legal/cookies" className="text-xs text-blue-400 hover:text-white transition-colors">Cookie Policy</Link>
