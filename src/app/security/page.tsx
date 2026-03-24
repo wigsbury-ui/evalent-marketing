@@ -68,11 +68,11 @@ We are honest about what we have and what we are working towards. We do not clai
     items: [
       {
         label: 'School data isolation',
-        detail: 'Each school account can only access its own data. API endpoints validate school identity on every request — it is not possible for one school to access another school's students, assessments, or reports.',
+        detail: 'Each school account can only access its own data. API endpoints validate school identity on every request — it is not possible for one school to access another school’s students, assessments, or reports.',
       },
       {
         label: 'Role-based access',
-        detail: 'The platform enforces role-based access control. School administrators have access only to their school's data. Super-admin functions require a separate authenticated role that cannot be assumed by school users.',
+        detail: 'The platform enforces role-based access control. School administrators have access only to their school’s data. Super-admin functions require a separate authenticated role that cannot be assumed by school users.',
       },
       {
         label: 'Database-level security',
@@ -103,11 +103,11 @@ We are honest about what we have and what we are working towards. We do not clai
       },
       {
         label: 'AI processing',
-        detail: 'Assessment responses are processed by Anthropic's Claude API to generate evaluation narratives and scores. Data sent to Anthropic is subject to their enterprise data processing terms. Anthropic does not use API data to train models by default. Evalent maintains a Data Processing Agreement with Anthropic.',
+        detail: 'Assessment responses are processed by Anthropic’s Claude API to generate evaluation narratives and scores. Data sent to Anthropic is subject to their enterprise data processing terms. Anthropic does not use API data to train models by default. Evalent maintains a Data Processing Agreement with Anthropic.',
       },
       {
         label: 'Assessment delivery',
-        detail: 'Student assessments are delivered via Jotform, an enterprise form platform. Student responses are transmitted to Jotform's servers during assessment completion and then processed by Evalent's scoring pipeline. Jotform is SOC 2 Type II certified.',
+        detail: 'Student assessments are delivered via Jotform, an enterprise form platform. Student responses are transmitted to Jotform’s servers during assessment completion and then processed by Evalent’s scoring pipeline. Jotform is SOC 2 Type II certified.',
       },
       {
         label: 'Audit logging',
@@ -126,7 +126,7 @@ We are honest about what we have and what we are working towards. We do not clai
     items: [
       {
         label: 'Security headers',
-        detail: 'All responses include security headers: X-Frame-Options (clickjacking protection), X-Content-Type-Options (MIME sniffing protection), Referrer-Policy, and Permissions-Policy. Content Security Policy is managed by Vercel's edge infrastructure.',
+        detail: 'All responses include security headers: X-Frame-Options (clickjacking protection), X-Content-Type-Options (MIME sniffing protection), Referrer-Policy, and Permissions-Policy. Content Security Policy is managed by Vercel’s edge infrastructure.',
       },
       {
         label: 'Input validation',
@@ -138,7 +138,7 @@ We are honest about what we have and what we are working towards. We do not clai
       },
       {
         label: 'Secret management',
-        detail: 'API keys, database credentials, and other secrets are stored as environment variables in Vercel's encrypted secrets store. Secrets are never committed to source control.',
+        detail: 'API keys, database credentials, and other secrets are stored as environment variables in Vercel’s encrypted secrets store. Secrets are never committed to source control.',
       },
     ],
   },
