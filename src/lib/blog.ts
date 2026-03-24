@@ -6,11 +6,6 @@ export type Category =
   | 'product-updates'
   | 'research'
 
-export interface Author {
-  name: string
-  role: string
-}
-
 export interface Post {
   id: string
   slug: string
@@ -58,41 +53,25 @@ export const CATEGORIES: Record<Category, { label: string; description: string; 
   },
 }
 
-const API_BASE = '/api/blog'
-
-export async function fetchPosts(params?: {
-  category?: Category
-  search?: string
-}): Promise<Post[]> {
-  try {
-    const url = new URL(API_BASE)
-    if (params?.category) url.searchParams.set('category', params.category)
-    if (params?.search) url.searchParams.set('search', params.search)
-    const res = await fetch(url.toString(), { cache: 'no-store' })
-    if (!res.ok) return []
-    return res.json()
-  } catch {
-    return []
-  }
+export async function fetchPosts(params?: { category?: Category; search?: string }): Promise<Post[]> {
+  const url = new URL('/api/blog', 'https://www.evalent.io')
+  if (params?.category) url.searchParams.set('category', params.category)
+  if (params?.search) url.searchParams.set('search', params.search)
+  const res = await fetch(url.toString(), { cache: 'no-store' })
+  if (!res.ok) return []
+  const data = await res.json()
+  return Array.isArray(data) ? data.filter((p: Post) => p.slug) : []
 }
 
 export async function fetchPostBySlug(slug: string): Promise<Post | null> {
-  try {
-    const res = await fetch(`${API_BASE}?slug=${slug}`, { cache: 'no-store' })
-    if (!res.ok) return null
-    return res.json()
-  } catch {
-    return null
-  }
+  const res = await fetch(`https://www.evalent.io/api/blog?slug=${slug}`, { cache: 'no-store' })
+  if (!res.ok) return null
+  const data = await res.json()
+  return data?.slug ? data : null
 }
 
 export function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('en-GB', {
     day: 'numeric', month: 'long', year: 'numeric'
   })
-}
-
-export function estimateReadingTime(body: string): number {
-  const words = body.replace(/<[^>]+>/g, '').split(/\s+/).length
-  return Math.max(1, Math.round(words / 200))
 }
