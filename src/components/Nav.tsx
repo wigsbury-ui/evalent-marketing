@@ -68,11 +68,9 @@ function Dropdown({ label, links, extraItem, isActive }: {
         }`}
       >
         {label}
-        {isActive && (
-          <span className="ml-0.5 w-1.5 h-1.5 rounded-full bg-brand inline-block" />
-        )}
+
         <svg
-          className={`w-3 h-3 mt-0.5 transition-transform duration-150 ${open ? 'rotate-180' : ''}`}
+          className={`w-3 h-3 mt-0.5 transition-transform duration-150 ${open ? 'rotate-180' : ''} ${isActive ? 'text-brand' : ''}`}
           fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
@@ -189,7 +187,7 @@ export default function Nav() {
               }`}
             >
               Pricing
-              {isPricing && <span className="ml-1.5 w-1.5 h-1.5 rounded-full bg-brand inline-block align-middle" />}
+
             </Link>
             <a href="https://app.evalent.io/login" className="hover:text-navy transition-colors">Sign in</a>
           </div>
@@ -217,7 +215,7 @@ export default function Nav() {
               href="/features"
               className={`block font-semibold ${isFeatures ? 'text-brand' : 'text-navy'}`}
             >
-              Features {isFeatures && <span className="w-1.5 h-1.5 rounded-full bg-brand inline-block align-middle ml-1" />}
+              Features
             </Link>
             {FEATURE_LINKS.map(({ href, label }) => (
               <Link
@@ -230,7 +228,7 @@ export default function Nav() {
             ))}
 
             <div className={`font-semibold pt-1 ${isWhy ? 'text-brand' : 'text-navy'}`}>
-              Why Evalent {isWhy && <span className="w-1.5 h-1.5 rounded-full bg-brand inline-block align-middle ml-1" />}
+              Why Evalent
             </div>
             {WHY_LINKS.map(({ href, label }) => (
               <Link
@@ -246,7 +244,7 @@ export default function Nav() {
               href="/curricula"
               className={`block font-semibold pt-1 ${isCurricula ? 'text-brand' : 'text-navy'}`}
             >
-              Curricula {isCurricula && <span className="w-1.5 h-1.5 rounded-full bg-brand inline-block align-middle ml-1" />}
+              Curricula
             </Link>
             {CURRICULA_LINKS.map(({ href, label }) => (
               <Link
@@ -259,7 +257,7 @@ export default function Nav() {
             ))}
 
             <div className={`font-semibold pt-1 ${isCountries ? 'text-brand' : 'text-navy'}`}>
-              Countries {isCountries && <span className="w-1.5 h-1.5 rounded-full bg-brand inline-block align-middle ml-1" />}
+              Countries
             </div>
             {SCHOOLS_LINKS.map(({ href, label }) => (
               <Link
@@ -275,7 +273,7 @@ export default function Nav() {
               href="/pricing"
               className={`block pt-1 transition-colors ${isPricing ? 'text-brand font-semibold' : 'text-gray-600'}`}
             >
-              Pricing {isPricing && <span className="w-1.5 h-1.5 rounded-full bg-brand inline-block align-middle ml-1" />}
+              Pricing
             </Link>
             <a href="https://app.evalent.io/login" className="block text-gray-600">Sign in</a>
             <button
