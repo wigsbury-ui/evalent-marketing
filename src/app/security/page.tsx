@@ -174,21 +174,6 @@ We are honest about what we have and what we are working towards. We do not clai
 
 To report a security vulnerability, please contact us at security@evalent.io. We aim to acknowledge reports within 24 hours and respond substantively within 5 business days.`,
   },
-  {
-    id: 'subprocessors',
-    title: 'Sub-processors',
-    icon: '🔗',
-    content: 'The following third-party services process data on behalf of Evalent in the course of delivering the platform:',
-    table: [
-      { name: 'AWS (via Supabase)', purpose: 'Database hosting and storage', region: 'EU (Ireland)' },
-      { name: 'Vercel', purpose: 'Application hosting and edge delivery', region: 'Global CDN, primary EU' },
-      { name: 'Anthropic', purpose: 'AI evaluation of assessment responses', region: 'US (enterprise API)' },
-      { name: 'Jotform', purpose: 'Assessment form delivery', region: 'US / EU' },
-      { name: 'Resend', purpose: 'Transactional email delivery', region: 'US' },
-      { name: 'Paddle', purpose: 'Payment processing (Merchant of Record)', region: 'UK / Global' },
-      { name: 'Upstash', purpose: 'Rate limiting (no personal data stored)', region: 'EU (Frankfurt)' },
-    ],
-  },
 ]
 
 export default function SecurityPage() {
@@ -235,8 +220,7 @@ export default function SecurityPage() {
         {/* Sections */}
         {sections.slice(1).map(section => (
           <div key={section.id} id={section.id} className="scroll-mt-24">
-            <h2 className="text-xl font-black text-navy tracking-tight mb-1 flex items-center gap-2">
-              {section.icon && <span>{section.icon}</span>}
+            <h2 className="text-xl font-black text-navy tracking-tight mb-1">
               {section.title}
             </h2>
             <div className="h-0.5 w-10 bg-brand mb-5" />
@@ -246,9 +230,9 @@ export default function SecurityPage() {
             )}
 
             {section.items && (
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {section.items.map(item => (
-                  <div key={item.label} className="bg-gray-50 rounded-xl px-5 py-4 border border-gray-100">
+                  <div key={item.label}>
                     <div className="text-sm font-bold text-navy mb-1">{item.label}</div>
                     <div className="text-sm text-gray-600 leading-relaxed">{item.detail}</div>
                   </div>
