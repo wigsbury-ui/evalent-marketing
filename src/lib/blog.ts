@@ -68,7 +68,7 @@ export async function fetchPosts(params?: {
     const url = new URL(API_BASE)
     if (params?.category) url.searchParams.set('category', params.category)
     if (params?.search) url.searchParams.set('search', params.search)
-    const res = await fetch(url.toString(), { next: { revalidate: 300 } })
+    const res = await fetch(url.toString(), { cache: 'no-store' })
     if (!res.ok) return []
     return res.json()
   } catch {
@@ -78,7 +78,7 @@ export async function fetchPosts(params?: {
 
 export async function fetchPostBySlug(slug: string): Promise<Post | null> {
   try {
-    const res = await fetch(`${API_BASE}?slug=${slug}`, { next: { revalidate: 300 } })
+    const res = await fetch(`${API_BASE}?slug=${slug}`, { cache: 'no-store' })
     if (!res.ok) return null
     return res.json()
   } catch {
