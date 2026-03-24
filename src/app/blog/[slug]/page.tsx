@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import PostCard from '@/components/blog/PostCard'
 import { fetchPostBySlug, fetchPosts, CATEGORIES, Post, formatDate } from '@/lib/blog'
+import ShareButtons from '@/components/blog/ShareButtons'
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>()
@@ -93,12 +94,21 @@ export default function BlogPost() {
           <article>
             {/* Tags */}
             {post.tags?.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {post.tags.map(tag => (
                   <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-500 font-medium">#{tag}</span>
                 ))}
               </div>
             )}
+
+            {/* Share */}
+            <div className="mb-8 pb-6 border-b border-gray-100">
+              <ShareButtons
+                url={`https://evalent.io/blog/${post.slug}`}
+                title={post.title}
+                excerpt={post.excerpt}
+              />
+            </div>
 
             {/* Body */}
             <div className="prose prose-lg max-w-none
@@ -116,8 +126,17 @@ export default function BlogPost() {
               dangerouslySetInnerHTML={{ __html: post.body }}
             />
 
+            {/* Share before CTA */}
+            <div className="mt-12 pt-8 border-t border-gray-100 mb-6">
+              <ShareButtons
+                url={`https://evalent.io/blog/${post.slug}`}
+                title={post.title}
+                excerpt={post.excerpt}
+              />
+            </div>
+
             {/* End CTA */}
-            <div className="mt-12 pt-8 border-t border-gray-100">
+            <div className="pt-8 border-t border-gray-100">
               <div className="bg-navy rounded-2xl p-8 text-center">
                 <p className="text-white font-black text-xl mb-2">Try Evalent free</p>
                 <p className="text-blue-200 text-sm mb-5">10 free reports. No credit card. Set up in 5 minutes.</p>
