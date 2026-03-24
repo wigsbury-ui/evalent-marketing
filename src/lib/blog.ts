@@ -58,7 +58,7 @@ export const CATEGORIES: Record<Category, { label: string; description: string; 
   },
 }
 
-const API_BASE = 'https://app.evalent.io/api/blog'
+const API_BASE = '/api/blog'
 
 export async function fetchPosts(params?: {
   category?: Category
