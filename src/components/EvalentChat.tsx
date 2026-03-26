@@ -58,7 +58,13 @@ export function EvalentChat() {
       {/* Chat Window */}
       {isOpen && (
         <div
-          className="fixed z-50 flex flex-col bg-white overflow-hidden shadow-2xl border border-gray-200 bottom-0 left-0 right-0 h-[85vh] rounded-t-2xl sm:bottom-20 sm:left-auto sm:right-6 sm:h-[520px] sm:w-[380px]"
+          className="fixed z-50 flex flex-col bg-white overflow-hidden shadow-2xl border border-gray-200 rounded-2xl"
+          style={{
+            width: 'min(380px, calc(100vw - 32px))',
+            height: 'min(520px, calc(100dvh - 120px))',
+            bottom: '80px',
+            right: '16px',
+          }}
         >
           {/* Header */}
           <div className="flex items-center justify-between px-5 py-3.5" style={{ backgroundColor: '#1a2b6b' }}>
