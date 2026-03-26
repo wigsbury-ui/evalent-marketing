@@ -60,7 +60,7 @@ export default function Home() {
             </button>
           </div>
           <div className="mt-8 flex gap-5 justify-center flex-wrap">
-            {['10 free reports','No credit card','Ready in 5 minutes','Zero admin overhead'].map(item => (
+            {['10 free reports','No credit card','Ready in 5 minutes','Student data never used to train AI'].map(item => (
               <div key={item} className="flex items-center gap-1.5 text-white/50 text-xs">
                 <span className="w-3.5 h-3.5 bg-green-400/20 rounded-full flex items-center justify-center text-green-400 text-[9px]">✓</span>
                 {item}
