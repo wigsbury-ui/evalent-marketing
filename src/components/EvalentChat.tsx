@@ -58,8 +58,8 @@ export function EvalentChat() {
       {/* Chat Window */}
       {isOpen && (
         <div
-          className="fixed bottom-20 right-6 z-50 flex flex-col rounded-2xl shadow-2xl border border-gray-200 bg-white overflow-hidden"
-          style={{ width: 380, height: 520 }}
+          className="chat-window fixed z-50 flex flex-col bg-white overflow-hidden shadow-2xl border border-gray-200 bottom-0 left-0 right-0 h-[85vh] rounded-t-2xl sm:bottom-20 sm:left-auto sm:right-6 sm:rounded-2xl"
+          className="chat-window" style={{}}
         >
           {/* Header */}
           <div className="flex items-center justify-between px-5 py-3.5" style={{ backgroundColor: '#1a2b6b' }}>
@@ -113,7 +113,7 @@ export function EvalentChat() {
             {messages.map((msg, i) => (
               <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div
-                  className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
+                  className={`max-w-[88%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed break-words ${
                     msg.role === 'user'
                       ? 'text-white rounded-br-md'
                       : 'bg-white text-gray-700 border border-gray-100 shadow-sm rounded-bl-md'
@@ -144,7 +144,7 @@ export function EvalentChat() {
           </div>
 
           {/* Input */}
-          <div className="border-t border-gray-200 bg-white px-4 py-3">
+          <div className="border-t border-gray-200 bg-white px-4 py-3 pb-safe" style={{ paddingBottom: "max(12px, env(safe-area-inset-bottom))" }}>
             <div className="flex items-center gap-2">
               <input
                 ref={inputRef}
@@ -173,7 +173,7 @@ export function EvalentChat() {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition-all hover:scale-105 active:scale-95"
+        className="fixed bottom-6 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition-all hover:scale-105 active:scale-95 sm:bottom-6 sm:right-6"
         style={{ backgroundColor: '#1a2b6b' }}
       >
         {isOpen ? (
