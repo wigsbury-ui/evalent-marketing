@@ -27,6 +27,7 @@ const WHY_LINKS = [
   { href: '/why/transparency', label: 'Transparency',           desc: 'Full audit trail, every decision documented' },
   { href: '/why/defensibility',label: 'Defensibility',          desc: 'Evidence-based, accreditation-ready records' },
   { href: '/why/conversion',   label: 'Conversion & Speed',     desc: 'Faster decisions, higher yield' },
+  { href: '/why/data-security',  label: 'Data Security',           desc: 'GDPR compliant · student data protected' },
 ]
 
 const SCHOOLS_LINKS = [
