@@ -100,7 +100,7 @@ export default function ReportSlider() {
                   key={i}
                   onClick={() => setActivePin(activePin === i ? -1 : i)}
                   className={`absolute w-7 h-7 rounded-full border-2 border-white text-white text-xs font-black flex items-center justify-center shadow-lg transition-all z-10 ${activePin === i ? 'bg-amber-500 scale-110' : 'bg-brand hover:scale-110'}`}
-                  style={{ left: \`\${ann.x}%\`, top: \`\${ann.y}%\`, transform: 'translate(-50%, -50%)' }}
+                  style={{ left: `${ann.x}%`, top: `${ann.y}%`, transform: 'translate(-50%, -50%)' }}
                   aria-label={ann.label}
                 >
                   {i + 1}
@@ -114,7 +114,7 @@ export default function ReportSlider() {
             <div className="h-1 bg-gray-200 rounded-full mb-5 overflow-hidden">
               <div
                 className="h-full bg-brand rounded-full transition-all duration-300"
-                style={{ width: \`\${((current + 1) / SLIDES.length) * 100}%\` }}
+                style={{ width: `${((current + 1) / SLIDES.length) * 100}%` }}
               />
             </div>
 
