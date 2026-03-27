@@ -85,8 +85,8 @@ export default function ReportSlider() {
         <div className="grid md:grid-cols-[1fr_380px] gap-10 items-start">
 
           {/* Left — report image */}
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100">
-            <div className="relative w-full" style={{ aspectRatio: '800/1130' }}>
+          <div className="relative rounded-2xl overflow-visible shadow-2xl bg-white border border-gray-100">
+            <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '800/1130' }}>
               <Image
                 src={slide.img}
                 alt={slide.title}
@@ -96,15 +96,58 @@ export default function ReportSlider() {
                 priority={current === 0}
               />
               {slide.annotations.map((ann, i) => (
-                <button
+                <div
                   key={i}
-                  onClick={() => setActivePin(activePin === i ? -1 : i)}
-                  className={`absolute w-7 h-7 rounded-full border-2 border-white text-white text-xs font-black flex items-center justify-center shadow-lg transition-all z-10 ${activePin === i ? 'bg-[#002ec1] scale-110' : 'bg-[#4b5563] hover:bg-[#002ec1] hover:scale-110'}`}
-                  style={{ left: `${ann.x}%`, top: `${ann.y}%`, transform: 'translate(-50%, -50%)' }}
-                  aria-label={ann.label}
+                  className="absolute"
+                  style={{ left: `${ann.x}%`, top: `${ann.y}%`, transform: 'translate(-50%, -50%)', zIndex: 10 }}
                 >
-                  {i + 1}
-                </button>
+                  {/* Pin button */}
+                  <button
+                    onClick={() => setActivePin(activePin === i ? -1 : i)}
+                    className={`w-7 h-7 rounded-full border-2 border-white text-white text-xs font-black flex items-center justify-center shadow-lg transition-all ${activePin === i ? 'bg-[#002ec1] scale-110' : 'bg-[#4b5563] hover:bg-[#002ec1] hover:scale-110'}`}
+                    aria-label={ann.label}
+                  >
+                    {i + 1}
+                  </button>
+                  {/* Callout tooltip — points left if pin on left half, right if on right half */}
+                  {activePin === i && (
+                    <div
+                      className="absolute"
+                      style={{
+                        ...(ann.x > 60
+                          ? { right: '130%', left: 'auto' }
+                          : { left: '130%' }),
+                        top: '50%',
+                        transform: 'translateY(-50%)',
+                        whiteSpace: 'nowrap',
+                      }}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {/* Triangle arrow */}
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          width: 0,
+                          height: 0,
+                          ...(ann.x > 60
+                            ? { right: '-7px', borderTop: '7px solid transparent', borderBottom: '7px solid transparent', borderLeft: '7px solid #07112e' }
+                            : { left: '-7px', borderTop: '7px solid transparent', borderBottom: '7px solid transparent', borderRight: '7px solid #07112e' }
+                          ),
+                        }}
+                      />
+                      {/* Callout box */}
+                      <div
+                        className="bg-[#07112e] text-white rounded-lg shadow-xl"
+                        style={{ padding: '8px 12px', maxWidth: '200px', whiteSpace: 'normal' }}
+                      >
+                        <div className="text-[10px] font-bold uppercase tracking-wider text-blue-300 mb-1">{ann.label}</div>
+                        <div className="text-xs leading-snug text-white/90">{ann.text}</div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
