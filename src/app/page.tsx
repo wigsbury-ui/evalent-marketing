@@ -6,9 +6,11 @@ import Footer from '@/components/Footer'
 import TrialSection from '@/components/TrialSection'
 import Link from 'next/link'
 import EvalDemo from '@/components/EvalDemo'
+import TrialModal from '@/components/TrialModal'
 
 export default function Home() {
   const [videoOpen, setVideoOpen] = useState(false)
+  const [trialOpen, setTrialOpen] = useState(false)
   return (
     <div className="min-h-screen">
       <Nav />
@@ -52,9 +54,9 @@ export default function Home() {
             Structured assessments. AI-evaluated reports. One-click decisions. All automatic — from link sent to decision logged.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <a href="#trial" className="bg-white text-brand font-bold text-sm px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors">
+            <button onClick={() => setTrialOpen(true)} className="bg-white text-brand font-bold text-sm px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
               Start your free trial →
-            </a>
+            </button>
             
           </div>
           <div className="mt-8 flex gap-5 justify-center flex-wrap">
@@ -371,6 +373,7 @@ export default function Home() {
       </section>
 
       <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
+      <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
       <Footer />
     </div>
   )
