@@ -118,12 +118,12 @@ export default function ReportSlider() {
                   {activePin === i && (
                     <span style={{
                       marginLeft: '4px',
-                      background: '#002ec1',
-                      color: 'white',
-                      fontSize: '10px',
+                      background: 'white',
+                      color: '#002ec1',
+                      fontSize: '20px',
                       fontWeight: 800,
                       lineHeight: 1,
-                      padding: '2px 5px',
+                      padding: '2px 6px',
                       borderRadius: '4px',
                       whiteSpace: 'nowrap',
                     }}>
