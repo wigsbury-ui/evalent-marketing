@@ -23,13 +23,21 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="px-6 bg-white pt-12 pb-2">
+      {/* Video */}
+      <section className="px-6 bg-white pt-10 pb-2">
         <div className="max-w-4xl mx-auto">
+          <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1177671437?badge=0&autopause=0&player_id=0&app_id=58479"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              title="Evalent — Data Security"
+            />
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
           <h2 className="text-center text-xl font-bold text-navy mt-4">Why data protection matters in admissions</h2>
-          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">
-            Independent schools assess applicants who are minors. That data — names, writing samples, scores, contact details — carries serious legal and ethical weight. Every school using Evalent needs to be confident that the platform meets its obligations under UK GDPR and EU GDPR, and that student data is never misused. This page explains exactly how Evalent handles that responsibility.
-          </p>
+          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Independent schools assess applicants who are minors. That data — names, writing samples, scores, contact details — carries serious legal and ethical weight. Every school using Evalent needs to be confident that the platform meets its obligations under UK GDPR and EU GDPR, and that student data is never misused. This page explains exactly how Evalent handles that responsibility.</p>
         </div>
       </section>
 
