@@ -95,15 +95,25 @@ export default function ReportSlider() {
                 sizes="(max-width: 900px) 100vw, 60vw"
                 priority={current === 0}
               />
+              {/* Triangle arrows on the LEFT edge of the image, vertically aligned to each annotation */}
               {slide.annotations.map((ann, i) => (
                 <button
                   key={i}
                   onClick={() => setActivePin(activePin === i ? -1 : i)}
-                  className={`absolute w-7 h-7 rounded-full border-2 border-white text-white text-xs font-black flex items-center justify-center shadow-lg transition-all z-10 ${activePin === i ? 'bg-[#002ec1] scale-125 ring-4 ring-[#002ec1]/30' : 'bg-[#4b5563] hover:bg-[#002ec1] hover:scale-110'}`}
-                  style={{ left: `${ann.x}%`, top: `${ann.y}%`, transform: 'translate(-50%, -50%)' }}
                   aria-label={ann.label}
+                  className="absolute transition-all z-10 group"
+                  style={{ left: 0, top: `${ann.y}%`, transform: 'translateY(-50%)' }}
                 >
-                  {i + 1}
+                  {/* Right-pointing triangle */}
+                  <div style={{
+                    width: 0,
+                    height: 0,
+                    borderTop: activePin === i ? '12px solid transparent' : '10px solid transparent',
+                    borderBottom: activePin === i ? '12px solid transparent' : '10px solid transparent',
+                    borderLeft: activePin === i ? '16px solid #002ec1' : '13px solid #4b5563',
+                    transition: 'all 0.15s',
+                    filter: activePin === i ? 'drop-shadow(0 0 4px rgba(0,46,193,0.5))' : 'none',
+                  }} />
                 </button>
               ))}
             </div>
@@ -129,21 +139,8 @@ export default function ReportSlider() {
                 <button
                   key={i}
                   onClick={() => setActivePin(activePin === i ? -1 : i)}
-                  className={`relative flex gap-3 items-start p-3 rounded-xl border text-left transition-all ${activePin === i ? 'border-[#002ec1] bg-blue-50 shadow-sm' : 'border-gray-200 bg-white hover:border-gray-300'}`}
+                  className={`flex gap-3 items-start p-3 rounded-xl border text-left transition-all ${activePin === i ? 'border-[#002ec1] bg-blue-50 shadow-sm' : 'border-gray-200 bg-white hover:border-gray-300'}`}
                 >
-                  {activePin === i && (
-                    <div style={{
-                      position: 'absolute',
-                      left: '-8px',
-                      top: '50%',
-                      transform: 'translateY(-50%)',
-                      width: 0,
-                      height: 0,
-                      borderTop: '7px solid transparent',
-                      borderBottom: '7px solid transparent',
-                      borderRight: '7px solid #002ec1',
-                    }} />
-                  )}
                   <span className={`w-6 h-6 rounded-full text-white text-xs font-black flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${activePin === i ? 'bg-[#002ec1]' : 'bg-[#4b5563]'}`}>
                     {i + 1}
                   </span>
