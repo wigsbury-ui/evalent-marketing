@@ -99,7 +99,7 @@ export default function ReportSlider() {
                 <button
                   key={i}
                   onClick={() => setActivePin(activePin === i ? -1 : i)}
-                  className={`absolute w-7 h-7 rounded-full border-2 border-white text-white text-xs font-black flex items-center justify-center shadow-lg transition-all z-10 ${activePin === i ? 'bg-amber-500 scale-110' : 'bg-brand hover:scale-110'}`}
+                  className={`absolute w-7 h-7 rounded-full border-2 border-white text-white text-xs font-black flex items-center justify-center shadow-lg transition-all z-10 ${activePin === i ? 'bg-[#07112e] scale-110' : 'bg-[#002ec1] hover:scale-110'}`}
                   style={{ left: `${ann.x}%`, top: `${ann.y}%`, transform: 'translate(-50%, -50%)' }}
                   aria-label={ann.label}
                 >
@@ -113,7 +113,7 @@ export default function ReportSlider() {
           <div className="md:sticky md:top-8">
             <div className="h-1 bg-gray-200 rounded-full mb-5 overflow-hidden">
               <div
-                className="h-full bg-brand rounded-full transition-all duration-300"
+                className="h-full bg-[#002ec1] rounded-full transition-all duration-300"
                 style={{ width: `${((current + 1) / SLIDES.length) * 100}%` }}
               />
             </div>
@@ -129,9 +129,9 @@ export default function ReportSlider() {
                 <button
                   key={i}
                   onClick={() => setActivePin(activePin === i ? -1 : i)}
-                  className={`flex gap-3 items-start p-3 rounded-xl border text-left transition-all ${activePin === i ? 'border-brand bg-blue-50' : 'border-gray-200 bg-white hover:border-brand/40'}`}
+                  className={`flex gap-3 items-start p-3 rounded-xl border text-left transition-all ${activePin === i ? 'border-[#002ec1] bg-blue-50' : 'border-gray-200 bg-white hover:border-gray-300'}`}
                 >
-                  <span className={`w-6 h-6 rounded-full text-white text-xs font-black flex items-center justify-center flex-shrink-0 mt-0.5 ${activePin === i ? 'bg-amber-500' : 'bg-brand'}`}>
+                  <span className={`w-6 h-6 rounded-full text-white text-xs font-black flex items-center justify-center flex-shrink-0 mt-0.5 ${activePin === i ? 'bg-[#002ec1]' : 'bg-gray-400'}`}>
                     {i + 1}
                   </span>
                   <span className="text-sm text-gray-700">
@@ -142,11 +142,11 @@ export default function ReportSlider() {
               ))}
             </div>
 
-            <div className="flex items-center gap-3 mb-5">
+            <div className="flex items-center gap-3 mb-6">
               <button
                 onClick={() => go(Math.max(0, current - 1))}
                 disabled={current === 0}
-                className="w-9 h-9 rounded-full border-2 border-gray-200 text-gray-500 hover:border-brand hover:text-brand disabled:opacity-30 disabled:cursor-not-allowed transition-all flex items-center justify-center text-lg"
+                className="w-9 h-9 rounded-full border-2 border-gray-200 text-gray-500 hover:border-navy hover:text-navy disabled:opacity-30 disabled:cursor-not-allowed transition-all flex items-center justify-center text-lg"
               >
                 &#8592;
               </button>
@@ -155,14 +155,14 @@ export default function ReportSlider() {
                   <button
                     key={i}
                     onClick={() => go(i)}
-                    className={`h-2 rounded-full transition-all ${i === current ? 'w-5 bg-brand' : 'w-2 bg-gray-300 hover:bg-gray-400'}`}
+                    className={`h-2 rounded-full transition-all ${i === current ? 'w-5 bg-[#002ec1]' : 'w-2 bg-gray-300 hover:bg-gray-400'}`}
                   />
                 ))}
               </div>
               <button
                 onClick={() => go(Math.min(SLIDES.length - 1, current + 1))}
                 disabled={current === SLIDES.length - 1}
-                className="w-9 h-9 rounded-full border-2 border-gray-200 text-gray-500 hover:border-brand hover:text-brand disabled:opacity-30 disabled:cursor-not-allowed transition-all flex items-center justify-center text-lg"
+                className="w-9 h-9 rounded-full border-2 border-gray-200 text-gray-500 hover:border-navy hover:text-navy disabled:opacity-30 disabled:cursor-not-allowed transition-all flex items-center justify-center text-lg"
               >
                 &#8594;
               </button>
@@ -172,15 +172,13 @@ export default function ReportSlider() {
               href="/Evalent_Sample_Report_Lilli_Smith_Grade4.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 p-3.5 bg-white border border-gray-200 rounded-xl hover:border-brand hover:bg-blue-50 transition-all group"
+              className="flex items-center justify-center gap-3 w-full py-4 px-5 bg-[#002ec1] hover:bg-[#07112e] text-white font-bold text-sm rounded-xl transition-colors shadow-md"
             >
-              <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center text-lg flex-shrink-0 group-hover:bg-blue-100">
-                &#128196;
-              </div>
-              <div>
-                <div className="text-sm font-bold text-navy">Download full sample report</div>
-                <div className="text-xs text-gray-400 mt-0.5">PDF &middot; 7 pages &middot; Lilli Smith, Grade 4</div>
-              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download full sample report
+              <span className="text-blue-200 font-normal text-xs">PDF &middot; 7 pages</span>
             </a>
           </div>
 
