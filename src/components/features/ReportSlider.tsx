@@ -1,0 +1,196 @@
+'use client'
+import { useState } from 'react'
+import Image from 'next/image'
+
+const SLIDES = [
+  {
+    title: 'Instant recommendation with full evidence',
+    description: 'The cover leads with a clear recommendation — Ready to admit, Borderline, or Not yet ready — backed by an AI executive summary and a radar chart plotting all four domains against your school's thresholds.',
+    img: '/report_slide_1.jpg',
+    annotations: [
+      { x: 50, y: 22, label: 'Recommendation band', text: 'Generated automatically from scores and thresholds — consistent across every applicant.' },
+      { x: 50, y: 42, label: 'AI executive summary', text: '2–3 paragraph narrative written specifically for this student's profile. Not a template.' },
+      { x: 50, y: 64, label: 'Radar chart', text: 'Four domains plotted against your thresholds. Student score vs. threshold visible instantly.' },
+      { x: 50, y: 86, label: 'Strengths & development', text: 'Auto-generated from the student's actual scores and written responses.' },
+    ],
+  },
+  {
+    title: 'Academic summary with bar chart breakdown',
+    description: 'Page 2 gives a quick-read overview — overall score, bar chart comparing each domain against threshold, and a snapshot table with MCQ scores, writing bands, delta, and plain-English comments.',
+    img: '/report_slide_2.jpg',
+    annotations: [
+      { x: 50, y: 21, label: 'Overall academic score', text: 'Weighted combination of all domain scores, calculated to one decimal place.' },
+      { x: 50, y: 47, label: 'Domain bar chart', text: 'Blue = student score. Green = school threshold. Red flag when below.' },
+      { x: 50, y: 76, label: 'Domain snapshot table', text: 'MCQ score, writing band, combined score, and a plain-English comment for each domain.' },
+    ],
+  },
+  {
+    title: 'Deep domain analysis — English',
+    description: 'Each domain gets its own page. English shows MCQ score, writing band, sub-skill breakdown bars, AI MCQ analysis, writing evaluation, and the student's verbatim written response.',
+    img: '/report_slide_3.jpg',
+    annotations: [
+      { x: 50, y: 17, label: 'Score summary', text: 'MCQ, writing band, and combined score side by side for instant comparison.' },
+      { x: 50, y: 30, label: 'Sub-skill breakdown', text: 'Bars show reading comprehension, grammar, and inference against the threshold line.' },
+      { x: 50, y: 58, label: 'AI narrative', text: 'Generated from this student's specific answers — not generic boilerplate.' },
+      { x: 50, y: 80, label: 'Student's own words', text: 'Verbatim written response. Assessors see exactly what the student produced under timed conditions.' },
+    ],
+  },
+  {
+    title: 'Mathematics — granular sub-skill data',
+    description: 'The maths page shows where gaps actually are. Sub-skill bars break performance into number & algebra, geometry, and statistics — so a low overall score is properly understood.',
+    img: '/report_slide_4.jpg',
+    annotations: [
+      { x: 50, y: 17, label: 'Below-threshold flag', text: 'Combined score shown in red when below threshold — immediately visible.' },
+      { x: 50, y: 33, label: 'Sub-skill bars', text: 'Green = above threshold. Red = below. Geometry strong, statistics a clear gap.' },
+      { x: 50, y: 67, label: 'Specific diagnosis', text: 'Identifies exactly which question types were missed — not just a percentage.' },
+    ],
+  },
+  {
+    title: 'Mindset lens — the full picture',
+    description: 'The final page surfaces the student's growth mindset orientation. Contextual data that doesn't gate an admission, but gives assessors something no academic score can: how this student approaches challenge.',
+    img: '/report_slide_7.jpg',
+    annotations: [
+      { x: 50, y: 21, label: 'Mindset score', text: 'Scored 0–4 from a 10-item inventory. Shown as a labelled progress bar.' },
+      { x: 50, y: 51, label: 'Contextual narrative', text: 'Explains what the score means for this specific student — with a panel recommendation.' },
+      { x: 50, y: 79, label: 'How-to-read guide', text: 'Built into every report so any member of the admissions team can interpret results confidently.' },
+    ],
+  },
+]
+
+export default function ReportSlider() {
+  const [current, setCurrent] = useState(0)
+  const [activePin, setActivePin] = useState(-1)
+
+  const slide = SLIDES[current]
+
+  function go(idx: number) {
+    setCurrent(idx)
+    setActivePin(-1)
+  }
+
+  return (
+    <section className="py-16 px-6 bg-[#f1f5f9]">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">SAMPLE REPORT</div>
+          <h2 className="text-2xl font-black text-navy tracking-tight mb-2">See exactly what your assessors receive.</h2>
+          <p className="text-gray-500 text-sm max-w-lg mx-auto leading-relaxed">
+            Every Evalent report is generated within minutes of submission — structured, evidence-based, and ready for decision.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-[1fr_380px] gap-10 items-start">
+
+          {/* Left — report image */}
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100 cursor-zoom-in">
+            <div className="relative w-full" style={{ aspectRatio: '800/1130' }}>
+              <Image
+                src={slide.img}
+                alt={slide.title}
+                fill
+                className="object-cover transition-opacity duration-200"
+                sizes="(max-width: 900px) 100vw, 60vw"
+                priority={current === 0}
+              />
+              {/* Annotation pins */}
+              {slide.annotations.map((ann, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActivePin(activePin === i ? -1 : i)}
+                  className={`absolute w-7 h-7 rounded-full border-2 border-white text-white text-xs font-black flex items-center justify-center shadow-lg transition-all z-10
+                    ${activePin === i ? 'bg-amber-500 scale-110' : 'bg-brand hover:scale-110'}`}
+                  style={{ left: `${ann.x}%`, top: `${ann.y}%`, transform: 'translate(-50%, -50%)' }}
+                  aria-label={ann.label}
+                >
+                  {i + 1}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Right — info panel */}
+          <div className="md:sticky md:top-8">
+            {/* Progress */}
+            <div className="h-1 bg-gray-200 rounded-full mb-5 overflow-hidden">
+              <div
+                className="h-full bg-brand rounded-full transition-all duration-300"
+                style={{ width: `${((current + 1) / SLIDES.length) * 100}%` }}
+              />
+            </div>
+
+            <div className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-2">
+              {String(current + 1).padStart(2, '0')} / {String(SLIDES.length).padStart(2, '0')}
+            </div>
+            <h3 className="text-xl font-black text-navy mb-3 leading-tight">{slide.title}</h3>
+            <p className="text-sm text-gray-500 leading-relaxed mb-5">{slide.description}</p>
+
+            {/* Annotations */}
+            <div className="flex flex-col gap-2 mb-6">
+              {slide.annotations.map((ann, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActivePin(activePin === i ? -1 : i)}
+                  className={`flex gap-3 items-start p-3 rounded-xl border text-left transition-all
+                    ${activePin === i ? 'border-brand bg-blue-50' : 'border-gray-200 bg-white hover:border-brand/40'}`}
+                >
+                  <span className={`w-6 h-6 rounded-full text-white text-xs font-black flex items-center justify-center flex-shrink-0 mt-0.5
+                    ${activePin === i ? 'bg-amber-500' : 'bg-brand'}`}>
+                    {i + 1}
+                  </span>
+                  <span className="text-sm text-gray-700">
+                    <strong className="block text-xs font-bold text-navy uppercase tracking-wide mb-0.5">{ann.label}</strong>
+                    {ann.text}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            {/* Nav */}
+            <div className="flex items-center gap-3 mb-5">
+              <button
+                onClick={() => go(Math.max(0, current - 1))}
+                disabled={current === 0}
+                className="w-9 h-9 rounded-full border-2 border-gray-200 text-gray-500 hover:border-brand hover:text-brand disabled:opacity-30 disabled:cursor-not-allowed transition-all flex items-center justify-center text-lg"
+              >
+                ←
+              </button>
+              <div className="flex gap-1.5">
+                {SLIDES.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => go(i)}
+                    className={`h-2 rounded-full transition-all ${i === current ? 'w-5 bg-brand' : 'w-2 bg-gray-300 hover:bg-gray-400'}`}
+                  />
+                ))}
+              </div>
+              <button
+                onClick={() => go(Math.min(SLIDES.length - 1, current + 1))}
+                disabled={current === SLIDES.length - 1}
+                className="w-9 h-9 rounded-full border-2 border-gray-200 text-gray-500 hover:border-brand hover:text-brand disabled:opacity-30 disabled:cursor-not-allowed transition-all flex items-center justify-center text-lg"
+              >
+                →
+              </button>
+            </div>
+
+            {/* Download CTA */}
+            <a
+              href="/Evalent_Sample_Report_Lilli_Smith_Grade4.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-3.5 bg-white border border-gray-200 rounded-xl hover:border-brand hover:bg-blue-50 transition-all group"
+            >
+              <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center text-lg flex-shrink-0 group-hover:bg-blue-100">
+                📄
+              </div>
+              <div>
+                <div className="text-sm font-bold text-navy">Download full sample report</div>
+                <div className="text-xs text-gray-400 mt-0.5">PDF · 7 pages · Lilli Smith, Grade 4</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  )
+}

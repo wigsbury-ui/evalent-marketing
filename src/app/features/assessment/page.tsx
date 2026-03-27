@@ -2,6 +2,7 @@ import HeroTrialButton from '@/components/HeroTrialButton'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import AssessmentDemo from '@/components/features/AssessmentDemo'
+import ReportSlider from '@/components/features/ReportSlider'
 import Link from 'next/link'
 
 export const metadata = {
@@ -100,16 +101,7 @@ export default function Page() {
       </section>
 
       
-      <section className="hidden md:block py-14 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">TRY IT YOURSELF</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight mb-2">The real assessment. Right here.</h2>
-            <p className="text-gray-500 text-sm max-w-lg mx-auto leading-relaxed">Grade 6 uses our animated avatar. Grade 8 uses a real person. Both are the actual assessment your applicants complete. When you submit, you&apos;ll be invited to start your free trial.</p>
-          </div>
-          <AssessmentDemo />
-        </div>
-      </section>
+      <ReportSlider />
 
       <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
