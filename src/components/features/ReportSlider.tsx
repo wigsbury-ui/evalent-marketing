@@ -101,7 +101,7 @@ export default function ReportSlider() {
                   key={i}
                   onClick={() => setActivePin(activePin === i ? -1 : i)}
                   aria-label={ann.label}
-                  className="absolute transition-all z-10 group"
+                  className="absolute transition-all z-10 flex items-center"
                   style={{ left: 0, top: `${ann.y}%`, transform: 'translateY(-50%)' }}
                 >
                   {/* Right-pointing triangle */}
@@ -112,8 +112,24 @@ export default function ReportSlider() {
                     borderBottom: activePin === i ? '12px solid transparent' : '10px solid transparent',
                     borderLeft: activePin === i ? '16px solid #002ec1' : '13px solid #4b5563',
                     transition: 'all 0.15s',
-                    filter: activePin === i ? 'drop-shadow(0 0 4px rgba(0,46,193,0.5))' : 'none',
+                    flexShrink: 0,
                   }} />
+                  {/* Number label — only when active */}
+                  {activePin === i && (
+                    <span style={{
+                      marginLeft: '4px',
+                      background: '#002ec1',
+                      color: 'white',
+                      fontSize: '10px',
+                      fontWeight: 800,
+                      lineHeight: 1,
+                      padding: '2px 5px',
+                      borderRadius: '4px',
+                      whiteSpace: 'nowrap',
+                    }}>
+                      {i + 1}
+                    </span>
+                  )}
                 </button>
               ))}
             </div>
