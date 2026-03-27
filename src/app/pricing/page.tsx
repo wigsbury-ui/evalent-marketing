@@ -37,6 +37,7 @@ export default function Pricing() {
           ))}
         </div>
         <p className="text-center text-xs text-gray-400 mt-8">Prices correct as of early 2026. Contact us for multi-year or multi-campus pricing.</p>
+        <p className="text-center text-xs text-gray-400 mt-2">All prices are exclusive of tax. Local taxes (including VAT where applicable) will be calculated at checkout based on your location.</p>
       </section>
       <Footer />
     </div>
