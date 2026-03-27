@@ -8,10 +8,10 @@ const SLIDES = [
     description: "The cover leads with a clear recommendation — Ready to admit, Borderline, or Not yet ready — backed by an AI executive summary and a radar chart plotting all four domains against your school's thresholds.",
     img: '/report_slide_1.jpg',
     annotations: [
-      { x: 50, y: 13, label: 'Recommendation band', text: 'Generated automatically from scores and thresholds — consistent across every applicant.' },
-      { x: 18, y: 34, label: 'AI executive summary', text: "2–3 paragraph narrative written specifically for this student's profile. Not a template." },
-      { x: 50, y: 57, label: 'Radar chart', text: 'Four domains plotted against your thresholds. Student score vs. threshold visible at a glance.' },
-      { x: 22, y: 86, label: 'Strengths & development', text: "Auto-generated bullet points from the student's actual scores and written responses." },
+      { x: 50, y: 11.5, label: 'Recommendation band', text: 'Generated automatically from scores and thresholds — consistent across every applicant.' },
+      { x: 50, y: 25.7, label: 'AI executive summary', text: "2–3 paragraph narrative written specifically for this student's profile. Not a template." },
+      { x: 50, y: 54.4, label: 'Radar chart', text: 'Four domains plotted against your thresholds. Student score vs. threshold visible at a glance.' },
+      { x: 26, y: 86.3, label: 'Strengths & development', text: "Auto-generated bullet points from the student's actual scores and written responses." },
     ],
   },
   {
@@ -19,9 +19,9 @@ const SLIDES = [
     description: 'Page 2 gives a quick-read overview — overall score, bar chart comparing each domain against threshold, and a snapshot table with MCQ scores, writing bands, delta, and plain-English comments.',
     img: '/report_slide_2.jpg',
     annotations: [
-      { x: 50, y: 16, label: 'Overall academic score', text: 'Weighted combination of all domain scores, calculated to one decimal place.' },
-      { x: 35, y: 40, label: 'Domain bar chart', text: 'Blue = student score. Green = school threshold. Red bar flags below-threshold performance.' },
-      { x: 20, y: 67, label: 'Domain snapshot table', text: 'MCQ score, writing band, combined score, and a plain-English comment for each domain.' },
+      { x: 50, y: 12.4, label: 'Overall academic score', text: 'Weighted combination of all domain scores, calculated to one decimal place.' },
+      { x: 44, y: 31.9, label: 'Domain bar chart', text: 'Blue = student score. Green = school threshold. Red bar flags below-threshold performance.' },
+      { x: 25, y: 51.3, label: 'Domain snapshot table', text: 'MCQ score, writing band, combined score, and a plain-English comment for each domain.' },
     ],
   },
   {
@@ -29,10 +29,10 @@ const SLIDES = [
     description: "Each domain gets its own page. English shows MCQ score, writing band, sub-skill breakdown bars, AI MCQ analysis, writing evaluation, and the student's verbatim written response.",
     img: '/report_slide_3.jpg',
     annotations: [
-      { x: 75, y: 11, label: 'Score summary', text: 'MCQ, writing band, and combined score side by side for instant comparison.' },
-      { x: 45, y: 27, label: 'Sub-skill breakdown', text: 'Bars show reading comprehension, grammar, and inference against the threshold line.' },
-      { x: 18, y: 50, label: 'AI narrative', text: "Generated from this student's specific answers — not generic boilerplate." },
-      { x: 50, y: 77, label: "Student's own words", text: 'Verbatim written response. Assessors see exactly what the student produced under timed conditions.' },
+      { x: 82.5, y: 13.3, label: 'Score summary', text: 'MCQ, writing band, and combined score side by side for instant comparison.' },
+      { x: 54, y: 27.9, label: 'Sub-skill breakdown', text: 'Bars show reading comprehension, grammar, and inference against the threshold line.' },
+      { x: 20, y: 43.4, label: 'AI narrative', text: "Generated from this student's specific answers — not generic boilerplate." },
+      { x: 50, y: 76.1, label: "Student's own words", text: 'Verbatim written response. Assessors see exactly what the student produced under timed conditions.' },
     ],
   },
   {
@@ -40,9 +40,9 @@ const SLIDES = [
     description: 'The maths page shows where gaps actually are. Sub-skill bars break performance into number & algebra, geometry, and statistics — so a low overall score is properly understood.',
     img: '/report_slide_4.jpg',
     annotations: [
-      { x: 80, y: 11, label: 'Below-threshold flag', text: 'Combined score shown in red when below threshold — immediately visible to the assessor.' },
-      { x: 45, y: 30, label: 'Sub-skill bars', text: 'Green = above threshold. Red = well below. Statistics at 25% is the critical gap here.' },
-      { x: 18, y: 58, label: 'Specific diagnosis', text: 'Identifies exactly which question types were missed — not just a percentage.' },
+      { x: 82.5, y: 13.3, label: 'Below-threshold flag', text: 'Combined score shown in red when below threshold — immediately visible to the assessor.' },
+      { x: 54, y: 29.2, label: 'Sub-skill bars', text: 'Green = above threshold. Red = well below. Statistics at 25% is the critical gap here.' },
+      { x: 20, y: 46, label: 'Specific diagnosis', text: 'Identifies exactly which question types were missed — not just a percentage.' },
     ],
   },
   {
@@ -50,9 +50,9 @@ const SLIDES = [
     description: "The final page surfaces the student's growth mindset orientation. Contextual data that doesn't gate an admission, but gives assessors something no academic score can: how this student approaches challenge.",
     img: '/report_slide_7.jpg',
     annotations: [
-      { x: 50, y: 13, label: 'Mindset score', text: 'Scored 0–4 from a 10-item inventory. Shown with a labelled progress bar.' },
-      { x: 18, y: 38, label: 'Contextual narrative', text: 'Explains what the score means for this specific student — with a recommendation for the panel.' },
-      { x: 18, y: 65, label: 'How-to-read guide', text: 'Built into every report so any member of the admissions team can interpret results confidently.' },
+      { x: 50, y: 13.7, label: 'Mindset score', text: 'Scored 0–4 from a 10-item inventory. Shown with a labelled progress bar.' },
+      { x: 20, y: 35.4, label: 'Contextual narrative', text: 'Explains what the score means for this specific student — with a recommendation for the panel.' },
+      { x: 20, y: 61.9, label: 'How-to-read guide', text: 'Built into every report so any member of the admissions team can interpret results confidently.' },
     ],
   },
 ]
