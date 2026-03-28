@@ -160,19 +160,16 @@ export default function Nav() {
             <Dropdown
               label="Features"
               links={FEATURE_LINKS}
-              extraItem={{ href: '/features', label: 'All features' }}
               isActive={isFeatures}
             />
             <Dropdown
               label="Why Evalent"
               links={WHY_LINKS}
-              extraItem={{ href: '/why', label: 'All benefits' }}
               isActive={isWhy}
             />
             <Dropdown
               label="Curricula"
               links={CURRICULA_LINKS}
-              extraItem={{ href: '/curricula', label: 'All curricula' }}
               isActive={isCurricula}
             />
             <Dropdown
