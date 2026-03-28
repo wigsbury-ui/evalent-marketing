@@ -72,9 +72,9 @@ export default function ReportSlider() {
   }
 
   return (
-    <section className="py-16 px-6 bg-[#f1f5f9]">
+    <section className="py-16 bg-[#f1f5f9]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 px-6">
           <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">SAMPLE REPORT</div>
           <h2 className="text-2xl font-black text-navy tracking-tight mb-2">See exactly what your assessors receive.</h2>
           <p className="text-gray-500 text-sm max-w-lg mx-auto leading-relaxed">
@@ -82,6 +82,47 @@ export default function ReportSlider() {
           </p>
         </div>
 
+        {/* ── MOBILE: horizontal scroll strip ── */}
+        <div className="md:hidden">
+          <div
+            className="flex gap-4 overflow-x-auto pb-4 px-6"
+            style={{ scrollSnapType: 'x mandatory', WebkitOverflowScrolling: 'touch' }}
+          >
+            {SLIDES.map((s, i) => (
+              <div
+                key={i}
+                className="flex-shrink-0 rounded-xl overflow-hidden shadow-lg bg-white border border-gray-100"
+                style={{ width: '72vw', maxWidth: '280px', scrollSnapAlign: 'start' }}
+              >
+                <div className="relative w-full" style={{ aspectRatio: '800/1130' }}>
+                  <Image
+                    src={s.img}
+                    alt={s.title}
+                    fill
+                    className="object-cover"
+                    sizes="280px"
+                  />
+                </div>
+                <div className="p-3 border-t border-gray-100">
+                  <p className="text-xs font-bold text-navy leading-snug">{s.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center mt-4 px-6">
+            <a
+              href="/Evalent_Sample_Report_Lilli_Smith_Grade4.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full max-w-sm py-3.5 px-5 bg-[#002ec1] hover:bg-[#07112e] text-white font-bold text-sm rounded-xl transition-colors"
+            >
+              &#8595; Download full sample report
+            </a>
+          </div>
+        </div>
+
+        {/* ── DESKTOP: annotated slider ── */}
+        <div className="hidden md:block px-6">
         <div className="grid md:grid-cols-[1fr_380px] gap-10 items-start">
 
           {/* Left — report image */}
@@ -209,6 +250,9 @@ export default function ReportSlider() {
           </div>
 
         </div>
+        </div>{/* end desktop grid */}
+        </div>{/* end hidden md:block */}
+
       </div>
     </section>
   )
