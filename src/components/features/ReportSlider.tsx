@@ -63,6 +63,7 @@ type Slide = { title: string; description: string; img: string; annotations: Ann
 export default function ReportSlider() {
   const [current, setCurrent] = useState(0)
   const [activePin, setActivePin] = useState(-1)
+  const [lightbox, setLightbox] = useState<Slide | null>(null)
 
   const slide: Slide = SLIDES[current]
 
@@ -95,9 +96,10 @@ export default function ReportSlider() {
             style={{ scrollSnapType: 'x mandatory' } as React.CSSProperties}
           >
             {SLIDES.map((s, i) => (
-              <div
+              <button
                 key={i}
-                className="flex-shrink-0 rounded-xl overflow-hidden shadow-lg bg-white border border-gray-100"
+                onClick={() => setLightbox(s)}
+                className="flex-shrink-0 rounded-xl overflow-hidden shadow-lg bg-white border border-gray-100 text-left active:scale-95 transition-transform"
                 style={{ width: '72vw', maxWidth: '280px', scrollSnapAlign: 'start' } as React.CSSProperties}
               >
                 <div className="relative w-full" style={{ aspectRatio: '800/1130' } as React.CSSProperties}>
@@ -108,11 +110,15 @@ export default function ReportSlider() {
                     className="object-cover"
                     sizes="280px"
                   />
+                  {/* Tap hint */}
+                  <div className="absolute bottom-2 right-2 bg-black/50 text-white text-[10px] font-semibold px-2 py-1 rounded-full backdrop-blur-sm">
+                    Tap to expand
+                  </div>
                 </div>
                 <div className="p-3 border-t border-gray-100">
                   <p className="text-xs font-bold text-navy leading-snug">{s.title}</p>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
           <div className="flex justify-center mt-5 px-6">
@@ -126,6 +132,37 @@ export default function ReportSlider() {
             </a>
           </div>
         </div>
+
+        {/* MOBILE: lightbox overlay */}
+        {lightbox && (
+          <div
+            className="md:hidden fixed inset-0 z-50 bg-black/90 flex flex-col items-center justify-center p-4"
+            onClick={() => setLightbox(null)}
+          >
+            <button
+              className="absolute top-5 right-5 text-white text-3xl leading-none font-light"
+              onClick={() => setLightbox(null)}
+              aria-label="Close"
+            >
+              &times;
+            </button>
+            <div
+              className="relative w-full rounded-xl overflow-hidden shadow-2xl"
+              style={{ maxWidth: '420px', maxHeight: '85vh', aspectRatio: '800/1130' } as React.CSSProperties}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={lightbox.img}
+                alt={lightbox.title}
+                fill
+                className="object-contain"
+                sizes="420px"
+              />
+            </div>
+            <p className="text-white text-sm font-semibold mt-4 text-center px-4">{lightbox.title}</p>
+            <p className="text-white/50 text-xs mt-1">Tap anywhere to close</p>
+          </div>
+        )}
 
         {/* DESKTOP: annotated interactive slider */}
         <div className="hidden md:block px-6">
