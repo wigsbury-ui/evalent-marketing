@@ -5,6 +5,7 @@ import VideoModal from '@/components/VideoModal'
 import Footer from '@/components/Footer'
 import TrialSection from '@/components/TrialSection'
 import Link from 'next/link'
+import AssessmentCounter from '@/components/AssessmentCounter'
 import EvalDemo from '@/components/EvalDemo'
 import TrialModal from '@/components/TrialModal'
 
@@ -65,6 +66,7 @@ export default function Home() {
                 <span className="w-3.5 h-3.5 bg-green-400/20 rounded-full flex items-center justify-center text-green-400 text-[9px]">✓</span>
                 {item}
               </div>
+        <AssessmentCounter />
             ))}
           </div>
         </div>
