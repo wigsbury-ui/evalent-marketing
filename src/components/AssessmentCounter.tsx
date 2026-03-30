@@ -58,7 +58,7 @@ export default function AssessmentCounter() {
   const [stats, setStats] = useState<SiteStats | null>(null)
 
   useEffect(() => {
-    fetch('https://app.evalent.io/api/site-stats', { cache: 'no-store' })
+    fetch('/api/site-stats', { cache: 'no-store' })
       .then(r => r.json())
       .then(setStats)
       .catch(() => {
