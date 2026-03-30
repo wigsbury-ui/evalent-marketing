@@ -75,7 +75,7 @@ export default function AssessmentCounter() {
   if (entries.length === 0) return null
 
   return (
-    <div className="w-full mb-6">
+    <div className="w-full mb-4">
       <div className="flex items-center justify-center gap-10 sm:gap-16 flex-wrap">
         {entries.map(([key, stat]) => (
           <AnimatedCounter
