@@ -43,7 +43,8 @@ export default function Home() {
           }
         `}</style>
         <div className="relative z-10 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-6">
+          <AssessmentCounter />
+        <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-6">
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
             10 FREE TRIAL REPORTS — NO CARD NEEDED
           </div>
