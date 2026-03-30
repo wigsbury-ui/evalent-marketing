@@ -43,7 +43,7 @@ function AnimatedCounter({ value, label, duration = 2000 }: CounterProps) {
   return (
     <div ref={ref} className="flex flex-col items-center">
       <span className="text-2xl sm:text-3xl font-bold tabular-nums tracking-tight text-white">
-        {started ? formatted : value.toLocaleString()}
+        {started ? formatted : value.toLocaleString()}+
       </span>
       <span className="text-xs sm:text-sm text-blue-200 mt-0.5 font-medium">{label}</span>
     </div>
