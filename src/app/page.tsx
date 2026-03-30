@@ -17,7 +17,7 @@ export default function Home() {
       <Nav />
 
       {/* HERO */}
-      <section className="bg-navy text-white pt-3 pb-14 px-6 text-center relative overflow-hidden">
+      <section className="bg-navy text-white pt-8 pb-9 px-6 text-center relative overflow-hidden">
         {/* Watermark — bottom-left, large, slow spin */}
         <div
           className="absolute pointer-events-none"
