@@ -29,7 +29,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* INTRO TEXT + VIDEO */}
       {/* VIDEO — directly under hero */}
       <section className="px-6 pt-10 pb-0 bg-white">
         <div className="max-w-5xl mx-auto">
@@ -61,7 +60,7 @@ export default function Page() {
           </div>
           <div className="space-y-3">
             {[
-                ['1', 'Enter the student's name, email, grade and curriculum', 'bg-blue-500/20 text-blue-300'],
+                ['1', "Enter the student's name, email, grade and curriculum", 'bg-blue-500/20 text-blue-300'],
                 ['2', 'Evalent sends the secure assessment link automatically', 'bg-green-500/20 text-green-300'],
                 ['3', 'You receive the completed report — nothing else to do', 'bg-purple-500/20 text-purple-300'],
               ].map(([n, text, cls]) => (
