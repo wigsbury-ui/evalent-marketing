@@ -52,7 +52,7 @@ export default function Page() {
       </section>
 
       <section className="py-14 px-6 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-5xl mx-auto">
           <div>
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHAT YOU RECEIVE</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Not just scores — a complete admissions picture</h2>
@@ -70,7 +70,7 @@ export default function Page() {
               ))}
             </div>
           </div>
-                      <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
+                      <div className="mt-10 rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
             <iframe
               src="https://player.vimeo.com/video/1175800177?badge=0&autopause=0&player_id=0&app_id=58479"
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
