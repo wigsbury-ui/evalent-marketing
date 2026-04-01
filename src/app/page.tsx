@@ -103,21 +103,6 @@ export default function Home() {
           <p className="text-center text-xs text-gray-400 mt-3">Watch this 2-minute overview to see Evalent in action</p>
         </div>
       </section>
-      {/* TRIAL */}
-      {/* Desktop: full trial form */}
-      <div className="hidden md:block">
-        <TrialSection />
-      </div>
-      {/* Mobile: simple CTA button */}
-      <section className="md:hidden bg-blue-50 py-12 px-6 text-center">
-        <h2 className="text-2xl font-black text-navy tracking-tight mb-3">10 free reports.<br/>No credit card.</h2>
-        <p className="text-gray-500 text-sm mb-6 leading-relaxed">Set up in minutes. Works on any device.</p>
-        <a href="https://app.evalent.io/signup" className="inline-block bg-brand text-white font-bold text-base px-8 py-4 rounded-xl hover:bg-blue-800 transition-colors">
-          Start your free trial →
-        </a>
-        <p className="text-xs text-gray-400 mt-3">10 free reports · No credit card · Ready in 5 minutes</p>
-      </section>
-
       {/* PROBLEM SECTION */}
       <section className="py-20 px-6 bg-navy relative overflow-hidden">
         {/* Subtle grid pattern */}
@@ -337,6 +322,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* REMINDERS */}
+      <section className="hidden md:block py-16 px-6 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">AUTOMATED REMINDERS</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-3">We chase applicants so you don't have to</h2>
+            <p className="text-sm text-gray-500 mb-6 leading-relaxed">If an applicant hasn't finished their assessment, Evalent sends reminders automatically. You're notified of every outcome.</p>
+            <div className="relative pl-7">
+              <div className="absolute left-2 top-2 bottom-2 w-0.5 bg-gradient-to-b from-brand to-blue-100" />
+              {[
+                { when: 'Day 0 — immediately', title: 'Assessment link sent', desc: 'Personalised email with secure link and instructions.', status: 'sent', color: 'bg-green-500 border-green-500' },
+                { when: 'Day 2 — if not started', title: 'Friendly reminder sent', desc: '"Your assessment link expires in 24 hours."', status: 'auto', color: 'bg-white border-brand' },
+                { when: 'Day 3 — if not complete', title: 'Expiry warning sent', desc: '"Your link expires today — click here to begin."', status: 'auto', color: 'bg-white border-brand' },
+                { when: 'Day 3 — on expiry', title: 'School notified', desc: 'You decide whether to extend or proceed.', status: 'auto', color: 'bg-white border-brand' },
+                { when: 'After decision', title: 'Record auto-updated', desc: 'Dashboard and audit trail updated instantly.', status: 'auto', color: 'bg-white border-brand' },
+              ].map((item, i) => (
+                <div key={i} className="relative mb-4">
+                  <div className={`absolute -left-5 top-2 w-3 h-3 rounded-full border-2 ${item.color}`} />
+                  <div className="bg-white border border-gray-200 rounded-xl p-3.5">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs font-bold text-brand">{item.when}</span>
+                      <span className={`text-[9px] font-black px-2 py-0.5 rounded-full ${item.status === 'sent' ? 'bg-green-100 text-green-700' : 'bg-blue-50 text-brand'}`}>{item.status === 'sent' ? '✓ SENT' : 'AUTO'}</span>
+                    </div>
+                    <div className="text-xs font-bold text-navy mb-0.5">{item.title}</div>
+                    <div className="text-xs text-gray-400">{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">COMMON QUESTIONS</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-3">What schools ask us</h2>
+            <p className="text-sm text-gray-500 mb-6 leading-relaxed">The honest answers.</p>
+            <div className="space-y-3">
+              {[
+                ['What if the assessor ignores the email?', 'A second reminder goes out after 48 hours. Most assessors click within the hour — one button is a very low bar.'],
+                ['What if a student does not complete in time?', 'Evalent sends two reminders before expiry. You are notified the moment a link expires so you can decide to extend.'],
+                ['Do we have to log into a portal each time?', 'No. The decision email works from any inbox. The dashboard exists if you want it — it is never required.'],
+                ['Can multiple assessors review the same report?', 'Yes. The report link can be forwarded. Only the recorded decision in the dashboard counts as official.'],
+              ].map(([q, a]) => (
+                <div key={q} className="bg-white border border-gray-200 rounded-xl p-4">
+                  <div className="text-xs font-bold text-gray-400 italic mb-1.5">"{q}"</div>
+                  <div className="text-xs text-gray-700 leading-relaxed">{a}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SOCIAL PROOF */}
       <section className="py-16 px-6 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto text-center mb-10">
@@ -361,6 +397,21 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* TRIAL */}
+      {/* Desktop: full trial form */}
+      <div className="hidden md:block">
+        <TrialSection />
+      </div>
+      {/* Mobile: simple CTA button */}
+      <section className="md:hidden bg-blue-50 py-12 px-6 text-center">
+        <h2 className="text-2xl font-black text-navy tracking-tight mb-3">10 free reports.<br/>No credit card.</h2>
+        <p className="text-gray-500 text-sm mb-6 leading-relaxed">Set up in minutes. Works on any device.</p>
+        <a href="https://app.evalent.io/signup" className="inline-block bg-brand text-white font-bold text-base px-8 py-4 rounded-xl hover:bg-blue-800 transition-colors">
+          Start your free trial →
+        </a>
+        <p className="text-xs text-gray-400 mt-3">10 free reports · No credit card · Ready in 5 minutes</p>
       </section>
 
       {/* BOTTOM CTA */}
