@@ -147,16 +147,9 @@ export default function About() {
           <p className="text-blue-300 text-base leading-relaxed mb-3">
             GDPR compliant. ISO 27001-compliant infrastructure. Student data is never used to train AI models — ever.
           </p>
-          <Link href="/why/data-security" className="text-sm text-blue-400 hover:text-white transition-colors underline underline-offset-2 block mb-10">
+          <Link href="/why/data-security" className="text-sm text-blue-400 hover:text-white transition-colors underline underline-offset-2 block">
             Read our full data security policy →
           </Link>
-          <div className="border-t border-white/10 pt-10">
-            <p className="text-white font-black text-2xl tracking-tight mb-2">Ready to see it in action?</p>
-            <p className="text-blue-300 text-sm mb-7">10 free reports. No credit card. Set up in 5 minutes.</p>
-            <a href="https://app.evalent.io/signup" className="inline-block bg-white text-brand font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors text-sm">
-              Start your free trial →
-            </a>
-          </div>
         </div>
       </section>
 
