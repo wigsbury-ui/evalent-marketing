@@ -51,27 +51,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-14 px-6 bg-white border-b border-gray-100">
+      {/* VIDEO — directly under hero */}
+      <section className="px-6 pt-10 pb-0 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE COMMAND CENTRE</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Know where every applicant stands — without asking</h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Tracking twenty or thirty applicants traditionally means chasing emails, updating spreadsheets, and asking colleagues whether they&apos;ve seen a result. Evalent replaces all of that with a single automatically updated dashboard.
-            </p>
-            <p className="text-gray-600 text-sm leading-relaxed mb-5">
-              The moment an applicant completes their assessment, their scores appear. The moment an assessor records a decision, the recommendation updates. Nothing is manual. Nothing falls through the gaps.
-            </p>
-            <div className="grid grid-cols-2 gap-3">
-              {features.map((f) => (
-                <div key={f.label} className="bg-gray-50 border border-gray-100 rounded-xl p-3">
-                  <div className="text-xs font-bold text-navy mb-0.5">{f.label}</div>
-                  <div className="text-xs text-gray-500">{f.desc}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="mt-10 rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
+          <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
             <iframe
               src="https://player.vimeo.com/video/1175796126?badge=0&autopause=0&player_id=0&app_id=58479"
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
@@ -80,7 +63,31 @@ export default function Page() {
               title="Evalent — Assessment Dashboard"
             />
           </div>
-          <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second walkthrough</p>
+          <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
+        </div>
+      </section>
+
+      {/* INTRO CONTENT */}
+      <section className="py-14 px-6 bg-navy">
+        <div className="max-w-5xl mx-auto">
+          <div className="max-w-3xl mb-8">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE COMMAND CENTRE</div>
+            <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight mb-4">Know where every applicant stands — without asking</h2>
+            <p className="text-blue-300 text-sm leading-relaxed mb-3">
+              Tracking twenty or thirty applicants traditionally means chasing emails, updating spreadsheets, and asking colleagues whether they've seen a result. Evalent replaces all of that with a single automatically updated dashboard.
+            </p>
+            <p className="text-blue-300 text-sm leading-relaxed">
+              The moment an applicant completes their assessment, their scores appear. The moment an assessor records a decision, the recommendation updates. Nothing is manual. Nothing falls through the gaps.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            {features.map((f) => (
+                <div key={f.label} className="bg-white/10 border border-white/20 rounded-xl p-4">
+                  <div className="text-xs font-bold text-white mb-0.5">{f.label}</div>
+                  <div className="text-xs text-blue-300">{f.desc}</div>
+                </div>
+              ))}
+          </div>
         </div>
       </section>
 

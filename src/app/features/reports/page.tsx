@@ -51,26 +51,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-14 px-6 bg-white border-b border-gray-100">
+      {/* VIDEO — directly under hero */}
+      <section className="px-6 pt-10 pb-0 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHAT YOU RECEIVE</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Not just scores — a complete admissions picture</h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              The Evalent report is designed to give your assessors everything they need to make a confident, defensible decision. It goes beyond raw percentages to include domain-level commentary, the student&apos;s actual written responses, and a clear recommendation calibrated to your school&apos;s entrance thresholds.
-            </p>
-            <p className="text-gray-600 text-sm leading-relaxed mb-5">
-              Reports are school-branded and look like they came from your institution. This makes them suitable to share with parents when a decision needs to be explained.
-            </p>
-            <div className="space-y-2">
-              {reportItems.map(item => (
-                <div key={item} className="flex items-start gap-2 text-xs text-gray-700">
-                  <span className="text-green-500 font-bold flex-shrink-0 mt-0.5">✓</span>{item}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="mt-10 rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
+          <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
             <iframe
               src="https://player.vimeo.com/video/1175800177?badge=0&autopause=0&player_id=0&app_id=58479"
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
@@ -79,7 +63,30 @@ export default function Page() {
               title="Evalent — Report Generation"
             />
           </div>
-          <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second walkthrough</p>
+          <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
+        </div>
+      </section>
+
+      {/* INTRO CONTENT */}
+      <section className="py-14 px-6 bg-navy">
+        <div className="max-w-5xl mx-auto">
+          <div className="max-w-3xl mb-8">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHAT YOU RECEIVE</div>
+            <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight mb-4">Not just scores — a complete admissions picture</h2>
+            <p className="text-blue-300 text-sm leading-relaxed mb-3">
+              The Evalent report is designed to give your assessors everything they need to make a confident, defensible decision. It goes beyond raw percentages to include domain-level commentary, the student's actual written responses, and a clear recommendation calibrated to your school's entrance thresholds.
+            </p>
+            <p className="text-blue-300 text-sm leading-relaxed">
+              Reports are school-branded and look like they came from your institution. This makes them suitable to share with parents when a decision needs to be explained.
+            </p>
+          </div>
+          <div className="space-y-3">
+            {reportItems.map(item => (
+                <div key={item} className="flex items-start gap-2 text-sm text-blue-200">
+                  <span className="text-green-400 font-bold flex-shrink-0 mt-0.5">✓</span>{item}
+                </div>
+              ))}
+          </div>
         </div>
       </section>
 
