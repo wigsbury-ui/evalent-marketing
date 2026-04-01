@@ -119,6 +119,9 @@ export default function Pricing() {
                   </div>
                 ))}
               </div>
+              {plan.name === 'Enterprise' && (
+                <p className="text-center text-xs text-gray-400 mb-2">Custom quote · Volume discounts available</p>
+              )}
               <a
                 href={plan.ctaHref}
                 className={`block text-center text-sm font-bold py-3 rounded-xl transition-colors mt-auto ${
@@ -131,9 +134,6 @@ export default function Pricing() {
               >
                 {plan.cta}
               </a>
-              {plan.name === 'Enterprise' && (
-                <p className="text-center text-xs text-gray-400 mt-2">Custom quote · Volume discounts available</p>
-              )}
             </div>
           ))}
         </div>
