@@ -135,20 +135,26 @@ export default function About() {
         </div>
       </section>
 
-      {/* Security trust signal */}
-      <section className="py-14 px-6 bg-navy text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-black tracking-tight mb-3">Trusted with student data</h2>
-          <p className="text-blue-300 text-sm leading-relaxed mb-6">
-            We handle sensitive information about children. We treat that with the seriousness it deserves —
-            GDPR compliance, ISO 27001-compliant infrastructure, and a strict no-training-on-student-data policy.
+      {/* Bottom CTA */}
+      <section className="py-20 px-6 bg-navy text-white">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-6">
+            STUDENT DATA PROTECTION
+          </div>
+          <h2 className="text-3xl font-black tracking-tight mb-4">
+            Trusted with the data that matters most
+          </h2>
+          <p className="text-blue-300 text-base leading-relaxed mb-3">
+            GDPR compliant. ISO 27001-compliant infrastructure. Student data is never used to train AI models — ever.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/why/data-security" className="text-sm text-blue-300 hover:text-white transition-colors underline underline-offset-2">
-              Read our data security policy →
-            </Link>
-            <a href="https://app.evalent.io/signup" className="inline-block bg-white text-brand font-bold text-sm px-6 py-2.5 rounded-xl hover:bg-blue-50 transition-colors">
-              Start free trial
+          <Link href="/why/data-security" className="text-sm text-blue-400 hover:text-white transition-colors underline underline-offset-2 block mb-10">
+            Read our full data security policy →
+          </Link>
+          <div className="border-t border-white/10 pt-10">
+            <p className="text-white font-black text-2xl tracking-tight mb-2">Ready to see it in action?</p>
+            <p className="text-blue-300 text-sm mb-7">10 free reports. No credit card. Set up in 5 minutes.</p>
+            <a href="https://app.evalent.io/signup" className="inline-block bg-white text-brand font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors text-sm">
+              Start your free trial →
             </a>
           </div>
         </div>
