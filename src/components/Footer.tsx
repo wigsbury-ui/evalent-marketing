@@ -6,7 +6,8 @@ export default function Footer() {
 
       {/* Rotating watermark — sits behind all content */}
       <div
-        className="absolute top-0 pointer-events-none" style={{ right: '15%' }}
+        className="absolute top-0 pointer-events-none"
+        style={{ right: '15%' }}
         aria-hidden="true"
       >
         <img
@@ -26,21 +27,20 @@ export default function Footer() {
       <style>{`
         @keyframes spin-slow {
           from { transform: rotate(0deg); }
-          to   { transform: rotate(360deg); }
+          to { transform: rotate(360deg); }
         }
       `}</style>
 
       <div className="relative z-10 max-w-6xl mx-auto">
-
         {/* Logo */}
         <img src="/evalent-logo-white.png" alt="Evalent" className="h-12 w-auto mb-10" />
 
         {/* 4 columns */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-
           <div>
             <p className="text-blue-300 text-sm leading-relaxed">
-              AI-powered admissions assessments for international and independent schools. Structured reports, automated scoring, and one-click decisions — in under 5 minutes per candidate.
+              AI-powered admissions assessments for international and independent schools.
+              Structured reports, automated scoring, and one-click decisions — in under 5 minutes per candidate.
             </p>
           </div>
 
@@ -49,9 +49,9 @@ export default function Footer() {
             <div className="space-y-2 text-sm text-blue-200">
               <Link href="/features" className="block hover:text-white transition-colors">Features</Link>
               <Link href="/curricula" className="block hover:text-white transition-colors">Curricula</Link>
-              <Link href="/pricing"
-            <Link href="/about" className="hover:text-white transition-colors">About</Link> className="block hover:text-white transition-colors">Pricing</Link>
-                <Link href="/blog" className="block hover:text-white transition-colors">Blog</Link>
+              <Link href="/pricing" className="block hover:text-white transition-colors">Pricing</Link>
+              <Link href="/about" className="block hover:text-white transition-colors">About</Link>
+              <Link href="/blog" className="block hover:text-white transition-colors">Blog</Link>
             </div>
           </div>
 
@@ -77,7 +77,6 @@ export default function Footer() {
               <a href="https://app.evalent.io/signup" className="block hover:text-white transition-colors">Start free trial</a>
             </div>
           </div>
-
         </div>
 
         <div className="border-t border-white/10 pt-6">
@@ -85,7 +84,7 @@ export default function Footer() {
             <span className="text-xs text-blue-400">&copy; 2026 Evalent Ltd. All rights reserved.</span>
             <div className="flex flex-wrap gap-x-5 gap-y-2">
               <Link href="/security" className="text-xs text-blue-400 hover:text-white transition-colors">Data Security</Link>
-                <Link href="/legal/terms" className="text-xs text-blue-400 hover:text-white transition-colors">Terms of Service</Link>
+              <Link href="/legal/terms" className="text-xs text-blue-400 hover:text-white transition-colors">Terms of Service</Link>
               <Link href="/legal/privacy" className="text-xs text-blue-400 hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/legal/refunds" className="text-xs text-blue-400 hover:text-white transition-colors">Refund Policy</Link>
               <Link href="/legal/cookies" className="text-xs text-blue-400 hover:text-white transition-colors">Cookie Policy</Link>
@@ -93,7 +92,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
       </div>
     </footer>
   )
