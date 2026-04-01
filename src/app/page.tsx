@@ -9,6 +9,57 @@ import AssessmentCounter from '@/components/AssessmentCounter'
 import EvalDemo from '@/components/EvalDemo'
 import TrialModal from '@/components/TrialModal'
 
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What if the assessor ignores the email?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A second reminder goes out after 48 hours. Most assessors click within the hour — one button is a very low bar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if a student does not complete in time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evalent sends two reminders before expiry. You are notified the moment a link expires so you can decide to extend."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we have to log into a portal each time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The decision email works from any inbox. The dashboard exists if you want it — it is never required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can multiple assessors review the same report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The report link can be forwarded. Only the recorded decision in the dashboard counts as official."
+      }
+    }
+  ]
+}
+
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Evalent",
+  "url": "https://www.evalent.io",
+  "logo": "https://www.evalent.io/evalent-logo.png",
+  "description": "AI-powered admissions assessments for international and independent schools.",
+  "sameAs": []
+}
+
 export default function Home() {
   const [videoOpen, setVideoOpen] = useState(false)
   const [trialOpen, setTrialOpen] = useState(false)
@@ -425,7 +476,15 @@ export default function Home() {
         </div>
       </section>
 
-      <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+        <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
       <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
       <Footer />
     </div>

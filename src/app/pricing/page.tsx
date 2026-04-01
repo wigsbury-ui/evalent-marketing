@@ -116,6 +116,82 @@ const FAQ = [
   },
 ]
 
+
+const pricingFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What happens after my 10 free trial reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After your trial, you choose a plan and pay annually. Your trial data and settings are preserved. There is no pressure to upgrade before you are ready."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cost per assessment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On Essentials it works out at approximately £23 per assessment. Professional is £17.60, and Enterprise is £15.20 or lower depending on volume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a contract or minimum term?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plans are billed annually. There is no long-term contract beyond the annual term. You can cancel before renewal and your data is exportable at any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is student data handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Student data is stored in ISO 27001-compliant infrastructure and never used to train AI models. We are GDPR compliant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which plan is right for us?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Essentials suits schools assessing up to 100 candidates a year. Professional is ideal for schools with multiple grades or 100–250 applicants. Enterprise is for large schools or networks above 250 per year."
+      }
+    }
+  ]
+}
+
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Evalent School Admissions Assessment Platform",
+  "description": "AI-powered admissions assessments for international and independent schools. Structured reports in minutes.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Evalent"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Essentials",
+      "price": "2900",
+      "priceCurrency": "USD",
+      "description": "Up to 100 assessments per year"
+    },
+    {
+      "@type": "Offer",
+      "name": "Professional",
+      "price": "5500",
+      "priceCurrency": "USD",
+      "description": "Up to 250 assessments per year"
+    }
+  ]
+}
+
 export default function Pricing() {
   return (
     <div>
@@ -199,6 +275,14 @@ export default function Pricing() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       <Footer />
     </div>
   )
