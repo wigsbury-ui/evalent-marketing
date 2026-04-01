@@ -77,7 +77,7 @@ export default function Page() {
               ))}
             </div>
           </div>
-                      <div className="mt-10 rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
+          <div className="mt-10 rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
             <iframe
               src="https://player.vimeo.com/video/1175803459?badge=0&autopause=0&player_id=0&app_id=58479"
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
