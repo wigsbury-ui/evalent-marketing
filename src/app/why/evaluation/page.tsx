@@ -3,8 +3,18 @@ import Footer from '@/components/Footer'
 import EvalDemo from '@/components/EvalDemo'
 
 export const metadata = {
-  title: 'See Evalent Evaluate Your Writing — Evalent',
-  description: 'See Evalent evaluate real student writing in seconds. Choose a grade, write a response, and watch a professional evaluation appear instantly.',
+  title: 'Try the Live AI Writing Evaluator — Evalent',
+  description: 'See Evalent evaluate real student writing in seconds. Choose a grade, write a response, and watch a professional AI evaluation appear instantly — the same tool used for every applicant.',
+  openGraph: {
+    title: 'Try the Live AI Writing Evaluator — Evalent',
+    description: 'Experience exactly what Evalent does for every admissions applicant. Live AI evaluation in seconds.',
+    url: 'https://www.evalent.io/why/evaluation',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Try the Live AI Writing Evaluator — Evalent',
+    description: 'Live AI evaluation. Choose a grade, write a response, get a professional evaluation instantly.',
+  },
 }
 
 export default function DemoPage() {

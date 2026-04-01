@@ -1,4 +1,6 @@
 'use client'
+// Note: metadata for client components must be in a separate layout or via head
+// We use a metadata export here via a sibling file approach
 import { useState, useEffect, useMemo } from 'react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'

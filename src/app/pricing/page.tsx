@@ -1,4 +1,20 @@
+import type { Metadata } from 'next'
 import Nav from '@/components/Nav'
+
+export const metadata: Metadata = {
+  title: 'Pricing — Evalent | School Admissions Assessment Software',
+  description: 'Simple, transparent pricing for international and independent schools. Essentials from £2,300/yr. 10 free trial reports included. No credit card required.',
+  openGraph: {
+    title: 'Evalent Pricing — School Admissions Assessment Software',
+    description: 'Plans from £2,300/yr. Includes full AI report generation, school branding, and admin dashboard. 10 free trial reports.',
+    url: 'https://www.evalent.io/pricing',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Evalent Pricing — School Admissions Assessment Software',
+    description: 'Plans from £2,300/yr. 10 free trial reports included.',
+  },
+}
 import Footer from '@/components/Footer'
 
 const plans = [

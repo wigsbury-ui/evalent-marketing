@@ -7,15 +7,24 @@ import { EvalentChat } from '@/components/EvalentChat'
 const figtree = Figtree({ subsets: ['latin'], variable: '--font-figtree' })
 
 export const metadata: Metadata = {
-  title: 'Evalent — Admissions Intelligence Platform',
-  description: 'AI-powered admissions assessments for international schools. Structured reports in minutes, not days.',
+  title: {
+    default: 'Evalent — AI Admissions Assessments for International Schools',
+    template: '%s — Evalent',
+  },
+  description: 'Replace paper tests with structured, AI-evaluated assessments. Professional admission reports in under 5 minutes — no manual scoring, no admin burden.',
   openGraph: {
-    title: 'Evalent — Admissions Intelligence Platform',
-    description: '10 free trial reports. No credit card. Set up in 5 minutes.',
-    url: 'https://evalent.io',
+    title: 'Evalent — AI Admissions Assessments for International Schools',
+    description: 'Replace paper tests with structured, AI-evaluated assessments. Professional admission reports in under 5 minutes.',
+    url: 'https://www.evalent.io',
     siteName: 'Evalent',
     type: 'website',
-  }
+    images: [{ url: 'https://www.evalent.io/og-default.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Evalent — AI Admissions Assessments for International Schools',
+    description: 'Replace paper tests with structured, AI-evaluated assessments. Professional reports in under 5 minutes.',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
