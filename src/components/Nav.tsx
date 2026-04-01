@@ -188,7 +188,7 @@ export default function Nav() {
               Pricing
 
             </Link>
-            <a href="https://app.evalent.io/login" className="hover:text-navy transition-colors">Sign in</a>
+            <Link href="/about" className={`transition-colors ${ pathname === '/about' ? 'text-brand font-semibold' : 'hover:text-navy' }`}>About</Link> <a href="https://app.evalent.io/login" className="hover:text-navy transition-colors">Sign in</a>
           </div>
 
           {/* Try free */}
@@ -280,7 +280,7 @@ export default function Nav() {
             >
               Pricing
             </Link>
-            <a href="https://app.evalent.io/login" className="block text-gray-600">Sign in</a>
+            <Link href="/about" className={`block pt-1 transition-colors ${pathname === '/about' ? 'text-brand font-semibold' : 'text-gray-600'}`}>About</Link> <a href="https://app.evalent.io/login" className="block text-gray-600">Sign in</a>
             <button
               onClick={() => { setMenuOpen(false); setTrialOpen(true) }}
               className="block w-full bg-brand text-white font-bold px-4 py-2 rounded-lg text-center mt-2">
