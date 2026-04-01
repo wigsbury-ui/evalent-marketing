@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Pricing — Evalent | School Admissions Assessment Software',
@@ -19,70 +18,43 @@ const plans = [
     usd: '$2,900',
     gbp: '£2,300',
     assessments: 100,
-    perAssessment: '£23',
+    perAssessment: '$29',
     tagline: 'For schools assessing up to 100 candidates per year — typically a single entry point or smaller prep school.',
     popular: false,
     cta: 'Start free trial',
     ctaHref: 'https://app.evalent.io/signup',
-    features: [
-      { label: 'Full AI report generation', included: true },
-      { label: 'School branding on all reports', included: true },
-      { label: 'Admin dashboard', included: true },
-      { label: 'Assessor email + one-click decisions', included: true },
-      { label: 'Automated reminders', included: true },
-      { label: 'Email support', included: true },
-      { label: 'Multi-campus management', included: false },
-      { label: 'Priority support & onboarding call', included: false },
-      { label: 'Cohort analytics & year-on-year reporting', included: false },
-      { label: 'Custom thresholds per grade level', included: false },
-    ],
   },
   {
     name: 'Professional',
     usd: '$5,500',
     gbp: '£4,400',
     assessments: 250,
-    perAssessment: '£17.60',
-    tagline: 'For mid-size international schools with multiple entry grades or higher annual applicant volumes.',
+    perAssessment: '$22',
+    tagline: 'Most popular for mid-size international schools with multiple entry grades.',
     popular: true,
     cta: 'Start free trial',
     ctaHref: 'https://app.evalent.io/signup',
-    features: [
-      { label: 'Full AI report generation', included: true },
-      { label: 'School branding on all reports', included: true },
-      { label: 'Admin dashboard', included: true },
-      { label: 'Assessor email + one-click decisions', included: true },
-      { label: 'Automated reminders', included: true },
-      { label: 'Priority email & chat support', included: true },
-      { label: 'Multi-campus management', included: false },
-      { label: 'Dedicated onboarding call', included: true },
-      { label: 'Cohort analytics & year-on-year reporting', included: true },
-      { label: 'Custom thresholds per grade level', included: true },
-    ],
   },
   {
     name: 'Enterprise',
     usd: '$9,500',
     gbp: '£7,600',
     assessments: '500+',
-    perAssessment: '£15.20',
-    tagline: 'For large schools, multi-campus groups, and networks with high volumes or complex requirements.',
+    perAssessment: '$19',
+    tagline: 'For larger schools, multi-campus groups, and networks with high volumes or complex requirements.',
     popular: false,
     cta: 'Talk to us',
     ctaHref: 'mailto:hello@evalent.io?subject=Enterprise%20enquiry',
-    features: [
-      { label: 'Full AI report generation', included: true },
-      { label: 'School branding on all reports', included: true },
-      { label: 'Admin dashboard', included: true },
-      { label: 'Assessor email + one-click decisions', included: true },
-      { label: 'Automated reminders', included: true },
-      { label: 'Dedicated account manager', included: true },
-      { label: 'Multi-campus management', included: true },
-      { label: 'White-glove onboarding & training', included: true },
-      { label: 'Cohort analytics & year-on-year reporting', included: true },
-      { label: 'Custom thresholds per grade level', included: true },
-    ],
   },
+]
+
+const FEATURES = [
+  'Full report generation',
+  'School branding',
+  'Admin dashboard',
+  'Assessor email flow',
+  'Automated reminders',
+  'Support included',
 ]
 
 const FAQ = [
@@ -92,7 +64,7 @@ const FAQ = [
   },
   {
     q: 'What is the cost per assessment?',
-    a: 'On Essentials it works out at approximately £23 per assessment. Professional is £17.60, and Enterprise is £15.20 or lower depending on volume. Multi-year discounts are available — contact us.',
+    a: 'On Essentials it works out at $29 per assessment. Professional is $22, and Enterprise is $19 or lower depending on volume. Multi-year discounts are available — contact us.',
   },
   {
     q: 'Is there a contract or minimum term?',
@@ -112,85 +84,9 @@ const FAQ = [
   },
   {
     q: 'Which plan is right for us?',
-    a: 'Essentials suits schools assessing up to 100 candidates a year (one or two entry points). Professional is ideal for schools with multiple grades or 100–250 applicants. Enterprise is for large schools or networks above 250 per year.',
+    a: 'Essentials suits schools assessing up to 100 candidates a year. Professional is ideal for schools with multiple grades or 100–250 applicants. Enterprise is for large schools or networks above 250 per year.',
   },
 ]
-
-
-const pricingFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What happens after my 10 free trial reports?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "After your trial, you choose a plan and pay annually. Your trial data and settings are preserved. There is no pressure to upgrade before you are ready."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the cost per assessment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "On Essentials it works out at approximately £23 per assessment. Professional is £17.60, and Enterprise is £15.20 or lower depending on volume."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there a contract or minimum term?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Plans are billed annually. There is no long-term contract beyond the annual term. You can cancel before renewal and your data is exportable at any time."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is student data handled?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Student data is stored in ISO 27001-compliant infrastructure and never used to train AI models. We are GDPR compliant."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which plan is right for us?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Essentials suits schools assessing up to 100 candidates a year. Professional is ideal for schools with multiple grades or 100–250 applicants. Enterprise is for large schools or networks above 250 per year."
-      }
-    }
-  ]
-}
-
-
-const productSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Evalent School Admissions Assessment Platform",
-  "description": "AI-powered admissions assessments for international and independent schools. Structured reports in minutes.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Evalent"
-  },
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "Essentials",
-      "price": "2900",
-      "priceCurrency": "USD",
-      "description": "Up to 100 assessments per year"
-    },
-    {
-      "@type": "Offer",
-      "name": "Professional",
-      "price": "5500",
-      "priceCurrency": "USD",
-      "description": "Up to 250 assessments per year"
-    }
-  ]
-}
 
 export default function Pricing() {
   return (
@@ -203,7 +99,7 @@ export default function Pricing() {
 
       {/* Pricing cards */}
       <section className="py-16 px-6">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
           {plans.map(plan => (
             <div key={plan.name} className={`rounded-2xl border p-7 relative flex flex-col ${plan.popular ? 'border-brand border-2 shadow-lg' : 'border-gray-200'}`}>
               {plan.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand text-white text-xs font-bold px-4 py-1 rounded-full">Most popular</div>}
@@ -216,10 +112,10 @@ export default function Pricing() {
               <div className="text-sm text-gray-600 mb-5 leading-relaxed">{plan.tagline}</div>
               <div className="text-sm font-bold text-navy mb-4">Up to {plan.assessments} assessments/year</div>
               <div className="space-y-2 text-xs text-gray-500 mb-6 flex-1">
-                {plan.features.map(f => (
-                  <div key={f.label} className="flex items-center gap-2">
-                    <span className={`font-bold flex-shrink-0 ${f.included ? 'text-green-500' : 'text-gray-200'}`}>{f.included ? '✓' : '—'}</span>
-                    <span className={f.included ? '' : 'text-gray-300'}>{f.label}</span>
+                {FEATURES.map(f => (
+                  <div key={f} className="flex items-center gap-2">
+                    <span className="text-green-500 font-bold flex-shrink-0">✓</span>
+                    {f}
                   </div>
                 ))}
               </div>
@@ -275,14 +171,6 @@ export default function Pricing() {
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
       <Footer />
     </div>
   )
