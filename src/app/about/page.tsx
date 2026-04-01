@@ -61,8 +61,7 @@ export default function About() {
             <span className="text-blue-300">For the schools that shape futures.</span>
           </h1>
           <p className="text-blue-200 text-lg leading-relaxed max-w-2xl mx-auto">
-            Evalent was founded on a simple belief: that every admissions decision deserves to be based on structured, 
-            consistent evidence — not on who writes the best parent letter.
+            Evalent was founded on a simple belief: that every admissions decision deserves to be based on structured, consistent evidence.
           </p>
         </div>
       </section>
@@ -89,16 +88,19 @@ export default function About() {
               the UK, and beyond.
             </p>
           </div>
-          <div className="space-y-4">
+          <div className="grid grid-cols-2 gap-4">
             {[
-              ['Schools using Evalent', 'Growing network across 3 continents'],
-              ['Assessments delivered', '140,000+ and counting'],
-              ['Time to first report', 'Under 5 minutes from submission'],
-              ['Manual scoring steps', 'Zero — fully automated'],
-            ].map(([label, val]) => (
-              <div key={label} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
-                <div className="text-sm font-bold text-navy mb-0.5">{label}</div>
-                <div className="text-xs text-gray-500">{val}</div>
+              { num: '140,000+', label: 'Assessments delivered', sub: 'and counting' },
+              { num: '<5 min', label: 'Assessment to report', sub: 'fully automated' },
+              { num: '0', label: 'Manual scoring steps', sub: 'zero admin overhead' },
+              { num: '3', label: 'Continents', sub: 'growing global network' },
+            ].map(({ num, label, sub }) => (
+              <div key={label} className="bg-navy rounded-2xl p-6 flex flex-col justify-between min-h-[130px]">
+                <div className="text-3xl font-black text-white tracking-tight leading-none mb-3">{num}</div>
+                <div>
+                  <div className="text-sm font-bold text-white leading-tight">{label}</div>
+                  <div className="text-xs text-blue-300 mt-0.5">{sub}</div>
+                </div>
               </div>
             ))}
           </div>
