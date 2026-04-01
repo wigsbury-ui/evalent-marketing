@@ -59,12 +59,25 @@ export default function DemoPage() {
           <p className="text-gray-500 text-sm">Choose a grade, write a response, and watch Evalent evaluate it in seconds.</p>
         </div>
         <EvalDemo />
+        {/* Post-evaluation CTA — appears after demo */}
+        <div className="max-w-2xl mx-auto mt-10 bg-white border-2 border-brand rounded-2xl p-8 text-center shadow-lg">
+          <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">
+            <span className="w-1.5 h-1.5 bg-green-500 rounded-full" /> Like what you see?
+          </div>
+          <h3 className="text-2xl font-black text-navy tracking-tight mb-2">Get 10 free reports for your school</h3>
+          <p className="text-gray-500 text-sm mb-6">Use Evalent with your next real applicants. No credit card, no commitment — just results.</p>
+          <a href="https://app.evalent.io/signup" className="inline-block bg-brand text-white font-bold px-8 py-3.5 rounded-xl hover:bg-blue-800 transition-colors text-sm">
+            Start your free trial →
+          </a>
+          <p className="text-xs text-gray-400 mt-3">10 free reports · No credit card · Set up in 5 minutes</p>
+        </div>
       </section>
       <section className="py-16 px-6 bg-navy text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-black text-white tracking-tight mb-3">Ready to use Evalent for real applicants?</h2>
-          <p className="text-blue-300 mb-7">Get 10 free trial reports — no credit card needed.</p>
-          <a href="/#trial" className="inline-block bg-white text-brand font-bold text-sm px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
+          <h2 className="text-3xl font-black text-white tracking-tight mb-3">This is what every applicant experiences.</h2>
+          <p className="text-blue-300 mb-3">The same evaluation — structured, fair, curriculum-aligned — for every candidate at your school.</p>
+          <p className="text-blue-400 text-sm mb-7">Start with 10 free reports. No credit card required.</p>
+          <a href="https://app.evalent.io/signup" className="inline-block bg-white text-brand font-bold text-sm px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
             Start your free trial →
           </a>
         </div>
