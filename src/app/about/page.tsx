@@ -17,31 +17,38 @@ const values = [
   {
     title: 'Evidence over impression',
     desc: 'Every admissions decision should rest on structured, documented evidence — not a feeling formed in a 20-minute campus visit.',
-    icon: '📋',
+    icon: (
+      <svg className="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+      </svg>
+    ),
   },
   {
     title: 'Fair to every applicant',
     desc: 'The same rubric, the same standard, the same evaluation model — whether a student applies from Dubai, Singapore or London.',
-    icon: '⚖️',
+    icon: (
+      <svg className="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
+      </svg>
+    ),
   },
   {
     title: 'Schools run on trust',
     desc: 'Schools share sensitive data with us. We take that seriously. Student data is never used to train AI models. Ever.',
-    icon: '🔒',
+    icon: (
+      <svg className="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+      </svg>
+    ),
   },
   {
     title: 'Admin should be invisible',
     desc: 'Admissions teams are stretched. Our job is to make the process disappear — so they can focus on the students, not the paperwork.',
-    icon: '⚡',
-  },
-]
-
-const team = [
-  {
-    name: 'Neil Tomalin',
-    role: 'Founder & CEO',
-    bio: 'Former educator with over a decade in international school leadership. Built Evalent after experiencing firsthand how inconsistent and time-consuming admissions processes were across the sector.',
-    initials: 'NT',
+    icon: (
+      <svg className="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+      </svg>
+    ),
   },
 ]
 
@@ -75,16 +82,16 @@ export default function About() {
               Make structured admissions accessible to every school
             </h2>
             <p className="text-gray-600 text-base leading-relaxed mb-4">
-              Large schools have always had the resources to build rigorous assessment processes. Smaller schools, 
+              Large schools have always had the resources to build rigorous assessment processes. Smaller schools,
               newer international schools, and resource-stretched admissions teams often haven't.
             </p>
             <p className="text-gray-600 text-base leading-relaxed mb-4">
-              Evalent changes that. For the cost of a part-time administrator, a school can run professional, 
-              AI-evaluated assessments for every applicant — with reports that stand up to scrutiny and decisions 
+              Evalent changes that. For the cost of a part-time administrator, a school can run professional,
+              AI-evaluated assessments for every applicant — with reports that stand up to scrutiny and decisions
               that can be explained to any parent.
             </p>
             <p className="text-gray-600 text-base leading-relaxed">
-              We work with international and independent schools across the Middle East, South-East Asia, 
+              We work with international and independent schools across the Middle East, South-East Asia,
               the UK, and beyond.
             </p>
           </div>
@@ -117,31 +124,11 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-5">
             {values.map(({ title, desc, icon }) => (
               <div key={title} className="bg-white rounded-2xl p-7 border border-gray-100">
-                <div className="text-3xl mb-4">{icon}</div>
+                <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+                  {icon}
+                </div>
                 <h3 className="text-base font-black text-navy mb-2">{title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE TEAM</div>
-            <h2 className="text-3xl font-black text-navy tracking-tight">The people behind Evalent</h2>
-          </div>
-          <div className="flex justify-center">
-            {team.map(({ name, role, bio, initials }) => (
-              <div key={name} className="max-w-md bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
-                <div className="w-20 h-20 rounded-full bg-brand text-white font-black text-xl flex items-center justify-center mx-auto mb-5">
-                  {initials}
-                </div>
-                <div className="text-lg font-black text-navy mb-0.5">{name}</div>
-                <div className="text-xs text-brand font-bold tracking-widest mb-4">{role}</div>
-                <p className="text-sm text-gray-600 leading-relaxed">{bio}</p>
               </div>
             ))}
           </div>
@@ -153,16 +140,16 @@ export default function About() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-black tracking-tight mb-3">Trusted with student data</h2>
           <p className="text-blue-300 text-sm leading-relaxed mb-6">
-            We handle sensitive information about children. We treat that with the seriousness it deserves — 
+            We handle sensitive information about children. We treat that with the seriousness it deserves —
             GDPR compliance, ISO 27001-compliant infrastructure, and a strict no-training-on-student-data policy.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link href="/why/data-security" className="text-sm text-blue-300 hover:text-white transition-colors underline underline-offset-2">
               Read our data security policy →
             </Link>
-            <Link href="https://app.evalent.io/signup" className="inline-block bg-white text-brand font-bold text-sm px-6 py-2.5 rounded-xl hover:bg-blue-50 transition-colors">
+            <a href="https://app.evalent.io/signup" className="inline-block bg-white text-brand font-bold text-sm px-6 py-2.5 rounded-xl hover:bg-blue-50 transition-colors">
               Start free trial
-            </Link>
+            </a>
           </div>
         </div>
       </section>
