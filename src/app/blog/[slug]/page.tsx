@@ -7,6 +7,7 @@ import Link from 'next/link'
 import PostCard from '@/components/blog/PostCard'
 import { fetchPostBySlug, fetchPosts, CATEGORIES, Post, formatDate } from '@/lib/blog'
 import ShareButtons from '@/components/blog/ShareButtons'
+import BlogCTA from '@/components/blog/BlogCTA'
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>()
