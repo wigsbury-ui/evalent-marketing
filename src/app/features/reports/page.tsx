@@ -68,24 +68,24 @@ export default function Page() {
       </section>
 
       {/* INTRO CONTENT */}
-      <section className="py-14 px-6 bg-navy">
-        <div className="max-w-5xl mx-auto">
-          <div className="max-w-3xl mb-8">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHAT YOU RECEIVE</div>
-            <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight mb-4">Not just scores — a complete admissions picture</h2>
-            <p className="text-blue-300 text-sm leading-relaxed mb-3">
-              The Evalent report is designed to give your assessors everything they need to make a confident, defensible decision. It goes beyond raw percentages to include domain-level commentary, the student's actual written responses, and a clear recommendation calibrated to your school's entrance thresholds.
+      <section className="py-14 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHAT YOU RECEIVE</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Not just scores — a complete admissions picture</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-3">
+              The Evalent report gives your assessors everything they need to make a confident, defensible decision — domain-level commentary, the student's actual written responses, and a clear recommendation calibrated to your school's entrance thresholds.
             </p>
-            <p className="text-blue-300 text-sm leading-relaxed">
+            <p className="text-gray-600 text-sm leading-relaxed">
               Reports are school-branded and look like they came from your institution. This makes them suitable to share with parents when a decision needs to be explained.
             </p>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {reportItems.map(item => (
-                <div key={item} className="flex items-start gap-2 text-sm text-blue-200">
-                  <span className="text-green-400 font-bold flex-shrink-0 mt-0.5">✓</span>{item}
-                </div>
-              ))}
+              <div key={item} className="flex items-start gap-2 text-sm text-gray-700 bg-gray-50 border border-gray-100 rounded-xl px-4 py-3">
+                <span className="text-green-500 font-bold flex-shrink-0 mt-0.5">✓</span>{item}
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -84,25 +84,25 @@ export default function Page() {
       </section>
 
       {/* INTRO CONTENT */}
-      <section className="py-14 px-6 bg-navy">
-        <div className="max-w-5xl mx-auto">
-          <div className="max-w-3xl mb-8">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE APPLICANT EXPERIENCE</div>
-            <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight mb-4">Designed to reveal ability, not test familiarity with test formats</h2>
-            <p className="text-blue-300 text-sm leading-relaxed mb-3">
+      <section className="py-14 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE APPLICANT EXPERIENCE</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Designed to reveal ability, not test familiarity with test formats</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-3">
               Evalent assessments are built around the curriculum your school uses — IB, British, or American. Questions are calibrated to the entry grade, so a Grade 4 applicant is not faced with secondary-level language or concepts.
             </p>
-            <p className="text-blue-300 text-sm leading-relaxed">
-              The extended writing tasks are the most important part. They give your assessors something a multiple-choice score never can: a real sample of how the student thinks and constructs an argument under time pressure.
+            <p className="text-gray-600 text-sm leading-relaxed">
+              The extended writing tasks give your assessors something a multiple-choice score never can: a real sample of how the student thinks and constructs an argument under time pressure.
             </p>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {domains.map(({ label, desc }) => (
-                <div key={label} className="flex items-start gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3">
-                  <span className="text-xs font-black text-blue-300 w-24 flex-shrink-0 pt-0.5">{label}</span>
-                  <span className="text-xs text-blue-200 leading-relaxed">{desc}</span>
-                </div>
-              ))}
+              <div key={label} className="flex items-start gap-3 border border-brand/20 bg-blue-50 rounded-xl px-4 py-3">
+                <span className="text-xs font-black text-brand w-24 flex-shrink-0 pt-0.5">{label}</span>
+                <span className="text-xs text-gray-600 leading-relaxed">{desc}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

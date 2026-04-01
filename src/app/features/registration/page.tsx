@@ -46,29 +46,29 @@ export default function Page() {
       </section>
 
       {/* INTRO CONTENT */}
-      <section className="py-14 px-6 bg-navy">
-        <div className="max-w-5xl mx-auto">
-          <div className="max-w-3xl mb-8">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">HOW IT WORKS</div>
-            <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight mb-4">Register a student in 60 seconds. Evalent handles the rest.</h2>
-            <p className="text-blue-300 text-sm leading-relaxed mb-3">
+      <section className="py-14 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">HOW IT WORKS</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Register a student in 60 seconds. Evalent handles the rest.</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-3">
               Most admissions teams spend significant time on the administrative side of assessments — preparing links, sending individual emails, chasing reminders, and collecting results. Evalent eliminates every one of those steps.
             </p>
-            <p className="text-blue-300 text-sm leading-relaxed">
-              When you register a student, Evalent automatically generates a personalised, secure assessment link calibrated to their grade level and your school's chosen curriculum. The link is emailed to the applicant immediately.
+            <p className="text-gray-600 text-sm leading-relaxed">
+              When you register a student, Evalent automatically generates a personalised, secure assessment link calibrated to their grade level and your school's chosen curriculum. The link is emailed immediately.
             </p>
           </div>
           <div className="space-y-3">
             {[
-                ['1', "Enter the student's name, email, grade and curriculum", 'bg-blue-500/20 text-blue-300'],
-                ['2', 'Evalent sends the secure assessment link automatically', 'bg-green-500/20 text-green-300'],
-                ['3', 'You receive the completed report — nothing else to do', 'bg-purple-500/20 text-purple-300'],
-              ].map(([n, text, cls]) => (
-                <div key={n} className="flex items-start gap-3 bg-white/10 border border-white/20 rounded-xl p-4">
-                  <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-black flex-shrink-0 ${cls}`}>{n}</span>
-                  <span className="text-sm text-blue-200 leading-snug">{text}</span>
-                </div>
-              ))}
+              { n: '1', text: "Enter the student's name, email, grade and curriculum", cls: 'border-brand/20 bg-blue-50', tc: 'text-brand' },
+              { n: '2', text: 'Evalent sends the secure assessment link automatically', cls: 'border-green-200 bg-green-50', tc: 'text-green-700' },
+              { n: '3', text: 'You receive the completed report — nothing else to do', cls: 'border-purple-200 bg-purple-50', tc: 'text-purple-700' },
+            ].map(({ n, text, cls, tc }) => (
+              <div key={n} className={`flex items-start gap-3 border rounded-xl p-4 ${cls}`}>
+                <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-black flex-shrink-0 ${tc} border-current`}>{n}</span>
+                <span className="text-sm text-gray-700 leading-snug">{text}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

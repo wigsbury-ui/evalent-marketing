@@ -74,25 +74,25 @@ export default function Page() {
       </section>
 
       {/* INTRO CONTENT */}
-      <section className="py-14 px-6 bg-navy">
-        <div className="max-w-5xl mx-auto">
-          <div className="max-w-3xl mb-8">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHY IT MATTERS</div>
-            <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight mb-4">The lowest-friction decision process in admissions</h2>
-            <p className="text-blue-300 text-sm leading-relaxed mb-3">
+      <section className="py-14 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHY IT MATTERS</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">The lowest-friction decision process in admissions</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-3">
               Most admissions workflows require an assessor to log into a portal, find the student, read the report, navigate to a decision screen, and record the outcome. That's five steps — and most assessors are busy teachers who find every additional click a reason to delay.
             </p>
-            <p className="text-blue-300 text-sm leading-relaxed">
-              Evalent reduces this to one step. The report summary is in the email. The decision buttons are in the email. The assessor never leaves their inbox. The decision is recorded the moment they click.
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Evalent reduces this to one step. The report summary is in the email. The decision buttons are in the email. The assessor never leaves their inbox.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-3">
             {featureGrid.map(f => (
-                <div key={f.label} className="bg-white/10 border border-white/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-white mb-0.5">✓ {f.label}</div>
-                  <div className="text-xs text-blue-300">{f.desc}</div>
-                </div>
-              ))}
+              <div key={f.label} className="bg-gray-50 border border-gray-200 rounded-xl p-3">
+                <div className="text-xs font-bold text-navy mb-0.5">✓ {f.label}</div>
+                <div className="text-xs text-gray-500">{f.desc}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
