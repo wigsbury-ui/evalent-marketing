@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Nav from '@/components/Nav'
 import VideoModal from '@/components/VideoModal'
 import Footer from '@/components/Footer'
@@ -63,6 +63,18 @@ const orgSchema = {
 export default function Home() {
   const [videoOpen, setVideoOpen] = useState(false)
   const [trialOpen, setTrialOpen] = useState(false)
+
+  // Auto-open intro video on first visit only
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const seen = localStorage.getItem('evalent_intro_seen')
+    if (!seen) {
+      localStorage.setItem('evalent_intro_seen', '1')
+      // Small delay so the page renders before the modal appears
+      const t = setTimeout(() => setVideoOpen(true), 800)
+      return () => clearTimeout(t)
+    }
+  }, [])
   return (
     <div className="min-h-screen">
       <Nav />
