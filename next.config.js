@@ -26,7 +26,7 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https://*.supabase.co https://oaidalleapiprodscus.blob.core.windows.net",
-      "connect-src 'self' https://*.supabase.co",
+      "connect-src 'self' https://*.supabase.co https://app.evalent.io",
       "frame-src 'self' https://player.vimeo.com",
       "media-src 'self' https://player.vimeo.com",
       "object-src 'none'",
