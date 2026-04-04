@@ -46,7 +46,8 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Something went wrong')
-      window.location.href = 'https://app.evalent.io/school'
+      // Redirect to auto-login page with token — sets session and lands on /school
+      window.location.href = 'https://app.evalent.io/auto-login?token=' + encodeURIComponent(data.token)
     } catch (e: any) {
       setError(e.message)
       setLoading(false)
