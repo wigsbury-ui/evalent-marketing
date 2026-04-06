@@ -1,3 +1,6 @@
+'use client'
+import { useState } from 'react'
+import TrialModal from '@/components/TrialModal'
 import type { Metadata } from 'next'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -22,7 +25,7 @@ const plans = [
     tagline: 'For schools assessing up to 100 candidates per year — typically a single entry point or smaller prep school.',
     popular: false,
     cta: 'Start free trial',
-    ctaHref: 'https://app.evalent.io/signup',
+    ctaHref: null,
   },
   {
     name: 'Professional',
@@ -33,7 +36,7 @@ const plans = [
     tagline: 'Most popular for mid-size international schools with multiple entry grades.',
     popular: true,
     cta: 'Start free trial',
-    ctaHref: 'https://app.evalent.io/signup',
+    ctaHref: null,
   },
   {
     name: 'Enterprise',
@@ -89,6 +92,8 @@ const FAQ = [
 ]
 
 export default function Pricing() {
+  const [trialOpen, setTrialOpen] = useState(false)
+
   return (
     <div>
       <Nav />
@@ -123,7 +128,12 @@ export default function Pricing() {
                 <p className="text-center text-xs text-gray-400 mb-2">Custom quote · Volume discounts available</p>
               )}
               <a
-                href={plan.ctaHref}
+                <button
+                  onClick={() => setTrialOpen(true)}
+                  className={plan.popular ? "w-full py-4 rounded-xl bg-brand text-white font-bold text-base cursor-pointer border-none" : "w-full py-4 rounded-xl bg-white text-navy font-bold text-base cursor-pointer border border-gray-200"}
+                >
+                  {plan.cta}
+                </button>
                 className={`block text-center text-sm font-bold py-3 rounded-xl transition-colors mt-auto ${
                   plan.name === 'Enterprise'
                     ? 'bg-navy text-white hover:bg-gray-800'
@@ -173,5 +183,6 @@ export default function Pricing() {
 
       <Footer />
     </div>
+    <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
   )
 }

@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Nav from '@/components/Nav'
 import VideoModal from '@/components/VideoModal'
 import Footer from '@/components/Footer'
@@ -63,6 +64,14 @@ const orgSchema = {
 export default function Home() {
   const [videoOpen, setVideoOpen] = useState(false)
   const [trialOpen, setTrialOpen] = useState(false)
+  const searchParams = useSearchParams()
+
+  // Auto-open TrialModal if ?signup=1 is in the URL
+  useEffect(() => {
+    if (searchParams.get('signup') === '1') {
+      setTrialOpen(true)
+    }
+  }, [searchParams])
 
   // Auto-open intro video on first visit only
   useEffect(() => {
@@ -422,7 +431,7 @@ export default function Home() {
       <section className="md:hidden bg-blue-50 py-12 px-6 text-center">
         <h2 className="text-2xl font-black text-navy tracking-tight mb-3">10 free reports.<br/>No credit card.</h2>
         <p className="text-gray-500 text-sm mb-6 leading-relaxed">Set up in minutes. Works on any device.</p>
-        <a href="https://app.evalent.io/signup" className="inline-block bg-brand text-white font-bold text-base px-8 py-4 rounded-xl hover:bg-blue-800 transition-colors">
+        <a onClick={(e) => { e.preventDefault(); setTrialOpen(true) }} href="#" className="inline-block bg-brand text-white font-bold text-base px-8 py-4 rounded-xl hover:bg-blue-800 transition-colors">
           Start your free trial →
         </a>
         <p className="text-xs text-gray-400 mt-3">10 free reports · No credit card · Ready in 5 minutes</p>
