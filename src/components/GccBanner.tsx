@@ -7,7 +7,7 @@ export default function GccBanner() {
 
   useEffect(() => {
     // Hide after May 30 2026
-    if (new Date() > new Date('2026-05-30')) return
+    if (new Date() > new Date('2026-06-01')) return
     // Hide if dismissed
     if (localStorage.getItem('gcc-banner-dismissed') === 'true') return
     setVisible(true)
@@ -22,7 +22,7 @@ export default function GccBanner() {
 
   return (
     <div style={{
-      background: '#b45309',
+      background: '#006C35',
       color: 'white',
       padding: '10px 20px',
       display: 'flex',

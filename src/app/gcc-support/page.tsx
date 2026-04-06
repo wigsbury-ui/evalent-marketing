@@ -115,7 +115,7 @@ export default function GccSupportPage() {
             Claim your free year today.
           </h2>
           <p className="text-gray-600 text-sm mb-2">
-            Available to all schools based in the GCC. Offer expires 30 May 2026.
+            Available to all schools based in the GCC. Offer expires 1 June 2026.
           </p>
           <p className="text-gray-500 text-sm mb-6">
             Use code <strong className="text-navy font-mono tracking-widest">GCC2026</strong> at checkout after signing up.
