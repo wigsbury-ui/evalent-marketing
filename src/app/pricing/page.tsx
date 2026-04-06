@@ -159,7 +159,7 @@ export default function Pricing() {
               {plan.isEnterprise ? (
                 <a
                   href="mailto:hello@evalent.io?subject=Enterprise%20enquiry"
-                  className="block text-center py-4 rounded-xl bg-navy text-white font-bold text-sm hover:bg-gray-800 transition-colors"
+                  className="block text-center py-4 rounded-xl bg-gray-50 text-navy border border-gray-200 hover:bg-gray-100 font-bold text-sm transition-colors"
                 >
                   Talk to us
                 </a>
