@@ -157,12 +157,12 @@ export default function Pricing() {
               </ul>
 
               {plan.isEnterprise ? (
-                <a
-                  href="mailto:hello@evalent.io?subject=Enterprise%20enquiry"
-                  className="block text-center py-4 rounded-xl bg-gray-50 text-navy border border-gray-200 hover:bg-gray-100 font-bold text-sm transition-colors"
+                <button
+                  onClick={() => setTrialOpen(true)}
+                  className="block w-full text-center py-4 rounded-xl bg-gray-50 text-navy border border-gray-200 hover:bg-gray-100 font-bold text-sm transition-colors cursor-pointer border-0"
                 >
-                  Talk to us
-                </a>
+                  Start free trial
+                </button>
               ) : (
                 <button
                   onClick={() => setTrialOpen(true)}
