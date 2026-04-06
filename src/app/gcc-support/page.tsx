@@ -39,7 +39,7 @@ export default function GccSupportPage() {
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Why we are doing this</h2>
           <p className="text-gray-600 text-base leading-relaxed mb-4">
-            Evalent was founded in the GCC. Our team, our first customers, and our understanding
+            Evalent was founded in the GCC. Our team and our understanding
             of what excellent international schooling looks like — all of it was shaped in this region.
           </p>
           <p className="text-gray-600 text-base leading-relaxed mb-4">
@@ -48,9 +48,33 @@ export default function GccSupportPage() {
             The last thing you need is more friction in your processes.
           </p>
           <p className="text-gray-600 text-base leading-relaxed">
-            So we wanted to do something concrete. Every school in the GCC can use Evalent for free for
-            a full year — no charge, no commitment beyond trying it. If it helps, we would love to
-            continue working with you.
+            So we wanted to do something concrete. Every school in the GCC can use Evalent free for a
+            full year — no charge, and no commitment beyond one thing: if it helps, we ask that you
+            share your experience with us.
+          </p>
+        </div>
+      </section>
+
+      {/* ── One small ask ── */}
+      <section className="py-14 px-6 bg-blue-50 border-t border-b border-blue-100">
+        <div className="max-w-2xl mx-auto">
+          <div className="inline-block bg-blue-100 text-brand text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">ONE SMALL ASK</div>
+          <h2 className="text-2xl font-black text-navy tracking-tight mb-4">
+            In return, we ask for your story.
+          </h2>
+          <p className="text-gray-600 text-base leading-relaxed mb-4">
+            This offer is completely free — but it is not unconditional. In exchange for your free year,
+            we ask that your school agrees to provide either a written testimonial or a short case study
+            about your experience with Evalent.
+          </p>
+          <p className="text-gray-600 text-base leading-relaxed mb-4">
+            We are not asking for a marketing brochure. A few honest sentences from your admissions
+            lead about what worked, what changed, and whether you would recommend it — that is all we need.
+            We will reach out near the end of your free year to collect it.
+          </p>
+          <p className="text-gray-600 text-base leading-relaxed">
+            Your feedback helps other GCC schools make an informed decision. It also helps us build
+            a better product. That feels like a fair exchange.
           </p>
         </div>
       </section>
@@ -64,7 +88,7 @@ export default function GccSupportPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              ['Unlimited assessments', 'Send assessments to as many applicants as your school needs throughout the year.'],
+              ['Up to 100 assessments', 'Send up to 100 assessments to applicants across all grades during your free year.'],
               ['AI-generated reports', 'Each completed assessment produces a professional report ready for your assessor within minutes.'],
               ['Full admissions workflow', 'Register students, track progress, record decisions, and maintain a full audit trail.'],
               ['All grades 3–10', 'Assessments calibrated to each grade level for every curriculum you teach.'],
