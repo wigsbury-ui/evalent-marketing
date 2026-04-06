@@ -1,6 +1,5 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
 import Nav from '@/components/Nav'
 import VideoModal from '@/components/VideoModal'
 import Footer from '@/components/Footer'
@@ -64,14 +63,12 @@ const orgSchema = {
 export default function Home() {
   const [videoOpen, setVideoOpen] = useState(false)
   const [trialOpen, setTrialOpen] = useState(false)
-  const searchParams = useSearchParams()
-
   // Auto-open TrialModal if ?signup=1 is in the URL
   useEffect(() => {
-    if (searchParams.get('signup') === '1') {
+    if (typeof window !== 'undefined' && window.location.search.includes('signup=1')) {
       setTrialOpen(true)
     }
-  }, [searchParams])
+  }, [])
 
   // Auto-open intro video on first visit only
   useEffect(() => {
