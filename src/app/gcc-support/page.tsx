@@ -55,30 +55,6 @@ export default function GccSupportPage() {
         </div>
       </section>
 
-      {/* ── One small ask ── */}
-      <section className="py-14 px-6 bg-blue-50 border-t border-b border-blue-100">
-        <div className="max-w-2xl mx-auto">
-          <div className="inline-block bg-blue-100 text-brand text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">ONE SMALL ASK</div>
-          <h2 className="text-2xl font-black text-navy tracking-tight mb-4">
-            In return, we ask for your story.
-          </h2>
-          <p className="text-gray-600 text-base leading-relaxed mb-4">
-            This offer is completely free — but it is not unconditional. In exchange for your free year,
-            we ask that your school agrees to provide either a written testimonial or a short case study
-            about your experience with Evalent.
-          </p>
-          <p className="text-gray-600 text-base leading-relaxed mb-4">
-            We are not asking for a marketing brochure. A few honest sentences from your admissions
-            lead about what worked, what changed, and whether you would recommend it — that is all we need.
-            We will reach out near the end of your free year to collect it.
-          </p>
-          <p className="text-gray-600 text-base leading-relaxed">
-            Your feedback helps other GCC schools make an informed decision. It also helps us build
-            a better product. That feels like a fair exchange.
-          </p>
-        </div>
-      </section>
-
       {/* ── What's included ── */}
       <section className="py-14 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
@@ -101,6 +77,30 @@ export default function GccSupportPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── One small ask ── */}
+      <section className="py-14 px-6 bg-blue-50 border-t border-b border-blue-100">
+        <div className="max-w-2xl mx-auto">
+          <div className="inline-block bg-blue-100 text-brand text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">ONE SMALL ASK</div>
+          <h2 className="text-2xl font-black text-navy tracking-tight mb-4">
+            In return, we ask for your story.
+          </h2>
+          <p className="text-gray-600 text-base leading-relaxed mb-4">
+            This offer is completely free — but it is not unconditional. In exchange for your free year,
+            we ask that your school agrees to provide either a written testimonial or a short case study
+            about your experience with Evalent.
+          </p>
+          <p className="text-gray-600 text-base leading-relaxed mb-4">
+            We are not asking for a marketing brochure. A few honest sentences from your admissions
+            lead about what worked, what changed, and whether you would recommend it — that is all we need.
+            We will reach out near the end of your free year to collect it.
+          </p>
+          <p className="text-gray-600 text-base leading-relaxed">
+            Your feedback helps other GCC schools make an informed decision. It also helps us build
+            a better product. That feels like a fair exchange.
+          </p>
         </div>
       </section>
 
