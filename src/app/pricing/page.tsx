@@ -1,53 +1,48 @@
 'use client'
 import { useState } from 'react'
-import TrialModal from '@/components/TrialModal'
-import type { Metadata } from 'next'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-
-export const metadata: Metadata = {
-  title: 'Pricing — Evalent | School Admissions Assessment Software',
-  description: 'Simple, transparent pricing for international and independent schools. From £2,300/yr. 10 free trial reports included. No credit card required.',
-  openGraph: {
-    title: 'Evalent Pricing — School Admissions Assessment Software',
-    description: 'Plans from £2,300/yr. Includes full AI report generation, school branding, and admin dashboard.',
-    url: 'https://www.evalent.io/pricing',
-  },
-}
+import TrialModal from '@/components/TrialModal'
 
 const plans = [
   {
     name: 'Essentials',
     usd: '$2,900',
     gbp: '£2,300',
-    assessments: 100,
+    period: '/yr',
+    subtext: '£2,300/yr · Billed annually',
     perAssessment: '$29',
+    assessments: 100,
     tagline: 'For schools assessing up to 100 candidates per year — typically a single entry point or smaller prep school.',
     popular: false,
     cta: 'Start free trial',
-    ctaHref: null,
+    isEnterprise: false,
   },
   {
     name: 'Professional',
     usd: '$5,500',
     gbp: '£4,400',
-    assessments: 250,
+    period: '/yr',
+    subtext: '£4,400/yr · Billed annually',
     perAssessment: '$22',
+    assessments: 250,
     tagline: 'Most popular for mid-size international schools with multiple entry grades.',
     popular: true,
     cta: 'Start free trial',
-    ctaHref: null,
+    isEnterprise: false,
   },
   {
     name: 'Enterprise',
     usd: '$9,500',
     gbp: '£7,600',
-    assessments: '500+',
+    period: '/yr',
+    subtext: '£7,600/yr · Billed annually',
     perAssessment: '$19',
+    assessments: '500+',
     tagline: 'For larger schools, multi-campus groups, and networks with high volumes or complex requirements.',
     popular: false,
     cta: 'Talk to us',
-    ctaHref: 'mailto:hello@evalent.io?subject=Enterprise%20enquiry',
+    isEnterprise: true,
   },
 ]
 
@@ -91,98 +86,143 @@ const FAQ = [
   },
 ]
 
+
 export default function Pricing() {
   const [trialOpen, setTrialOpen] = useState(false)
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
 
   return (
-    <div>
+    <>
       <Nav />
+
+      {/* Hero */}
       <section className="bg-navy text-white py-16 px-6 text-center">
         <h1 className="text-4xl font-black tracking-tight mb-3">Simple, transparent pricing</h1>
-        <p className="text-blue-300 max-w-lg mx-auto">All plans include full report generation, school branding, admin dashboard, and support. No hidden fees.</p>
+        <p className="text-blue-300 max-w-lg mx-auto">
+          All plans include full report generation, school branding, and the complete Evalent platform.
+          Start with 10 free assessments.
+        </p>
       </section>
 
       {/* Pricing cards */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
-          {plans.map(plan => (
-            <div key={plan.name} className={`rounded-2xl border p-7 relative flex flex-col ${plan.popular ? 'border-brand border-2 shadow-lg' : 'border-gray-200'}`}>
-              {plan.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand text-white text-xs font-bold px-4 py-1 rounded-full">Most popular</div>}
-              <div className="text-lg font-black text-navy mb-1">{plan.name}</div>
-              <div className="text-3xl font-black text-navy tracking-tight mb-0.5">{plan.usd}<span className="text-base font-medium text-gray-400">/yr</span></div>
-              <div className="text-sm text-gray-400 mb-1">{plan.gbp}/yr · Billed annually</div>
-              <div className="inline-flex items-center gap-1 bg-blue-50 text-brand text-xs font-bold px-2.5 py-1 rounded-full mb-4 w-fit">
-                ≈ {plan.perAssessment} per assessment
-              </div>
-              <div className="text-sm text-gray-600 mb-5 leading-relaxed">{plan.tagline}</div>
-              <div className="text-sm font-bold text-navy mb-4">Up to {plan.assessments} assessments/year</div>
-              <div className="space-y-2 text-xs text-gray-500 mb-6 flex-1">
-                {FEATURES.map(f => (
-                  <div key={f} className="flex items-center gap-2">
-                    <span className="text-green-500 font-bold flex-shrink-0">✓</span>
-                    {f}
-                  </div>
-                ))}
-              </div>
-              {plan.name === 'Enterprise' && (
-                <p className="text-center text-xs text-gray-400 mb-2">Custom quote · Volume discounts available</p>
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          {plans.map((plan) => (
+            <div
+              key={plan.name}
+              className={`bg-white rounded-2xl p-8 flex flex-col h-full ${
+                plan.popular
+                  ? 'border-2 border-brand shadow-xl relative'
+                  : 'border border-gray-200 shadow-sm'
+              }`}
+            >
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <span className="bg-brand text-white text-xs font-bold px-4 py-1.5 rounded-full">
+                    Most popular
+                  </span>
+                </div>
               )}
-              <a
+
+              <h2 className="text-xl font-black text-navy mb-1">{plan.name}</h2>
+              <div className="flex items-baseline gap-1 mb-1">
+                <span className="text-4xl font-black text-navy">{plan.usd}</span>
+                <span className="text-gray-400 text-sm">{plan.period}</span>
+              </div>
+              <p className="text-sm text-gray-400 mb-3">{plan.subtext}</p>
+              <span className="inline-block bg-blue-50 text-brand text-xs font-bold px-3 py-1 rounded-full mb-4">
+                ≈ {plan.perAssessment} per assessment
+              </span>
+
+              <p className="text-sm text-gray-600 mb-5">{plan.tagline}</p>
+
+              <p className="font-bold text-navy mb-3 text-sm">
+                Up to {plan.assessments} assessments/year
+              </p>
+
+              <ul className="space-y-2 mb-6 flex-1">
+                {FEATURES.map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-sm text-gray-700">
+                    <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 20 20">
+                      <path d="M5 10l4 4 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    {f}
+                  </li>
+                ))}
+                {plan.isEnterprise && (
+                  <li className="text-xs text-gray-400 mt-2 pt-2 border-t border-gray-100">
+                    Custom quote · Volume discounts available
+                  </li>
+                )}
+              </ul>
+
+              {plan.isEnterprise ? (
+                <a
+                  href="mailto:hello@evalent.io?subject=Enterprise%20enquiry"
+                  className="block text-center py-4 rounded-xl bg-navy text-white font-bold text-sm hover:bg-gray-800 transition-colors"
+                >
+                  Talk to us
+                </a>
+              ) : (
                 <button
                   onClick={() => setTrialOpen(true)}
-                  className={plan.popular ? "w-full py-4 rounded-xl bg-brand text-white font-bold text-base cursor-pointer border-none" : "w-full py-4 rounded-xl bg-white text-navy font-bold text-base cursor-pointer border border-gray-200"}
+                  className={`block w-full text-center py-4 rounded-xl font-bold text-sm transition-colors cursor-pointer border-0 ${
+                    plan.popular
+                      ? 'bg-brand text-white hover:bg-blue-800'
+                      : 'bg-gray-50 text-navy border border-gray-200 hover:bg-gray-100'
+                  }`}
                 >
                   {plan.cta}
                 </button>
-                className={`block text-center text-sm font-bold py-3 rounded-xl transition-colors mt-auto ${
-                  plan.name === 'Enterprise'
-                    ? 'bg-navy text-white hover:bg-gray-800'
-                    : plan.popular
-                    ? 'bg-brand text-white hover:bg-blue-800'
-                    : 'bg-gray-50 text-navy border border-gray-200 hover:bg-gray-100'
-                }`}
-              >
-                {plan.cta}
-              </a>
+              )}
             </div>
           ))}
         </div>
-        <p className="text-center text-xs text-gray-400 mt-8">Prices correct as of early 2026. Contact us for multi-year or multi-campus pricing.</p>
-        <p className="text-center text-xs text-gray-400 mt-2">All prices are exclusive of tax. Local taxes (including VAT where applicable) will be calculated at checkout based on your location.</p>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 px-6 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">COMMON QUESTIONS</div>
-            <h2 className="text-3xl font-black text-navy tracking-tight mb-2">Pricing questions, answered</h2>
-            <p className="text-gray-500 text-sm">Everything you need to make a decision. If it is not here, <a href="mailto:hello@evalent.io" className="text-brand hover:underline">get in touch</a>.</p>
-          </div>
+      {/* FAQ */}
+      {FAQ && FAQ.length > 0 && (
+        <section className="py-16 px-6 max-w-2xl mx-auto">
+          <h2 className="text-2xl font-black text-navy text-center mb-8">Frequently asked questions</h2>
           <div className="space-y-3">
-            {FAQ.map(({ q, a }) => (
-              <div key={q} className="bg-white rounded-xl border border-gray-200 p-5">
-                <div className="text-sm font-bold text-navy mb-2">{q}</div>
-                <div className="text-sm text-gray-600 leading-relaxed">{a}</div>
+            {FAQ.map((item: {q: string, a: string}, i: number) => (
+              <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full text-left px-6 py-4 font-semibold text-navy flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
+                >
+                  {item.q}
+                  <svg className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 16 16">
+                    <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+                {openFaq === i && (
+                  <div className="px-6 py-4 text-sm text-gray-600 border-t border-gray-100 bg-white">
+                    {item.a}
+                  </div>
+                )}
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Bottom CTA */}
-      <section className="bg-navy py-16 px-6 text-center">
-        <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-black text-white tracking-tight mb-3">Start with 10 free reports</h2>
-          <p className="text-blue-300 mb-7">No credit card. No commitment. Use with your next real applicants.</p>
-          <a href="https://app.evalent.io/signup" className="inline-block bg-white text-brand font-bold text-sm px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
-            Start your free trial →
-          </a>
-        </div>
+      <section className="py-16 px-6 bg-navy text-white text-center">
+        <h2 className="text-3xl font-black mb-4">Start your free trial today</h2>
+        <p className="text-blue-300 mb-8 max-w-md mx-auto">
+          10 free assessment reports. No credit card needed. Set up in minutes.
+        </p>
+        <button
+          onClick={() => setTrialOpen(true)}
+          className="bg-white text-navy font-bold py-4 px-10 rounded-xl hover:bg-gray-100 transition-colors cursor-pointer border-0"
+        >
+          Start your free trial →
+        </button>
       </section>
 
       <Footer />
-    </div>
-    <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
+      <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
+    </>
   )
 }
