@@ -35,7 +35,7 @@ export default function GccSupportPage() {
       </section>
 
       {/* ── Eligible countries ── */}
-      <section className="py-8 px-6 bg-white border-b border-gray-100">
+      <section className="py-5 px-6 bg-white border-b border-gray-100">
         <div className="max-w-2xl mx-auto">
           <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-4">Eligible countries</p>
           <div className="flex flex-wrap gap-3">
@@ -58,7 +58,7 @@ export default function GccSupportPage() {
       </section>
 
       {/* ── Our story ── */}
-      <section className="py-14 px-6 bg-white border-b border-gray-100">
+      <section className="py-10 px-6 bg-white border-b border-gray-100">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Why we are doing this</h2>
           <p className="text-gray-600 text-base leading-relaxed mb-4">
@@ -79,9 +79,9 @@ export default function GccSupportPage() {
       </section>
 
       {/* ── What's included ── */}
-      <section className="py-14 px-6 bg-white">
+      <section className="py-10 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <div className="inline-block bg-blue-50 text-brand text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-3">WHAT YOU GET</div>
             <h2 className="text-2xl font-black text-navy tracking-tight">Everything in Essentials — free for 12 months</h2>
           </div>
@@ -104,7 +104,7 @@ export default function GccSupportPage() {
       </section>
 
       {/* ── One small ask ── */}
-      <section className="py-14 px-6 bg-blue-50 border-t border-b border-blue-100">
+      <section className="py-10 px-6 bg-blue-50 border-t border-b border-blue-100">
         <div className="max-w-2xl mx-auto">
           <div className="inline-block bg-blue-100 text-brand text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">ONE SMALL ASK</div>
           <h2 className="text-2xl font-black text-navy tracking-tight mb-4">
@@ -128,13 +128,13 @@ export default function GccSupportPage() {
       </section>
 
       {/* ── How to redeem ── */}
-      <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
+      <section className="py-10 px-6 bg-gray-50 border-t border-gray-100">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <div className="inline-block bg-blue-50 text-brand text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-3">REDEEM YOUR CODE</div>
             <h2 className="text-2xl font-black text-navy tracking-tight">Up and running in four steps</h2>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
             {[
               ['Start a free trial', 'Create your school account at evalent.io — it takes under two minutes.'],
               ['Complete your school setup', 'Configure your curriculum, grades, and assessor details in the onboarding flow.'],
