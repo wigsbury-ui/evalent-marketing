@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
@@ -10,6 +11,11 @@ export const metadata: Metadata = {
 }
 
 export default function GccSupportPage() {
+  // Offer expired — hide page after 1 June 2026 00:00 UTC
+  if (new Date() > new Date('2026-06-01T00:00:00Z')) {
+    notFound()
+  }
+
   return (
     <div className="min-h-screen">
       <Nav />
