@@ -190,8 +190,7 @@ export default function Nav() {
 
             </Link>
             <Link href="/about" className={`transition-colors ${ pathname === '/about' ? 'text-brand font-semibold' : 'hover:text-navy' }`}>About</Link>
-          <Link href="/live-demo" className={`transition-colors flex items-center gap-1.5 ${isDemo ? 'text-brand font-semibold' : 'hover:text-navy'}`}>
-            <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
+          <Link href="/live-demo" className={`transition-colors ${isDemo ? 'text-brand font-semibold' : 'text-gray-700 hover:text-navy'}`}>
             Live demo
           </Link>
           <a href="https://app.evalent.io/login" className="hover:text-navy transition-colors">Sign in</a>
@@ -274,8 +273,7 @@ export default function Nav() {
               </Link>
             ))}
 
-            <Link href="/live-demo" className={`block pt-1 transition-colors font-semibold flex items-center gap-1.5 ${isDemo ? 'text-brand' : 'text-gray-900'}`}>
-              <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
+            <Link href="/live-demo" className={`block pt-1 transition-colors font-semibold ${isDemo ? 'text-brand' : 'text-gray-700'}`}>
               Live demo
             </Link>
             <Link
