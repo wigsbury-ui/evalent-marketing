@@ -22,8 +22,8 @@ export default function LiveDemoPage() {
             LIVE DEMO
           </div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
-            See it evaluate.<br />
-            <span className="text-blue-300">Right now.</span>
+            Try Evalent.<br />
+            <span className="text-blue-300">On your own words.</span>
           </h1>
           <p className="text-blue-300 text-base leading-relaxed mb-8 max-w-xl mx-auto">
             Write any response — 50 words or more — and watch Evalent score it across four criteria in seconds. Calibrated to grade and curriculum.
