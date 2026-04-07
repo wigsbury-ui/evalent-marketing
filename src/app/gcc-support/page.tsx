@@ -6,7 +6,7 @@ import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Standing with GCC Schools',
+  title: 'Standing with GCC International Schools',
   description: 'Evalent is a GCC-founded company. We are offering all GCC international schools a free year of Essentials as a gesture of solidarity during a difficult period.',
 }
 
@@ -72,12 +72,12 @@ export default function GccSupportPage() {
             of what excellent international schooling looks like — all of it was shaped in this region.
           </p>
           <p className="text-gray-600 text-base leading-relaxed mb-4">
-            We know that schools across the Gulf are navigating an unusually difficult period right now.
+            We know that international schools across the Gulf are navigating an unusually difficult period right now.
             Admissions teams are under pressure. Families are making decisions in uncertain circumstances.
             The last thing you need is more friction in your processes.
           </p>
           <p className="text-gray-600 text-base leading-relaxed">
-            So we wanted to do something concrete. Every school in the GCC can use Evalent free for a
+            So we wanted to do something concrete. Every international school in the GCC can use Evalent free for a
             full year — no charge, and no commitment beyond one thing: if it helps, we ask that you
             share your experience with us.
           </p>
@@ -118,7 +118,7 @@ export default function GccSupportPage() {
           </h2>
           <p className="text-gray-600 text-base leading-relaxed mb-4">
             This offer is completely free — but it is not unconditional. In exchange for your free year,
-            we ask that your school agrees to provide either a written testimonial or a short case study
+            we ask that your international school agrees to provide either a written testimonial or a short case study
             about your experience with Evalent.
           </p>
           <p className="text-gray-600 text-base leading-relaxed mb-4">
@@ -168,7 +168,7 @@ export default function GccSupportPage() {
             Claim your free year today.
           </h2>
           <p className="text-gray-600 text-sm mb-2">
-            Available to all schools based in the GCC. Offer expires 1 June 2026.
+            Available to all international schools based in the GCC. Offer expires 1 June 2026.
           </p>
           <p className="text-gray-500 text-sm mb-6">
             Use code <strong className="text-navy font-mono tracking-widest">GCC2026</strong> at checkout after signing up.
