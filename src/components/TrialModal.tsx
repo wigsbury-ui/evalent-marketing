@@ -39,10 +39,17 @@ export default function TrialModal({ open, onClose }: { open: boolean; onClose: 
     setLoading(true)
     setError('')
     try {
+      // Read evalent_ref cookie if present
+      const refCookie = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('evalent_ref='))
+        ?.split('=')?.[1]
+      const ref = refCookie ? decodeURIComponent(refCookie) : undefined
+
       const res = await fetch('https://app.evalent.io/api/public/trial-signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form }),
+        body: JSON.stringify({ ...form, ...(ref ? { ref } : {}) }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Something went wrong')

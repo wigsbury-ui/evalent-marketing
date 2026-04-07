@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Figtree } from 'next/font/google'
 import './globals.css'
 import CookieBanner from "@/components/CookieBanner"
+import RefCookieHandler from "@/components/RefCookieHandler"
+import { Suspense } from 'react'
 import GccBanner from "@/components/GccBanner"
 import { EvalentChat } from '@/components/EvalentChat'
 
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={figtree.variable}>
-      <body className="font-sans antialiased overflow-x-hidden"><GccBanner />{children}<div className="hidden md:block"><EvalentChat /></div><CookieBanner /></body>
+      <body className="font-sans antialiased overflow-x-hidden"><Suspense fallback={null}><RefCookieHandler /></Suspense><GccBanner />{children}<div className="hidden md:block"><EvalentChat /></div><CookieBanner /></body>
     </html>
   )
 }
