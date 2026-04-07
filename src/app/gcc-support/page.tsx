@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Standing with GCC Schools',
-  description: 'Evalent is a GCC-founded company. We are offering all GCC schools a free year of Essentials as a gesture of solidarity during a difficult period.',
+  description: 'Evalent is a GCC-founded company. We are offering all GCC international schools a free year of Essentials as a gesture of solidarity during a difficult period.',
 }
 
 export default function GccSupportPage() {
@@ -31,7 +31,7 @@ export default function GccSupportPage() {
           </h1>
           <p className="text-blue-300 text-base leading-relaxed mb-8 max-w-xl mx-auto">
             Evalent was built in the Gulf. As a gesture of support during a difficult period,
-            every GCC school can use Evalent free for a full year.
+            every GCC international school can use Evalent free for a full year.
           </p>
           <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 rounded-2xl px-8 py-4">
             <span className="text-blue-300 text-sm font-semibold tracking-widest uppercase">Your code</span>
@@ -127,7 +127,7 @@ export default function GccSupportPage() {
             We will reach out near the end of your free year to collect it.
           </p>
           <p className="text-gray-600 text-base leading-relaxed">
-            Your feedback helps other GCC schools make an informed decision. It also helps us build
+            Your feedback helps other GCC international schools make an informed decision. It also helps us build
             a better product. That feels like a fair exchange.
           </p>
         </div>
@@ -193,14 +193,14 @@ export default function GccSupportPage() {
           <h2 className="text-sm font-bold text-navy mb-4">Terms and conditions</h2>
           <ul className="space-y-2">
             {[
-              'This offer is available to schools physically located in the United Arab Emirates, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, or Jordan.',
-              'To qualify, your school must register and activate a subscription using coupon code GCC2026 before 11:59 pm (GST) on 31 May 2026.',
+              'This offer is available to international schools physically located in the United Arab Emirates, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, or Jordan.',
+              'To qualify, your international school must register and activate a subscription using coupon code GCC2026 before 11:59 pm (GST) on 31 May 2026.',
               'The offer provides 12 months of the Essentials plan at no charge. After 12 months, your subscription will automatically renew at the standard Essentials rate unless cancelled.',
               'A valid payment method is required at checkout. No charge will be made during the free 12-month period.',
-              'The offer is limited to one subscription per school. It may not be combined with any other promotion or discount.',
-              'In accepting this offer, your school agrees to provide Evalent with either a written testimonial or a short case study about your experience. We will contact you near the end of your free year to collect this.',
-              'Evalent reserves the right to verify the eligibility of any school and to withdraw this offer at any time prior to activation.',
-              'This offer applies to new Evalent customers only. Schools with an existing paid subscription are not eligible.',
+              'The offer is limited to one subscription per international school. It may not be combined with any other promotion or discount.',
+              'In accepting this offer, your international school agrees to provide Evalent with either a written testimonial or a short case study about your experience. We will contact you near the end of your free year to collect this.',
+              'Evalent reserves the right to verify the eligibility of any international school and to withdraw this offer at any time prior to activation.',
+              'This offer applies to new Evalent customers only. International schools with an existing paid subscription are not eligible.',
               'Standard Evalent terms of service apply throughout the subscription period.',
             ].map((term, i) => (
               <li key={i} className="flex gap-3 text-xs text-gray-500 leading-relaxed">
