@@ -68,7 +68,7 @@ export default function Page() {
         </div>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE UK INDEPENDENT SCHOOL CONTEXT</div>
+            <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE UK INDEPENDENT SCHOOL CONTEXT</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Most UK independent schools are assessing on instinct. Evalent gives you evidence.</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               The UK independent sector is academically rigorous and professionally run — but admissions is often its weakest administrative process. Schools that would never accept a vague marking scheme in the classroom routinely make entry decisions on the basis of a brief written paper, a school report from a source they cannot verify, and a 20-minute interview.
@@ -83,7 +83,7 @@ export default function Page() {
           <div className="space-y-3">
             {challenges.map((c) => (
               <div key={c.title} className="flex items-start gap-4 bg-gray-50 border border-gray-200 rounded-xl p-4">
-                <div className="w-2 h-2 bg-red-400 rounded-full flex-shrink-0 mt-1.5"/>
+                <div className="w-2 h-2 bg-indigo-400 rounded-full flex-shrink-0 mt-1.5"/>
                 <div>
                   <div className="text-xs font-bold text-navy mb-1">{c.title}</div>
                   <div className="text-xs text-gray-600 leading-relaxed">{c.desc}</div>
@@ -97,13 +97,13 @@ export default function Page() {
       <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">BUILT FOR BRITISH SCHOOLS</div>
+            <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">BUILT FOR BRITISH SCHOOLS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight">What makes Evalent right for UK independent schools</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             {differences.map((d) => (
-              <div key={d[0]} className="border border-red-100 bg-red-50 rounded-xl p-4">
-                <div className="text-xs font-bold text-red-700 mb-1.5">{d[0]}</div>
+              <div key={d[0]} className="border border-indigo-100 bg-indigo-50 rounded-xl p-4">
+                <div className="text-xs font-bold text-indigo-700 mb-1.5">{d[0]}</div>
                 <div className="text-xs text-gray-700 leading-relaxed">{d[1]}</div>
               </div>
             ))}
@@ -162,7 +162,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-red-50 py-12 px-6 border-t border-red-100 text-center">
+      <section className="bg-indigo-50 py-12 px-6 border-t border-indigo-100 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-black text-navy tracking-tight mb-3">Try Evalent free with your next 10 applicants.</h2>
           <p className="text-gray-600 text-sm mb-6 leading-relaxed">No credit card. No contract. Set up in 5 minutes. Use with real candidates from day one.</p>

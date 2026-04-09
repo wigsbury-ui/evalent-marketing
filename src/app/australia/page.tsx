@@ -68,7 +68,7 @@ export default function Page() {
         </div>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE AUSTRALIAN CONTEXT</div>
+            <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE AUSTRALIAN CONTEXT</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Australia’s independent schools are geographically spread and globally connected. Assessment needs to match.</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Australian independent and private schools face a specific combination of challenges: a highly mobile domestic population, significant international enrolment, large geographic catchments, and increasing family expectation that the admissions process reflects the school’s academic standards.
@@ -83,7 +83,7 @@ export default function Page() {
           <div className="space-y-3">
             {challenges.map((c) => (
               <div key={c.title} className="flex items-start gap-4 bg-gray-50 border border-gray-200 rounded-xl p-4">
-                <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0 mt-1.5"/>
+                <div className="w-2 h-2 bg-indigo-500 rounded-full flex-shrink-0 mt-1.5"/>
                 <div>
                   <div className="text-xs font-bold text-navy mb-1">{c.title}</div>
                   <div className="text-xs text-gray-600 leading-relaxed">{c.desc}</div>
@@ -97,13 +97,13 @@ export default function Page() {
       <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">BUILT FOR AUSTRALIAN SCHOOLS</div>
+            <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">BUILT FOR AUSTRALIAN SCHOOLS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight">What makes Evalent right for Australian independent schools</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             {differences.map((d) => (
-              <div key={d[0]} className="border border-green-200 bg-green-50 rounded-xl p-4">
-                <div className="text-xs font-bold text-green-700 mb-1.5">{d[0]}</div>
+              <div key={d[0]} className="border border-indigo-100 bg-indigo-50 rounded-xl p-4">
+                <div className="text-xs font-bold text-indigo-700 mb-1.5">{d[0]}</div>
                 <div className="text-xs text-gray-700 leading-relaxed">{d[1]}</div>
               </div>
             ))}
@@ -133,7 +133,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-green-50 py-12 px-6 border-t border-green-100 text-center">
+      <section className="bg-indigo-50 py-12 px-6 border-t border-indigo-100 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-black text-navy tracking-tight mb-3">Try Evalent free with your next 10 applicants.</h2>
           <p className="text-gray-600 text-sm mb-6">No credit card. No contract. Set up in 5 minutes.</p>
