@@ -5,6 +5,7 @@ import CookieBanner from "@/components/CookieBanner"
 import RefCookieHandler from "@/components/RefCookieHandler"
 import { Suspense } from 'react'
 import GccBanner from "@/components/GccBanner"
+import { Analytics } from '@vercel/analytics/next'
 import { EvalentChat } from '@/components/EvalentChat'
 
 const figtree = Figtree({ subsets: ['latin'], variable: '--font-figtree' })
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={figtree.variable}>
-      <body className="font-sans antialiased overflow-x-hidden"><Suspense fallback={null}><RefCookieHandler /></Suspense><GccBanner />{children}<div className="hidden md:block"><EvalentChat /></div><CookieBanner /></body>
+      <body className="font-sans antialiased overflow-x-hidden"><Suspense fallback={null}><RefCookieHandler /></Suspense><GccBanner />{children}<div className="hidden md:block"><EvalentChat /></div><CookieBanner /><Analytics /></body>
     </html>
   )
 }
