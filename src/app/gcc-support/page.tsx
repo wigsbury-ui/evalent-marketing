@@ -55,29 +55,6 @@ export default function GccSupportPage() {
         </div>
       </section>
 
-      {/* ── Eligible countries ── */}
-      <section className="py-5 px-6 bg-white border-b border-gray-100">
-        <div className="max-w-2xl mx-auto">
-          <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-4">Eligible countries</p>
-          <div className="flex flex-wrap gap-3">
-            {[
-              { flag: '🇦🇪', name: 'United Arab Emirates' },
-              { flag: '🇸🇦', name: 'Saudi Arabia' },
-              { flag: '🇶🇦', name: 'Qatar' },
-              { flag: '🇰🇼', name: 'Kuwait' },
-              { flag: '🇧🇭', name: 'Bahrain' },
-              { flag: '🇴🇲', name: 'Oman' },
-              { flag: '🇯🇴', name: 'Jordan' },
-            ].map(({ flag, name }) => (
-              <div key={name} className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
-                <span className="text-lg">{flag}</span>
-                <span className="text-sm font-medium text-navy">{name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Our story ── */}
       <section className="py-10 px-6 bg-white border-b border-gray-100">
         <div className="max-w-2xl mx-auto">
@@ -118,6 +95,29 @@ export default function GccSupportPage() {
               <div key={title} className="border border-blue-100 rounded-xl p-5">
                 <h3 className="text-sm font-bold text-navy mb-2">{title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Eligible countries ── */}
+      <section className="py-5 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-4">Eligible countries</p>
+          <div className="flex flex-wrap gap-3">
+            {[
+              { flag: '🇦🇪', name: 'United Arab Emirates' },
+              { flag: '🇸🇦', name: 'Saudi Arabia' },
+              { flag: '🇶🇦', name: 'Qatar' },
+              { flag: '🇰🇼', name: 'Kuwait' },
+              { flag: '🇧🇭', name: 'Bahrain' },
+              { flag: '🇴🇲', name: 'Oman' },
+              { flag: '🇯🇴', name: 'Jordan' },
+            ].map(({ flag, name }) => (
+              <div key={name} className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
+                <span className="text-lg">{flag}</span>
+                <span className="text-sm font-medium text-navy">{name}</span>
               </div>
             ))}
           </div>
