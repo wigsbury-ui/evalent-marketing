@@ -170,41 +170,6 @@ export default function Home() {
           <p className="text-center text-xs text-gray-400 mt-3">Watch this 2-minute overview to see Evalent in action</p>
         </div>
       </section>
-      {/* THREE CAPABILITIES */}
-      <section className="py-14 px-6 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-2">Everything your admissions operation needs</p>
-            <h2 className="text-2xl font-black text-navy tracking-tight">One platform. Three layers of intelligence.</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-5">
-            <Link href="/features/assessment" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-brand transition-colors">
-                <svg className="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-              </div>
-              <h3 className="text-sm font-bold text-navy mb-2">Assessment &amp; Decisions</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">Structured assessments for every applicant. Professional reports in under 5 minutes. One-click decisions delivered to your assessor's inbox.</p>
-              <span className="text-xs font-semibold text-brand">See how it works →</span>
-            </Link>
-            <Link href="/features/strategy" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-brand transition-colors">
-                <svg className="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
-              </div>
-              <h3 className="text-sm font-bold text-navy mb-2">Enrolment Intelligence</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">Six live KPI cards across every grade. Evalent-generated signals. 8-week trend tracking. Executive reports your board can act on — in one click.</p>
-              <span className="text-xs font-semibold text-brand">See the Strategy page →</span>
-            </Link>
-            <Link href="/features/team" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-brand transition-colors">
-                <svg className="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              </div>
-              <h3 className="text-sm font-bold text-navy mb-2">Team &amp; Governance</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">Four role groups. Six permissions. Every stakeholder — admissions team, senior leadership, board chair, governors — sees exactly what they need.</p>
-              <span className="text-xs font-semibold text-brand">See Team Management →</span>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* PROBLEM SECTION */}
       <section className="py-20 px-6 bg-navy relative overflow-hidden">
