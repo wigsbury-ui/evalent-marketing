@@ -83,6 +83,40 @@ export default function Page() {
         </div>
       </section>
 
+      {/* REPORT SHOWCASE */}
+      <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">BOARD REPORT</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight">What your board actually receives</h2>
+            <p className="text-gray-500 text-sm mt-2 max-w-2xl mx-auto">
+              Generated in one click from the Strategy page. A professional admissions report covering pipeline activity, enrolment position, grade-level trends, and three strategic recommendations — written in the language of your school, ready to drop into a board pack.
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-2xl">
+            <img
+              src="/leadership-report.png"
+              alt="Evalent Strategic Admissions Report — showing executive summary, enrolment position, analysis and strategic recommendations for the Board"
+              className="w-full block"
+            />
+          </div>
+          <div className="grid grid-cols-3 gap-5 mt-8">
+            <div className="text-center">
+              <div className="text-2xl font-black text-navy mb-1">1</div>
+              <div className="text-xs text-gray-500">Click to generate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-black text-navy mb-1">PDF or Word</div>
+              <div className="text-xs text-gray-500">Board-pack ready</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-black text-navy mb-1">Confidential</div>
+              <div className="text-xs text-gray-500">Marked for Senior Leadership &amp; Board</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* QUOTE STRIP */}
       <section className="py-12 px-6 bg-navy text-center">
         <div className="max-w-2xl mx-auto">
