@@ -47,13 +47,16 @@ export default function Page() {
       {/* VIDEO PLACEHOLDER — replace src with Vimeo ID when available */}
       <section className="px-6 pt-10 pb-0 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="rounded-2xl overflow-hidden relative shadow-xl bg-gray-100 flex items-center justify-center" style={{ paddingTop: '56.25%' }}>
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <div className="text-4xl mb-3">📊</div>
-              <p className="text-sm text-gray-400 font-medium">Video walkthrough coming soon</p>
-            </div>
+          <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1183290560?badge=0&autopause=0&player_id=0&app_id=58479"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              title="Evalent — Strategy & Enrolment"
+            />
           </div>
-          <p className="text-center text-xs text-gray-400 mt-3 mb-0">90-second walkthrough</p>
+          <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
         </div>
       </section>
 
