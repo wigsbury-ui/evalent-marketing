@@ -124,6 +124,9 @@ export default function Home() {
           <p className="text-lg text-blue-300 max-w-xl mx-auto mb-8 leading-relaxed">
             Structured assessments. Evalent-evaluated reports. One-click decisions. All automatic — from link sent to decision logged.
           </p>
+          <p className="text-sm text-blue-300/70 max-w-xl mx-auto mt-3 leading-relaxed">
+            Plus live enrolment intelligence and board-ready strategic reports — for every layer of your leadership.
+          </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <button onClick={() => setTrialOpen(true)} className="bg-white text-brand font-bold text-sm px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
               Start your free trial →
@@ -172,6 +175,42 @@ export default function Home() {
           <p className="text-center text-xs text-gray-400 mt-3">Watch this 2-minute overview to see Evalent in action</p>
         </div>
       </section>
+      {/* THREE CAPABILITIES */}
+      <section className="py-14 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-2">Everything your admissions operation needs</p>
+            <h2 className="text-2xl font-black text-navy tracking-tight">One platform. Three layers of intelligence.</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-5">
+            <Link href="/features/assessment" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-brand transition-colors">
+                <svg className="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              </div>
+              <h3 className="text-sm font-bold text-navy mb-2">Assessment &amp; Decisions</h3>
+              <p className="text-xs text-gray-500 leading-relaxed mb-4">Structured assessments for every applicant. Professional reports in under 5 minutes. One-click decisions delivered to your assessor's inbox.</p>
+              <span className="text-xs font-semibold text-brand">See how it works →</span>
+            </Link>
+            <Link href="/features/strategy" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-brand transition-colors">
+                <svg className="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
+              </div>
+              <h3 className="text-sm font-bold text-navy mb-2">Enrolment Intelligence</h3>
+              <p className="text-xs text-gray-500 leading-relaxed mb-4">Six live KPI cards across every grade. Evalent-generated signals. 8-week trend tracking. Executive reports your board can act on — in one click.</p>
+              <span className="text-xs font-semibold text-brand">See the Strategy page →</span>
+            </Link>
+            <Link href="/features/team" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-brand transition-colors">
+                <svg className="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              </div>
+              <h3 className="text-sm font-bold text-navy mb-2">Team &amp; Governance</h3>
+              <p className="text-xs text-gray-500 leading-relaxed mb-4">Four role groups. Six permissions. Every stakeholder — admissions team, senior leadership, board chair, governors — sees exactly what they need.</p>
+              <span className="text-xs font-semibold text-brand">See Team Management →</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* PROBLEM SECTION */}
       <section className="py-20 px-6 bg-navy relative overflow-hidden">
         {/* Subtle grid pattern */}
@@ -232,6 +271,8 @@ export default function Home() {
                   "Domain scores in English, Maths, and Reasoning",
                   "A professional report in under five minutes",
                   "A complete audit trail for every decision",
+                  "Live enrolment position across every grade",
+                  "Board-ready strategic reports in one click",
                 ].map(item => (
                   <div key={item} className="flex items-start gap-3 text-sm text-blue-100">
                     <span className="text-green-400 mt-0.5 flex-shrink-0 font-bold">✓</span>
@@ -245,7 +286,7 @@ export default function Home() {
           {/* Stats row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              ['0', 'Manual scoring steps'],
+              ['6', 'Live KPI metrics'],
               ['<5 min', 'Assessment to report'],
               ['1 click', 'To record a decision'],
               ['100%', 'Automated reminders'],
@@ -391,7 +432,66 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* STRATEGIC LAYER TEASER */}
+      <section className="py-16 px-6 bg-navy relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">ENROLMENT INTELLIGENCE</div>
+              <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-5">
+                Beyond the individual report.<br/>
+                <span className="text-blue-300">See every grade. Every week.</span>
+              </h2>
+              <p className="text-blue-300 text-sm leading-relaxed mb-6">
+                Evalent’s Strategy page gives your leadership team a live picture of every grade’s enrolment position — fill rate, retention, new entrants, gap to target. Six KPI cards update automatically. Evalent-generated signals surface the grades that need attention. And when it’s time to brief the board, one click produces a professional strategic admissions report.
+              </p>
+              <div className="flex flex-wrap gap-3 mb-8">
+                {[
+                  "6 live KPI cards",
+                  "Grade-level signals",
+                  "8-week trend tracking",
+                  "Board-ready reports",
+                  "Team access controls",
+                ].map(tag => (
+                  <span key={tag} className="text-xs font-semibold text-blue-200 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full">{tag}</span>
+                ))}
+              </div>
+              <Link href="/features/strategy" className="inline-flex items-center gap-2 bg-white text-brand font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors">
+                See the Strategy page →
+              </Link>
+            </div>
+            <div className="space-y-3">
+              {[
+                { label: "Fill Rate", value: "62%", sub: "210 / 337 seats", trend: "→ In progress", trendColor: "#f59e0b", bar: 62, barColor: "#f59e0b" },
+                { label: "Retention", value: "59%", sub: "188 confirmed", trend: "→ Moderate", trendColor: "#f59e0b", bar: 59, barColor: "#15803d" },
+                { label: "Pipeline Velocity", value: "23", sub: "in active pipeline", trend: "↑ Active", trendColor: "#15803d", bar: 30, barColor: "#1a2b6b" },
+              ].map(card => (
+                <div key={card.label} className="bg-white/8 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs text-white/60 font-medium">{card.label}</span>
+                    <span className="text-xs font-semibold" style={{ color: card.trendColor }}>{card.trend}</span>
+                  </div>
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="text-2xl font-black text-white">{card.value}</span>
+                    <span className="text-xs text-white/40">{card.sub}</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
+                    <div className="h-full rounded-full" style={{ width: `${card.bar}%`, backgroundColor: card.barColor }} />
+                  </div>
+                </div>
+              ))}
+              <Link href="/why/decision-making" className="flex items-center justify-between bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-colors group">
+                <div>
+                  <p className="text-xs font-bold text-white">Informed Decision Making</p>
+                  <p className="text-xs text-white/40 mt-0.5">How Evalent serves every layer of leadership</p>
+                </div>
+                <span className="text-white/40 group-hover:text-white transition-colors">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* SOCIAL PROOF */}
       <section className="py-16 px-6 bg-white border-t border-gray-100">
