@@ -1,4 +1,5 @@
 import HeroTrialButton from '@/components/HeroTrialButton'
+import StrategyDemo from '@/components/features/StrategyDemo'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -14,30 +15,6 @@ export default function Page() {
     { label: 'Evalent strategic signals',    desc: 'Grade-level intelligence organised into capacity, retention, and pipeline sections' },
     { label: 'Enrolment planning',      desc: 'All grades in one editable view, with 8-week trend tracking per grade' },
     { label: 'Executive report',        desc: 'Evalent-generated board summary, available as PDF or Word in one click' },
-  ]
-
-  const pillars = [
-    {
-      title: 'Enrolment & Capacity',
-      color: '#1a2b6b',
-      bg: '#f0f4ff',
-      border: '#c7d2fe',
-      desc: 'Fill rate and gap to target — how close each grade is to its intake target, with trend direction over eight weeks.',
-    },
-    {
-      title: 'Retention',
-      color: '#15803d',
-      bg: '#f0fdf4',
-      border: '#bbf7d0',
-      desc: 'Returning confirmed, leavers, and undecided — who is staying next year and which grades carry attrition risk.',
-    },
-    {
-      title: 'Pipeline & Growth',
-      color: '#b45309',
-      bg: '#fffbeb',
-      border: '#fde68a',
-      desc: 'New entrants accepted, students in process, and pipeline velocity — how actively each grade is building towards its target.',
-    },
   ]
 
   const faqs = [
@@ -108,22 +85,15 @@ export default function Page() {
         </div>
       </section>
 
-      {/* THREE PILLARS */}
+      {/* INTERACTIVE KPI DEMO */}
       <section className="py-14 px-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">THREE PILLARS</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight">Intelligence organised the way you think</h2>
-            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">Every KPI and Evalent signal maps to one of three strategic areas — so you always know what kind of problem you are looking at.</p>
+            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">LIVE PREVIEW</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight">See it in action</h2>
+            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">Click any grade pill to see how the six KPI cards update instantly — just like the real Strategy page in your school account.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-5">
-            {pillars.map((p) => (
-              <div key={p.title} className="rounded-xl border p-5" style={{ backgroundColor: p.bg, borderColor: p.border }}>
-                <div className="text-sm font-bold mb-2" style={{ color: p.color }}>{p.title}</div>
-                <p className="text-xs text-gray-600 leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
-          </div>
+          <StrategyDemo />
         </div>
       </section>
 
