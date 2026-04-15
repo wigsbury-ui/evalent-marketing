@@ -52,11 +52,12 @@ const SCHOOLS_LINKS: NavLink[] = [
   { href: '/new-zealand', label: 'New Zealand',    desc: 'NZC · Years 4–10' },
 ]
 
-function Dropdown({ label, links, extraItem, isActive }: {
+function Dropdown({ label, links, extraItem, isActive, columns = 2 }: {
   label: string
   links: NavLink[]
   extraItem?: { href: string; label: string }
   isActive: boolean
+  columns?: number
 }) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -90,9 +91,9 @@ function Dropdown({ label, links, extraItem, isActive }: {
 
       {open && (
         <div className={`absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-50 py-3 ${
-          hasIcons ? 'min-w-[560px]' : 'min-w-[340px]'
+          columns === 3 ? (hasIcons ? 'min-w-[740px]' : 'min-w-[520px]') : (hasIcons ? 'min-w-[560px]' : 'min-w-[340px]')
         }`}>
-          <div className="grid grid-cols-2 gap-0.5 px-2">
+          <div className={`grid gap-0.5 px-2 ${columns === 3 ? 'grid-cols-3' : 'grid-cols-2'}`}>
             {links.map(({ href, label: lbl, desc, icon: Icon }) => {
               const active = pathname === href
               return (
@@ -169,9 +170,9 @@ export default function Nav() {
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-6 text-sm text-gray-500">
-            <Dropdown label="Features"    links={FEATURE_LINKS}  isActive={isFeatures} />
-            <Dropdown label="Why Evalent" links={WHY_LINKS}       isActive={isWhy} />
-            <Dropdown label="Curricula"   links={CURRICULA_LINKS} isActive={isCurricula} />
+            <Dropdown label="Features"    links={FEATURE_LINKS}  isActive={isFeatures}  columns={3} />
+            <Dropdown label="Why Evalent" links={WHY_LINKS}       isActive={isWhy}       columns={3} />
+            <Dropdown label="Curricula"   links={CURRICULA_LINKS} isActive={isCurricula} columns={3} />
             <Dropdown label="Countries"   links={SCHOOLS_LINKS}   isActive={isCountries} />
             <Link href="/pricing" className={`transition-colors ${isPricing ? 'text-brand font-semibold' : 'hover:text-navy'}`}>
               Pricing
