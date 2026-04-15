@@ -17,7 +17,12 @@ export default function Page() {
     { label: 'Individual overrides',  desc: 'Adjust any person beyond their role preset, with clear visual indicators for modified settings' },
   ]
 
-
+  const faqs = [
+    ['Can I adjust individual permissions beyond the role preset?', 'Yes. Any permission can be overridden at the individual level. Modified permissions are shown with an amber indicator so your admissions head can see at a glance who has a custom setup.'],
+    ['Do board members see individual student data?', 'No. Board Member and Board Chair roles do not have access to student-level reports by default. They see enrolment position and strategy — the big picture only.'],
+    ['How do I invite a new team member?', 'From the Team page, click Add Team Member, enter their name and email, assign their role group, and send the invitation. They receive a secure welcome email with login instructions.'],
+    ['Is there an audit trail for permission changes?', 'Yes. All permission changes are logged with timestamp and actor, giving you a complete record for governance and compliance purposes.'],
+  ]
 
   return (
     <div className="min-h-screen overflow-x-hidden">
