@@ -50,17 +50,30 @@ export default function Page() {
       <Nav />
 
       {/* HERO */}
-      <section className="bg-navy py-16 px-6">
-        <div className="max-w-4xl mx-auto">
+      <section className="bg-navy py-16 px-6 text-center">
+        <div className="max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">INTERNATIONAL SCHOOLS</div>
-          <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-5 max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-5">
             One assessment platform.<br/>
             <span className="text-blue-300">Every curriculum. Every campus.</span>
           </h1>
-          <p className="text-blue-300 text-base leading-relaxed mb-8 max-w-2xl">
+          <p className="text-blue-300 text-base leading-relaxed mb-8">
             Evalent gives international schools a structured, consistent way to assess every applicant — regardless of where they have been educated, which curriculum they are joining, or where in the world they are applying from.
           </p>
           <HeroTrialButton />
+        </div>
+      </section>
+
+      {/* VIDEO */}
+      <section className="px-6 bg-white pt-10 pb-2">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-2xl overflow-hidden relative shadow-xl bg-gray-100" style={{ paddingTop: '56.25%' }}>
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <div className="text-4xl mb-3">🌐</div>
+              <p className="text-sm text-gray-400 font-medium">Video walkthrough coming soon</p>
+            </div>
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-2">90-second walkthrough</p>
         </div>
       </section>
 
