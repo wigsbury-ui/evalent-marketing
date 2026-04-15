@@ -5,7 +5,6 @@ import VideoModal from '@/components/VideoModal'
 import Footer from '@/components/Footer'
 import TrialSection from '@/components/TrialSection'
 import Link from 'next/link'
-import AssessmentCounter from '@/components/AssessmentCounter'
 import EvalDemo from '@/components/EvalDemo'
 import TrialModal from '@/components/TrialModal'
 
@@ -118,7 +117,7 @@ export default function Home() {
           </div>
           <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-5">
             Know your applicants.<br/>
-            <span className="text-blue-300">Before they arrive.</span>
+            <span className="text-blue-300">Know your school.</span>
           </h1>
           <p className="text-lg text-blue-300 max-w-xl mx-auto mb-8 leading-relaxed">
             Structured assessments. Evalent-evaluated reports. One-click decisions. Live enrolment intelligence. From first application to board report — all automatic.
