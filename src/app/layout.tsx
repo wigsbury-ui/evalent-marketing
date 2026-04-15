@@ -10,6 +10,13 @@ import { EvalentChat } from '@/components/EvalentChat'
 const figtree = Figtree({ subsets: ['latin'], variable: '--font-figtree' })
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: '/favicon-24.png', sizes: '24x24', type: 'image/png' },
+      { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   title: {
     default: 'Evalent — Intelligent Admissions Assessments for International Schools',
     template: '%s — Evalent',
