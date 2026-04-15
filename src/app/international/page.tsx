@@ -34,7 +34,7 @@ export default function Page() {
     ['Fair for students from any background', 'The assessment is structured and curriculum-aligned, but written to be accessible to able students from diverse educational backgrounds. It measures how students think and reason — not what they have memorised in a particular system.'],
     ['Supervised on campus', 'The assessment is designed to be sat under supervision at your school. It runs in a browser, requires no printing, and takes around 45 minutes. A short video guide introduces each section, settling students who may be unfamiliar with the format.'],
     ['Reports in under five minutes', 'From the moment a student submits, Evalent evaluates every response automatically and delivers a professional report to your assessor — with domain scores, written commentary, and a clear recommendation. No waiting, no manual scoring.'],
-    ['Board-ready enrolment intelligence', 'For principals and leadership teams, the Strategy page provides a live view of every grade's enrolment position across the whole school. Six KPI cards, grade-level signals, and executive reports your board can act on in one click.'],
+    ['Board-ready enrolment intelligence', 'For principals and leadership teams, the Strategy page provides a live view of every grade\'s enrolment position across the whole school. Six KPI cards, grade-level signals, and executive reports your board can act on in one click.'],
   ]
 
   const faqs = [
