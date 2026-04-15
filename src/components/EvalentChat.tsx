@@ -170,7 +170,7 @@ export function EvalentChat() {
                 </svg>
               </button>
             </div>
-            <p className="text-center text-[9px] text-gray-300 mt-1.5">Powered by Evalent AI</p>
+            <p className="text-center text-[9px] text-gray-300 mt-1.5">Powered by Evalent</p>
           </div>
         </div>
       )}

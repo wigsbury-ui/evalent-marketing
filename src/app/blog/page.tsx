@@ -45,7 +45,7 @@ export default function BlogIndex() {
           </div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">The Evalent Blog</h1>
           <p className="text-blue-200 text-lg leading-relaxed mb-8">
-            Admissions strategy, AI assessment, school leadership, and product updates.
+            Admissions strategy, Evalent assessment, school leadership, and product updates.
           </p>
           <div className="relative max-w-lg mx-auto">
             <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">

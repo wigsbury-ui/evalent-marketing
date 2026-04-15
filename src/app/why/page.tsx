@@ -8,12 +8,12 @@ export const metadata = {
 }
 
 const BENEFITS = [
-  { href: '/why/evaluation', title: 'Intelligent Evaluation', desc: 'AI-powered, rubric-based scoring that measures how students think, write, and reason — not just recall.', icon: '🧠' },
+  { href: '/why/evaluation', title: 'Intelligent Evaluation', desc: 'Evalent-powered, rubric-based scoring that measures how students think, write, and reason — not just recall.', icon: '🧠' },
   { href: '/why/wellbeing', title: 'Student Wellbeing', desc: 'Video guides and a calm, structured format that reduces anxiety and helps every student perform at their best.', icon: '💚' },
   { href: '/why/transparency', title: 'Transparency', desc: 'A complete audit trail from registration to decision — timestamped, attributed, and permanently stored.', icon: '🔍' },
   { href: '/why/defensibility', title: 'Defensibility', desc: 'Structured, reproducible assessments with documented evidence that satisfies accreditation and governance expectations.', icon: '🛡️' },
   { href: '/why/conversion', title: 'Conversion & Speed', desc: 'From assessment link to admissions decision in under five minutes, with automated reminders that keep applications moving.', icon: '⚡' },
-  { href: '/why/data-security', title: 'Data Security', desc: 'UK and EU GDPR compliant. School is the data controller. Student data is never used to train AI models.', icon: '🔒' },
+  { href: '/why/data-security', title: 'Data Security', desc: 'UK and EU GDPR compliant. School is the data controller. Student data is never used to train language models.', icon: '🔒' },
 ]
 
 export default function Page() {

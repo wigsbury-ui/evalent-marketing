@@ -23,12 +23,12 @@ const FEATURE_LINKS: NavLink[] = [
   { href: '/features/assessment',   label: 'The Assessment',        desc: 'What students experience',                         icon: ClipboardList },
   { href: '/features/reports',      label: 'Report Generation',     desc: 'From submission to PDF in minutes',                icon: FileText },
   { href: '/features/decisions',    label: 'Decision Workflow',     desc: 'One-click decisions from your inbox',              icon: CheckSquare },
-  { href: '/features/strategy',     label: 'Strategy & Enrolment', desc: 'Live enrolment KPIs and AI grade signals',         icon: TrendingUp },
+  { href: '/features/strategy',     label: 'Strategy & Enrolment', desc: 'Live enrolment KPIs and Evalent grade signals',         icon: TrendingUp },
   { href: '/features/team',         label: 'Team Management',       desc: 'Role-based access for your whole team',            icon: Users },
 ]
 
 const WHY_LINKS: NavLink[] = [
-  { href: '/why/evaluation',    label: 'Intelligent Evaluation', desc: 'AI-powered, rubric-based scoring',              icon: Sparkles },
+  { href: '/why/evaluation',    label: 'Intelligent Evaluation', desc: 'Evalent-powered, rubric-based scoring',              icon: Sparkles },
   { href: '/why/wellbeing',     label: 'Student Wellbeing',      desc: 'Calm, supported assessment experience',         icon: Heart },
   { href: '/why/transparency',  label: 'Transparency',           desc: 'Full audit trail, every decision documented',   icon: Eye },
   { href: '/why/defensibility', label: 'Defensibility',          desc: 'Evidence-based, accreditation-ready records',   icon: Shield },

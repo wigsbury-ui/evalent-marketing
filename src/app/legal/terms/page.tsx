@@ -31,7 +31,7 @@ export default function Page() {
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">1. About Evalent</h2>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            Evalent is an online admissions assessment platform operated by Evalent Ltd (&ldquo;Evalent&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). The platform enables international schools to register students, administer structured admissions assessments, and receive AI-assisted evaluation reports and recommendations.
+            Evalent is an online admissions assessment platform operated by Evalent Ltd (&ldquo;Evalent&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). The platform enables international schools to register students, administer structured admissions assessments, and receive Evalent-assisted evaluation reports and recommendations.
           </p>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
             By accessing or using Evalent, you agree to these Terms of Service. If you are using Evalent on behalf of a school or organisation, you represent that you have authority to bind that organisation to these terms.
@@ -72,9 +72,9 @@ export default function Page() {
             Assessment data submitted through the platform relates to minors. You agree to handle this data in accordance with applicable data protection law, including the UK GDPR and, where applicable, the EU GDPR and FERPA.
           </p>
 
-          <h2 className="text-lg font-black text-navy mt-8 mb-3">6. Assessment Results and AI Evaluation</h2>
+          <h2 className="text-lg font-black text-navy mt-8 mb-3">6. Assessment Results and Evalent Evaluation</h2>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            Evalent&apos;s reports are generated using automated scoring and AI-assisted writing evaluation. They are designed to support, not replace, the professional judgement of qualified admissions staff. Evalent makes no guarantee that assessment results will predict future academic performance. Admissions decisions remain the sole responsibility of the school.
+            Evalent&apos;s reports are generated using automated scoring and Evalent-assisted writing evaluation. They are designed to support, not replace, the professional judgement of qualified admissions staff. Evalent makes no guarantee that assessment results will predict future academic performance. Admissions decisions remain the sole responsibility of the school.
           </p>
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">7. Intellectual Property</h2>

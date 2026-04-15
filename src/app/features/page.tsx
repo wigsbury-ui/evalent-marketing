@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Features — Evalent',
-  description: 'Structured assessments, AI-evaluated writing, automatic reports, one-click decisions and automated reminders. Everything your admissions team needs.',
+  description: 'Structured assessments, Evalent-evaluated writing, automatic reports, one-click decisions and automated reminders. Everything your admissions team needs.',
 }
 
 const features = [
@@ -25,7 +25,7 @@ const features = [
     color: 'bg-purple-50 text-purple-700',
     items: [
       { title: 'Live writing evaluation', desc: 'Extended writing is evaluated by Evalent against four criteria: task completion, organisation, vocabulary, and accuracy.' },
-      { title: 'Expert commentary', desc: 'The AI writes evaluative commentary referencing the student\'s actual words — not a template.' },
+      { title: 'Expert commentary', desc: 'Evalent writes evaluative commentary referencing the student\'s actual words — not a template.' },
       { title: 'Honest bands', desc: 'Excellent / Good / Developing / Beginning — calibrated to your grade level and curriculum.' },
       { title: 'Strengths & development', desc: 'Every evaluation identifies specific strengths and two concrete areas to develop.' },
     ],
@@ -117,7 +117,7 @@ export default function FeaturesPage() {
           <p className="text-blue-300 mb-7">10 free reports. No credit card. Set up in 5 minutes.</p>
           <div className="flex gap-3 justify-center flex-wrap">
             <a href="/#trial" className="bg-white text-brand font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors">Start free trial →</a>
-            <Link href="/demo" className="bg-white/10 text-white font-bold text-sm px-6 py-3 rounded-xl border border-white/20 hover:bg-white/20 transition-colors">Try the AI evaluator</Link>
+            <Link href="/demo" className="bg-white/10 text-white font-bold text-sm px-6 py-3 rounded-xl border border-white/20 hover:bg-white/20 transition-colors">Try the Evalent evaluator</Link>
           </div>
         </div>
       </section>

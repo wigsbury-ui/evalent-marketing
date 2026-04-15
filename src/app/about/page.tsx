@@ -34,7 +34,7 @@ const values = [
   },
   {
     title: 'Schools run on trust',
-    desc: 'Schools share sensitive data with us. We take that seriously. Student data is never used to train AI models. Ever.',
+    desc: 'Schools share sensitive data with us. We take that seriously. Student data is never used to train language models. Ever.',
     icon: (
       <svg className="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
@@ -87,7 +87,7 @@ export default function About() {
             </p>
             <p className="text-gray-600 text-base leading-relaxed mb-4">
               Evalent changes that. For the cost of a part-time administrator, a school can run professional,
-              AI-evaluated assessments for every applicant — with reports that stand up to scrutiny and decisions
+              Evalent-evaluated assessments for every applicant — with reports that stand up to scrutiny and decisions
               that can be explained to any parent.
             </p>
             <p className="text-gray-600 text-base leading-relaxed">
@@ -145,7 +145,7 @@ export default function About() {
             Trusted with the data that matters most
           </h2>
           <p className="text-blue-300 text-base leading-relaxed mb-3">
-            GDPR compliant. ISO 27001-compliant infrastructure. Student data is never used to train AI models — ever.
+            GDPR compliant. ISO 27001-compliant infrastructure. Student data is never used to train language models — ever.
           </p>
           <Link href="/why/data-security" className="text-sm text-blue-400 hover:text-white transition-colors underline underline-offset-2 block">
             Read our full data security policy →

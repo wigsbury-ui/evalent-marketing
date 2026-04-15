@@ -27,8 +27,8 @@ export const CATEGORIES: Record<Category, { label: string; description: string; 
     color: 'bg-blue-50 text-blue-700 border-blue-200',
   },
   'ai-assessment': {
-    label: 'AI & Assessment',
-    description: 'How AI is changing the way schools evaluate applicants',
+    label: 'Intelligent Assessment',
+    description: 'How Evalent is changing the way schools evaluate applicants',
     color: 'bg-purple-50 text-purple-700 border-purple-200',
   },
   'school-leadership': {

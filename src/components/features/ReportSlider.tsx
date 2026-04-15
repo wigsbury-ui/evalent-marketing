@@ -5,11 +5,11 @@ import Image from 'next/image'
 const SLIDES = [
   {
     title: 'Instant recommendation with full evidence',
-    description: "The cover leads with a clear recommendation — Ready to admit, Borderline, or Not yet ready — backed by an AI executive summary and a radar chart plotting all four domains against your school's thresholds.",
+    description: "The cover leads with a clear recommendation — Ready to admit, Borderline, or Not yet ready — backed by an Evalent executive summary and a radar chart plotting all four domains against your school's thresholds.",
     img: '/report_slide_1.jpg',
     annotations: [
       { x: 50, y: 11.5, label: 'Recommendation band', text: 'Generated automatically from scores and thresholds — consistent across every applicant.' },
-      { x: 50, y: 25.7, label: 'AI executive summary', text: "2–3 paragraph narrative written specifically for this student's profile. Not a template." },
+      { x: 50, y: 25.7, label: 'Evalent executive summary', text: "2–3 paragraph narrative written specifically for this student's profile. Not a template." },
       { x: 50, y: 54.4, label: 'Radar chart', text: 'Four domains plotted against your thresholds. Student score vs. threshold visible at a glance.' },
       { x: 26, y: 86.3, label: 'Strengths & development', text: "Auto-generated bullet points from the student's actual scores and written responses." },
     ],
@@ -26,12 +26,12 @@ const SLIDES = [
   },
   {
     title: 'Deep domain analysis — English',
-    description: "Each domain gets its own page. English shows MCQ score, writing band, sub-skill breakdown bars, AI MCQ analysis, writing evaluation, and the student's verbatim written response.",
+    description: "Each domain gets its own page. English shows MCQ score, writing band, sub-skill breakdown bars, Evalent MCQ analysis, writing evaluation, and the student's verbatim written response.",
     img: '/report_slide_3.jpg',
     annotations: [
       { x: 82.5, y: 13.3, label: 'Score summary', text: 'MCQ, writing band, and combined score side by side for instant comparison.' },
       { x: 54, y: 27.9, label: 'Sub-skill breakdown', text: 'Bars show reading comprehension, grammar, and inference against the threshold line.' },
-      { x: 20, y: 43.4, label: 'AI narrative', text: "Generated from this student's specific answers — not generic boilerplate." },
+      { x: 20, y: 43.4, label: 'Evalent narrative', text: "Generated from this student's specific answers — not generic boilerplate." },
       { x: 50, y: 76.1, label: "Student's own words", text: 'Verbatim written response. Assessors see exactly what the student produced under timed conditions.' },
     ],
   },

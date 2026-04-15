@@ -94,14 +94,14 @@ We are honest about what we have and what we are working towards. We do not clai
     items: [
       {
         label: 'What we store',
-        detail: 'Evalent stores student registration data (name, grade, date of birth, nationality, first language), assessment responses, AI-generated evaluation scores and narratives, and school decision records. We do not store payment card data — payments are processed by Paddle as Merchant of Record.',
+        detail: 'Evalent stores student registration data (name, grade, date of birth, nationality, first language), assessment responses, Evalent-generated evaluation scores and narratives, and school decision records. We do not store payment card data — payments are processed by Paddle as Merchant of Record.',
       },
       {
         label: 'Who can access student data',
-        detail: 'Student data is accessible only to authenticated users at the school that registered the student, and to Evalent staff for the purposes of support and platform operation. Data is never sold, shared with third parties for marketing purposes, or used to train AI models without explicit consent.',
+        detail: 'Student data is accessible only to authenticated users at the school that registered the student, and to Evalent staff for the purposes of support and platform operation. Data is never sold, shared with third parties for marketing purposes, or used to train language models without explicit consent.',
       },
       {
-        label: 'AI processing',
+        label: 'Evalent processing',
         detail: 'Assessment responses are processed by Anthropic’s Claude API to generate evaluation narratives and scores. Data sent to Anthropic is subject to their enterprise data processing terms. Anthropic does not use API data to train models by default. Evalent maintains a Data Processing Agreement with Anthropic.',
       },
       {

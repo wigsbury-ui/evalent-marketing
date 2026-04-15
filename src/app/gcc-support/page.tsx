@@ -86,7 +86,7 @@ export default function GccSupportPage() {
           <div className="grid gap-4 sm:grid-cols-2">
             {[
               ['Up to 100 assessments', 'Send up to 100 assessments to applicants across all grades during your free year.'],
-              ['AI-generated reports', 'Each completed assessment produces a professional report ready for your assessor within minutes.'],
+              ['Evalent-generated reports', 'Each completed assessment produces a professional report ready for your assessor within minutes.'],
               ['Full admissions workflow', 'Register students, track progress, record decisions, and maintain a full audit trail.'],
               ['All grades 3–10', 'Assessments calibrated to each grade level for every curriculum you teach.'],
               ['Assessor decision tools', 'Email-based decision workflow — accept, waitlist, or decline with one click.'],

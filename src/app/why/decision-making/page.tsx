@@ -41,7 +41,7 @@ export default function Page() {
             Every layer of leadership, perfectly informed
           </h2>
           <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">
-            Most schools manage enrolment through a patchwork of spreadsheets, email threads, and meeting notes — leaving leaders to make decisions based on incomplete or out-of-date information. Evalent replaces that with a structured intelligence layer: live data, AI-generated signals, and governed access that ensures the right people see the right things.
+            Most schools manage enrolment through a patchwork of spreadsheets, email threads, and meeting notes — leaving leaders to make decisions based on incomplete or out-of-date information. Evalent replaces that with a structured intelligence layer: live data, Evalent-generated signals, and governed access that ensures the right people see the right things.
           </p>
         </div>
       </section>
@@ -59,7 +59,7 @@ export default function Page() {
             </div>
 
             <div className="border border-indigo-100 rounded-xl p-5">
-              <h3 className="text-sm font-bold text-navy mb-2">AI signals that surface what matters</h3>
+              <h3 className="text-sm font-bold text-navy mb-2">Evalent signals that surface what matters</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Evalent&apos;s strategic signals engine analyses your enrolment data and generates specific, grade-level intelligence — organised into three categories: Enrolment &amp; Capacity, Retention, and Pipeline. Leaders don&apos;t have to hunt for problems. The system surfaces them, with recommended actions, so attention goes where it&apos;s needed most.
               </p>

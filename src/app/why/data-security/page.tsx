@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Data Security — Why Evalent',
-  description: 'How Evalent protects student data. UK and EU GDPR compliant. Student data never used to train AI. School is the data controller.',
+  description: 'How Evalent protects student data. UK and EU GDPR compliant. Student data never used to train language models. School is the data controller.',
 }
 
 export default function Page() {
@@ -18,7 +18,7 @@ export default function Page() {
         <div className="max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">WHY EVALENT</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">Student data handled the right way.</h1>
-          <p className="text-blue-300 text-base leading-relaxed mb-6">UK and EU GDPR compliant. School is the data controller. Student assessment data is never used to train AI models — ever.</p>
+          <p className="text-blue-300 text-base leading-relaxed mb-6">UK and EU GDPR compliant. School is the data controller. Student assessment data is never used to train language models — ever.</p>
           <HeroTrialButton />
         </div>
       </section>
@@ -52,8 +52,8 @@ export default function Page() {
             </div>
 
             <div className="border border-purple-100 rounded-xl p-5">
-              <h3 className="text-sm font-bold text-navy mb-2">Student data is never used to train AI</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Assessment responses — including extended writing — are processed by AI only to generate the report for that specific student. This processing is governed by a data processing agreement with Anthropic, our AI sub-processor, which contractually prohibits the use of your students' data for AI training purposes. Student data is used for one purpose: producing the admissions report your school requested.</p>
+              <h3 className="text-sm font-bold text-navy mb-2">Student data is never used to train language models</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">Assessment responses — including extended writing — are processed by Evalent only to generate the report for that specific student. This processing is governed by a data processing agreement with Anthropic, our language model sub-processor, which contractually prohibits the use of your students' data for AI training purposes. Student data is used for one purpose: producing the admissions report your school requested.</p>
             </div>
 
             <div className="border border-purple-100 rounded-xl p-5">
@@ -68,7 +68,7 @@ export default function Page() {
 
             <div className="border border-purple-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Sub-processors bound by data processing agreements</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Evalent shares data only with the sub-processors required to deliver the service — database hosting (Supabase), AI evaluation (Anthropic), transactional email (Resend), and platform infrastructure (Vercel). Each is bound by a formal data processing agreement. We do not sell personal data to any third party, and we do not use student data for advertising, profiling, or any purpose beyond delivering your school's reports.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">Evalent shares data only with the sub-processors required to deliver the service — database hosting (Supabase), Evalent evaluation (Anthropic), transactional email (Resend), and platform infrastructure (Vercel). Each is bound by a formal data processing agreement. We do not sell personal data to any third party, and we do not use student data for advertising, profiling, or any purpose beyond delivering your school's reports.</p>
             </div>
 
             <div className="border border-purple-100 rounded-xl p-5">
@@ -86,7 +86,7 @@ export default function Page() {
           {[
             ['UK & EU GDPR', 'Compliant with both UK ICO and EU GDPR frameworks'],
             ['School controls the data', 'You are the data controller. We are the processor.'],
-            ['AI never trains on student data', 'Contractually prohibited. No exceptions.'],
+            ['Language models never train on student data', 'Contractually prohibited. No exceptions.'],
           ].map(([title, desc]) => (
             <div key={title} className="bg-white rounded-xl p-5 border border-blue-100">
               <div className="text-xs font-black text-brand uppercase tracking-widest mb-2">{title}</div>

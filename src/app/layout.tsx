@@ -12,13 +12,13 @@ const figtree = Figtree({ subsets: ['latin'], variable: '--font-figtree' })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Evalent — AI Admissions Assessments for International Schools',
+    default: 'Evalent — Intelligent Admissions Assessments for International Schools',
     template: '%s — Evalent',
   },
-  description: 'Replace paper tests with structured, AI-evaluated assessments. Professional admission reports in under 5 minutes — no manual scoring, no admin burden.',
+  description: 'Replace paper tests with structured, Evalent-evaluated assessments. Professional admission reports in under 5 minutes — no manual scoring, no admin burden.',
   openGraph: {
-    title: 'Evalent — AI Admissions Assessments for International Schools',
-    description: 'Replace paper tests with structured, AI-evaluated assessments. Professional admission reports in under 5 minutes.',
+    title: 'Evalent — Intelligent Admissions Assessments for International Schools',
+    description: 'Replace paper tests with structured, Evalent-evaluated assessments. Professional admission reports in under 5 minutes.',
     url: 'https://www.evalent.io',
     siteName: 'Evalent',
     type: 'website',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Evalent — AI Admissions Assessments for International Schools',
-    description: 'Replace paper tests with structured, AI-evaluated assessments. Professional reports in under 5 minutes.',
+    title: 'Evalent — Intelligent Admissions Assessments for International Schools',
+    description: 'Replace paper tests with structured, Evalent-evaluated assessments. Professional reports in under 5 minutes.',
   },
 }
 

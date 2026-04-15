@@ -64,7 +64,7 @@ export default function Page() {
           <ul className="text-sm text-gray-600 leading-relaxed mb-4 space-y-1 list-disc pl-5">
             <li><strong>Paddle</strong> — payment processing and Merchant of Record services</li>
             <li><strong>Supabase</strong> — database hosting and infrastructure</li>
-            <li><strong>Anthropic</strong> — AI writing evaluation (assessment text is processed to generate report commentary)</li>
+            <li><strong>Anthropic</strong> — Evalent writing evaluation (assessment text is processed to generate report commentary)</li>
             <li><strong>Resend</strong> — transactional email delivery</li>
             <li><strong>Vercel</strong> — platform hosting</li>
           </ul>

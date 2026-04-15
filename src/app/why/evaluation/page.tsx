@@ -3,17 +3,17 @@ import Footer from '@/components/Footer'
 import EvalDemo from '@/components/EvalDemo'
 
 export const metadata = {
-  title: 'Try the Live AI Writing Evaluator — Evalent',
-  description: 'See Evalent evaluate real student writing in seconds. Choose a grade, write a response, and watch a professional AI evaluation appear instantly — the same tool used for every applicant.',
+  title: 'Try the Live Evalent Writing Evaluator — Evalent',
+  description: 'See Evalent evaluate real student writing in seconds. Choose a grade, write a response, and watch a professional Evalent evaluation appear instantly — the same tool used for every applicant.',
   openGraph: {
-    title: 'Try the Live AI Writing Evaluator — Evalent',
-    description: 'Experience exactly what Evalent does for every admissions applicant. Live AI evaluation in seconds.',
+    title: 'Try the Live Evalent Writing Evaluator — Evalent',
+    description: 'Experience exactly what Evalent does for every admissions applicant. Live Evalent evaluation in seconds.',
     url: 'https://www.evalent.io/why/evaluation',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Try the Live AI Writing Evaluator — Evalent',
-    description: 'Live AI evaluation. Choose a grade, write a response, get a professional evaluation instantly.',
+    title: 'Try the Live Evalent Writing Evaluator — Evalent',
+    description: 'Live Evalent evaluation. Choose a grade, write a response, get a professional evaluation instantly.',
   },
 }
 
@@ -49,7 +49,7 @@ export default function DemoPage() {
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
           <h2 className="text-center text-xl font-bold text-navy mt-4">Assessment that measures how students think, not just what they recall</h2>
-          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Evalent goes beyond multiple choice. Extended writing tasks evaluated by AI give your assessors a real sample of how each student reasons and communicates — the same standard applied to every candidate, every time.</p>
+          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Evalent goes beyond multiple choice. Extended writing tasks evaluated by Evalent give your assessors a real sample of how each student reasons and communicates — the same standard applied to every candidate, every time.</p>
         </div>
       </section>
 

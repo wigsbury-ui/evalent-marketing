@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div>
             <p className="text-blue-300 text-sm leading-relaxed">
-              AI-powered admissions assessments for international and independent schools.
+              Evalent-powered admissions assessments for international and independent schools.
               Structured reports, automated scoring, and one-click decisions — in under 5 minutes per candidate.
             </p>
           </div>

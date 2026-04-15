@@ -5,13 +5,13 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Strategy & Enrolment Planning — Evalent Features',
-  description: 'See your school\'s complete enrolment picture in real time. Six live KPI metrics, AI-generated grade signals, and board-ready executive reports.',
+  description: 'See your school\'s complete enrolment picture in real time. Six live KPI metrics, Evalent-generated grade signals, and board-ready executive reports.',
 }
 
 export default function Page() {
   const features = [
     { label: 'Six live KPIs',           desc: 'Fill rate, retention, new entrants, gap to target, leaver risk, pipeline velocity' },
-    { label: 'AI strategic signals',    desc: 'Grade-level intelligence organised into capacity, retention, and pipeline sections' },
+    { label: 'Evalent strategic signals',    desc: 'Grade-level intelligence organised into capacity, retention, and pipeline sections' },
     { label: 'Enrolment planning',      desc: 'All grades in one editable view, with 8-week trend tracking per grade' },
     { label: 'Executive report',        desc: 'Evalent-generated board summary, available as PDF or Word in one click' },
   ]
@@ -43,8 +43,8 @@ export default function Page() {
   const faqs = [
     ['Does the strategy page cover all grades, including Early Years?', 'Yes. The enrolment planning table covers every grade from Pre-K to G12. Grades assessed via Evalent have their Accepted and In Process figures auto-populated. All other data is entered manually by your team.'],
     ['Where does the enrolment data come from?', 'Your admissions team enters current enrolment, targets, leavers, and returning students directly into the planning table. Evalent auto-populates pipeline data for assessed grades. You can also upload data via CSV.'],
-    ['How do the AI signals work?', 'Evalent analyses your grade data and generates 3–5 signals classified into Enrolment & Capacity, Retention, and Pipeline. Each signal is specific to your school\'s numbers and recommends a concrete next action. Signals regenerate each time you click Generate.'],
-    ['Can I filter the view by grade group?', 'Yes. Filter pills at the top let you switch between Whole School, Early Years & Primary, your middle school range, Senior School, or any individual grade. KPI cards, AI signals, and the chart all update instantly.'],
+    ['How do the Evalent signals work?', 'Evalent analyses your grade data and generates 3–5 signals classified into Enrolment & Capacity, Retention, and Pipeline. Each signal is specific to your school\'s numbers and recommends a concrete next action. Signals regenerate each time you click Generate.'],
+    ['Can I filter the view by grade group?', 'Yes. Filter pills at the top let you switch between Whole School, Early Years & Primary, your middle school range, Senior School, or any individual grade. KPI cards, Evalent signals, and the chart all update instantly.'],
   ]
 
   return (
@@ -60,7 +60,7 @@ export default function Page() {
             <span className="text-blue-300">for the whole school.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            Six live KPI cards. AI-generated grade signals. An executive report your board can act on.
+            Six live KPI cards. Evalent-generated grade signals. An executive report your board can act on.
             All powered by data your team already has.
           </p>
           <HeroTrialButton />
@@ -92,7 +92,7 @@ export default function Page() {
               who has confirmed they are returning, and how many new students are in the pipeline.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Six KPI cards update automatically as your admissions data changes. AI-generated signals surface
+              Six KPI cards update automatically as your admissions data changes. Evalent-generated signals surface
               the grades that need attention. And when it is time to report to your board, one click generates
               a professional executive summary written in the language of your school.
             </p>
@@ -114,7 +114,7 @@ export default function Page() {
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">THREE PILLARS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight">Intelligence organised the way you think</h2>
-            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">Every KPI and AI signal maps to one of three strategic areas — so you always know what kind of problem you are looking at.</p>
+            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">Every KPI and Evalent signal maps to one of three strategic areas — so you always know what kind of problem you are looking at.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {pillars.map((p) => (
@@ -131,7 +131,7 @@ export default function Page() {
       <section className="py-10 px-6 bg-navy">
         <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6 text-center">
           <div><div className="text-3xl font-black text-white">6</div><div className="text-sm text-blue-300 mt-1">Live KPI metrics</div></div>
-          <div><div className="text-3xl font-black text-white">AI</div><div className="text-sm text-blue-300 mt-1">Grade-level signals</div></div>
+          <div><div className="text-3xl font-black text-white">✦</div><div className="text-sm text-blue-300 mt-1">Grade-level signals</div></div>
           <div><div className="text-3xl font-black text-white">1</div><div className="text-sm text-blue-300 mt-1">Click to board report</div></div>
         </div>
       </section>

@@ -56,7 +56,7 @@ const orgSchema = {
   "name": "Evalent",
   "url": "https://www.evalent.io",
   "logo": "https://www.evalent.io/evalent-logo.png",
-  "description": "AI-powered admissions assessments for international and independent schools.",
+  "description": "Evalent-powered admissions assessments for international and independent schools.",
   "sameAs": []
 }
 
@@ -122,7 +122,7 @@ export default function Home() {
             <span className="text-blue-300">Before they arrive.</span>
           </h1>
           <p className="text-lg text-blue-300 max-w-xl mx-auto mb-8 leading-relaxed">
-            Structured assessments. AI-evaluated reports. One-click decisions. All automatic — from link sent to decision logged.
+            Structured assessments. Evalent-evaluated reports. One-click decisions. All automatic — from link sent to decision logged.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <button onClick={() => setTrialOpen(true)} className="bg-white text-brand font-bold text-sm px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
@@ -131,7 +131,7 @@ export default function Home() {
             
           </div>
           <div className="mt-8 flex gap-5 justify-center flex-wrap">
-            {['10 free reports','No credit card','Ready in 5 minutes','Student data never used to train AI'].map(item => (
+            {['10 free reports','No credit card','Ready in 5 minutes','Student data never used to train language models'].map(item => (
               <div key={item} className="flex items-center gap-1.5 text-white/50 text-xs">
                 <span className="w-3.5 h-3.5 bg-green-400/20 rounded-full flex items-center justify-center text-green-400 text-[9px]">✓</span>
                 {item}
@@ -228,7 +228,7 @@ export default function Home() {
               <div className="space-y-3">
                 {[
                   "A timed, structured assessment completed by the applicant",
-                  "Extended writing evaluated by AI against your curriculum",
+                  "Extended writing evaluated by Evalent against your curriculum",
                   "Domain scores in English, Maths, and Reasoning",
                   "A professional report in under five minutes",
                   "A complete audit trail for every decision",
@@ -272,7 +272,7 @@ export default function Home() {
             <div className="hidden md:block absolute top-10 left-[12%] right-[12%] h-0.5 bg-gray-100 z-0" />
             {[
               { label: 'Link sent', sub: 'One click from dashboard', icon: '↗', auto: true, bg: 'bg-blue-50' },
-              { label: 'Report built', sub: 'AI scores and writes narrative', icon: '★', auto: true, bg: 'bg-blue-50' },
+              { label: 'Report built', sub: 'Evalent scores and writes narrative', icon: '★', auto: true, bg: 'bg-blue-50' },
               { label: 'Assessor emailed', sub: 'Report + decision buttons', icon: '✉', auto: true, bg: 'bg-green-50' },
               { label: 'Decision logged', sub: 'Admit / Reject / Waitlist', icon: '✓', auto: false, bg: 'bg-green-50' },
             ].map((node, i) => (

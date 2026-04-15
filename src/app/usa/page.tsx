@@ -30,7 +30,7 @@ export default function Page() {
     ['Does Evalent meet NAIS admission standards?', 'Evalent supports best practice in independent school admissions as described by NAIS: structured, evidence-based, documented, and respectful of the whole child. It produces the kind of documented record that accreditation reviewers look for.'],
     ['Can we use Evalent for both lower school and upper school entry?', 'Yes. Grades 3–10 are all covered. Each grade has its own calibrated assessment.'],
     ['What about students with IEPs or 504 plans?', 'Extended time and other accommodations can be configured per student before the link is sent.'],
-    ['How does the writing evaluation work?', 'Students complete an extended writing task responding to an age-appropriate prompt. Evalent’s AI evaluates the response against four criteria: task completion, organisation, vocabulary, and accuracy. The assessor receives both a band rating and written commentary.'],
+    ['How does the writing evaluation work?', 'Students complete an extended writing task responding to an age-appropriate prompt. Evalent evaluates the response against four criteria: task completion, organisation, vocabulary, and accuracy. The assessor receives both a band rating and written commentary.'],
   ]
 
   return (

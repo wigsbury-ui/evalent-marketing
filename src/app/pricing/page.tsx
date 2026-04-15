@@ -70,7 +70,7 @@ const FAQ = [
   },
   {
     q: 'How is student data handled?',
-    a: 'Student data is stored in ISO 27001-compliant infrastructure and never used to train AI models. We are GDPR compliant. Full details are on our data security page.',
+    a: 'Student data is stored in ISO 27001-compliant infrastructure and never used to train language models. We are GDPR compliant. Full details are on our data security page.',
   },
   {
     q: 'Do you offer multi-campus or group pricing?',

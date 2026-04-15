@@ -28,7 +28,7 @@ MANAGING ACCESS:
 - Each user manages their own two-factor authentication setting independently
 
 == WHAT EVALENT IS ==
-Evalent is an AI-powered admissions assessment platform for international and independent schools. Schools use it to evaluate applicants for entry at Grades 3–10 (Years 4–11 in British schools). The company is Evalent Ltd, governed by English and Welsh law.
+Evalent is an intelligent admissions assessment platform for international and independent schools. Schools use it to evaluate applicants for entry at Grades 3–10 (Years 4–11 in British schools). The company is Evalent Ltd, governed by English and Welsh law.
 
 The problem Evalent solves: most schools base admissions decisions on parent letters, school transcripts, and brief campus visits — unstructured evidence that varies widely. Evalent replaces this with a consistent, structured assessment that produces a professional evaluation report in under 5 minutes.
 
@@ -37,7 +37,7 @@ The problem Evalent solves: most schools base admissions decisions on parent let
 2. A unique secure assessment link is generated automatically
 3. School sends the link to the student or family — Evalent does NOT email students directly
 4. Student completes the online assessment (approx. 45 minutes, any device, no software, no account needed)
-5. Evalent auto-scores MCQ questions and AI-evaluates all writing tasks
+5. Evalent auto-scores MCQ questions and Evalent-evaluates all writing tasks
 6. A professional PDF report is generated automatically
 7. Report is emailed to the school's designated assessor with one-click decision buttons
 8. Assessor clicks Admit / Admit with Support / Waitlist / Do Not Admit from the email — no portal login required
@@ -69,7 +69,7 @@ MINDSET — contextual, scored 0–4
 - Values alignment: how the student approaches challenge
 - Not a gatekeeper — contextual signal, especially useful for borderline academic scores
 
-Three qualitative lenses (no score, AI narrative only):
+Three qualitative lenses (no score, Evalent narrative only):
 - Creativity: writing prompt
 - Values: short response
 - Motivation: "Why do you want to come to our school?"
@@ -79,12 +79,12 @@ Generated automatically in under 2 minutes after submission. Professional PDF, s
 
 Report contents:
 - Cover page: student name, school, grade, date, overall recommendation pill, spider/radar chart of all 4 domains vs school thresholds
-- AI-written executive summary
-- English domain: MCQ score, writing band, full AI narrative, strengths and development areas
-- Mathematics domain: MCQ score, writing band where applicable, AI narrative
-- Reasoning domain: score and AI narrative
-- Mindset page: score out of 4, AI narrative
-- Values, Creativity, Motivation pages (if completed): qualitative AI commentary
+- Evalent-written executive summary
+- English domain: MCQ score, writing band, full Evalent narrative, strengths and development areas
+- Mathematics domain: MCQ score, writing band where applicable, Evalent narrative
+- Reasoning domain: score and Evalent narrative
+- Mindset page: score out of 4, Evalent narrative
+- Values, Creativity, Motivation pages (if completed): qualitative Evalent commentary
 Reports are professional enough to share with parents when explaining decisions.
 
 == RECOMMENDATION BANDS ==
@@ -115,7 +115,7 @@ Zero manual steps: from assessment link to recorded decision, everything is auto
 == PLATFORM FEATURES ==
 - Admin dashboard: KPI cards (total students, turnaround time, awaiting decisions, decisions made, average score, acceptance rate)
 - Admissions by Grade chart: stacked bar showing outcomes per grade, filterable by intake period
-- Evalent Insights: AI-generated cohort analysis — trends, patterns, outliers across the applicant pool
+- Evalent Insights: Evalent-generated cohort analysis — trends, patterns, outliers across the applicant pool
 - Students table: sortable, filterable, CSV export, inline admission term editing, Resend option
 - Assessors page: universal assessor + grade-specific overrides
 - School Settings: branding, curriculum, grade naming (Grade vs Year), British/American English reports, admission terms, completion message
@@ -228,7 +228,7 @@ Q: Can the assessment be taken at home?
 A: Yes. Designed for remote, unsupervised completion. In-person supervision is possible if preferred.
 
 Q: How long to get a report after the student submits?
-A: Typically under 2 minutes. MCQ scoring, AI writing evaluation, narrative generation, PDF creation, and email dispatch all run automatically.
+A: Typically under 2 minutes. MCQ scoring, Evalent writing evaluation, narrative generation, PDF creation, and email dispatch all run automatically.
 
 Q: Does Evalent send the link to students?
 A: No — the school sends the link. Evalent generates it; schools send it however they normally communicate with applicants.
