@@ -1,4 +1,5 @@
 import HeroTrialButton from '@/components/HeroTrialButton'
+import TeamDemo from '@/components/features/TeamDemo'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -16,43 +17,7 @@ export default function Page() {
     { label: 'Individual overrides',  desc: 'Adjust any person beyond their role preset, with clear visual indicators for modified settings' },
   ]
 
-  const groups = [
-    {
-      name: 'Admissions Team',
-      color: '#1a2b6b',
-      bg: '#f0f4ff',
-      border: '#c7d2fe',
-      desc: 'Full operational access. They register students, send assessments, and work the pipeline day to day.',
-    },
-    {
-      name: 'Senior Leadership',
-      color: '#7c3aed',
-      bg: '#faf5ff',
-      border: '#ddd6fe',
-      desc: 'Strategic visibility without operational controls. They see the dashboard, student reports, and strategy — but do not operate the system.',
-    },
-    {
-      name: 'Board Chair',
-      color: '#b45309',
-      bg: '#fffbeb',
-      border: '#fde68a',
-      desc: 'Executive layer. Strategy, enrolment position, and the ability to generate board-level reports.',
-    },
-    {
-      name: 'Board Members',
-      color: '#0369a1',
-      bg: '#f0f9ff',
-      border: '#bae6fd',
-      desc: 'Read-only strategy overview. The big picture — enrolment position and trends — with no access to individual student data.',
-    },
-  ]
 
-  const faqs = [
-    ['Can I adjust individual permissions beyond the role preset?', 'Yes. Any permission can be overridden at the individual level. Modified permissions are shown with an amber indicator so your admissions head can see at a glance who has a custom setup.'],
-    ['Do board members see individual student data?', 'No. Board Member and Board Chair roles do not have access to student-level reports by default. They see enrolment position and strategy — the big picture only.'],
-    ['How do I invite a new team member?', 'From the Team page, click Add Team Member, enter their name and email, assign their role group, and send the invitation. They receive a secure welcome email with login instructions.'],
-    ['Is there an audit trail for permission changes?', 'Yes. All permission changes are logged with timestamp and actor, giving you a complete record for governance and compliance purposes.'],
-  ]
 
   return (
     <div className="min-h-screen overflow-x-hidden">
@@ -116,22 +81,15 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ROLE GROUPS */}
+      {/* TEAM DEMO */}
       <section className="py-14 px-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">ROLE GROUPS</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight">Built for how schools are actually organised</h2>
-            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">Each group reflects a real layer of your organisation — with permissions that match what that layer genuinely needs.</p>
+            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">LIVE PREVIEW</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight">See it in action</h2>
+            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">Every group is collapsible. Click any header to expand or collapse. This is the real interface your admissions head will use.</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-5">
-            {groups.map((g) => (
-              <div key={g.name} className="rounded-xl border p-5" style={{ backgroundColor: g.bg, borderColor: g.border }}>
-                <div className="text-sm font-bold mb-2" style={{ color: g.color }}>{g.name}</div>
-                <p className="text-xs text-gray-600 leading-relaxed">{g.desc}</p>
-              </div>
-            ))}
-          </div>
+          <TeamDemo />
         </div>
       </section>
 
