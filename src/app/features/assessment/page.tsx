@@ -55,7 +55,7 @@ export default function Page() {
 
       <section className="bg-navy py-16 px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">FEATURE 3 OF 5</div>
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">FEATURE 3 OF 7</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             A professional assessment.<br/>
             <span className="text-blue-300">From any device. In 45 minutes.</span>

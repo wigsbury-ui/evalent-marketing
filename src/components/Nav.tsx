@@ -11,6 +11,8 @@ const FEATURE_LINKS = [
   { href: '/features/assessment',   label: 'The Assessment',       desc: 'What students experience' },
   { href: '/features/reports',      label: 'Report Generation',    desc: 'From submission to PDF in minutes' },
   { href: '/features/decisions',    label: 'Decision Workflow',    desc: 'One-click decisions from your inbox' },
+  { href: '/features/strategy',     label: 'Strategy & Enrolment', desc: 'Live enrolment KPIs and AI grade signals' },
+  { href: '/features/team',         label: 'Team Management',      desc: 'Role-based access for your whole team' },
 ]
 
 const CURRICULA_LINKS = [
