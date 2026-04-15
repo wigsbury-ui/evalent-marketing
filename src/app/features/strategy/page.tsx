@@ -97,6 +97,48 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ENROLMENT CHART */}
+      <section className="py-14 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">ENROLMENT BY GRADE</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight">Every grade. One view.</h2>
+            <p className="text-gray-500 text-sm mt-2 max-w-2xl mx-auto">
+              The Enrolment by Grade chart shows your whole school on a single canvas — current year as a thin blue bar, next year projected as a stacked column, leavers below the baseline, and your target as a dashed line. Seven legend items are individually clickable, fading everything else to reveal the signal you&apos;re looking for.
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-xl">
+            <img
+              src="/enrolment-chart.png"
+              alt="Enrolment by Grade chart showing all grades with stacked bars for returning students, accepted new, pipeline, and leavers below baseline"
+              className="w-full block"
+            />
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 mt-6">
+            {([
+              { color: "#93c5fd", label: "Current year", dashed: false },
+              { color: "#15803d", label: "Returning", dashed: false },
+              { color: "#22c55e", label: "Accepted (new)", dashed: false },
+              { color: "#94a3b8", label: "Unsure", dashed: false },
+              { color: "#f59e0b", label: "In Pipeline", dashed: false },
+              { color: "#fecaca", label: "Leavers", dashed: false },
+              { color: "#15803d", label: "Target", dashed: true },
+            ] as { color: string; label: string; dashed: boolean }[]).map((item) => (
+              <div key={item.label} className="flex items-center gap-1.5">
+                {item.dashed ? (
+                  <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
+                    <line x1="0" y1="5" x2="16" y2="5" stroke={item.color} strokeWidth="2" strokeDasharray="3 2"/>
+                  </svg>
+                ) : (
+                  <div className="w-3 h-3 rounded-sm flex-shrink-0" style={{ backgroundColor: item.color }} />
+                )}
+                <span className="text-xs text-gray-500">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* STATS */}
       <section className="py-10 px-6 bg-navy">
         <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6 text-center">
