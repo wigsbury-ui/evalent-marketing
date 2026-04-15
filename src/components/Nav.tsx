@@ -46,10 +46,11 @@ const CURRICULA_LINKS: NavLink[] = [
 ]
 
 const SCHOOLS_LINKS: NavLink[] = [
-  { href: '/uk',          label: 'United Kingdom', desc: 'British National Curriculum · Years 4–11' },
-  { href: '/usa',         label: 'United States',  desc: 'Common Core · Grades 3–10' },
-  { href: '/australia',   label: 'Australia',      desc: 'ACARA · Years 4–10' },
-  { href: '/new-zealand', label: 'New Zealand',    desc: 'NZC · Years 4–10' },
+  { href: '/international', label: 'International Schools', desc: 'All curricula · Global campuses' },
+  { href: '/uk',            label: 'United Kingdom',        desc: 'British National Curriculum · Years 4–11' },
+  { href: '/usa',           label: 'United States',         desc: 'Common Core · Grades 3–10' },
+  { href: '/australia',     label: 'Australia',             desc: 'ACARA · Years 4–10' },
+  { href: '/new-zealand',   label: 'New Zealand',           desc: 'NZC · Years 4–10' },
 ]
 
 function Dropdown({ label, links, extraItem, isActive, columns = 2 }: {
@@ -154,7 +155,7 @@ export default function Nav() {
   const isFeatures  = pathname.startsWith('/features')
   const isWhy       = pathname.startsWith('/why')
   const isCurricula = pathname.startsWith('/curricula')
-  const isCountries = ['/uk', '/usa', '/australia', '/new-zealand'].some(p => pathname === p)
+  const isCountries = ['/uk', '/usa', '/australia', '/new-zealand', '/international'].some(p => pathname === p)
   const isPricing   = pathname === '/pricing'
   const isDemo      = pathname === '/live-demo'
   const isBlog      = pathname.startsWith('/blog')
@@ -173,7 +174,7 @@ export default function Nav() {
             <Dropdown label="Features"    links={FEATURE_LINKS}  isActive={isFeatures}  columns={3} />
             <Dropdown label="Why Evalent" links={WHY_LINKS}       isActive={isWhy}       columns={3} />
             <Dropdown label="Curricula"   links={CURRICULA_LINKS} isActive={isCurricula} columns={3} />
-            <Dropdown label="Countries"   links={SCHOOLS_LINKS}   isActive={isCountries} />
+            <Dropdown label="Regions"     links={SCHOOLS_LINKS}   isActive={isCountries} />
             <Link href="/pricing" className={`transition-colors ${isPricing ? 'text-brand font-semibold' : 'hover:text-navy'}`}>
               Pricing
             </Link>
