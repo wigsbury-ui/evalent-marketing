@@ -31,7 +31,7 @@ export default function Page() {
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">1. About Evalent</h2>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            Evalent is an online admissions assessment platform operated by Evalent Ltd (&ldquo;Evalent&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). The platform enables international schools to register students, administer structured admissions assessments, and receive Evalent-assisted evaluation reports and recommendations.
+            Evalent is an online admissions assessment platform operated by Evalent LLC TZE (&ldquo;Evalent&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). The platform enables international schools to register students, administer structured admissions assessments, and receive Evalent-assisted evaluation reports and recommendations.
           </p>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
             By accessing or using Evalent, you agree to these Terms of Service. If you are using Evalent on behalf of a school or organisation, you represent that you have authority to bind that organisation to these terms.
@@ -84,12 +84,12 @@ export default function Page() {
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">8. Limitation of Liability</h2>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            To the maximum extent permitted by law, Evalent Ltd shall not be liable for any indirect, incidental, or consequential damages arising from your use of the platform. Our total liability to you shall not exceed the fees paid by you in the 12 months preceding the claim.
+            To the maximum extent permitted by law, Evalent LLC TZE shall not be liable for any indirect, incidental, or consequential damages arising from your use of the platform. Our total liability to you shall not exceed the fees paid by you in the 12 months preceding the claim.
           </p>
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">9. Governing Law</h2>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            These terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.
+            These terms are governed by the laws of the United Arab Emirates and the regulations of the Ras Al Khaimah Economic Zone (RAKEZ). Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.
           </p>
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">10. Contact</h2>

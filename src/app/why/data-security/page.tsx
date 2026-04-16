@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Data Security | Why Evalent',
-  description: 'How Evalent protects student data. UK and EU GDPR compliant. Student data never used to train language models. School is the data controller.',
+  description: 'How Evalent protects student data. UAE data protection law compliant. GDPR-aligned for EU and UK data subjects. Student data never used to train language models. School is the data controller.',
 }
 
 export default function Page() {
@@ -18,7 +18,7 @@ export default function Page() {
         <div className="max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">WHY EVALENT</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">Student data handled the right way.</h1>
-          <p className="text-blue-300 text-base leading-relaxed mb-6">UK and EU GDPR compliant. School is the data controller. Student assessment data is never used to train language models. Ever.</p>
+          <p className="text-blue-300 text-base leading-relaxed mb-6">UAE data protection compliant. GDPR-aligned for EU and UK data subjects. School is the data controller. Student assessment data is never used to train language models. Ever.</p>
           <HeroTrialButton />
         </div>
       </section>
@@ -37,7 +37,7 @@ export default function Page() {
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
           <h2 className="text-center text-xl font-bold text-navy mt-4">Why data protection matters in admissions</h2>
-          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Independent schools assess applicants who are minors. That data, names, writing samples, scores, contact details, carries serious legal and ethical weight. Every school using Evalent needs to be confident that the platform meets its obligations under UK GDPR and EU GDPR, and that student data is never misused. This page explains exactly how Evalent handles that responsibility.</p>
+          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Independent schools assess applicants who are minors. That data, names, writing samples, scores, contact details, carries serious legal and ethical weight. Every school using Evalent needs to be confident that the platform meets its obligations under applicable data protection law and EU GDPR, and that student data is never misused. This page explains exactly how Evalent handles that responsibility.</p>
         </div>
       </section>
 
@@ -57,8 +57,8 @@ export default function Page() {
             </div>
 
             <div className="border border-purple-100 rounded-xl p-5">
-              <h3 className="text-sm font-bold text-navy mb-2">UK GDPR and EU GDPR compliant</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Evalent is operated by Evalent Ltd, a UK-registered company. We comply with both UK GDPR (as administered by the Information Commissioner's Office) and EU GDPR. Where sub-processors operate outside the UK and EEA, we ensure appropriate safeguards are in place, including Standard Contractual Clauses approved by the UK ICO and European Commission.</p>
+              <h3 className="text-sm font-bold text-navy mb-2">UAE data protection law and GDPR-aligned</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">Evalent is operated by Evalent LLC TZE, a company registered in the Ras Al Khaimah Economic Zone (RAKEZ), UAE. We comply with both UK GDPR (as administered by the Information Commissioner's Office) and EU GDPR. Where sub-processors operate outside the UK and EEA, we ensure appropriate safeguards are in place, including Standard Contractual Clauses approved by the UK ICO and European Commission.</p>
             </div>
 
             <div className="border border-purple-100 rounded-xl p-5">

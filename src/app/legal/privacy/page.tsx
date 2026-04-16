@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'Privacy Policy | Evalent',
-  description: 'How Evalent collects, uses and protects your personal data. GDPR compliant. Paddle processes buyer data as Merchant of Record.',
+  description: 'How Evalent collects, uses and protects your personal data. UAE data protection law compliant. GDPR-aligned for EU and UK data subjects. Paddle processes buyer data as Merchant of Record.',
 }
 
 export default function Page() {
@@ -30,12 +30,12 @@ export default function Page() {
         <div className="prose prose-sm max-w-none">
 
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            Evalent Ltd (&ldquo;Evalent&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) is committed to protecting your personal data. This policy explains what we collect, why we collect it, and your rights under UK GDPR and EU GDPR.
+            Evalent LLC TZE (&ldquo;Evalent&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;), registered in the Ras Al Khaimah Economic Zone (RAKEZ), UAE, is committed to protecting your personal data. This policy explains what we collect, why we collect it, and your rights under UK GDPR and EU GDPR.
           </p>
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">1. Data Controller</h2>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            Evalent Ltd is the data controller for school administrator and assessor data. For assessment data relating to student applicants (who may be minors), the school is the data controller and Evalent acts as data processor.
+            Evalent LLC TZE is the data processor for school administrator and assessor data. For assessment data relating to student applicants (who may be minors), the school is the data controller and Evalent acts as data processor.
           </p>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
             <strong>Payment data</strong> is controlled by Paddle.com, who acts as Merchant of Record for all transactions. Paddle&apos;s privacy policy is available at <a href="https://www.paddle.com/legal/privacy" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">paddle.com/legal/privacy</a>.
@@ -82,7 +82,7 @@ export default function Page() {
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">8. Your Rights</h2>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            Under UK GDPR and EU GDPR you have the right to: access your personal data; correct inaccurate data; request erasure; restrict or object to processing; and data portability. To exercise any right, contact us at <a href="mailto:hello@evalent.io" className="text-brand hover:underline">hello@evalent.io</a>. You also have the right to lodge a complaint with the UK Information Commissioner&apos;s Office (ico.org.uk) or your local supervisory authority.
+            Under applicable data protection law, including UAE Federal Data Protection Law (Federal Decree-Law No. 45 of 2021) and, where applicable, EU and UK GDPR, you have the right to: access your personal data; correct inaccurate data; request erasure; restrict or object to processing; and data portability. To exercise any right, contact us at <a href="mailto:hello@evalent.io" className="text-brand hover:underline">hello@evalent.io</a>. You also have the right to lodge a complaint with the UK Information Commissioner&apos;s Office (ico.org.uk) or your local supervisory authority.
           </p>
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">9. Cookies</h2>

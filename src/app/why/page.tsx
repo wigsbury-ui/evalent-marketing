@@ -13,7 +13,7 @@ const BENEFITS = [
   { href: '/why/transparency', title: 'Transparency', desc: 'A complete audit trail from registration to decision, timestamped, attributed, and permanently stored.', icon: '🔍' },
   { href: '/why/defensibility', title: 'Defensibility', desc: 'Structured, reproducible assessments with documented evidence that satisfies accreditation and governance expectations.', icon: '🛡️' },
   { href: '/why/conversion', title: 'Conversion & Speed', desc: 'From assessment link to admissions decision in under five minutes, with automated reminders that keep applications moving.', icon: '⚡' },
-  { href: '/why/data-security', title: 'Data Security', desc: 'UK and EU GDPR compliant. School is the data controller. Student data is never used to train language models.', icon: '🔒' },
+  { href: '/why/data-security', title: 'Data Security', desc: 'UAE data protection law compliant. School is the data controller. Student data is never used to train language models.', icon: '🔒' },
 ]
 
 export default function Page() {

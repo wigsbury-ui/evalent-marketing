@@ -30,7 +30,7 @@ export default function Page() {
         <div className="prose prose-sm max-w-none">
 
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            This policy explains how Evalent Ltd uses cookies and similar tracking technologies on this website (evalent.io) and the Evalent platform (app.evalent.io).
+            This policy explains how Evalent LLC TZE uses cookies and similar tracking technologies on this website (evalent.io) and the Evalent platform (app.evalent.io).
           </p>
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">What are cookies?</h2>

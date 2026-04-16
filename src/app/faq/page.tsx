@@ -155,8 +155,8 @@ const sections = [
         link: { href: "/security", label: "Full security details" },
       },
       {
-        q: "Is Evalent GDPR compliant?",
-        a: "Yes. Evalent Ltd is a UK-registered company and complies with UK GDPR and EU GDPR. Student data is never used to train language models.",
+        q: "What data protection laws does Evalent comply with?",
+        a: "Evalent LLC TZE is registered in RAKEZ, UAE, and complies with UAE Federal Data Protection Law (Federal Decree-Law No. 45 of 2021). For EU and UK data subjects, Evalent adheres to GDPR principles. Student data is never used to train language models.",
         link: null,
       },
     ],

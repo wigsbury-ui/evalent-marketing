@@ -145,7 +145,7 @@ export default function About() {
             Trusted with the data that matters most
           </h2>
           <p className="text-blue-300 text-base leading-relaxed mb-3">
-            GDPR compliant. ISO 27001-compliant infrastructure. Student data is never used to train language models. Ever.
+            UAE data protection law compliant. GDPR-aligned for EU and UK data subjects. ISO 27001-compliant infrastructure. Student data is never used to train language models. Ever.
           </p>
           <Link href="/why/data-security" className="text-sm text-blue-400 hover:text-white transition-colors underline underline-offset-2 block">
             Read our full data security policy →

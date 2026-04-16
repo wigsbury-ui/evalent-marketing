@@ -74,7 +74,7 @@ const softwareSchema = {
     {"@type": "Offer", "name": "Professional", "price": "5500", "priceCurrency": "USD"},
     {"@type": "Offer", "name": "Enterprise", "price": "9500", "priceCurrency": "USD"}
   ],
-  "provider": {"@type": "Organization", "name": "Evalent Ltd", "url": "https://www.evalent.io"}
+  "provider": {"@type": "Organization", "name": "Evalent LLC TZE", "url": "https://www.evalent.io"}
 }
 
 const howToSchema = {

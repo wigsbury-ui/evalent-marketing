@@ -82,7 +82,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <span className="text-xs text-blue-400">&copy; 2026 Evalent Ltd. All rights reserved.</span>
+            <span className="text-xs text-blue-400">&copy; 2026 Evalent LLC TZE. All rights reserved.</span>
             <div className="flex flex-wrap gap-x-5 gap-y-2">
               <Link href="/security" className="text-xs text-blue-400 hover:text-white transition-colors">Data Security</Link>
               <Link href="/legal/terms" className="text-xs text-blue-400 hover:text-white transition-colors">Terms of Service</Link>
