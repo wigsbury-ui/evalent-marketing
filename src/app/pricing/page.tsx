@@ -62,7 +62,7 @@ const FAQ = [
   },
   {
     q: 'What is the cost per assessment?',
-    a: 'On Essentials it works out at $29 per assessment. Professional is $22, and Enterprise is $19 or lower depending on volume. Multi-year discounts are available — contact us.',
+    a: 'On Essentials it works out at $29 per assessment. Professional is $22, and Enterprise is $19 or lower depending on volume. Multi-year discounts are available, contact us.',
   },
   {
     q: 'Is there a contract or minimum term?',
@@ -78,7 +78,7 @@ const FAQ = [
   },
   {
     q: 'Can we trial with real applicants?',
-    a: 'Yes — that is exactly what the free trial is for. Your 10 free reports work on real applicants, with full functionality. No synthetic data required.',
+    a: 'Yes, that is exactly what the free trial is for. Your 10 free reports work on real applicants, with full functionality. No synthetic data required.',
   },
   {
     q: 'Which plan is right for us?',

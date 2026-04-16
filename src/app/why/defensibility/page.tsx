@@ -34,7 +34,7 @@ export default function Page() {
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
           <h2 className="text-center text-xl font-bold text-navy mt-4">Why every admissions decision needs to be evidenced</h2>
-          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Families challenge decisions. Governors ask questions. Accreditation reviewers expect documentation. Evalent gives your school a structured, reproducible assessment record that stands up to scrutiny — because every score, every report, and every decision is documented against criteria your school defines and owns.</p>
+          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Families challenge decisions. Governors ask questions. Accreditation reviewers expect documentation. Evalent gives your school a structured, reproducible assessment record that stands up to scrutiny, because every score, every report, and every decision is documented against criteria your school defines and owns.</p>
         </div>
       </section>
 
@@ -43,11 +43,11 @@ export default function Page() {
           <div className="grid gap-4">
             <div className="border border-purple-100 border-purple-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Criterion-referenced, not norm-referenced</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Evalent scores students against your school's own entry thresholds — not a national average or a percentile rank. Every score is expressed as a percentage against a criterion your school has defined and owns.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">Evalent scores students against your school's own entry thresholds, not a national average or a percentile rank. Every score is expressed as a percentage against a criterion your school has defined and owns.</p>
             </div>
             <div className="border border-purple-100 border-purple-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Reproducible methodology</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">The same assessment structure, the same rubrics, the same scoring methodology — applied consistently across every intake. If a decision is ever questioned, the evidence is structured, documented, and explainable.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">The same assessment structure, the same rubrics, the same scoring methodology, applied consistently across every intake. If a decision is ever questioned, the evidence is structured, documented, and explainable.</p>
             </div>
             <div className="border border-purple-100 border-purple-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Accreditation-ready records</h3>
@@ -55,7 +55,7 @@ export default function Page() {
             </div>
             <div className="border border-purple-100 border-purple-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Board-level confidence</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Governors and trustees can see that admissions decisions are based on consistent, structured evidence — not informal impressions. This reduces governance risk and supports board confidence in the admissions process.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">Governors and trustees can see that admissions decisions are based on consistent, structured evidence, not informal impressions. This reduces governance risk and supports board confidence in the admissions process.</p>
             </div>
           </div>
         </div>

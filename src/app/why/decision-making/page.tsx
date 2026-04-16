@@ -21,7 +21,7 @@ export default function Page() {
             The intelligence your leaders need. At exactly the right level.
           </h1>
           <p className="text-blue-300 text-base leading-relaxed mb-6">
-            From real-time enrolment KPIs to board-ready executive reports, Evalent ensures every stakeholder, including admissions teams, senior leadership, and governors — has exactly the information they need to make confident, evidence-based decisions.
+            From real-time enrolment KPIs to board-ready executive reports, Evalent ensures every stakeholder, including admissions teams, senior leadership, and governors, has exactly the information they need to make confident, evidence-based decisions.
           </p>
           <HeroTrialButton />
         </div>
@@ -71,14 +71,14 @@ export default function Page() {
             <div className="border border-indigo-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Board-ready reporting in one click</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                The Executive Report Generator produces a professional, narrative admissions report in the language of your school&apos;s curriculum — covering pipeline activity, enrolment trends, and three strategic recommendations. Available as PDF or Word, it is designed to be placed directly into a board pack. No formatting, no summarising, no preparation time.
+                The Executive Report Generator produces a professional, narrative admissions report in the language of your school&apos;s curriculum, covering pipeline activity, enrolment trends, and three strategic recommendations. Available as PDF or Word, it is designed to be placed directly into a board pack. No formatting, no summarising, no preparation time.
               </p>
             </div>
 
             <div className="border border-indigo-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Governed access for every stakeholder</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Not everyone needs to see everything. Evalent&apos;s Team Management page lets you assign each person to a role group: Admissions Team, Senior Leadership, Board Chair, or Board Members — each with permissions calibrated to what that layer genuinely needs. Board members see strategy and enrolment position. They do not see individual student data. Admissions staff manage the pipeline. Senior leaders have strategic visibility without operational controls. Everyone is informed at exactly the right level.
+                Not everyone needs to see everything. Evalent&apos;s Team Management page lets you assign each person to a role group: Admissions Team, Senior Leadership, Board Chair, or Board Members, each with permissions calibrated to what that layer genuinely needs. Board members see strategy and enrolment position. They do not see individual student data. Admissions staff manage the pipeline. Senior leaders have strategic visibility without operational controls. Everyone is informed at exactly the right level.
               </p>
             </div>
 
@@ -93,7 +93,7 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">BOARD REPORT</div>
             <h2 className="text-2xl font-black text-navy tracking-tight">What your board actually receives</h2>
             <p className="text-gray-500 text-sm mt-2 max-w-2xl mx-auto">
-              Generated in one click from the Strategy page. A professional admissions report covering pipeline activity, enrolment position, grade-level trends, and three strategic recommendations — written in the language of your school, ready to drop into a board pack.
+              Generated in one click from the Strategy page. A professional admissions report covering pipeline activity, enrolment position, grade-level trends, and three strategic recommendations, written in the language of your school, ready to drop into a board pack.
             </p>
           </div>
           <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-2xl">

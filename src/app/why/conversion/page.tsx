@@ -34,7 +34,7 @@ export default function Page() {
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
           <h2 className="text-center text-xl font-bold text-navy mt-4">The school that responds first often wins</h2>
-          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Families applying to multiple schools make decisions quickly. Evalent compresses the admissions timeline at every stage — from five-minute report generation to one-click decisions from the assessor's inbox. Faster cycles mean higher yield, without your team working any harder.</p>
+          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Families applying to multiple schools make decisions quickly. Evalent compresses the admissions timeline at every stage, from five-minute report generation to one-click decisions from the assessor's inbox. Faster cycles mean higher yield, without your team working any harder.</p>
         </div>
       </section>
 
@@ -47,7 +47,7 @@ export default function Page() {
             </div>
             <div className="border border-orange-100 border-orange-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">One click to record a decision</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">The assessor receives the report summary and five decision buttons in a single email. One click records the decision instantly — no portal login, no navigation, no delay. Assessors who are busy teachers respond faster when friction is removed.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">The assessor receives the report summary and five decision buttons in a single email. One click records the decision instantly, no portal login, no navigation, no delay. Assessors who are busy teachers respond faster when friction is removed.</p>
             </div>
             <div className="border border-orange-100 border-orange-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Automated reminders keep applications moving</h3>

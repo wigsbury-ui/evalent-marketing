@@ -19,11 +19,11 @@ export default function NZCPage() {
     ['Year 10', 'NZC Level 5', '~60 min', '52 items'],
   ]
   const differences = [
-    ['Key competency language in reports', 'The five NZC key competencies, Thinking; Using Language, Symbols and Texts; Managing Self; Relating to Others; Participating and Contributing — are referenced in the written commentary where genuinely evidenced in the student&apos;s work.'],
+    ['Key competency language in reports', 'The five NZC key competencies, Thinking; Using Language, Symbols and Texts; Managing Self; Relating to Others; Participating and Contributing, are referenced in the written commentary where genuinely evidenced in the student&apos;s work.'],
     ['NZC curriculum level framing', 'Assessment and reporting is structured around NZC curriculum levels rather than year-group attainment targets. Levels 2 through 5 are covered, mapping automatically to the appropriate year group.'],
-    ['Writing evaluated through an NZC lens', 'Extended writing tasks are evaluated for clarity of thinking, purposeful use of language, and the capacity to structure and present ideas — the qualities the NZC describes as central to literate, capable learners.'],
-    ['Values-informed mindset section', 'The Mindset section draws on the NZC&apos;s eight values of excellence, innovation, inquiry, curiosity, diversity, equity, community, and integrity — providing a structured lens on the kind of learner you are welcoming into your school.'],
-    ['Asset-focused, growth-oriented tone', 'Reports describe what the student demonstrates and where further development is possible — reflecting the NZC’s vision of confident, connected, actively involved, and lifelong learners.'],
+    ['Writing evaluated through an NZC lens', 'Extended writing tasks are evaluated for clarity of thinking, purposeful use of language, and the capacity to structure and present ideas, the qualities the NZC describes as central to literate, capable learners.'],
+    ['Values-informed mindset section', 'The Mindset section draws on the NZC&apos;s eight values of excellence, innovation, inquiry, curiosity, diversity, equity, community, and integrity, providing a structured lens on the kind of learner you are welcoming into your school.'],
+    ['Asset-focused, growth-oriented tone', 'Reports describe what the student demonstrates and where further development is possible, reflecting the NZC’s vision of confident, connected, actively involved, and lifelong learners.'],
     ['No offshore terminology', 'Key Stage language, SATs references, NAPLAN framing, Common Core, and ACARA terminology are excluded. Reports use Year labels throughout and reflect New Zealand schooling norms.'],
   ]
   const faqs = [
@@ -47,7 +47,7 @@ export default function NZCPage() {
             <span className="text-blue-300">In NZC language.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            Evalent assessments for New Zealand schools use key competency language, NZC curriculum levels, and a values-informed mindset section — from Year 4 to Year 10.
+            Evalent assessments for New Zealand schools use key competency language, NZC curriculum levels, and a values-informed mindset section, from Year 4 to Year 10.
           </p>
           <HeroTrialButton />
         </div>
@@ -59,10 +59,10 @@ export default function NZCPage() {
             <div className="inline-flex items-center gap-2 bg-teal-50 text-teal-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHY IT MATTERS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">New Zealand schools need New Zealand language.</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              The New Zealand Curriculum is built around a vision of young people who are confident, connected, actively involved, and lifelong learners. Most admissions assessment tools were built to measure academic performance against a narrow content syllabus — which is not what the NZC is about, and not what New Zealand independent schools are looking for.
+              The New Zealand Curriculum is built around a vision of young people who are confident, connected, actively involved, and lifelong learners. Most admissions assessment tools were built to measure academic performance against a narrow content syllabus, which is not what the NZC is about, and not what New Zealand independent schools are looking for.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
-              Evalent assesses the domains your school cares about, including English, Mathematics, and Reasoning — but frames evaluation and reporting through an NZC lens. Your team will recognise the language. Your applicants experience an assessment that reflects the values of the school they are applying to.
+              Evalent assesses the domains your school cares about, including English, Mathematics, and Reasoning, but frames evaluation and reporting through an NZC lens. Your team will recognise the language. Your applicants experience an assessment that reflects the values of the school they are applying to.
             </p>
             <div className="space-y-2">
               {[

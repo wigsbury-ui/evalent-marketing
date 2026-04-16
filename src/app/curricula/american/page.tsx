@@ -24,7 +24,7 @@ export default function AmericanPage() {
     ['Common Core alignment', 'Questions and evaluation criteria are mapped to Common Core ELA and Math standards. Grade-level benchmarks use CCSS language explicitly, so commentary is familiar to American-trained educators.'],
     ['Thesis-driven writing', 'American writing instruction emphasises a clear thesis statement, supporting body paragraphs, and a synthesising conclusion. Evalent’s evaluation reflects this structure and rewards it explicitly.'],
     ['School level framing', 'Reports distinguish between elementary (G3–5), middle school (G6–8), and high school (G9–10) expectations. The language shift across levels matches how American educators think about student progression.'],
-    ['AP/honors readiness (G9–10)', 'At high school entry, commentary includes explicit indicators of readiness for advanced placement or honours courses — a significant data point for selective American curriculum schools.'],
+    ['AP/honors readiness (G9–10)', 'At high school entry, commentary includes explicit indicators of readiness for advanced placement or honours courses, a significant data point for selective American curriculum schools.'],
     ['Text-based evidence', 'Close reading and evidence-based argument are central to American ELA instruction. Writing evaluation specifically assesses whether the student grounds their argument in specific, cited examples.'],
   ]
 
@@ -47,7 +47,7 @@ export default function AmericanPage() {
             <span className="text-blue-300">American language.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            Common Core-aligned evaluation, thesis-driven writing assessment, and AP/honours pathway readiness indicators at Grade 9–10 — calibrated to how American educators actually think about student progression.
+            Common Core-aligned evaluation, thesis-driven writing assessment, and AP/honours pathway readiness indicators at Grade 9–10, calibrated to how American educators actually think about student progression.
           </p>
           <HeroTrialButton />
         </div>
@@ -59,7 +59,7 @@ export default function AmericanPage() {
             <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHY IT MATTERS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">American educators speak a different professional language. Reports should reflect that.</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              American curriculum schools, whether in Chicago, Dubai, or Singapore — share a common set of expectations around how students should write, argue, and demonstrate subject knowledge. A report that uses British Key Stage language or IB Learner Profile attributes signals to an American-trained head of admissions that the tool wasn’t designed for their context.
+              American curriculum schools, whether in Chicago, Dubai, or Singapore, share a common set of expectations around how students should write, argue, and demonstrate subject knowledge. A report that uses British Key Stage language or IB Learner Profile attributes signals to an American-trained head of admissions that the tool wasn’t designed for their context.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
               Evalent’s American configuration was developed with American curriculum practitioners. It reflects how Common Core ELA and Math standards describe grade-level readiness, and how American schools communicate about student potential.

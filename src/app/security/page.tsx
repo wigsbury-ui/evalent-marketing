@@ -44,7 +44,7 @@ We are honest about what we have and what we are working towards. We do not clai
     items: [
       {
         label: 'In transit',
-        detail: 'All data transmitted between users and Evalent is encrypted using TLS 1.2 or higher. HTTPS is enforced on all endpoints — HTTP connections are automatically redirected. SSL certificates are managed and auto-renewed via Vercel.',
+        detail: 'All data transmitted between users and Evalent is encrypted using TLS 1.2 or higher. HTTPS is enforced on all endpoints, HTTP connections are automatically redirected. SSL certificates are managed and auto-renewed via Vercel.',
       },
       {
         label: 'At rest',
@@ -94,7 +94,7 @@ We are honest about what we have and what we are working towards. We do not clai
     items: [
       {
         label: 'What we store',
-        detail: 'Evalent stores student registration data (name, grade, date of birth, nationality, first language), assessment responses, Evalent-generated evaluation scores and narratives, and school decision records. We do not store payment card data — payments are processed by Paddle as Merchant of Record.',
+        detail: 'Evalent stores student registration data (name, grade, date of birth, nationality, first language), assessment responses, Evalent-generated evaluation scores and narratives, and school decision records. We do not store payment card data, payments are processed by Paddle as Merchant of Record.',
       },
       {
         label: 'Who can access student data',
@@ -110,7 +110,7 @@ We are honest about what we have and what we are working towards. We do not clai
       },
       {
         label: 'Audit logging',
-        detail: 'Sensitive actions, including student registration, assessment dispatch, and decision recording — are written to an immutable audit log with timestamp, actor identity, and action details. This supports accountability and investigation in the event of a dispute.',
+        detail: 'Sensitive actions, including student registration, assessment dispatch, and decision recording, are written to an immutable audit log with timestamp, actor identity, and action details. This supports accountability and investigation in the event of a dispute.',
       },
       {
         label: 'Retention',

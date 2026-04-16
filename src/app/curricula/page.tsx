@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Curricula | Evalent',
-  description: 'Evalent assessments are fully calibrated for IB, British and American curricula. Same platform, same rigour — right language for every programme.',
+  description: 'Evalent assessments are fully calibrated for IB, British and American curricula. Same platform, same rigour, right language for every programme.',
 }
 
 const CURRICULA = [
@@ -72,7 +72,7 @@ export default function CurriculaPage() {
         <div className="max-w-5xl mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-10">
             <p className="text-gray-600 text-base leading-relaxed">
-              Most assessment platforms apply a single rubric to every student. Evalent does not. A Grade 7 IB student is evaluated with MYP vocabulary and ATL skill framing. A Year 8 British student is assessed against KS3 attainment targets. An American Grade 9 student is evaluated for AP-pathway readiness. The difference matters — for report accuracy, and for the confidence your assessors can place in it.
+              Most assessment platforms apply a single rubric to every student. Evalent does not. A Grade 7 IB student is evaluated with MYP vocabulary and ATL skill framing. A Year 8 British student is assessed against KS3 attainment targets. An American Grade 9 student is evaluated for AP-pathway readiness. The difference matters, for report accuracy, and for the confidence your assessors can place in it.
             </p>
           </div>
           <div className="grid md:grid-cols-3 xl:grid-cols-5 gap-6">
@@ -126,7 +126,7 @@ export default function CurriculaPage() {
       <section className="bg-navy py-14 px-6 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-black text-white tracking-tight mb-3">Not sure which applies to your school?</h2>
-          <p className="text-blue-300 text-sm mb-6 leading-relaxed">You select your curriculum once when setting up. If your school runs two programmes, contact us — multi-curriculum accounts are supported.</p>
+          <p className="text-blue-300 text-sm mb-6 leading-relaxed">You select your curriculum once when setting up. If your school runs two programmes, contact us, multi-curriculum accounts are supported.</p>
           <div className="flex gap-3 justify-center flex-wrap">
             <a href="/#trial" className="bg-white text-brand font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors">Start free trial →</a>
             <a href="mailto:hello@evalent.io" className="bg-white/10 text-white font-bold text-sm px-6 py-3 rounded-xl border border-white/20 hover:bg-white/20 transition-colors">Talk to us</a>

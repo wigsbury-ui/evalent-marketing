@@ -80,7 +80,7 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHY IT MATTERS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">The lowest-friction decision process in admissions</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-3">
-              Most admissions workflows require an assessor to log into a portal, find the student, read the report, navigate to a decision screen, and record the outcome. That's five steps — and most assessors are busy teachers who find every additional click a reason to delay.
+              Most admissions workflows require an assessor to log into a portal, find the student, read the report, navigate to a decision screen, and record the outcome. That's five steps, and most assessors are busy teachers who find every additional click a reason to delay.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               Evalent reduces this to one step. The report summary is in the email. The decision buttons are in the email. The assessor never leaves their inbox.

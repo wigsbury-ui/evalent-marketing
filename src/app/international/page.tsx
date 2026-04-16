@@ -20,7 +20,7 @@ export default function Page() {
     },
     {
       title: 'Admissions teams are stretched across multiple campuses and time zones',
-      desc: 'International schools often have small admissions teams managing high volumes across different intakes, with families based in multiple countries. A process that sends a link, runs the assessment, and delivers a report automatically is not just convenient — for many schools, it is the only viable way to operate at scale.',
+      desc: 'International schools often have small admissions teams managing high volumes across different intakes, with families based in multiple countries. A process that sends a link, runs the assessment, and delivers a report automatically is not just convenient, for many schools, it is the only viable way to operate at scale.',
     },
     {
       title: 'Multi-curriculum schools need a single consistent system',
@@ -31,16 +31,16 @@ export default function Page() {
   const benefits = [
     ['Works across every major curriculum', 'Evalent supports IB (PYP & MYP), British National Curriculum, American Common Core, Australian ACARA, New Zealand NZC, and more. Every report automatically uses the language of the curriculum your school teaches.'],
     ['Grade naming adapts to your school', 'Whether your school uses Year groups, Grades, or custom labels, the platform and every report reflect your naming convention. Assessors never see labels that do not match their context.'],
-    ['Fair for students from any background', 'The assessment is structured and curriculum-aligned, but written to be accessible to able students from diverse educational backgrounds. It measures how students think and reason — not what they have memorised in a particular system.'],
+    ['Fair for students from any background', 'The assessment is structured and curriculum-aligned, but written to be accessible to able students from diverse educational backgrounds. It measures how students think and reason, not what they have memorised in a particular system.'],
     ['Supervised on campus', 'The assessment is designed to be sat under supervision at your school. It runs in a browser, requires no printing, and takes around 45 minutes. A short video guide introduces each section, settling students who may be unfamiliar with the format.'],
-    ['Reports in under five minutes', 'From the moment a student submits, Evalent evaluates every response automatically and delivers a professional report to your assessor — with domain scores, written commentary, and a clear recommendation. No waiting, no manual scoring.'],
+    ['Reports in under five minutes', 'From the moment a student submits, Evalent evaluates every response automatically and delivers a professional report to your assessor, with domain scores, written commentary, and a clear recommendation. No waiting, no manual scoring.'],
     ['Board-ready enrolment intelligence', 'For principals and leadership teams, the Strategy page provides a live view of every grade\'s enrolment position across the whole school. Six KPI cards, grade-level signals, and executive reports your board can act on in one click.'],
   ]
 
   const faqs = [
-    ['Does Evalent work for schools running multiple curricula?', 'Yes. Each student is assessed against the curriculum you specify at registration. A school running both IB and British streams can use Evalent for both — reports will use the appropriate language for each stream automatically.'],
+    ['Does Evalent work for schools running multiple curricula?', 'Yes. Each student is assessed against the curriculum you specify at registration. A school running both IB and British streams can use Evalent for both, reports will use the appropriate language for each stream automatically.'],
     ['What if our students speak English as a second language?', 'Evalent assessments are written in clear, accessible academic English and are designed for students who are capable of studying in English-medium schools. The writing evaluation takes language background into account as context, not as a penalty.'],
-    ['Can we use Evalent for mid-year admissions?', 'Yes. Most international schools have rolling admissions throughout the year. Evalent works for individual assessments as well as cohort entry points — you can send a link to one student or fifty, and the process is identical.'],
+    ['Can we use Evalent for mid-year admissions?', 'Yes. Most international schools have rolling admissions throughout the year. Evalent works for individual assessments as well as cohort entry points, you can send a link to one student or fifty, and the process is identical.'],
     ['How do we handle students in different time zones?', 'The assessment link is sent by email and can be completed at any time before the expiry date you set. Students complete it under supervision when they visit campus, or at a scheduled time your team arranges.'],
     ['We are an IB World School. Is this suitable?', 'Yes. Evalent has a dedicated IB mode covering PYP (Grades 3–5) and MYP (Grades 6–10). Reports use IB ATL framing and describe student performance in the language of the IB learner profile.'],
   ]
@@ -58,7 +58,7 @@ export default function Page() {
             <span className="text-blue-300">Every curriculum. Every campus.</span>
           </h1>
           <p className="text-blue-300 text-base leading-relaxed mb-8">
-            Evalent gives international schools a structured, consistent way to assess every applicant — regardless of where they have been educated, which curriculum they are joining, or where in the world they are applying from.
+            Evalent gives international schools a structured, consistent way to assess every applicant, regardless of where they have been educated, which curriculum they are joining, or where in the world they are applying from.
           </p>
           <HeroTrialButton />
         </div>

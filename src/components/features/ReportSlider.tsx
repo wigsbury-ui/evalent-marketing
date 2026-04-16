@@ -37,7 +37,7 @@ const SLIDES = [
   },
   {
     title: 'Mathematics: granular sub-skill data',
-    description: 'The maths page shows where gaps actually are. Sub-skill bars break performance into number & algebra, geometry, and statistics — so a low overall score is properly understood.',
+    description: 'The maths page shows where gaps actually are. Sub-skill bars break performance into number & algebra, geometry, and statistics, so a low overall score is properly understood.',
     img: '/report_slide_4.jpg',
     annotations: [
       { x: 82.5, y: 13.3, label: 'Below-threshold flag', text: 'Combined score shown in red when below threshold, immediately visible to the assessor.' },

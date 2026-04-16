@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: 'Evalent | Intelligent Admissions Assessments for International Schools',
     template: '%s | Evalent',
   },
-  description: 'Replace paper tests with structured, Evalent-evaluated assessments. Professional admission reports in under 5 minutes — no manual scoring, no admin burden.',
+  description: 'Replace paper tests with structured, Evalent-evaluated assessments. Professional admission reports in under 5 minutes, no manual scoring, no admin burden.',
   openGraph: {
     title: 'Evalent | Intelligent Admissions Assessments for International Schools',
     description: 'Replace paper tests with structured, Evalent-evaluated assessments. Professional admission reports in under 5 minutes.',

@@ -159,7 +159,7 @@ export default function EvalDemoWidget() {
             </div>
             <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flex: 1 }}>
               <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '14px 16px', marginBottom: '14px' }}>
-                <div style={{ fontSize: '10px', fontWeight: 800, color: '#94a3b8', letterSpacing: '0.12em', marginBottom: '8px', textTransform: 'uppercase' as const }}>Writing prompt — {gradeLabel(grade)} {curric}</div>
+                <div style={{ fontSize: '10px', fontWeight: 800, color: '#94a3b8', letterSpacing: '0.12em', marginBottom: '8px', textTransform: 'uppercase' as const }}>Writing prompt, {gradeLabel(grade)} {curric}</div>
                 <p style={{ fontSize: '13px', color: '#07112e', lineHeight: 1.6, margin: 0, fontStyle: 'italic' }}>{PROMPTS[grade]}</p>
               </div>
               <textarea

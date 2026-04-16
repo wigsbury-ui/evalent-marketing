@@ -8,7 +8,7 @@ export const metadata = {
 }
 
 const BENEFITS = [
-  { href: '/why/evaluation', title: 'Intelligent Evaluation', desc: 'Evalent-powered, rubric-based scoring that measures how students think, write, and reason — not just recall.', icon: '🧠' },
+  { href: '/why/evaluation', title: 'Intelligent Evaluation', desc: 'Evalent-powered, rubric-based scoring that measures how students think, write, and reason, not just recall.', icon: '🧠' },
   { href: '/why/wellbeing', title: 'Student Wellbeing', desc: 'Video guides and a calm, structured format that reduces anxiety and helps every student perform at their best.', icon: '💚' },
   { href: '/why/transparency', title: 'Transparency', desc: 'A complete audit trail from registration to decision, timestamped, attributed, and permanently stored.', icon: '🔍' },
   { href: '/why/defensibility', title: 'Defensibility', desc: 'Structured, reproducible assessments with documented evidence that satisfies accreditation and governance expectations.', icon: '🛡️' },

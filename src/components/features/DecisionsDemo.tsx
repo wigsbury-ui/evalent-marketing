@@ -18,7 +18,7 @@ export default function DecisionsDemo() {
       <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
         <div className="bg-gray-100 px-4 py-2 flex items-center gap-2 border-b border-gray-200">
           <div className="flex gap-1.5"><div className="w-2.5 h-2.5 rounded-full bg-red-400"/><div className="w-2.5 h-2.5 rounded-full bg-yellow-400"/><div className="w-2.5 h-2.5 rounded-full bg-green-400"/></div>
-          <div className="flex-1 bg-white rounded px-3 py-1 text-xs text-gray-400">{confirmed?'Re: Sara Ahmed: decision recorded':'Admissions report ready — Sara Ahmed, Grade 7 · from reports@evalent.io'}</div>
+          <div className="flex-1 bg-white rounded px-3 py-1 text-xs text-gray-400">{confirmed?'Re: Sara Ahmed: decision recorded':'Admissions report ready, Sara Ahmed, Grade 7 · from reports@evalent.io'}</div>
         </div>
         <div className="p-6">
           <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">

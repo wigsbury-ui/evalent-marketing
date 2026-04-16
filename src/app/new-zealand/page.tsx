@@ -44,7 +44,7 @@ export default function Page() {
             <span className="text-blue-300">built for New Zealand independent schools.</span>
           </h1>
           <p className="text-blue-300 text-base leading-relaxed max-w-xl mx-auto mb-2">
-            NZC-aligned reports using key competency and values framing. Structured, mana-enhancing assessment from Year 4 to Year 10 — for local and international applicants alike.
+            NZC-aligned reports using key competency and values framing. Structured, mana-enhancing assessment from Year 4 to Year 10, for local and international applicants alike.
           </p>
 
           <div className="mt-6">
@@ -71,10 +71,10 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE NEW ZEALAND CONTEXT</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">New Zealand schools value the whole child. Evalent’s reports reflect that.</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              The New Zealand Curriculum is built around a vision of young people who are confident, connected, actively involved, and lifelong learners. Most admissions assessment tools were built to measure academic performance against a narrow content syllabus — which is not what the NZC is about, and not what New Zealand independent schools are looking for.
+              The New Zealand Curriculum is built around a vision of young people who are confident, connected, actively involved, and lifelong learners. Most admissions assessment tools were built to measure academic performance against a narrow content syllabus, which is not what the NZC is about, and not what New Zealand independent schools are looking for.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Evalent’s New Zealand configuration assesses the academic domains your school cares about, including English, Mathematics, Reasoning — but does so through an NZC lens. The writing evaluation assesses the qualities the NZC describes: clarity of thinking, purposeful use of language, and capacity to structure and present ideas.
+              Evalent’s New Zealand configuration assesses the academic domains your school cares about, including English, Mathematics, Reasoning, but does so through an NZC lens. The writing evaluation assesses the qualities the NZC describes: clarity of thinking, purposeful use of language, and capacity to structure and present ideas.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               The mindset and values section draws explicitly on the NZC’s eight values, providing a structured, documented lens on the kind of learner you are welcoming into your school community.

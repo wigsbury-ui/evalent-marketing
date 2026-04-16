@@ -18,7 +18,7 @@ const faqSchema = {
       "name": "What if the assessor ignores the email?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A second reminder goes out after 48 hours. Most assessors click within the hour — one button is a very low bar."
+        "text": "A second reminder goes out after 48 hours. Most assessors click within the hour. One button is a very low bar."
       }
     },
     {
@@ -34,7 +34,7 @@ const faqSchema = {
       "name": "Do we have to log into a portal each time?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The decision email works from any inbox. The dashboard exists if you want it — it is never required."
+        "text": "No. The decision email works from any inbox. The dashboard exists if you want it, it is never required."
       }
     },
     {
@@ -191,7 +191,7 @@ export default function Home() {
                 <svg className="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
               </div>
               <h3 className="text-sm font-bold text-navy mb-2">Enrolment Intelligence</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">Six live KPI cards across every grade. Evalent-generated signals. 8-week trend tracking. Executive reports your board can act on — in one click.</p>
+              <p className="text-xs text-gray-500 leading-relaxed mb-4">Six live KPI cards across every grade. Evalent-generated signals. 8-week trend tracking. Executive reports your board can act on, in one click.</p>
               <span className="text-xs font-semibold text-brand">See the Strategy page →</span>
             </Link>
             <Link href="/features/team" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all">
@@ -199,7 +199,7 @@ export default function Home() {
                 <svg className="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
               </div>
               <h3 className="text-sm font-bold text-navy mb-2">Team &amp; Governance</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">Four role groups. Six permissions. Every stakeholder — admissions team, senior leadership, board chair, governors — sees exactly what they need.</p>
+              <p className="text-xs text-gray-500 leading-relaxed mb-4">Four role groups. Six permissions. Every stakeholder, including admissions team, senior leadership, board chair and governors, sees exactly what they need.</p>
               <span className="text-xs font-semibold text-brand">See Team Management →</span>
             </Link>
           </div>
@@ -412,9 +412,9 @@ export default function Home() {
             <p className="text-sm text-gray-500 mb-6 leading-relaxed">The honest answers.</p>
             <div className="space-y-3">
               {[
-                ['What if the assessor ignores the email?', 'A second reminder goes out after 48 hours. Most assessors click within the hour — one button is a very low bar.'],
+                ['What if the assessor ignores the email?', 'A second reminder goes out after 48 hours. Most assessors click within the hour. One button is a very low bar.'],
                 ['What if a student does not complete in time?', 'Evalent sends two reminders before expiry. You are notified the moment a link expires so you can decide to extend.'],
-                ['Do we have to log into a portal each time?', 'No. The decision email works from any inbox. The dashboard exists if you want it — it is never required.'],
+                ['Do we have to log into a portal each time?', 'No. The decision email works from any inbox. The dashboard exists if you want it, it is never required.'],
                 ['Can multiple assessors review the same report?', 'Yes. The report link can be forwarded. Only the recorded decision in the dashboard counts as official.'],
               ].map(([q, a]) => (
                 <div key={q} className="bg-white border border-gray-200 rounded-xl p-4">
@@ -439,7 +439,7 @@ export default function Home() {
                 <span className="text-blue-300">See every grade. Every week.</span>
               </h2>
               <p className="text-blue-300 text-sm leading-relaxed mb-6">
-                Evalent’s Strategy page gives your leadership team a live picture of every grade’s enrolment position — fill rate, retention, new entrants, gap to target. Six KPI cards update automatically. Evalent-generated signals surface the grades that need attention. And when it is time to brief the board, one click produces a professional strategic admissions report.
+                Evalent’s Strategy page gives your leadership team a live picture of every grade’s enrolment position, covering fill rate, retention, new entrants, gap to target. Six KPI cards update automatically. Evalent-generated signals surface the grades that need attention. And when it is time to brief the board, one click produces a professional strategic admissions report.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 {["6 live KPI cards","Grade-level signals","8-week trend tracking","Board-ready reports","Team access controls"].map(tag => (

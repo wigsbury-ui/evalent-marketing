@@ -37,7 +37,7 @@ export default function Page() {
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
           <h2 className="text-center text-xl font-bold text-navy mt-4">Why data protection matters in admissions</h2>
-          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Independent schools assess applicants who are minors. That data — names, writing samples, scores, contact details — carries serious legal and ethical weight. Every school using Evalent needs to be confident that the platform meets its obligations under UK GDPR and EU GDPR, and that student data is never misused. This page explains exactly how Evalent handles that responsibility.</p>
+          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Independent schools assess applicants who are minors. That data, names, writing samples, scores, contact details, carries serious legal and ethical weight. Every school using Evalent needs to be confident that the platform meets its obligations under UK GDPR and EU GDPR, and that student data is never misused. This page explains exactly how Evalent handles that responsibility.</p>
         </div>
       </section>
 
@@ -48,7 +48,7 @@ export default function Page() {
 
             <div className="border border-purple-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Your school is the data controller</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Under GDPR, the organisation that determines the purpose and means of processing personal data is the data controller. For student applicant data, that is your school — not Evalent. Evalent acts only as a data processor, processing data strictly on your school's instructions. This means your school retains full ownership and control of all assessment data from day one.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">Under GDPR, the organisation that determines the purpose and means of processing personal data is the data controller. For student applicant data, that is your school, not Evalent. Evalent acts only as a data processor, processing data strictly on your school's instructions. This means your school retains full ownership and control of all assessment data from day one.</p>
             </div>
 
             <div className="border border-purple-100 rounded-xl p-5">
@@ -58,12 +58,12 @@ export default function Page() {
 
             <div className="border border-purple-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">UK GDPR and EU GDPR compliant</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Evalent is operated by Evalent Ltd, a UK-registered company. We comply with both UK GDPR (as administered by the Information Commissioner's Office) and EU GDPR. Where sub-processors operate outside the UK and EEA, we ensure appropriate safeguards are in place — including Standard Contractual Clauses approved by the UK ICO and European Commission.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">Evalent is operated by Evalent Ltd, a UK-registered company. We comply with both UK GDPR (as administered by the Information Commissioner's Office) and EU GDPR. Where sub-processors operate outside the UK and EEA, we ensure appropriate safeguards are in place, including Standard Contractual Clauses approved by the UK ICO and European Commission.</p>
             </div>
 
             <div className="border border-purple-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Configurable data retention</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Schools can configure their own data retention period in Evalent's settings. Assessment data is automatically deleted after the period you specify — or immediately on request by emailing hello@evalent.io. You are never locked into holding data longer than your school's own policy requires.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">Schools can configure their own data retention period in Evalent's settings. Assessment data is automatically deleted after the period you specify, or immediately on request by emailing hello@evalent.io. You are never locked into holding data longer than your school's own policy requires.</p>
             </div>
 
             <div className="border border-purple-100 rounded-xl p-5">
@@ -73,7 +73,7 @@ export default function Page() {
 
             <div className="border border-purple-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Secure infrastructure</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">All data is encrypted in transit (TLS 1.2+) and at rest. Access to assessment data is restricted to authenticated school users only — assessors receive a secure, time-limited link to view the specific report they need, with no access to any other student data. Multi-factor authentication is available for all school accounts.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">All data is encrypted in transit (TLS 1.2+) and at rest. Access to assessment data is restricted to authenticated school users only, assessors receive a secure, time-limited link to view the specific report they need, with no access to any other student data. Multi-factor authentication is available for all school accounts.</p>
             </div>
 
           </div>

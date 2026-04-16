@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Team & Access Management | Evalent Features',
-  description: 'Give every team member exactly the access they need. Four role groups, six permissions, and full control — without complexity.',
+  description: 'Give every team member exactly the access they need. Four role groups, six permissions, and full control, without complexity.',
 }
 
 export default function Page() {
@@ -19,7 +19,7 @@ export default function Page() {
 
   const faqs = [
     ['Can I adjust individual permissions beyond the role preset?', 'Yes. Any permission can be overridden at the individual level. Modified permissions are shown with an amber indicator so your admissions head can see at a glance who has a custom setup.'],
-    ['Do board members see individual student data?', 'No. Board Member and Board Chair roles do not have access to student-level reports by default. They see enrolment position and strategy — the big picture only.'],
+    ['Do board members see individual student data?', 'No. Board Member and Board Chair roles do not have access to student-level reports by default. They see enrolment position and strategy, the big picture only.'],
     ['How do I invite a new team member?', 'From the Team page, click Add Team Member, enter their name and email, assign their role group, and send the invitation. They receive a secure welcome email with login instructions.'],
     ['Is there an audit trail for permission changes?', 'Yes. All permission changes are logged with timestamp and actor, giving you a complete record for governance and compliance purposes.'],
   ]
@@ -38,7 +38,7 @@ export default function Page() {
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
             Four role groups. Six permissions. Individual overrides.
-            Your whole admissions operation — governed clearly, from one page.
+            Your whole admissions operation, governed clearly, from one page.
           </p>
           <HeroTrialButton />
         </div>

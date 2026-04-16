@@ -25,7 +25,7 @@ const features = [
     color: 'bg-purple-50 text-purple-700',
     items: [
       { title: 'Live writing evaluation', desc: 'Extended writing is evaluated by Evalent against four criteria: task completion, organisation, vocabulary, and accuracy.' },
-      { title: 'Expert commentary', desc: 'Evalent writes evaluative commentary referencing the student\'s actual words — not a template.' },
+      { title: 'Expert commentary', desc: 'Evalent writes evaluative commentary referencing the student\'s actual words, not a template.' },
       { title: 'Honest bands', desc: 'Excellent / Good / Developing / Beginning, calibrated to your grade level and curriculum.' },
       { title: 'Strengths & development', desc: 'Every evaluation identifies specific strengths and two concrete areas to develop.' },
     ],
@@ -35,9 +35,9 @@ const features = [
     icon: '◈',
     color: 'bg-green-50 text-green-700',
     items: [
-      { title: 'Report in under 5 minutes', desc: 'From assessment submission to branded PDF report in your assessor\'s inbox — fully automatic.' },
+      { title: 'Report in under 5 minutes', desc: 'From assessment submission to branded PDF report in your assessor\'s inbox, fully automatic.' },
       { title: 'School-branded reports', desc: 'Professional PDF with your school name. Ready to share with parents if needed.' },
-      { title: 'Benchmarked to your thresholds', desc: 'Scores are measured against your school\'s own entrance thresholds — not national norms.' },
+      { title: 'Benchmarked to your thresholds', desc: 'Scores are measured against your school\'s own entrance thresholds, not national norms.' },
       { title: 'One-click decisions', desc: 'Admit / Admit with support / Waitlist / Do not admit, recorded from the email, no portal login required.' },
     ],
   },

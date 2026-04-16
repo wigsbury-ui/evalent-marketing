@@ -170,7 +170,7 @@ export default function PartnersPage() {
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-gray-100 text-gray-600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
                 <div className="text-base font-black text-navy">Senior Partner</div>
               </div>
-              <p className="text-sm text-gray-600 leading-relaxed mb-3">Our deepest commercial tier. Earn a recurring percentage on every payment the school makes &mdash; not just the first year.</p>
+              <p className="text-sm text-gray-600 leading-relaxed mb-3">Our deepest commercial tier. Earn a recurring percentage on every payment the school makes, not just the first year.</p>
               <div className="bg-gray-50 rounded-lg px-3 py-2">
                 <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-0.5">BEST FIT</div>
                 <div className="text-xs text-gray-600">High-volume introducers and strategic partners with strong school network access.</div>
@@ -291,7 +291,7 @@ export default function PartnersPage() {
             </div>
             <div className="border border-gray-200 rounded-xl p-4">
               <div className="text-sm font-bold text-navy mb-1.5">I want a custom arrangement. Is that possible?</div>
-              <div className="text-sm text-gray-600 leading-relaxed">Yes. We offer a Custom partner tier for arrangements that don&apos;t fit the standard tiers &mdash; for example, embedding Evalent into a larger managed admissions service. Apply below and tell us more.</div>
+              <div className="text-sm text-gray-600 leading-relaxed">Yes. We offer a Custom partner tier for arrangements that don&apos;t fit the standard tiers, for example, embedding Evalent into a larger managed admissions service. Apply below and tell us more.</div>
             </div>
           </div>
         </div>

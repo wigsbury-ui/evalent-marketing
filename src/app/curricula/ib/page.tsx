@@ -21,7 +21,7 @@ export default function IBPage() {
   ]
 
   const differences = [
-    ['Learner Profile language', 'Reports reference IB Learner Profile attributes including Inquirer, Thinker, Communicator, Principled, Reflective and others — where genuinely evidenced in the student’s writing.'],
+    ['Learner Profile language', 'Reports reference IB Learner Profile attributes including Inquirer, Thinker, Communicator, Principled, Reflective and others, where genuinely evidenced in the student’s writing.'],
     ['PYP framing (G3–5)', 'Younger students are assessed with transdisciplinary language, five essential elements, and Units of Inquiry framing. Attainment is described holistically, not against national Key Stage targets.'],
     ['MYP framing (G6–10)', 'Older students are assessed against ATL skill clusters (thinking, communication, self-management, research, social), MYP global contexts, and criterion-referenced expectations.'],
     ['Evaluation tone', 'IB reports are warm, asset-focused, and growth-oriented, reflecting the IB’s emphasis on the whole learner. Commentary never uses deficit language.'],
@@ -31,7 +31,7 @@ export default function IBPage() {
   const faqs = [
     ['Does Evalent cover both PYP and MYP?', 'Yes. Grades 3–5 use PYP framing; Grades 6–10 use MYP framing. The transition is automatic based on the grade selected at registration.'],
     ['What about the DP (Diploma Programme)?', 'Evalent currently covers entry up to Grade 10 (MYP Year 5). DP entry assessment (Grade 11 entry) is on the roadmap.'],
-    ['Do IB schools in the Middle East use Evalent?', 'Yes. The platform is particularly common in UAE, Qatar, Singapore, and Hong Kong — markets where IB entry is competitive and assessment rigour is expected.'],
+    ['Do IB schools in the Middle East use Evalent?', 'Yes. The platform is particularly common in UAE, Qatar, Singapore, and Hong Kong, markets where IB entry is competitive and assessment rigour is expected.'],
     ['Can we set our own IB-specific thresholds?', 'Yes. You configure your school’s entrance threshold per domain per grade. Evalent recommends starting at 55% and adjusting based on your cohort data.'],
   ]
 
@@ -47,7 +47,7 @@ export default function IBPage() {
             <span className="text-blue-300">In IB language.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            Evalent assessments for IB schools use Learner Profile attributes, ATL skill clusters, and programme-appropriate language at every grade level — PYP for Grades 3–5, MYP for Grades 6–10.
+            Evalent assessments for IB schools use Learner Profile attributes, ATL skill clusters, and programme-appropriate language at every grade level, PYP for Grades 3–5, MYP for Grades 6–10.
           </p>
           <HeroTrialButton />
         </div>
@@ -59,7 +59,7 @@ export default function IBPage() {
             <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHY IT MATTERS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">IB admissions require IB thinking</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              International Baccalaureate schools attract families who have specifically chosen an inquiry-based, internationally-minded education. When your admissions report uses the language of your programme — not generic schooling language — it signals to families and assessors that the evaluation is grounded in the values of the school they are applying to.
+              International Baccalaureate schools attract families who have specifically chosen an inquiry-based, internationally-minded education. When your admissions report uses the language of your programme, not generic schooling language, it signals to families and assessors that the evaluation is grounded in the values of the school they are applying to.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
               Evalent’s IB configuration was developed with input from IB practitioners. The writing evaluation specifically looks for evidence of the traits your programme develops: self-directedness, intellectual risk-taking, balanced argumentation, and reflective awareness.

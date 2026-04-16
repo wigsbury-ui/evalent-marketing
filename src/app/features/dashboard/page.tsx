@@ -45,7 +45,7 @@ export default function Page() {
             <span className="text-blue-300">One screen. Real time.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            Your dashboard shows every registered applicant, their current status, their domain scores, and your school&apos;s recommendation — updating automatically as assessments complete.
+            Your dashboard shows every registered applicant, their current status, their domain scores, and your school&apos;s recommendation, updating automatically as assessments complete.
           </p>
           <HeroTrialButton />
         </div>

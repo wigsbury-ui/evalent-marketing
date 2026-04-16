@@ -45,7 +45,7 @@ export default function Page() {
             <span className="text-blue-300">can act on immediately.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            Every completed assessment triggers an automatic pipeline that scores, analyses, and formats a professional admissions report — ready in under 5 minutes, without any human involvement.
+            Every completed assessment triggers an automatic pipeline that scores, analyses, and formats a professional admissions report, ready in under 5 minutes, without any human involvement.
           </p>
           <HeroTrialButton />
         </div>
@@ -104,7 +104,7 @@ export default function Page() {
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">RECOMMENDATION BANDS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-2">What the recommendation means</h2>
-            <p className="text-gray-500 text-sm max-w-xl mx-auto">Recommendations are calculated against your school&apos;s own thresholds — not national norms.</p>
+            <p className="text-gray-500 text-sm max-w-xl mx-auto">Recommendations are calculated against your school&apos;s own thresholds, not national norms.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             {bands.map((b) => (

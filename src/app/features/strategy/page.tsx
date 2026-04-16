@@ -94,7 +94,7 @@ export default function Page() {
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">LIVE PREVIEW</div>
             <h2 className="text-2xl font-black text-navy tracking-tight">See it in action</h2>
-            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">Click any grade pill to see how the six KPI cards update instantly — just like the real Strategy page in your school account.</p>
+            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">Click any grade pill to see how the six KPI cards update instantly, just like the real Strategy page in your school account.</p>
           </div>
           <StrategyDemo />
         </div>

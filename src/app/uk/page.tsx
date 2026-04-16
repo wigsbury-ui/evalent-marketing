@@ -18,7 +18,7 @@ export default function Page() {
 
   const differences = [
     ['KS2, KS3 and KS4 language', 'Reports use Key Stage attainment framing throughout. A Year 6 entry report reads differently from a Year 9 one.'],
-    ['Year labels, not Grade labels', 'The platform uses Year groups automatically when set to British curriculum. Your assessors see Year 7, Year 8 — not Grade 7.'],
+    ['Year labels, not Grade labels', 'The platform uses Year groups automatically when set to British curriculum. Your assessors see Year 7, Year 8, not Grade 7.'],
     ['PEE writing framework', 'Extended writing is evaluated against Point-Evidence-Explanation structure, the standard your English department teaches.'],
     ['Formal register assessment', 'British independent schools expect formal academic register. Evalent marks informal register as a development area.'],
     ['IGCSE pathway indicators at KS4', 'For Year 10 and Year 11 entry, the report includes readiness indicators for GCSE and IGCSE-level demands.'],
@@ -74,7 +74,7 @@ export default function Page() {
               The UK independent sector is academically rigorous and professionally run, but admissions is often its weakest administrative process. Schools that would never accept a vague marking scheme in the classroom routinely make entry decisions on the basis of a brief written paper, a school report from a source they cannot verify, and a 20-minute interview.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Evalent does not replace the interview. It replaces the thin paper test that precedes it. Every candidate completes a structured, timed assessment covering English, Mathematics, Reasoning and Mindset. The platform scores it automatically, evaluates the extended writing and delivers a professional report to your assessor — typically within 5 minutes of submission.
+              Evalent does not replace the interview. It replaces the thin paper test that precedes it. Every candidate completes a structured, timed assessment covering English, Mathematics, Reasoning and Mindset. The platform scores it automatically, evaluates the extended writing and delivers a professional report to your assessor, typically within 5 minutes of submission.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               The result is a defensible, documented assessment profile for every candidate, produced without any additional burden on your teaching staff.

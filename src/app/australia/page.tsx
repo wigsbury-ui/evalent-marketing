@@ -11,8 +11,8 @@ export const metadata = {
 export default function Page() {
   const challenges = [
     { title: 'NAPLAN is a population measure, not an admissions tool', desc: 'NAPLAN results arrive late, measure a narrow band of skills, and were never designed for school-to-school entry decisions. Many Australian independent schools have no structured alternative for assessing candidates who have not yet sat NAPLAN.' },
-    { title: 'Mid-year and out-of-cycle enrolments are hard to assess', desc: 'A family arriving from interstate or overseas cannot sit a scheduled assessment day. Evalent sends a link — the student completes it from wherever they are, within a 72-hour window.' },
-    { title: 'International enrolments require a comparable baseline', desc: 'Australian independent schools attract families from Southeast Asia, the Middle East, and Europe. Comparing an application from Singapore to one from regional New South Wales requires a common assessment — which Evalent provides.' },
+    { title: 'Mid-year and out-of-cycle enrolments are hard to assess', desc: 'A family arriving from interstate or overseas cannot sit a scheduled assessment day. Evalent sends a link, the student completes it from wherever they are, within a 72-hour window.' },
+    { title: 'International enrolments require a comparable baseline', desc: 'Australian independent schools attract families from Southeast Asia, the Middle East, and Europe. Comparing an application from Singapore to one from regional New South Wales requires a common assessment, which Evalent provides.' },
     { title: 'Scholarship assessment is resource-intensive', desc: 'Most Australian private schools run scholarship programmes with significant logistical overhead. Evalent streamlines the first-pass assessment so your scholarship committee focuses on the shortlist.' },
   ]
 

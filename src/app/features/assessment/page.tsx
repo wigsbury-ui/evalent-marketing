@@ -26,12 +26,12 @@ export default function Page() {
     },
     {
       domain: 'Mathematics', weight: '35%', color: 'border-purple-300 bg-purple-50', tc: 'text-purple-700',
-      parts: ['Core knowledge MCQ: number, algebra, geometry, data', 'Applied problem-solving: multi-step word problems', 'Written explanation task — show your reasoning'],
+      parts: ['Core knowledge MCQ: number, algebra, geometry, data', 'Applied problem-solving: multi-step word problems', 'Written explanation task, show your reasoning'],
       why: 'The written maths task reveals whether a student can explain their thinking, a critical skill in IB and inquiry-based curricula.',
     },
     {
       domain: 'Reasoning', weight: '30%', color: 'border-green-300 bg-green-50', tc: 'text-green-700',
-      parts: ['Pattern recognition: sequences, matrices, analogies', 'Verbal reasoning: logic, inference, classification', 'MCQ only — no written component'],
+      parts: ['Pattern recognition: sequences, matrices, analogies', 'Verbal reasoning: logic, inference, classification', 'MCQ only, no written component'],
       why: 'Reasoning scores are the least susceptible to tutoring. A strong reasoning score alongside weaker English often signals a student who will thrive once settled.',
     },
     {

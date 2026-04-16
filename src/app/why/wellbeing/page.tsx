@@ -34,7 +34,7 @@ export default function Page() {
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
           <h2 className="text-center text-xl font-bold text-navy mt-4">An assessment experience that reflects well on your school</h2>
-          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">For many applicants, Evalent is the first formal assessment they have ever sat. Video guides, grade-appropriate content, and a consistent structure ensure every student feels prepared and supported throughout. Students who feel calm perform closer to their actual ability — giving your assessors better evidence and families a better impression.</p>
+          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">For many applicants, Evalent is the first formal assessment they have ever sat. Video guides, grade-appropriate content, and a consistent structure ensure every student feels prepared and supported throughout. Students who feel calm perform closer to their actual ability, giving your assessors better evidence and families a better impression.</p>
         </div>
       </section>
 
@@ -51,7 +51,7 @@ export default function Page() {
             </div>
             <div className="border border-green-100 border-green-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Appropriate for the grade</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">A Grade 3 applicant does not face secondary-level language or concepts. Every assessment is calibrated to the entry grade — the prompts, vocabulary, and task complexity are all appropriate for the student sitting in front of them.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">A Grade 3 applicant does not face secondary-level language or concepts. Every assessment is calibrated to the entry grade, the prompts, vocabulary, and task complexity are all appropriate for the student sitting in front of them.</p>
             </div>
             <div className="border border-green-100 border-green-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Accommodations built in</h3>

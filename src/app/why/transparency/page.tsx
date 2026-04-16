@@ -51,7 +51,7 @@ export default function Page() {
             </div>
             <div className="border border-indigo-100 border-indigo-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">The student's own words</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">The report includes the student's written responses verbatim. Assessors see not just scores and commentary, but the actual work the student produced. There is no black box — the evidence is in the report.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">The report includes the student's written responses verbatim. Assessors see not just scores and commentary, but the actual work the student produced. There is no black box, the evidence is in the report.</p>
             </div>
             <div className="border border-indigo-100 border-indigo-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Exportable records</h3>

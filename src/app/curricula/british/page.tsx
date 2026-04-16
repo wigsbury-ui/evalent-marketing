@@ -32,7 +32,7 @@ export default function BritishPage() {
     ['Do British schools in the UAE use Evalent?', 'Yes. British curriculum schools are the largest single group of Evalent users. The UAE, Qatar, Malaysia, and East Africa are the most active markets.'],
     ['Do you cover Year 3 (the equivalent of Grade 3)?', 'Year 4 is our current starting point for British schools. Year 3 entry assessment is on the roadmap.'],
     ['Does Evalent support IGCSE-specific questions?', 'The assessment at KS4 level is calibrated to IGCSE readiness expectations, but is not itself a practice IGCSE paper. It assesses readiness, not content knowledge of specific subjects.'],
-    ['What does the grade label look like in the report?', 'British schools are shown Year labels throughout, such as Year 7, Year 8, etc. — rather than Grade labels. This is configured when you set your school’s curriculum to British.'],
+    ['What does the grade label look like in the report?', 'British schools are shown Year labels throughout, such as Year 7, Year 8, etc., rather than Grade labels. This is configured when you set your school’s curriculum to British.'],
   ]
 
   return (
@@ -47,7 +47,7 @@ export default function BritishPage() {
             <span className="text-blue-300">British language.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            Evalent’s British configuration uses Key Stage attainment language, PEE writing framing, and formal register expectations — from KS2 primary entry through to KS4 GCSE pathway.
+            Evalent’s British configuration uses Key Stage attainment language, PEE writing framing, and formal register expectations, from KS2 primary entry through to KS4 GCSE pathway.
           </p>
           <HeroTrialButton />
         </div>
@@ -59,7 +59,7 @@ export default function BritishPage() {
             <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHY IT MATTERS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Your assessors speak British English. So should the reports.</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              British curriculum schools, whether in the UK, UAE, Malaysia, or Africa — share a common professional vocabulary. Reports that use American terminology or IB language signal that the evaluation tool doesn’t understand the context it’s operating in.
+              British curriculum schools, whether in the UK, UAE, Malaysia, or Africa, share a common professional vocabulary. Reports that use American terminology or IB language signal that the evaluation tool doesn’t understand the context it’s operating in.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
               Evalent’s British configuration was built with heads of admissions at independent British schools. It uses the language your senior leadership team uses in conversation, and the language parents who have chosen a British education expect to see.
