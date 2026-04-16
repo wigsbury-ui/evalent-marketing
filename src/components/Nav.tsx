@@ -180,9 +180,6 @@ export default function Nav() {
             <Link href="/about" className={`transition-colors ${pathname === '/about' ? 'text-brand font-semibold' : 'hover:text-navy'}`}>
               About
             </Link>
-            <Link href="/live-demo" className={`transition-colors ${isDemo ? 'text-brand font-semibold' : 'text-gray-700 hover:text-navy'}`}>
-              Live demo
-            </Link>
             <a href="https://app.evalent.io/login" className="hover:text-navy transition-colors">Sign in</a>
           </div>
 
