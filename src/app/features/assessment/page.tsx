@@ -6,7 +6,7 @@ import ReportSlider from '@/components/features/ReportSlider'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'The Assessment — Evalent Features',
+  title: 'The Assessment | Evalent Features',
   description: 'A structured 45-minute online assessment covering English, Mathematics, Reasoning and Mindset. Professional, timed, browser-based.',
 }
 
@@ -21,22 +21,22 @@ export default function Page() {
   const domainCards = [
     {
       domain: 'English', weight: '35%', color: 'border-brand bg-blue-50', tc: 'text-brand',
-      parts: ['Reading comprehension — 8 calibrated passages and questions', 'Extended writing — one open-ended prompt (20 minutes)', 'Scored on: task completion, organisation, vocabulary, accuracy'],
+      parts: ['Reading comprehension: 8 calibrated passages and questions', 'Extended writing: one open-ended prompt (20 minutes)', 'Scored on: task completion, organisation, vocabulary, accuracy'],
       why: 'English is the primary indicator of readiness. The writing task gives Evalent and your assessors a real, unmediated sample of the student’s ability.',
     },
     {
       domain: 'Mathematics', weight: '35%', color: 'border-purple-300 bg-purple-50', tc: 'text-purple-700',
-      parts: ['Core knowledge MCQ — number, algebra, geometry, data', 'Applied problem-solving — multi-step word problems', 'Written explanation task — show your reasoning'],
-      why: 'The written maths task reveals whether a student can explain their thinking — a critical skill in IB and inquiry-based curricula.',
+      parts: ['Core knowledge MCQ: number, algebra, geometry, data', 'Applied problem-solving: multi-step word problems', 'Written explanation task — show your reasoning'],
+      why: 'The written maths task reveals whether a student can explain their thinking, a critical skill in IB and inquiry-based curricula.',
     },
     {
       domain: 'Reasoning', weight: '30%', color: 'border-green-300 bg-green-50', tc: 'text-green-700',
-      parts: ['Pattern recognition — sequences, matrices, analogies', 'Verbal reasoning — logic, inference, classification', 'MCQ only — no written component'],
+      parts: ['Pattern recognition: sequences, matrices, analogies', 'Verbal reasoning: logic, inference, classification', 'MCQ only — no written component'],
       why: 'Reasoning scores are the least susceptible to tutoring. A strong reasoning score alongside weaker English often signals a student who will thrive once settled.',
     },
     {
       domain: 'Mindset', weight: 'Contextual', color: 'border-amber-300 bg-amber-50', tc: 'text-amber-700',
-      parts: ['Growth mindset inventory — 10 short items', 'Values alignment — how the student approaches challenge', 'Scored 0–4: strong / developing / needs support'],
+      parts: ['Growth mindset inventory: 10 short items', 'Values alignment: how the student approaches challenge', 'Scored 0–4: strong / developing / needs support'],
       why: 'Mindset data is contextual, not a gatekeeper. Strong growth orientation with borderline academic scores can still support an offer.',
     },
   ]
@@ -76,7 +76,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — The Assessment"
+              title="Evalent | The Assessment"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
@@ -90,7 +90,7 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE APPLICANT EXPERIENCE</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Designed to reveal ability, not test familiarity with test formats</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-3">
-              Evalent assessments are built around the curriculum your school uses — IB, British, or American. Questions are calibrated to the entry grade, so a Grade 4 applicant is not faced with secondary-level language or concepts.
+              Evalent assessments are built around the curriculum your school uses, whether IB, British, or American. Questions are calibrated to the entry grade, so a Grade 4 applicant is not faced with secondary-level language or concepts.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               The extended writing tasks give your assessors something a multiple-choice score never can: a real sample of how the student thinks and constructs an argument under time pressure.

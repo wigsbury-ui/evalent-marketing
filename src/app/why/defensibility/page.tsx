@@ -4,8 +4,8 @@ import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Defensibility — Why Evalent',
-  description: 'Structured, reproducible assessments with documented evidence — the kind of record accreditation bodies and governing boards expect to see.',
+  title: 'Defensibility | Why Evalent',
+  description: 'Structured, reproducible assessments with documented evidence, the kind of record accreditation bodies and governing boards expect to see.',
 }
 
 export default function Page() {
@@ -17,7 +17,7 @@ export default function Page() {
         <div className="max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">WHY EVALENT</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">Decisions you can stand behind.</h1>
-          <p className="text-blue-300 text-base leading-relaxed mb-6">Structured, reproducible assessments with documented evidence — the kind of record accreditation bodies and governing boards expect to see.</p>
+          <p className="text-blue-300 text-base leading-relaxed mb-6">Structured, reproducible assessments with documented evidence, the kind of record accreditation bodies and governing boards expect to see.</p>
           <HeroTrialButton />
         </div>
       </section>
@@ -29,7 +29,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Defensibility"
+              title="Evalent | Defensibility"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>

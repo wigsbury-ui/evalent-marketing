@@ -5,7 +5,7 @@ import DecisionsDemo from '@/components/features/DecisionsDemo'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Decision Workflow — Evalent Features',
+  title: 'Decision Workflow | Evalent Features',
   description: 'One-click decisions directly from your inbox. No portal login. No manual data entry. Every decision timestamped and audit-logged automatically.',
 }
 
@@ -34,7 +34,7 @@ export default function Page() {
 
   const faqs = [
     ['What if the assessor never clicks a button?', 'A follow-up reminder is sent after 48 hours. The dashboard flags unactioned reports. You can reassign the decision to another assessor if needed.'],
-    ['Can a decision be changed after clicking?', 'Yes — decisions can be amended by a school admin user from the dashboard. The audit log records both the original and the amendment with timestamps.'],
+    ['Can a decision be changed after clicking?', 'Yes, decisions can be amended by a school admin user from the dashboard. The audit log records both the original and the amendment with timestamps.'],
     ['Can we add notes to the decision?', 'Free-text notes can be added to any applicant record from the dashboard and are stored alongside the decision in the audit log.'],
     ["What happens to the applicant's data after a decision?", 'Data is retained according to your school’s configured retention period. Evalent supports GDPR-compliant deletion requests at any time.'],
   ]
@@ -66,7 +66,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Decision Workflow"
+              title="Evalent | Decision Workflow"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
@@ -129,7 +129,7 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">GOVERNANCE &amp; COMPLIANCE</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Every decision is defensible</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              International schools increasingly face scrutiny over admissions decisions — from parents, boards, and in some cases regulatory bodies. Evalent creates a complete, tamper-proof record of every assessment and decision.
+              International schools increasingly face scrutiny over admissions decisions, from parents, boards, and in some cases regulatory bodies. Evalent creates a complete, tamper-proof record of every assessment and decision.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               The audit log records who assessed, which report they received, which button they clicked, and when. This is exportable and can be retained as long as your school requires.

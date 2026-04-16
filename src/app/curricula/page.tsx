@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Curricula — Evalent',
+  title: 'Curricula | Evalent',
   description: 'Evalent assessments are fully calibrated for IB, British and American curricula. Same platform, same rigour — right language for every programme.',
 }
 

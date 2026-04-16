@@ -2,7 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Privacy Policy — Evalent',
+  title: 'Privacy Policy | Evalent',
   description: 'How Evalent collects, uses and protects your personal data. GDPR compliant. Paddle processes buyer data as Merchant of Record.',
 }
 
@@ -62,11 +62,11 @@ export default function Page() {
             We share data only with the following categories of third party, each bound by appropriate data processing agreements:
           </p>
           <ul className="text-sm text-gray-600 leading-relaxed mb-4 space-y-1 list-disc pl-5">
-            <li><strong>Paddle</strong> — payment processing and Merchant of Record services</li>
-            <li><strong>Supabase</strong> — database hosting and infrastructure</li>
-            <li><strong>Anthropic</strong> — Evalent writing evaluation (assessment text is processed to generate report commentary)</li>
-            <li><strong>Resend</strong> — transactional email delivery</li>
-            <li><strong>Vercel</strong> — platform hosting</li>
+            <li><strong>Paddle</strong>: payment processing and Merchant of Record services</li>
+            <li><strong>Supabase</strong>: database hosting and infrastructure</li>
+            <li><strong>Anthropic</strong>: Evalent writing evaluation (assessment text is processed to generate report commentary)</li>
+            <li><strong>Resend</strong>: transactional email delivery</li>
+            <li><strong>Vercel</strong>: platform hosting</li>
           </ul>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">We do not sell personal data to any third party.</p>
 

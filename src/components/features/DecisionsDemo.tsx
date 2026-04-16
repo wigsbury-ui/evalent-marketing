@@ -18,7 +18,7 @@ export default function DecisionsDemo() {
       <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
         <div className="bg-gray-100 px-4 py-2 flex items-center gap-2 border-b border-gray-200">
           <div className="flex gap-1.5"><div className="w-2.5 h-2.5 rounded-full bg-red-400"/><div className="w-2.5 h-2.5 rounded-full bg-yellow-400"/><div className="w-2.5 h-2.5 rounded-full bg-green-400"/></div>
-          <div className="flex-1 bg-white rounded px-3 py-1 text-xs text-gray-400">{confirmed?'Re: Sara Ahmed — decision recorded':'Admissions report ready — Sara Ahmed, Grade 7 · from reports@evalent.io'}</div>
+          <div className="flex-1 bg-white rounded px-3 py-1 text-xs text-gray-400">{confirmed?'Re: Sara Ahmed: decision recorded':'Admissions report ready — Sara Ahmed, Grade 7 · from reports@evalent.io'}</div>
         </div>
         <div className="p-6">
           <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
@@ -29,7 +29,7 @@ export default function DecisionsDemo() {
             <>
               <div className="text-xs text-gray-400 mb-1">To: sarah.principal@diacademy.ae · Grade 7 Entry</div>
               <div className="text-lg font-black text-navy mb-3 tracking-tight">Admissions report: Sara Ahmed</div>
-              <p className="text-sm text-gray-600 mb-4">Hi Sarah — Sara&apos;s Grade 7 IB assessment is complete. Use the buttons below to record your decision instantly. No login required.</p>
+              <p className="text-sm text-gray-600 mb-4">Hi Sarah, Sara&apos;s Grade 7 IB assessment is complete. Use the buttons below to record your decision instantly. No login required.</p>
               <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4">
                 <div className="flex items-center justify-between mb-3">
                   <div className="text-sm font-bold text-navy">Sara Ahmed · Grade 7 · IB</div>
@@ -43,7 +43,7 @@ export default function DecisionsDemo() {
                   </div>
                 ))}
               </div>
-              <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-3">RECORD YOUR DECISION — ONE CLICK · NO LOGIN REQUIRED</div>
+              <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-3">RECORD YOUR DECISION: ONE CLICK · NO LOGIN REQUIRED</div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                 {Object.entries(CFG).map(([key,cfg])=>(
                   <button key={key} onClick={()=>{setDecision(key as D);setConfirmed(true)}}
@@ -72,7 +72,7 @@ export default function DecisionsDemo() {
       </div>
       <div className="grid md:grid-cols-3 gap-4">
         {[
-          {icon:'email',title:'Works from any inbox',desc:'Decision buttons work in Gmail, Outlook, Apple Mail — any email client on any device.'},
+          {icon:'email',title:'Works from any inbox',desc:'Decision buttons work in Gmail, Outlook, Apple Mail and any email client on any device.'},
           {icon:'link',title:'No login required',desc:'The link is secure and single-use. Assessors never need a portal password.'},
           {icon:'audit',title:'Full audit trail',desc:'Every decision is timestamped, attributed, and stored permanently in the applicant record.'},
         ].map(({title,desc})=>(

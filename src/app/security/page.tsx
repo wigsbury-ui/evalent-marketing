@@ -2,7 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Data Security — Evalent',
+  title: 'Data Security | Evalent',
   description: 'How Evalent protects student data. Encryption, access controls, infrastructure security, and data handling practices for international school admissions.',
 }
 
@@ -10,7 +10,7 @@ const sections = [
   {
     id: 'overview',
     title: 'Overview',
-    content: `Evalent handles sensitive personal data on behalf of schools — including student names, dates of birth, nationalities, and academic assessment responses. We take this responsibility seriously. This page describes the technical and organisational measures we use to protect that data.
+    content: `Evalent handles sensitive personal data on behalf of schools, including student names, dates of birth, nationalities, and academic assessment responses. We take this responsibility seriously. This page describes the technical and organisational measures we use to protect that data.
 
 We are honest about what we have and what we are working towards. We do not claim certifications we have not achieved.`,
   },
@@ -67,7 +67,7 @@ We are honest about what we have and what we are working towards. We do not clai
     items: [
       {
         label: 'School data isolation',
-        detail: 'Each school account can only access its own data. API endpoints validate school identity on every request — it is not possible for one school to access another school’s students, assessments, or reports.',
+        detail: 'Each school account can only access its own data. API endpoints validate school identity on every request. It is not possible for one school to access another school’s students, assessments, or reports.',
       },
       {
         label: 'Role-based access',
@@ -110,7 +110,7 @@ We are honest about what we have and what we are working towards. We do not clai
       },
       {
         label: 'Audit logging',
-        detail: 'Sensitive actions — including student registration, assessment dispatch, and decision recording — are written to an immutable audit log with timestamp, actor identity, and action details. This supports accountability and investigation in the event of a dispute.',
+        detail: 'Sensitive actions, including student registration, assessment dispatch, and decision recording — are written to an immutable audit log with timestamp, actor identity, and action details. This supports accountability and investigation in the event of a dispute.',
       },
       {
         label: 'Retention',

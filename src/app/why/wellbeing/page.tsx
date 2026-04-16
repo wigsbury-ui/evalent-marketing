@@ -4,7 +4,7 @@ import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Student Wellbeing — Why Evalent',
+  title: 'Student Wellbeing | Why Evalent',
   description: 'Video guides, clear instructions, and a structured format that reduces anxiety and helps every student perform at their best.',
 }
 
@@ -29,7 +29,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Wellbeing"
+              title="Evalent | Wellbeing"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>

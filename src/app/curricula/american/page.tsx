@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'American Curriculum — Evalent',
+  title: 'American Curriculum | Evalent',
   description: 'Evalent assessments calibrated for the American curriculum. Common Core-aligned. Thesis-driven. AP/honours pathway readiness at Grade 9–10.',
 }
 
@@ -59,7 +59,7 @@ export default function AmericanPage() {
             <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHY IT MATTERS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">American educators speak a different professional language. Reports should reflect that.</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              American curriculum schools — whether in Chicago, Dubai, or Singapore — share a common set of expectations around how students should write, argue, and demonstrate subject knowledge. A report that uses British Key Stage language or IB Learner Profile attributes signals to an American-trained head of admissions that the tool wasn’t designed for their context.
+              American curriculum schools, whether in Chicago, Dubai, or Singapore — share a common set of expectations around how students should write, argue, and demonstrate subject knowledge. A report that uses British Key Stage language or IB Learner Profile attributes signals to an American-trained head of admissions that the tool wasn’t designed for their context.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
               Evalent’s American configuration was developed with American curriculum practitioners. It reflects how Common Core ELA and Math standards describe grade-level readiness, and how American schools communicate about student potential.
@@ -79,7 +79,7 @@ export default function AmericanPage() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — American Curriculum"
+              title="Evalent | American Curriculum"
             />
             </div>
             <p className="text-center text-xs text-gray-400 mt-3">Watch this 2-minute walkthrough</p>

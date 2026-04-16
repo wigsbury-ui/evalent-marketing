@@ -3,14 +3,14 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Why Evalent — Benefits',
+  title: 'Why Evalent: Benefits',
   description: 'Intelligent evaluation, student wellbeing, transparency, defensibility, and faster conversion. Why schools choose Evalent.',
 }
 
 const BENEFITS = [
   { href: '/why/evaluation', title: 'Intelligent Evaluation', desc: 'Evalent-powered, rubric-based scoring that measures how students think, write, and reason — not just recall.', icon: '🧠' },
   { href: '/why/wellbeing', title: 'Student Wellbeing', desc: 'Video guides and a calm, structured format that reduces anxiety and helps every student perform at their best.', icon: '💚' },
-  { href: '/why/transparency', title: 'Transparency', desc: 'A complete audit trail from registration to decision — timestamped, attributed, and permanently stored.', icon: '🔍' },
+  { href: '/why/transparency', title: 'Transparency', desc: 'A complete audit trail from registration to decision, timestamped, attributed, and permanently stored.', icon: '🔍' },
   { href: '/why/defensibility', title: 'Defensibility', desc: 'Structured, reproducible assessments with documented evidence that satisfies accreditation and governance expectations.', icon: '🛡️' },
   { href: '/why/conversion', title: 'Conversion & Speed', desc: 'From assessment link to admissions decision in under five minutes, with automated reminders that keep applications moving.', icon: '⚡' },
   { href: '/why/data-security', title: 'Data Security', desc: 'UK and EU GDPR compliant. School is the data controller. Student data is never used to train language models.', icon: '🔒' },

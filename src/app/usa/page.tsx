@@ -44,7 +44,7 @@ export default function Page() {
             <span className="text-blue-300">built for US independent schools.</span>
           </h1>
           <p className="text-blue-300 text-base leading-relaxed max-w-xl mx-auto mb-2">
-            Common Core-aligned reports from Grade 3 to Grade 10. Structured evidence for every admissions decision — including AP-track placement at Grade 9–10.
+            Common Core-aligned reports from Grade 3 to Grade 10. Structured evidence for every admissions decision, including AP-track placement at Grade 9–10.
           </p>
 
           <div className="mt-6">
@@ -61,7 +61,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — How it works"
+              title="Evalent | How it works"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second overview</p>

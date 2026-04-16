@@ -32,11 +32,11 @@ export default function AssessmentDemo() {
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
           allowFullScreen
-          title="Evalent — Assessment walkthrough"
+          title="Evalent | Assessment walkthrough"
         />
       </div>
       <p className="text-center text-xs text-gray-400 mt-3">
-        A real Grade 8 assessment from start to finish — the same experience every applicant has
+        A real Grade 8 assessment from start to finish, the same experience every applicant has
       </p>
     </div>
   )

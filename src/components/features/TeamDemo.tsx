@@ -11,7 +11,7 @@ interface Group { name: string; color: string; bg: string; border: string; dot: 
 const GROUPS: Group[] = [
   {
     name: 'Admissions Team', color: '#1a2b6b', bg: '#f0f4ff', border: '#c7d2fe', dot: '#1a2b6b',
-    desc: 'Day-to-day admissions — register students, send assessments, monitor pipeline.',
+    desc: 'Day-to-day admissions: register students, send assessments, monitor pipeline.',
     defaults: ['edit','edit','view','view','none','none'],
     members: [
       { name: 'Ahmed George',  email: 'ahmed@stfrancis.edu',  avatar: 'AG', perms: ['edit','edit','view','view','none','none'] },
@@ -20,7 +20,7 @@ const GROUPS: Group[] = [
   },
   {
     name: 'Senior Leadership', color: '#7c3aed', bg: '#faf5ff', border: '#ddd6fe', dot: '#7c3aed',
-    desc: 'Full operational and strategic oversight — dashboard, pipeline, strategy, and Evalent reports.',
+    desc: 'Full operational and strategic oversight: dashboard, pipeline, strategy, and Evalent reports.',
     defaults: ['edit','edit','view','view','view','none'],
     members: [
       { name: 'Paul Johnson',  email: 'paul@stfrancis.edu',   avatar: 'PJ', perms: ['edit','edit','view','view','view','none'] },
@@ -34,7 +34,7 @@ const GROUPS: Group[] = [
   },
   {
     name: 'Board Members', color: '#0369a1', bg: '#f0f9ff', border: '#bae6fd', dot: '#0369a1',
-    desc: 'Strategic overview — enrolment trends, KPIs, executive reports. No individual student data.',
+    desc: 'Strategic overview: enrolment trends, KPIs, executive reports. No individual student data.',
     defaults: ['none','none','view','none','view','none'],
     members: [],
   },
@@ -79,7 +79,7 @@ export default function TeamDemo() {
     <div className="rounded-2xl border border-gray-200 bg-white shadow-xl overflow-hidden">
       {/* Browser chrome */}
       <div className="flex items-center justify-between px-4 py-3 bg-gray-50 border-b border-gray-100">
-        <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Live preview — Team page</span>
+        <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Live preview: Team page</span>
         <div className="flex items-center gap-1">
           <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
           <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />

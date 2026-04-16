@@ -4,7 +4,7 @@ import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Data Security — Why Evalent',
+  title: 'Data Security | Why Evalent',
   description: 'How Evalent protects student data. UK and EU GDPR compliant. Student data never used to train language models. School is the data controller.',
 }
 
@@ -18,7 +18,7 @@ export default function Page() {
         <div className="max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">WHY EVALENT</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">Student data handled the right way.</h1>
-          <p className="text-blue-300 text-base leading-relaxed mb-6">UK and EU GDPR compliant. School is the data controller. Student assessment data is never used to train language models — ever.</p>
+          <p className="text-blue-300 text-base leading-relaxed mb-6">UK and EU GDPR compliant. School is the data controller. Student assessment data is never used to train language models. Ever.</p>
           <HeroTrialButton />
         </div>
       </section>
@@ -32,7 +32,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Data Security"
+              title="Evalent | Data Security"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
@@ -53,7 +53,7 @@ export default function Page() {
 
             <div className="border border-purple-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Student data is never used to train language models</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Assessment responses — including extended writing — are processed by Evalent only to generate the report for that specific student. This processing is governed by a data processing agreement with Anthropic, our language model sub-processor, which contractually prohibits the use of your students' data for AI training purposes. Student data is used for one purpose: producing the admissions report your school requested.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">Assessment responses, including extended writing, are processed by Evalent only to generate the report for that specific student. This processing is governed by a data processing agreement with Anthropic, our language model sub-processor, which contractually prohibits the use of your students' data for AI training purposes. Student data is used for one purpose: producing the admissions report your school requested.</p>
             </div>
 
             <div className="border border-purple-100 rounded-xl p-5">
@@ -68,7 +68,7 @@ export default function Page() {
 
             <div className="border border-purple-100 rounded-xl p-5">
               <h3 className="text-sm font-bold text-navy mb-2">Sub-processors bound by data processing agreements</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Evalent shares data only with the sub-processors required to deliver the service — database hosting (Supabase), Evalent evaluation (Anthropic), transactional email (Resend), and platform infrastructure (Vercel). Each is bound by a formal data processing agreement. We do not sell personal data to any third party, and we do not use student data for advertising, profiling, or any purpose beyond delivering your school's reports.</p>
+              <p className="text-sm text-gray-600 leading-relaxed">Evalent shares data only with the sub-processors required to deliver the service: database hosting (Supabase), Evalent evaluation (Anthropic), transactional email (Resend), and platform infrastructure (Vercel). Each is bound by a formal data processing agreement. We do not sell personal data to any third party, and we do not use student data for advertising, profiling, or any purpose beyond delivering your school's reports.</p>
             </div>
 
             <div className="border border-purple-100 rounded-xl p-5">

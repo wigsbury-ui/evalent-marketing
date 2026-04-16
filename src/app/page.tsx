@@ -113,14 +113,14 @@ export default function Home() {
         <div className="relative z-10 max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-6">
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
-            10 FREE TRIAL REPORTS — NO CARD NEEDED
+            10 FREE TRIAL REPORTS | NO CARD NEEDED
           </div>
           <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-5">
             Know your applicants.<br/>
             <span className="text-blue-300">Know your school.</span>
           </h1>
           <p className="text-lg text-blue-300 max-w-xl mx-auto mb-8 leading-relaxed">
-            Structured assessments. Evalent-evaluated reports. One-click decisions. Live enrolment intelligence. From first application to board report — all automatic.
+            Structured assessments. Evalent-evaluated reports. One-click decisions. Live enrolment intelligence. From first application to board report. All automatic.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <button onClick={() => setTrialOpen(true)} className="bg-white text-brand font-bold text-sm px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
@@ -148,7 +148,7 @@ export default function Home() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Admissions Intelligence"
+              title="Evalent | Admissions Intelligence"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-3">Watch this 50-second overview to see Evalent in action</p>
@@ -164,7 +164,7 @@ export default function Home() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Admissions Intelligence (mobile)"
+              title="Evalent | Admissions Intelligence (mobile)"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-3">Watch this 50-second overview to see Evalent in action</p>
@@ -222,7 +222,7 @@ export default function Home() {
               <span className="text-blue-300">run on the thinnest evidence.</span>
             </h2>
             <p className="text-blue-300 text-base max-w-2xl mx-auto leading-relaxed">
-              Independent schools invest heavily in academic programmes and student outcomes. But the evidence gathered during admissions — the point that shapes the entire incoming cohort — is often a parent letter, a school report, and a brief impression.
+              Independent schools invest heavily in academic programmes and student outcomes. But the evidence gathered during admissions, the point that shapes the entire incoming cohort, is often a parent letter, a school report, and a brief impression.
             </p>
           </div>
 
@@ -327,7 +327,7 @@ export default function Home() {
               <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
               <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
               <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
-              <div className="flex-1 bg-[#0d0d1a] rounded px-3 py-1 text-xs text-gray-500">Admissions report ready — Alex Chen, Grade 7 · from reports@evalent.io</div>
+              <div className="flex-1 bg-[#0d0d1a] rounded px-3 py-1 text-xs text-gray-500">Admissions report ready: Alex Chen, Grade 7 · from reports@evalent.io</div>
             </div>
             <div className="p-4 md:p-8 bg-[#0f0f1f]">
               <div className="flex items-center justify-between mb-5 pb-5 border-b border-gray-700">
@@ -336,7 +336,7 @@ export default function Home() {
               </div>
               <div className="text-xs text-gray-500 mb-1">To: sarah.ahmed@diacademy.ae · Grade 7 Entry</div>
               <div className="text-xl font-black text-white mb-3 tracking-tight">Admissions report: Alex Chen</div>
-              <p className="text-sm text-gray-400 mb-5">Hi Sarah — Alex's Grade 7 assessment is complete. Use the buttons below to record your decision instantly. No login required.</p>
+              <p className="text-sm text-gray-400 mb-5">Hi Sarah, Alex's Grade 7 assessment is complete. Use the buttons below to record your decision instantly. No login required.</p>
               <div className="bg-[#1a1a2e] border border-gray-700 rounded-xl p-4 mb-4">
                 <div className="flex items-center justify-between mb-3">
                   <div className="text-sm font-bold text-white">Alex Chen · Grade 7 · IB</div>
@@ -352,7 +352,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div className="text-xs font-bold text-gray-500 tracking-widest mb-3">RECORD YOUR DECISION — ONE CLICK, NO LOGIN REQUIRED</div>
+              <div className="text-xs font-bold text-gray-500 tracking-widest mb-3">RECORD YOUR DECISION: ONE CLICK, NO LOGIN REQUIRED</div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                 {[
                   ['✓ Admit','border-green-200 bg-green-50 text-green-700'],
@@ -386,10 +386,10 @@ export default function Home() {
             <div className="relative pl-7">
               <div className="absolute left-2 top-2 bottom-2 w-0.5 bg-gradient-to-b from-brand to-blue-100" />
               {[
-                { when: 'Day 0 — immediately', title: 'Assessment link sent', desc: 'Personalised email with secure link and instructions.', status: 'sent', color: 'bg-green-500 border-green-500' },
-                { when: 'Day 2 — if not started', title: 'Friendly reminder sent', desc: '"Your assessment link expires in 24 hours."', status: 'auto', color: 'bg-white border-brand' },
-                { when: 'Day 3 — if not complete', title: 'Expiry warning sent', desc: '"Your link expires today — click here to begin."', status: 'auto', color: 'bg-white border-brand' },
-                { when: 'Day 3 — on expiry', title: 'School notified', desc: 'You decide whether to extend or proceed.', status: 'auto', color: 'bg-white border-brand' },
+                { when: 'Day 0: immediately', title: 'Assessment link sent', desc: 'Personalised email with secure link and instructions.', status: 'sent', color: 'bg-green-500 border-green-500' },
+                { when: 'Day 2: if not started', title: 'Friendly reminder sent', desc: '"Your assessment link expires in 24 hours."', status: 'auto', color: 'bg-white border-brand' },
+                { when: 'Day 3: if not complete', title: 'Expiry warning sent', desc: '"Your link expires today. Click here to begin."', status: 'auto', color: 'bg-white border-brand' },
+                { when: 'Day 3: on expiry', title: 'School notified', desc: 'You decide whether to extend or proceed.', status: 'auto', color: 'bg-white border-brand' },
                 { when: 'After decision', title: 'Record auto-updated', desc: 'Dashboard and audit trail updated instantly.', status: 'auto', color: 'bg-white border-brand' },
               ].map((item, i) => (
                 <div key={i} className="relative mb-4">
@@ -439,7 +439,7 @@ export default function Home() {
                 <span className="text-blue-300">See every grade. Every week.</span>
               </h2>
               <p className="text-blue-300 text-sm leading-relaxed mb-6">
-                Evalent’s Strategy page gives your leadership team a live picture of every grade’s enrolment position — fill rate, retention, new entrants, gap to target. Six KPI cards update automatically. Evalent-generated signals surface the grades that need attention. And when it’s time to brief the board, one click produces a professional strategic admissions report.
+                Evalent’s Strategy page gives your leadership team a live picture of every grade’s enrolment position — fill rate, retention, new entrants, gap to target. Six KPI cards update automatically. Evalent-generated signals surface the grades that need attention. And when it is time to brief the board, one click produces a professional strategic admissions report.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 {["6 live KPI cards","Grade-level signals","8-week trend tracking","Board-ready reports","Team access controls"].map(tag => (

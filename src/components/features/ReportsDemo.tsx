@@ -69,7 +69,7 @@ export default function ReportsDemo() {
           {!running
             ? <button onClick={run} className="w-full bg-brand text-white text-sm font-bold py-2.5 rounded-xl hover:bg-blue-800">▶ Run pipeline demo</button>
             : done
-            ? <div className="text-center text-xs text-green-600 font-bold py-2">✓ Complete — report delivered in 4.5 seconds</div>
+            ? <div className="text-center text-xs text-green-600 font-bold py-2">✓ Complete: report delivered in 4.5 seconds</div>
             : <div className="text-center text-xs text-brand font-bold py-2 animate-pulse">Processing...</div>
           }
         </div>

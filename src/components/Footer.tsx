@@ -40,7 +40,7 @@ export default function Footer() {
           <div>
             <p className="text-blue-300 text-sm leading-relaxed">
               Evalent-powered admissions assessments for international and independent schools.
-              Structured reports, automated scoring, and one-click decisions — in under 5 minutes per candidate.
+              Structured reports, automated scoring, and one-click decisions, in under 5 minutes per candidate.
             </p>
           </div>
 

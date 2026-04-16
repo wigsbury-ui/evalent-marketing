@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'IB Curriculum — Evalent',
+  title: 'IB Curriculum | Evalent',
   description: 'Evalent assessments are fully calibrated for the International Baccalaureate. PYP language for Grades 3–5, MYP language for Grades 6–10.',
 }
 
@@ -21,10 +21,10 @@ export default function IBPage() {
   ]
 
   const differences = [
-    ['Learner Profile language', 'Reports reference IB Learner Profile attributes — Inquirer, Thinker, Communicator, Principled, Reflective and others — where genuinely evidenced in the student’s writing.'],
+    ['Learner Profile language', 'Reports reference IB Learner Profile attributes including Inquirer, Thinker, Communicator, Principled, Reflective and others — where genuinely evidenced in the student’s writing.'],
     ['PYP framing (G3–5)', 'Younger students are assessed with transdisciplinary language, five essential elements, and Units of Inquiry framing. Attainment is described holistically, not against national Key Stage targets.'],
     ['MYP framing (G6–10)', 'Older students are assessed against ATL skill clusters (thinking, communication, self-management, research, social), MYP global contexts, and criterion-referenced expectations.'],
-    ['Evaluation tone', 'IB reports are warm, asset-focused, and growth-oriented — reflecting the IB’s emphasis on the whole learner. Commentary never uses deficit language.'],
+    ['Evaluation tone', 'IB reports are warm, asset-focused, and growth-oriented, reflecting the IB’s emphasis on the whole learner. Commentary never uses deficit language.'],
     ['No leakage', 'British Key Stage language, SATs references, and American Common Core terminology are explicitly excluded from IB reports. What you receive is programme-pure.'],
   ]
 
@@ -79,7 +79,7 @@ export default function IBPage() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — IB Curriculum"
+              title="Evalent | IB Curriculum"
             />
             </div>
             <p className="text-center text-xs text-gray-400 mt-3">Watch this 2-minute walkthrough</p>

@@ -34,7 +34,7 @@ export async function POST(req: Request) {
         from: 'Evalent Partners <noreply@evalent.io>',
         to: ['partners@evalent.io'],
         reply_to: email,
-        subject: `Partner enquiry from ${name}${company ? ` — ${company}` : ''}`,
+        subject: `Partner enquiry from ${name}${company ? `: ${company}` : ''}`,
         html,
       }),
     })

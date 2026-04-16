@@ -20,9 +20,9 @@ export default function Page() {
     ['NZC key competencies', 'Reports reference all five key competencies: thinking; using language, symbols and texts; managing self; relating to others; and participating and contributing.'],
     ['NZC values framing', 'The mindset and values elements draw on the eight NZC values: excellence, innovation, diversity, equity, community, ecological sustainability, integrity, and respect.'],
     ['Year labels and level mapping', 'Year group naming and NZC curriculum level mapping throughout. No Grade labels, no Key Stage references.'],
-    ['Mana-enhancing language', 'Evalent’s NZC evaluation approach is asset-focused and mana-enhancing — describing what the student can do and where growth is possible.'],
+    ['Mana-enhancing language', 'Evalent’s NZC evaluation approach is asset-focused and mana-enhancing, describing what the student can do and where growth is possible.'],
     ['No deficit framing', 'Reports do not describe students as failing or below standard. They describe evidence of capability and areas for further development, consistent with New Zealand’s holistic assessment philosophy.'],
-    ['Student agency', 'The mindset section assesses readiness to engage as an active, self-directed learner — a quality the NZC places at the centre of its vision for the educated New Zealander.'],
+    ['Student agency', 'The mindset section assesses readiness to engage as an active, self-directed learner, a quality the NZC places at the centre of its vision for the educated New Zealander.'],
   ]
 
   const faqs = [
@@ -61,7 +61,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — How it works"
+              title="Evalent | How it works"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second overview</p>
@@ -74,7 +74,7 @@ export default function Page() {
               The New Zealand Curriculum is built around a vision of young people who are confident, connected, actively involved, and lifelong learners. Most admissions assessment tools were built to measure academic performance against a narrow content syllabus — which is not what the NZC is about, and not what New Zealand independent schools are looking for.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              Evalent’s New Zealand configuration assesses the academic domains your school cares about — English, Mathematics, Reasoning — but does so through an NZC lens. The writing evaluation assesses the qualities the NZC describes: clarity of thinking, purposeful use of language, and capacity to structure and present ideas.
+              Evalent’s New Zealand configuration assesses the academic domains your school cares about, including English, Mathematics, Reasoning — but does so through an NZC lens. The writing evaluation assesses the qualities the NZC describes: clarity of thinking, purposeful use of language, and capacity to structure and present ideas.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               The mindset and values section draws explicitly on the NZC’s eight values, providing a structured, documented lens on the kind of learner you are welcoming into your school community.

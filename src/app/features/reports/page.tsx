@@ -5,7 +5,7 @@ import ReportsDemo from '@/components/features/ReportsDemo'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Report Generation — Evalent Features',
+  title: 'Report Generation | Evalent Features',
   description: 'From assessment submission to a professional, school-branded PDF report in under 5 minutes. Scores, narrative, and recommendation included.',
 }
 
@@ -22,7 +22,7 @@ export default function Page() {
   const bands = [
     { band: 'Ready to admit',               cls: 'border-green-300 bg-green-50',   tc: 'text-green-700', icon: '✓', desc: 'All core domains meet your school’s entrance threshold and mindset score is strong. No significant concerns identified.' },
     { band: 'Ready to admit with support',   cls: 'border-blue-200 bg-blue-50',    tc: 'text-blue-700',  icon: '≈', desc: 'Core domains meet threshold but one area suggests the student will benefit from structured academic support in their first term.' },
-    { band: 'Borderline — further review',cls: 'border-yellow-200 bg-yellow-50',tc: 'text-yellow-700',icon: '?',     desc: 'One or more domains are below threshold. The report flags which and by how much. An interview or further assessment is recommended.' },
+    { band: 'Borderline: further review',cls: 'border-yellow-200 bg-yellow-50',tc: 'text-yellow-700',icon: '?',     desc: 'One or more domains are below threshold. The report flags which and by how much. An interview or further assessment is recommended.' },
     { band: 'Not yet ready',                  cls: 'border-red-200 bg-red-50',      tc: 'text-red-700',   icon: '✕', desc: 'Multiple domains are significantly below threshold. The report supports a clear, defensible decision with enough detail to explain to families.' },
   ]
 
@@ -60,7 +60,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Report Generation"
+              title="Evalent | Report Generation"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
@@ -72,9 +72,9 @@ export default function Page() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div>
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHAT YOU RECEIVE</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Not just scores — a complete admissions picture</h2>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Not just scores. A complete admissions picture</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-3">
-              The Evalent report gives your assessors everything they need to make a confident, defensible decision — domain-level commentary, the student's actual written responses, and a clear recommendation calibrated to your school's entrance thresholds.
+              The Evalent report gives your assessors everything they need to make a confident, defensible decision, with domain-level commentary, the student's actual written responses, and a clear recommendation calibrated to your school's entrance thresholds.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               Reports are school-branded and look like they came from your institution. This makes them suitable to share with parents when a decision needs to be explained.

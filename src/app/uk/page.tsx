@@ -44,7 +44,7 @@ export default function Page() {
             <span className="text-blue-300">built for UK independent schools.</span>
           </h1>
           <p className="text-blue-300 text-base leading-relaxed max-w-xl mx-auto mb-2">
-            Structured, evidence-based reports aligned to the British National Curriculum. Year 4 to Year 11 — in under 5 minutes per candidate.
+            Structured, evidence-based reports aligned to the British National Curriculum. Year 4 to Year 11, in under 5 minutes per candidate.
           </p>
 
           <div className="mt-6">
@@ -61,7 +61,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — How it works"
+              title="Evalent | How it works"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second overview</p>
@@ -71,7 +71,7 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE UK INDEPENDENT SCHOOL CONTEXT</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Most UK independent schools are assessing on instinct. Evalent gives you evidence.</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              The UK independent sector is academically rigorous and professionally run — but admissions is often its weakest administrative process. Schools that would never accept a vague marking scheme in the classroom routinely make entry decisions on the basis of a brief written paper, a school report from a source they cannot verify, and a 20-minute interview.
+              The UK independent sector is academically rigorous and professionally run, but admissions is often its weakest administrative process. Schools that would never accept a vague marking scheme in the classroom routinely make entry decisions on the basis of a brief written paper, a school report from a source they cannot verify, and a 20-minute interview.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Evalent does not replace the interview. It replaces the thin paper test that precedes it. Every candidate completes a structured, timed assessment covering English, Mathematics, Reasoning and Mindset. The platform scores it automatically, evaluates the extended writing and delivers a professional report to your assessor — typically within 5 minutes of submission.

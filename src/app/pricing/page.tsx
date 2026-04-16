@@ -13,7 +13,7 @@ const plans = [
     subtext: '£2,300/yr · Billed annually',
     perAssessment: '$29',
     assessments: 100,
-    tagline: 'For schools assessing up to 100 candidates per year — typically a single entry point or smaller prep school.',
+    tagline: 'For schools assessing up to 100 candidates per year, typically a single entry point or smaller prep school.',
     popular: false,
     cta: 'Start free trial',
     isEnterprise: false,

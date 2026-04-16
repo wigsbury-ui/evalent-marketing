@@ -24,7 +24,7 @@ export default function Page() {
     },
     {
       title: 'Multi-curriculum schools need a single consistent system',
-      desc: 'Some international schools run more than one curriculum stream — IB alongside British, or American alongside local national. A single assessment platform that adapts its language and framing to the relevant curriculum keeps your process consistent without requiring separate tools.',
+      desc: 'Some international schools run more than one curriculum stream, IB alongside British, or American alongside local national. A single assessment platform that adapts its language and framing to the relevant curriculum keeps your process consistent without requiring separate tools.',
     },
   ]
 
@@ -141,7 +141,7 @@ export default function Page() {
       <section className="py-12 px-6 bg-navy text-center">
         <div className="max-w-2xl mx-auto">
           <p className="text-xl font-black text-white leading-snug mb-3">
-            &ldquo;Every applicant deserves the same fair assessment — regardless of where they learned.&rdquo;
+            &ldquo;Every applicant deserves the same fair assessment, regardless of where they learned.&rdquo;
           </p>
           <p className="text-blue-300 text-sm">The Evalent principle for international admissions</p>
         </div>

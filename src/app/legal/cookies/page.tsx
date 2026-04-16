@@ -2,7 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Cookie Policy — Evalent',
+  title: 'Cookie Policy | Evalent',
   description: 'How Evalent uses cookies and similar technologies on its marketing website and platform.',
 }
 

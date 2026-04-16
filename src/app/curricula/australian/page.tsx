@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Australian Curriculum — Evalent',
+  title: 'Australian Curriculum | Evalent',
   description: 'Evalent assessments for Australian independent schools use ACARA general capabilities language, Year group labels, and criterion-referenced scoring. Years 4 to 10.',
 }
 
@@ -20,7 +20,7 @@ export default function AustralianPage() {
   ]
   const differences = [
     ['ACARA general capabilities language', 'Reports use language aligned to the Australian Curriculum&apos;s general capabilities framework — literacy, numeracy, critical and creative thinking, and personal and social capability — where evidenced in the student&apos;s work.'],
-    ['Year group labels throughout', 'Year labels are used throughout — Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or report. Primary and lower secondary framing is applied automatically based on year group.'],
+    ['Year group labels throughout', 'Year labels are used throughout, from Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or report. Primary and lower secondary framing is applied automatically based on year group.'],
     ['NAPLAN is not a comparison point', 'Evalent is a criterion-referenced admissions assessment, not a population measure. Scores are expressed against your school&apos;s entry thresholds, not national percentiles or NAPLAN bands.'],
     ['Writing evaluated against Australian standards', 'Extended writing tasks are evaluated for task completion, organisation, vocabulary, and accuracy — using language consistent with Australian Curriculum achievement standards at the appropriate year level.'],
     ['Senior pathway readiness at Year 10', 'For Year 10 entry, the report includes academic maturity indicators relevant to ATAR, IB, and IGCSE pathway readiness — giving your admissions team evidence for both the entry decision and initial subject pathway placement.'],
@@ -32,7 +32,7 @@ export default function AustralianPage() {
     ['How does Evalent compare to ACER assessments?', 'ACER provides norm-referenced scholarship ranking. Evalent provides criterion-referenced entry profiling. Many schools use Evalent for general enrolment and ACER specifically for scholarship selection.'],
     ['Is Evalent suitable for boarding school applicants?', 'Particularly well-suited. Boarding applicants often cannot attend assessment days in person. Evalent&apos;s remote-first model means a student in rural Queensland or based overseas completes the same structured assessment as a local day applicant.'],
     ['Can we configure our own thresholds?', 'Yes. Each school sets its own pass thresholds per domain per year group. Evalent reflects your standards, not a national benchmark.'],
-    ['Does Evalent use Year or Grade labels?', 'Year labels throughout — Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or the report.'],
+    ['Does Evalent use Year or Grade labels?', 'Year labels throughout, from Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or the report.'],
   ]
 
   return (
@@ -62,12 +62,12 @@ export default function AustralianPage() {
               Australian independent schools invest heavily in academic programmes and student outcomes. But the evidence gathered during admissions is often thinner than the data collected in a single semester of student performance. A NAPLAN result tells you where a student ranked nationally two years ago. It does not tell you whether they are ready for your school.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
-              Evalent fills that gap — with a structured, timed assessment that uses Australian Curriculum language, Year group labels, and criterion-referenced scoring against the entry standards your school defines.
+              Evalent fills that gap with a structured, timed assessment that uses Australian Curriculum language, Year group labels, and criterion-referenced scoring against the entry standards your school defines.
             </p>
             <div className="space-y-2">
               {[
                 'ACARA general capabilities language in reports',
-                'Year group labels throughout — no Grade labels',
+                'Year group labels throughout, no Grade labels',
                 'Criterion-referenced against your thresholds, not NAPLAN bands',
                 'Writing evaluated against Australian Curriculum standards',
                 'ATAR / IB / IGCSE pathway indicators at Year 10',
@@ -86,7 +86,7 @@ export default function AustralianPage() {
                 style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                title="Evalent — Australian Curriculum"
+                title="Evalent | Australian Curriculum"
               />
             </div>
             <p className="text-center text-xs text-gray-400 mt-2">Watch this 2-minute walkthrough</p>

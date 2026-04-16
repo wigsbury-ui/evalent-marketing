@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'New Zealand Curriculum — Evalent',
+  title: 'New Zealand Curriculum | Evalent',
   description: 'Evalent assessments for New Zealand independent schools use NZC key competency language, curriculum levels, and a values-informed mindset section. Years 4 to 10.',
 }
 
@@ -19,10 +19,10 @@ export default function NZCPage() {
     ['Year 10', 'NZC Level 5', '~60 min', '52 items'],
   ]
   const differences = [
-    ['Key competency language in reports', 'The five NZC key competencies — Thinking; Using Language, Symbols and Texts; Managing Self; Relating to Others; Participating and Contributing — are referenced in the written commentary where genuinely evidenced in the student&apos;s work.'],
+    ['Key competency language in reports', 'The five NZC key competencies, Thinking; Using Language, Symbols and Texts; Managing Self; Relating to Others; Participating and Contributing — are referenced in the written commentary where genuinely evidenced in the student&apos;s work.'],
     ['NZC curriculum level framing', 'Assessment and reporting is structured around NZC curriculum levels rather than year-group attainment targets. Levels 2 through 5 are covered, mapping automatically to the appropriate year group.'],
     ['Writing evaluated through an NZC lens', 'Extended writing tasks are evaluated for clarity of thinking, purposeful use of language, and the capacity to structure and present ideas — the qualities the NZC describes as central to literate, capable learners.'],
-    ['Values-informed mindset section', 'The Mindset section draws on the NZC&apos;s eight values — excellence, innovation, inquiry, curiosity, diversity, equity, community, and integrity — providing a structured lens on the kind of learner you are welcoming into your school.'],
+    ['Values-informed mindset section', 'The Mindset section draws on the NZC&apos;s eight values of excellence, innovation, inquiry, curiosity, diversity, equity, community, and integrity — providing a structured lens on the kind of learner you are welcoming into your school.'],
     ['Asset-focused, growth-oriented tone', 'Reports describe what the student demonstrates and where further development is possible — reflecting the NZC’s vision of confident, connected, actively involved, and lifelong learners.'],
     ['No offshore terminology', 'Key Stage language, SATs references, NAPLAN framing, Common Core, and ACARA terminology are excluded. Reports use Year labels throughout and reflect New Zealand schooling norms.'],
   ]
@@ -32,7 +32,7 @@ export default function NZCPage() {
     ['Can we use Evalent for international students applying to NZ schools?', 'Yes. The assessment link can be sent to any email address worldwide. Students complete it on any device, making it well-suited for families applying from overseas or from other regions of New Zealand.'],
     ['Is there a national admissions standard Evalent aligns to?', 'New Zealand has no national independent school admissions standard. Evalent provides the structured, documented assessment record that individual schools need to make consistent, evidenced decisions against their own entry criteria.'],
     ['Can we set our own entry thresholds?', 'Yes. You configure your school’s entrance thresholds by year group and by domain. Evalent reflects your standards, not a national benchmark.'],
-    ['Does Evalent use Year or Grade labels?', 'Year labels throughout — Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or report.'],
+    ['Does Evalent use Year or Grade labels?', 'Year labels throughout, from Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or report.'],
   ]
 
   return (
@@ -62,7 +62,7 @@ export default function NZCPage() {
               The New Zealand Curriculum is built around a vision of young people who are confident, connected, actively involved, and lifelong learners. Most admissions assessment tools were built to measure academic performance against a narrow content syllabus — which is not what the NZC is about, and not what New Zealand independent schools are looking for.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed mb-5">
-              Evalent assesses the domains your school cares about — English, Mathematics, and Reasoning — but frames evaluation and reporting through an NZC lens. Your team will recognise the language. Your applicants experience an assessment that reflects the values of the school they are applying to.
+              Evalent assesses the domains your school cares about, including English, Mathematics, and Reasoning — but frames evaluation and reporting through an NZC lens. Your team will recognise the language. Your applicants experience an assessment that reflects the values of the school they are applying to.
             </p>
             <div className="space-y-2">
               {[
@@ -71,7 +71,7 @@ export default function NZCPage() {
                 'Writing evaluated for thinking and language use',
                 'Values-informed mindset section (8 NZC values)',
                 'Asset-focused, growth-oriented report tone',
-                'Year labels throughout — no Grade labels',
+                'Year labels throughout, no Grade labels',
               ].map(item => (
                 <div key={item} className="flex items-start gap-2 text-xs text-gray-700">
                   <span className="text-teal-600 font-bold flex-shrink-0 mt-0.5">✓</span>{item}
@@ -86,7 +86,7 @@ export default function NZCPage() {
                 style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                title="Evalent — New Zealand Curriculum"
+                title="Evalent | New Zealand Curriculum"
               />
             </div>
             <p className="text-center text-xs text-gray-400 mt-2">Watch this 2-minute walkthrough</p>

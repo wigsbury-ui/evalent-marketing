@@ -107,7 +107,7 @@ export default function StrategyDemo() {
     <div className="rounded-2xl border border-gray-200 bg-white shadow-xl overflow-hidden">
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-gray-50 border-b border-gray-100">
-        <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Live preview — Strategy page</span>
+        <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Live preview: Strategy page</span>
         <div className="flex items-center gap-1">
           <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
           <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />

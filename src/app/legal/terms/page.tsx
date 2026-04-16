@@ -2,7 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Terms of Service — Evalent',
+  title: 'Terms of Service | Evalent',
   description: 'Evalent Terms of Service. Payments processed by Paddle as Merchant of Record.',
 }
 

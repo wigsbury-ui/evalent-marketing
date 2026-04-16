@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Strategy & Enrolment Planning — Evalent Features',
+  title: 'Strategy & Enrolment Planning | Evalent Features',
   description: 'See your school\'s complete enrolment picture in real time. Six live KPI metrics, Evalent-generated grade signals, and board-ready executive reports.',
 }
 
@@ -53,7 +53,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Strategy & Enrolment"
+              title="Evalent | Strategy & Enrolment"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
@@ -65,7 +65,7 @@ export default function Page() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div>
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE ENROLMENT COMMAND CENTRE</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Know where every grade stands — without a spreadsheet</h2>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Know where every grade stands, without a spreadsheet</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-3">
               Most schools manage enrolment across a patchwork of spreadsheets, emails, and meeting notes.
               Evalent replaces that with a single live view of every grade: how full it is, who is leaving,
@@ -107,7 +107,7 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">ENROLMENT BY GRADE</div>
             <h2 className="text-2xl font-black text-navy tracking-tight">Every grade. One view.</h2>
             <p className="text-gray-500 text-sm mt-2 max-w-2xl mx-auto">
-              The Enrolment by Grade chart shows your whole school on a single canvas — current year as a thin blue bar, next year projected as a stacked column, leavers below the baseline, and your target as a dashed line. Seven legend items are individually clickable, fading everything else to reveal the signal you&apos;re looking for.
+              The Enrolment by Grade chart shows your whole school on a single canvas. Current year as a thin blue bar, next year projected as a stacked column, leavers below the baseline, and your target as a dashed line. Seven legend items are individually clickable, fading everything else to reveal the signal you&apos;re looking for.
             </p>
           </div>
           <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-xl">

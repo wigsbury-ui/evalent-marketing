@@ -2,7 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Refund Policy — Evalent',
+  title: 'Refund Policy | Evalent',
   description: 'Evalent refund and cancellation policy. 14-day refund on first payment. Powered by Paddle.',
 }
 

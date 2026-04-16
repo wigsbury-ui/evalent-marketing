@@ -18,7 +18,7 @@ export default function Page() {
 
   const differences = [
     ['ACARA general capabilities', 'Reports reference the Australian Curriculum’s seven general capabilities, familiar to any Australian educator.'],
-    ['Year labels throughout', 'The platform uses Australian Year group naming. Year 4, Year 7, Year 10 — not Grade labels.'],
+    ['Year labels throughout', 'The platform uses Australian Year group naming. Year 4, Year 7, Year 10, not Grade labels.'],
     ['Primary / secondary framing', 'Foundation–Year 6 and Years 7–10 are assessed and reported with different expectations, consistent with the ACARA band structure.'],
     ['Proficiency strand language', 'Maths reports reference ACARA’s four proficiency strands: understanding, fluency, problem-solving, and reasoning.'],
     ['No UK or US terminology', 'Key Stage, SATs, Common Core, and GCSE language are explicitly excluded. Your assessors see reports written for an Australian context.'],
@@ -44,7 +44,7 @@ export default function Page() {
             <span className="text-blue-300">built for Australian independent schools.</span>
           </h1>
           <p className="text-blue-300 text-base leading-relaxed max-w-xl mx-auto mb-2">
-            ACARA-aligned reports from Year 4 to Year 10. Structured evidence for local and international applicants alike — delivered in under 5 minutes.
+            ACARA-aligned reports from Year 4 to Year 10. Structured evidence for local and international applicants alike, delivered in under 5 minutes.
           </p>
 
           <div className="mt-6">
@@ -61,7 +61,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — How it works"
+              title="Evalent | How it works"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second overview</p>

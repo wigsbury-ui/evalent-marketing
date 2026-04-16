@@ -66,7 +66,7 @@ export default function PartnersPage() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Admissions Intelligence Platform"
+              title="Evalent | Admissions Intelligence Platform"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-3">Two minutes. The complete picture.</p>
@@ -83,7 +83,7 @@ export default function PartnersPage() {
                 A product schools need.<br/>A market ready to buy.
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Independent and international schools spend significant time and money on admissions &mdash; yet most still rely on unstructured evidence. Evalent solves a problem that every admissions team feels.
+                Independent and international schools spend significant time and money on admissions, yet most still rely on unstructured evidence. Evalent solves a problem that every admissions team feels.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 When you introduce a school to Evalent, you&apos;re offering something they can trial for free, with no credit card, and see working within 5 minutes. Conversion is straightforward because the product sells itself.
@@ -93,7 +93,7 @@ export default function PartnersPage() {
                   'Attractive commission across multiple tiers',
                   'Dedicated partner portal to track clicks and earnings',
                   'Free trial means schools can say yes immediately',
-                  'Global market — no geographic restrictions',
+                  'Global market, no geographic restrictions',
                   'Monthly payouts with full transparency',
                   'Dedicated account manager from day one',
                 ].map(item => (
@@ -287,7 +287,7 @@ export default function PartnersPage() {
             </div>
             <div className="border border-gray-200 rounded-xl p-4">
               <div className="text-sm font-bold text-navy mb-1.5">Do referred schools need to be new to Evalent?</div>
-              <div className="text-sm text-gray-600 leading-relaxed">Yes &mdash; the programme applies to new customers only. Schools already using Evalent cannot be retrospectively attributed to a partner.</div>
+              <div className="text-sm text-gray-600 leading-relaxed">Yes, the programme applies to new customers only. Schools already using Evalent cannot be retrospectively attributed to a partner.</div>
             </div>
             <div className="border border-gray-200 rounded-xl p-4">
               <div className="text-sm font-bold text-navy mb-1.5">I want a custom arrangement. Is that possible?</div>

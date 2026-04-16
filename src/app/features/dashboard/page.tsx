@@ -5,8 +5,8 @@ import DashboardDemo from '@/components/features/DashboardDemo'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Assessment Dashboard — Evalent Features',
-  description: 'Track every applicant in real time. See who has completed, who is in progress, and who needs a nudge — all from one screen.',
+  title: 'Assessment Dashboard | Evalent Features',
+  description: 'Track every applicant in real time. See who has completed, who is in progress, and who needs a nudge, all from one screen.',
 }
 
 export default function Page() {
@@ -27,7 +27,7 @@ export default function Page() {
   ]
 
   const faqs = [
-    ['Can I filter by grade or curriculum?', 'Yes — the dashboard can be filtered by grade, curriculum, and status. Particularly useful for schools running assessments across multiple entry points simultaneously.'],
+    ['Can I filter by grade or curriculum?', 'Yes, the dashboard can be filtered by grade, curriculum, and status. Particularly useful for schools running assessments across multiple entry points simultaneously.'],
     ['Can multiple admin users see the dashboard?', 'All school admin users on your Evalent account have dashboard access. Permissions can be configured by role.'],
     ['Can I export the data?', 'CSV export is available from the dashboard. Useful for integration with your admissions CRM or for sharing with board members.'],
     ['How quickly do scores appear after completion?', 'Scores are calculated and the dashboard updates within seconds of the student submitting their assessment.'],
@@ -60,7 +60,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Assessment Dashboard"
+              title="Evalent | Assessment Dashboard"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
@@ -72,7 +72,7 @@ export default function Page() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div>
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE COMMAND CENTRE</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Know where every applicant stands — without asking</h2>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Know where every applicant stands, without asking</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-3">
               Tracking twenty or thirty applicants traditionally means chasing emails, updating spreadsheets, and asking colleagues whether they've seen a result. Evalent replaces all of that with a single automatically updated dashboard.
             </p>

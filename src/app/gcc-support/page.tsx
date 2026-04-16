@@ -50,7 +50,7 @@ export default function GccSupportPage() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Standing with GCC International Schools"
+              title="Evalent | Standing with GCC International Schools"
             />
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function GccSupportPage() {
           <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Why we are doing this</h2>
           <p className="text-gray-600 text-base leading-relaxed mb-4">
             Evalent was founded in the GCC. Our team and our understanding
-            of what excellent international schooling looks like — all of it was shaped in this region.
+            of what excellent international schooling looks like. All of it was shaped in this region.
           </p>
           <p className="text-gray-600 text-base leading-relaxed mb-4">
             We know that international schools across the Gulf are navigating an unusually difficult period right now.
@@ -71,7 +71,7 @@ export default function GccSupportPage() {
           </p>
           <p className="text-gray-600 text-base leading-relaxed">
             So we wanted to do something concrete. Every international school in the GCC can use Evalent free for a
-            full year — no charge, and no commitment beyond one thing: if it helps, we ask that you
+            full year, no charge, and no commitment beyond one thing: if it helps, we ask that you
             share your experience with us.
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function GccSupportPage() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-6">
             <div className="inline-block bg-blue-50 text-brand text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-3">WHAT YOU GET</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight">Everything in Essentials — free for 12 months</h2>
+            <h2 className="text-2xl font-black text-navy tracking-tight">Everything in Essentials, free for 12 months</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
@@ -90,7 +90,7 @@ export default function GccSupportPage() {
               ['Evalent-generated reports', 'Each completed assessment produces a professional report ready for your assessor within minutes.'],
               ['Full admissions workflow', 'Register students, track progress, record decisions, and maintain a full audit trail.'],
               ['All grades 3–10', 'Assessments calibrated to each grade level for every curriculum you teach.'],
-              ['Assessor decision tools', 'Email-based decision workflow — accept, waitlist, or decline with one click.'],
+              ['Assessor decision tools', 'Email-based decision workflow: accept, waitlist, or decline with one click.'],
               ['Priority onboarding', 'We will personally help you set up your first cohort.'],
             ].map(([title, desc]) => (
               <div key={title} className="border border-blue-100 rounded-xl p-5">
@@ -133,13 +133,13 @@ export default function GccSupportPage() {
             In return, we ask for your story.
           </h2>
           <p className="text-gray-600 text-base leading-relaxed mb-4">
-            This offer is completely free — but it is not unconditional. In exchange for your free year,
+            This offer is completely free, but it is not unconditional. In exchange for your free year,
             we ask that your international school agrees to provide either a written testimonial or a short case study
             about your experience with Evalent.
           </p>
           <p className="text-gray-600 text-base leading-relaxed mb-4">
             We are not asking for a marketing brochure. A few honest sentences from your admissions
-            lead about what worked, what changed, and whether you would recommend it — that is all we need.
+            lead about what worked, what changed, and whether you would recommend it. That is all we need.
             We will reach out near the end of your free year to collect it.
           </p>
           <p className="text-gray-600 text-base leading-relaxed">
@@ -158,10 +158,10 @@ export default function GccSupportPage() {
           </div>
           <div className="flex flex-col gap-4">
             {[
-              ['Start a free trial', 'Create your school account at evalent.io — it takes under two minutes.'],
+              ['Start a free trial', 'Create your school account at evalent.io. It takes under two minutes.'],
               ['Complete your school setup', 'Configure your curriculum, grades, and assessor details in the onboarding flow.'],
               ['Enter GCC2026 on the Billing page', 'In your dashboard, go to Billing → type GCC2026 → click Apply before proceeding to checkout.'],
-              ['Check out at $0', 'Essentials shows as free for Year 1. Your card is saved for auto-renewal after 12 months — cancel any time before then at no cost.'],
+              ['Check out at $0', 'Essentials shows as free for Year 1. Your card is saved for auto-renewal after 12 months, cancel any time before then at no cost.'],
             ].map(([title, desc], i) => (
               <div key={i} className="flex gap-4 items-start">
                 <div className="w-8 h-8 rounded-full bg-brand text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
@@ -198,7 +198,7 @@ export default function GccSupportPage() {
             </Link>
           </div>
           <p className="text-xs text-gray-400 mt-6">
-            Questions? Email <a href="mailto:team@evalent.io" className="text-brand">team@evalent.io</a> — we respond personally.
+            Questions? Email <a href="mailto:team@evalent.io" className="text-brand">team@evalent.io</a>. We respond personally.
           </p>
         </div>
       </section>

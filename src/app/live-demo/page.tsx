@@ -5,7 +5,7 @@ import EvalDemoWidget from '@/components/EvalDemoWidget'
 import HeroTrialButton from '@/components/HeroTrialButton'
 
 export const metadata: Metadata = {
-  title: 'Live Demo — See Evalent Evaluate',
+  title: 'Live Demo | See Evalent Evaluate',
   description: 'Write any response and watch Evalent score it across four criteria in seconds. Calibrated to grade and curriculum.',
 }
 
@@ -26,7 +26,7 @@ export default function LiveDemoPage() {
             <span className="text-blue-300">On your own words.</span>
           </h1>
           <p className="text-blue-300 text-base leading-relaxed mb-8 max-w-xl mx-auto">
-            Write any response — 50 words or more — and watch Evalent score it across four criteria in seconds. Calibrated to grade and curriculum.
+            Write any response, 50 words or more, and watch Evalent score it across four criteria in seconds. Calibrated to grade and curriculum.
           </p>
           <HeroTrialButton />
         </div>

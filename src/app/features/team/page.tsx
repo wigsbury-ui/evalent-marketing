@@ -5,15 +5,15 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Team & Access Management — Evalent Features',
+  title: 'Team & Access Management | Evalent Features',
   description: 'Give every team member exactly the access they need. Four role groups, six permissions, and full control — without complexity.',
 }
 
 export default function Page() {
   const features = [
-    { label: 'Four role groups',      desc: 'Admissions Team, Senior Leadership, Board Chair, Board Members — each with tailored presets' },
+    { label: 'Four role groups',      desc: 'Admissions Team, Senior Leadership, Board Chair, Board Members, each with tailored presets' },
     { label: 'Six permissions',       desc: 'Register students, send assessments, dashboard, reports, strategy, executive reports' },
-    { label: 'Three access levels',   desc: 'Edit, View, or No access — precise control over every feature for every person' },
+    { label: 'Three access levels',   desc: 'Edit, View, or No access, precise control over every feature for every person' },
     { label: 'Individual overrides',  desc: 'Adjust any person beyond their role preset, with clear visual indicators for modified settings' },
   ]
 
@@ -53,7 +53,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Team Management"
+              title="Evalent | Team Management"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
@@ -65,11 +65,11 @@ export default function Page() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div>
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">ACCESS & GOVERNANCE</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">The right people see the right things — automatically</h2>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">The right people see the right things, automatically</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-3">
               As your admissions operation grows, so does the question of who should see what. Should your board
               see individual student reports? Should an assessor be able to register new students? Evalent&apos;s
-              team management page answers these questions with precision — not with a long settings menu, but with
+              team management page answers these questions with precision, not with a long settings menu, but with
               a clear, visual permission grid.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">

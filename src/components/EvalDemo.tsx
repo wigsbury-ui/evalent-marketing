@@ -143,7 +143,7 @@ export default function EvalDemo() {
               <span style={{ color: BRAND }}>Right now.</span>
             </h2>
             <p style={{ fontSize: '17px', color: '#4b5563', lineHeight: 1.65, margin: 0, maxWidth: '380px' }}>
-              Write any response — 50 words or more — and watch Evalent score it across four criteria in seconds.
+              Write any response, 50 words or more, and watch Evalent score it across four criteria in seconds.
             </p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', minWidth: '260px', paddingTop: '88px' }}>
@@ -203,7 +203,7 @@ export default function EvalDemo() {
                 style={{ width: '100%', boxSizing: 'border-box' as const, border: `1.5px solid ${ready ? '#86efac' : '#e2e8f0'}`, borderRadius: '12px', padding: '14px 16px', fontSize: '14px', color: '#07112e', fontFamily: 'Figtree, sans-serif', resize: 'none' as const, outline: 'none', minHeight: '160px', lineHeight: 1.65, transition: 'border-color 0.2s', background: 'white' }}
               />
               <div style={{ fontSize: '12px', color: ready ? '#16a34a' : '#94a3b8', fontWeight: ready ? 700 : 400, marginTop: '8px', marginBottom: '14px' }}>
-                {words} word{words !== 1 ? 's' : ''}{!ready ? ` — ${50 - words} more needed` : ' ✓ ready to evaluate'}
+                {words} word{words !== 1 ? 's' : ''}{!ready ? ` , ${50 - words} more needed` : ' ✓ ready to evaluate'}
               </div>
               <button onClick={evaluate} disabled={!ready || state === 'loading'} style={{ width: '100%', padding: '14px', borderRadius: '12px', border: 'none', background: ready && state !== 'loading' ? BRAND : '#f1f5f9', color: ready && state !== 'loading' ? 'white' : '#94a3b8', fontSize: '14px', fontWeight: 800, cursor: ready && state !== 'loading' ? 'pointer' : 'not-allowed', transition: 'all 0.2s', letterSpacing: '0.01em', fontFamily: 'Figtree, sans-serif' }}>
                 {state === 'loading' ? 'Evaluating...' : ready ? 'Evaluate my writing →' : `${50 - words} more words to unlock`}
@@ -310,7 +310,7 @@ export default function EvalDemo() {
                   </div>
 
                   <a href="/#trial" style={{ display: 'block', textAlign: 'center' as const, padding: '13px', borderRadius: '12px', background: BRAND, color: 'white', fontSize: '13px', fontWeight: 800, textDecoration: 'none', letterSpacing: '0.01em' }}>
-                    Use this for real applicants — start free trial →
+                    Use this for real applicants. Start free trial →
                   </a>
                   <style>{`@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }`}</style>
                 </div>

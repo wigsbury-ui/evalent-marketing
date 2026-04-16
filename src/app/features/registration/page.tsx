@@ -5,7 +5,7 @@ import RegistrationDemo from '@/components/features/RegistrationDemo'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Student Registration — Evalent Features',
+  title: 'Student Registration | Evalent Features',
   description: 'Register students in seconds. Evalent automatically sends assessment links, tracks completion, and notifies you the moment results are ready.',
 }
 
@@ -38,7 +38,7 @@ export default function Page() {
               style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent — Student Registration"
+              title="Evalent | Student Registration"
             />
           </div>
           <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
@@ -52,7 +52,7 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">HOW IT WORKS</div>
             <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Register a student in 60 seconds. Evalent handles the rest.</h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-3">
-              Most admissions teams spend significant time on the administrative side of assessments — preparing links, sending individual emails, chasing reminders, and collecting results. Evalent eliminates every one of those steps.
+              Most admissions teams spend significant time on the administrative side of assessments, preparing links, sending individual emails, chasing reminders, and collecting results. Evalent eliminates every one of those steps.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               When you register a student, Evalent automatically generates a personalised, secure assessment link calibrated to their grade level and your school's chosen curriculum. The link is emailed immediately.
@@ -62,7 +62,7 @@ export default function Page() {
             {[
               { n: '1', text: "Enter the student's name, email, grade and curriculum", cls: 'border-brand/20 bg-blue-50', tc: 'text-brand' },
               { n: '2', text: 'Evalent sends the secure assessment link automatically', cls: 'border-green-200 bg-green-50', tc: 'text-green-700' },
-              { n: '3', text: 'You receive the completed report — nothing else to do', cls: 'border-purple-200 bg-purple-50', tc: 'text-purple-700' },
+              { n: '3', text: 'You receive the completed report. Nothing else to do', cls: 'border-purple-200 bg-purple-50', tc: 'text-purple-700' },
             ].map(({ n, text, cls, tc }) => (
               <div key={n} className={`flex items-start gap-3 border rounded-xl p-4 ${cls}`}>
                 <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-black flex-shrink-0 ${tc} border-current`}>{n}</span>
