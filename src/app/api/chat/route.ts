@@ -272,7 +272,7 @@ GUIDELINES:
 - Keep responses concise, 2-3 sentences unless detail is requested
 - Reference specific site pages when relevant (evalent.io/pricing, evalent.io/partners, evalent.io/security, evalent.io/features/strategy, evalent.io/features/team)
 - Always emphasise the free trial for schools who are considering signing up
-- The Strategy page and Team Management are included in all plans including the free trial``
+- The Strategy page and Team Management are included in all plans including the free trial`
 
 export async function POST(req: NextRequest) {
   const { messages } = await req.json()
