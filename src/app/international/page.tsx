@@ -67,11 +67,14 @@ export default function Page() {
       {/* VIDEO */}
       <section className="px-6 bg-white pt-10 pb-2">
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-2xl overflow-hidden relative shadow-xl bg-gray-100" style={{ paddingTop: '56.25%' }}>
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <div className="text-4xl mb-3">🌐</div>
-              <p className="text-sm text-gray-400 font-medium">Video walkthrough coming soon</p>
-            </div>
+          <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1183729955?autoplay=0&title=0&byline=0&portrait=0&texttrack=en"
+              className="absolute inset-0 w-full h-full"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="Evalent for International Schools"
+            />
           </div>
           <p className="text-center text-xs text-gray-400 mt-2">90-second walkthrough</p>
         </div>
