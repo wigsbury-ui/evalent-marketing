@@ -231,7 +231,6 @@ export default function Nav() {
                 → {label}
               </Link>
             ))}
-            <Link href="/live-demo" className={`block pt-1 transition-colors font-semibold ${isDemo ? 'text-brand' : 'text-gray-700'}`}>Live demo</Link>
             <Link href="/blog" className={`block pt-1 transition-colors ${isBlog ? 'text-brand font-semibold' : 'text-gray-600'}`}>Blog</Link>
             <Link href="/pricing" className={`block pt-1 transition-colors ${isPricing ? 'text-brand font-semibold' : 'text-gray-600'}`}>Pricing</Link>
             <Link href="/about" className={`block pt-1 transition-colors ${pathname === '/about' ? 'text-brand font-semibold' : 'text-gray-600'}`}>About</Link>
