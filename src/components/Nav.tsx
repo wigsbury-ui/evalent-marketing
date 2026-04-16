@@ -157,7 +157,6 @@ export default function Nav() {
   const isCurricula = pathname.startsWith('/curricula')
   const isCountries = ['/uk', '/usa', '/australia', '/new-zealand', '/international'].some(p => pathname === p)
   const isPricing   = pathname === '/pricing'
-  const isDemo      = pathname === '/live-demo'
   const isBlog      = pathname.startsWith('/blog')
 
   return (
