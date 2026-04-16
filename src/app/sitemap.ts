@@ -52,6 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/partners',                   priority: 0.7,  changeFrequency: 'monthly' as const },
     // Blog
     { url: '/blog',                       priority: 0.7,  changeFrequency: 'weekly'  as const },
+    { url: '/faq',                        priority: 0.8,  changeFrequency: 'monthly' as const },
   ]
 
   return routes.map(route => ({
