@@ -38,6 +38,9 @@ const securityHeaders = [
   },
 ]
 
-nextConfig.headers = async () => [{ source: '/(.*)', headers: securityHeaders }]
+const configWithHeaders = {
+  ...nextConfig,
+  headers: async () => [{ source: '/(.*)', headers: securityHeaders }],
+}
 
-module.exports = nextConfig
+module.exports = configWithHeaders

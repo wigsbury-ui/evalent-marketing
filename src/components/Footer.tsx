@@ -19,7 +19,7 @@ export default function Footer() {
             opacity: 0.04,
             animation: 'spin-slow 120s linear infinite',
             transformOrigin: 'center center',
-          }}
+          }} alt=""
         />
       </div>
 

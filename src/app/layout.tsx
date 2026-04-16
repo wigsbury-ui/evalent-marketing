@@ -10,6 +10,10 @@ import { EvalentChat } from '@/components/EvalentChat'
 const figtree = Figtree({ subsets: ['latin'], variable: '--font-figtree' })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.evalent.io'),
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: [
       { url: '/favicon-24.png', sizes: '24x24', type: 'image/png' },

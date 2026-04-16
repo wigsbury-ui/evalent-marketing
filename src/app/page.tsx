@@ -101,7 +101,7 @@ export default function Home() {
               opacity: 0.03,
               animation: 'spin-slow-hero 240s linear infinite',
               transformOrigin: 'center center',
-            }}
+            }} alt=""
           />
         </div>
         <style>{`
@@ -331,7 +331,7 @@ export default function Home() {
             </div>
             <div className="p-4 md:p-8 bg-[#0f0f1f]">
               <div className="flex items-center justify-between mb-5 pb-5 border-b border-gray-700">
-                <img src="/mark_white.svg" alt="Evalent" style={{ width: "32px", height: "32px", opacity: 1, filter: "brightness(0) invert(1)" }} />
+                <img src="/mark_white.svg" alt="Evalent" style={{ width: "32px", height: "32px", opacity: 1, filter: "brightness(0) invert(1)" }} alt="" />
                 <div className="bg-navy text-white text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wide">REPORT READY</div>
               </div>
               <div className="text-xs text-gray-500 mb-1">To: sarah.ahmed@diacademy.ae · Grade 7 Entry</div>
