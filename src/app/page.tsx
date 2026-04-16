@@ -171,7 +171,7 @@ export default function Home() {
         </div>
       </section>
       {/* THREE CAPABILITIES */}
-      <section className="py-14 px-6 bg-white border-b border-gray-100">
+      <section className="py-8 px-6 bg-white border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-2">Everything your admissions operation needs</p>
