@@ -528,7 +528,6 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
-        <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
       <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
       <Footer />
     </div>
