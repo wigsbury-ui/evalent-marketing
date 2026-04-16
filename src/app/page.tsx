@@ -101,7 +101,7 @@ export default function Home() {
               opacity: 0.03,
               animation: 'spin-slow-hero 240s linear infinite',
               transformOrigin: 'center center',
-            }} alt=""
+            }}
           />
         </div>
         <style>{`
