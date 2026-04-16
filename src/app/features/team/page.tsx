@@ -1,3 +1,14 @@
+const teamFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What role groups does Evalent Team Management offer?", "acceptedAnswer": {"@type": "Answer", "text": "Evalent offers four role groups: Admissions Team for day-to-day operations, Senior Leadership for full operational and strategic access, Board Chair for governance with executive report generation, and Board Members for strategic overview without individual student data access."}},
+    {"@type": "Question", "name": "Can board members see enrolment data without seeing individual student records?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Board Members role group provides access to enrolment KPIs, strategic signals, and executive reports but has no access to individual student data, assessment reports, or admission decisions."}},
+    {"@type": "Question", "name": "Is there a limit on team members in Evalent?", "acceptedAnswer": {"@type": "Answer", "text": "No. There is no limit on the number of team members per school. Each person is assigned to a role group and can have individual permission overrides."}},
+    {"@type": "Question", "name": "Is Team Management included in the free trial?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Team Management with all four role groups and permission controls is fully available during the 10-report free trial."}}
+  ]
+}
+
 import HeroTrialButton from '@/components/HeroTrialButton'
 import TeamDemo from '@/components/features/TeamDemo'
 import Nav from '@/components/Nav'
@@ -133,6 +144,7 @@ export default function Page() {
         </div>
       </div>
 
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(teamFaqSchema) }} />
       <Footer />
     </div>
   )

@@ -58,6 +58,40 @@ const orgSchema = {
   "sameAs": []
 }
 
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Evalent",
+  "applicationCategory": "EducationApplication",
+  "applicationSubCategory": "Admissions Assessment Software",
+  "operatingSystem": "Web",
+  "description": "Evalent is an admissions intelligence platform for international and independent schools. Structured assessments, automated professional reports in under 5 minutes, one-click decisions, and live enrolment intelligence across every grade.",
+  "url": "https://www.evalent.io",
+  "screenshot": "https://www.evalent.io/og-default.png",
+  "featureList": ["Structured admissions assessments for Grades 3-10", "Automated professional reports in under 5 minutes", "One-click decision workflow via email", "Live enrolment KPI dashboard with 6 KPI cards", "Executive report generator for board packs", "Role-based team access management", "IB, British, American, Australian and NZ curriculum support"],
+  "offers": [
+    {"@type": "Offer", "name": "Essentials", "price": "2900", "priceCurrency": "USD"},
+    {"@type": "Offer", "name": "Professional", "price": "5500", "priceCurrency": "USD"},
+    {"@type": "Offer", "name": "Enterprise", "price": "9500", "priceCurrency": "USD"}
+  ],
+  "provider": {"@type": "Organization", "name": "Evalent Ltd", "url": "https://www.evalent.io"}
+}
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to assess a school applicant with Evalent",
+  "description": "A step-by-step guide to running a structured admissions assessment and receiving a professional report using Evalent.",
+  "totalTime": "PT50M",
+  "step": [
+    {"@type": "HowToStep", "position": 1, "name": "Register the applicant", "text": "Sign in to the Evalent dashboard and register the student with their name, grade, and admission term. A unique secure assessment link is generated automatically."},
+    {"@type": "HowToStep", "position": 2, "name": "Send the assessment link", "text": "Send the secure link to the student or family. No account or software is needed to complete the assessment."},
+    {"@type": "HowToStep", "position": 3, "name": "Student completes the assessment", "text": "The student completes a 45-minute structured assessment covering English, Mathematics, Reasoning, and Mindset on any device."},
+    {"@type": "HowToStep", "position": 4, "name": "Receive the professional report", "text": "Within 5 minutes of submission, a professional PDF report is automatically emailed to the assessor with domain scores, written commentary, and a clear recommendation."},
+    {"@type": "HowToStep", "position": 5, "name": "Record your decision", "text": "The assessor clicks Admit, Admit with Support, Waitlist, or Do Not Admit directly from the email. No portal login required. The decision is recorded instantly."}
+  ]
+}
+
 export default function Home() {
   const [trialOpen, setTrialOpen] = useState(false)
   // Auto-open TrialModal if ?signup=1 is in the URL
@@ -528,6 +562,8 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
       <Footer />
     </div>

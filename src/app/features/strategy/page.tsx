@@ -1,3 +1,14 @@
+const strategyFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What is the Evalent Strategy page?", "acceptedAnswer": {"@type": "Answer", "text": "The Strategy page gives principals and senior leadership a live picture of every grade's enrolment position, with six KPI cards, Evalent-generated signals, an enrolment planning table, and a one-click executive report generator ready for board packs."}},
+    {"@type": "Question", "name": "Is the Strategy page included in the free trial?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The full Strategy page including all six KPI cards, signals, and the executive report generator is available during the 10-report free trial with no credit card required."}},
+    {"@type": "Question", "name": "What are the six KPI cards on the Strategy page?", "acceptedAnswer": {"@type": "Answer", "text": "The six KPI cards are: Fill Rate, Retention, New Entrants, Gap to Target, Leaver Risk, and Pipeline Velocity. Each updates automatically as admissions data changes."}},
+    {"@type": "Question", "name": "What does the executive report contain?", "acceptedAnswer": {"@type": "Answer", "text": "The executive report covers pipeline activity, enrolment position by grade, trends, and three strategic recommendations. Generated in one click, available as PDF or Word, ready for a board pack."}}
+  ]
+}
+
 import HeroTrialButton from '@/components/HeroTrialButton'
 import StrategyDemo from '@/components/features/StrategyDemo'
 import Nav from '@/components/Nav'
@@ -174,6 +185,7 @@ export default function Page() {
         </div>
       </div>
 
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(strategyFaqSchema) }} />
       <Footer />
     </div>
   )

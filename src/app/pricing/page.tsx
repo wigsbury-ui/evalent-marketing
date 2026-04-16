@@ -4,6 +4,31 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import TrialModal from '@/components/TrialModal'
 
+const pricingProductSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Evalent Admissions Assessment Platform",
+  "description": "Structured admissions assessments, automated professional reports, one-click decisions, and live enrolment intelligence for international and independent schools.",
+  "url": "https://www.evalent.io/pricing",
+  "brand": {"@type": "Brand", "name": "Evalent"},
+  "offers": [
+    {"@type": "Offer", "name": "Essentials", "price": "2900", "priceCurrency": "USD", "url": "https://app.evalent.io/signup"},
+    {"@type": "Offer", "name": "Professional", "price": "5500", "priceCurrency": "USD", "url": "https://app.evalent.io/signup"},
+    {"@type": "Offer", "name": "Enterprise", "price": "9500", "priceCurrency": "USD", "url": "https://app.evalent.io/signup"}
+  ]
+}
+
+const pricingFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "How much does Evalent cost?", "acceptedAnswer": {"@type": "Answer", "text": "Evalent offers three plans: Essentials at $2,900 per year (100 assessments), Professional at $5,500 per year (250 assessments), and Enterprise at $9,500 per year (500+ assessments). All plans include a 10-report free trial with no credit card required."}},
+    {"@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Evalent offers 10 free assessment reports with no credit card required. The trial includes full access to all features including the Strategy page and Team Management."}},
+    {"@type": "Question", "name": "What is included in all plans?", "acceptedAnswer": {"@type": "Answer", "text": "All plans include full report generation, school branding, admin dashboard, assessor email workflow, automated reminders, Strategy page with live enrolment KPIs, Team Management with role-based access, and support."}},
+    {"@type": "Question", "name": "Can we get a refund?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Evalent offers a 14-day full refund on the first paid payment. Email hello@evalent.io with your account email and Paddle order reference."}}
+  ]
+}
+
 const plans = [
   {
     name: 'Essentials',
@@ -221,6 +246,8 @@ export default function Pricing() {
         </button>
       </section>
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingProductSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqSchema) }} />
       <Footer />
       <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
     </>
