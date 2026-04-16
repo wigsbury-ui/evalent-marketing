@@ -384,8 +384,7 @@ export default function Home() {
             <h2 className="text-2xl font-black text-navy tracking-tight mb-3">We chase applicants so you don't have to</h2>
             <p className="text-sm text-gray-500 mb-6 leading-relaxed">If an applicant hasn't finished their assessment, Evalent sends reminders automatically. You're notified of every outcome.</p>
             <div className="relative pl-7">
-              <div className="absolute left-2 top-2 bottom-2 w-0.5 bg-gradient-to-b from-brand to-blue-100" />
-              {[
+                  {[
                 { when: 'Day 0: immediately', title: 'Assessment link sent', desc: 'Personalised email with secure link and instructions.', status: 'sent', color: 'bg-green-500 border-green-500' },
                 { when: 'Day 2: if not started', title: 'Friendly reminder sent', desc: '"Your assessment link expires in 24 hours."', status: 'auto', color: 'bg-white border-brand' },
                 { when: 'Day 3: if not complete', title: 'Expiry warning sent', desc: '"Your link expires today. Click here to begin."', status: 'auto', color: 'bg-white border-brand' },
