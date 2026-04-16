@@ -177,9 +177,6 @@ export default function Nav() {
             <Link href="/pricing" className={`transition-colors ${isPricing ? 'text-brand font-semibold' : 'hover:text-navy'}`}>
               Pricing
             </Link>
-            <Link href="/about" className={`transition-colors ${pathname === '/about' ? 'text-brand font-semibold' : 'hover:text-navy'}`}>
-              About
-            </Link>
             <a href="https://app.evalent.io/login" className="hover:text-navy transition-colors">Sign in</a>
           </div>
 
@@ -233,7 +230,6 @@ export default function Nav() {
             ))}
             <Link href="/blog" className={`block pt-1 transition-colors ${isBlog ? 'text-brand font-semibold' : 'text-gray-600'}`}>Blog</Link>
             <Link href="/pricing" className={`block pt-1 transition-colors ${isPricing ? 'text-brand font-semibold' : 'text-gray-600'}`}>Pricing</Link>
-            <Link href="/about" className={`block pt-1 transition-colors ${pathname === '/about' ? 'text-brand font-semibold' : 'text-gray-600'}`}>About</Link>
             <a href="https://app.evalent.io/login" className="block text-gray-600">Sign in</a>
             <button onClick={() => { setMenuOpen(false); setTrialOpen(true) }}
               className="block w-full bg-brand text-white font-bold px-4 py-2 rounded-lg text-center mt-2">
