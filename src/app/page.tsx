@@ -53,9 +53,30 @@ const orgSchema = {
   "@type": "Organization",
   "name": "Evalent",
   "url": "https://www.evalent.io",
-  "logo": "https://www.evalent.io/evalent-logo.png",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.evalent.io/apple-touch-icon.png",
+    "width": 180,
+    "height": 180
+  },
   "description": "Evalent-powered admissions assessments for international and independent schools.",
   "sameAs": []
+}
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.evalent.io/",
+  "name": "Evalent",
+  "description": "Admissions intelligence platform for international and independent schools.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.evalent.io/blog?search={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
 }
 
 const softwareSchema = {
@@ -562,6 +583,7 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
