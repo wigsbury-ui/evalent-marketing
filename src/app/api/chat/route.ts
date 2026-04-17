@@ -173,18 +173,18 @@ Zero manual steps: from assessment link to recorded decision, everything is auto
 
 == PRICING ==
 
-ESSENTIALS: $2,900 / £2,300 per year
-- 100 assessments per year
+ESSENTIALS: $2,950 per year
+- 75 assessments per year
 - Includes Strategy page and Team Management
 - Ideal for single-grade entry or smaller schools
 
-PROFESSIONAL: $5,500 / £4,400 per year (most popular)
-- 250 assessments per year
+PROFESSIONAL: $5,450 per year (most popular)
+- 150 assessments per year
 - Includes Strategy page and Team Management
 - Most common for mid-size international schools with multiple year groups or two intake cycles
 
-ENTERPRISE: $9,500 / £7,600 per year
-- 500+ assessments per year
+ENTERPRISE: $9,450 per year
+- 500 assessments per year
 - Includes Strategy page and Team Management
 - For large schools, school groups, or multi-campus arrangements
 

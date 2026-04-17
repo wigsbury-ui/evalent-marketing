@@ -12,9 +12,9 @@ const pricingProductSchema = {
   "url": "https://www.evalent.io/pricing",
   "brand": {"@type": "Brand", "name": "Evalent"},
   "offers": [
-    {"@type": "Offer", "name": "Essentials", "price": "2900", "priceCurrency": "USD", "url": "https://app.evalent.io/signup"},
-    {"@type": "Offer", "name": "Professional", "price": "5500", "priceCurrency": "USD", "url": "https://app.evalent.io/signup"},
-    {"@type": "Offer", "name": "Enterprise", "price": "9500", "priceCurrency": "USD", "url": "https://app.evalent.io/signup"}
+    {"@type": "Offer", "name": "Essentials", "price": "2950", "priceCurrency": "USD", "url": "https://app.evalent.io/signup"},
+    {"@type": "Offer", "name": "Professional", "price": "5450", "priceCurrency": "USD", "url": "https://app.evalent.io/signup"},
+    {"@type": "Offer", "name": "Enterprise", "price": "9450", "priceCurrency": "USD", "url": "https://app.evalent.io/signup"}
   ]
 }
 
@@ -22,7 +22,7 @@ const pricingFaqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "How much does Evalent cost?", "acceptedAnswer": {"@type": "Answer", "text": "Evalent offers three plans: Essentials at $2,900 per year (100 assessments), Professional at $5,500 per year (250 assessments), and Enterprise at $9,500 per year (500+ assessments). All plans include a 10-report free trial with no credit card required."}},
+    {"@type": "Question", "name": "How much does Evalent cost?", "acceptedAnswer": {"@type": "Answer", "text": "Evalent offers three plans: Essentials at $2,950 per year (75 assessments), Professional at $5,450 per year (150 assessments), and Enterprise at $9,450 per year (500 assessments). All plans include a 10-report free trial with no credit card required."}},
     {"@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Evalent offers 10 free assessment reports with no credit card required. The trial includes full access to all features including the Strategy page and Team Management."}},
     {"@type": "Question", "name": "What is included in all plans?", "acceptedAnswer": {"@type": "Answer", "text": "All plans include full report generation, school branding, admin dashboard, assessor email workflow, automated reminders, Strategy page with live enrolment KPIs, Team Management with role-based access, and support."}},
     {"@type": "Question", "name": "Can we get a refund?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Evalent offers a 14-day full refund on the first paid payment. Email hello@evalent.io with your account email and Paddle order reference."}}
@@ -32,25 +32,23 @@ const pricingFaqSchema = {
 const plans = [
   {
     name: 'Essentials',
-    usd: '$2,900',
-    gbp: '£2,300',
+    usd: '$2,950',
     period: '/yr',
-    subtext: '£2,300/yr · Billed annually',
-    perAssessment: '$29',
-    assessments: 100,
-    tagline: 'For schools assessing up to 100 candidates per year, typically a single entry point or smaller prep school.',
+    subtext: 'Billed annually',
+    perAssessment: '$39',
+    assessments: 75,
+    tagline: 'For schools assessing up to 75 candidates per year, typically a single entry point or smaller school.',
     popular: false,
     cta: 'Start free trial',
     isEnterprise: false,
   },
   {
     name: 'Professional',
-    usd: '$5,500',
-    gbp: '£4,400',
+    usd: '$5,450',
     period: '/yr',
-    subtext: '£4,400/yr · Billed annually',
-    perAssessment: '$22',
-    assessments: 250,
+    subtext: 'Billed annually',
+    perAssessment: '$36',
+    assessments: 150,
     tagline: 'Most popular for mid-size international schools with multiple entry grades.',
     popular: true,
     cta: 'Start free trial',
@@ -58,12 +56,11 @@ const plans = [
   },
   {
     name: 'Enterprise',
-    usd: '$9,500',
-    gbp: '£7,600',
+    usd: '$9,450',
     period: '/yr',
-    subtext: '£7,600/yr · Billed annually',
-    perAssessment: '$19',
-    assessments: '500+',
+    subtext: 'Billed annually',
+    perAssessment: '$18',
+    assessments: 500,
     tagline: 'For larger schools, multi-campus groups, and networks with high volumes or complex requirements.',
     popular: false,
     cta: 'Talk to us',
@@ -87,7 +84,7 @@ const FAQ = [
   },
   {
     q: 'What is the cost per assessment?',
-    a: 'On Essentials it works out at $29 per assessment. Professional is $22, and Enterprise is $19 or lower depending on volume. Multi-year discounts are available, contact us.',
+    a: 'On Essentials it works out at $39 per assessment. Professional is $36, and Enterprise is $18. Multi-year discounts are available, contact us.',
   },
   {
     q: 'Is there a contract or minimum term?',
@@ -107,7 +104,7 @@ const FAQ = [
   },
   {
     q: 'Which plan is right for us?',
-    a: 'Essentials suits schools assessing up to 100 candidates a year. Professional is ideal for schools with multiple grades or 100–250 applicants. Enterprise is for large schools or networks above 250 per year.',
+    a: 'Essentials suits schools assessing up to 75 candidates a year. Professional is ideal for schools with multiple grades or 75–150 applicants. Enterprise is for large schools or networks above 150 per year.',
   },
 ]
 
@@ -154,7 +151,7 @@ export default function Pricing() {
                 <span className="text-4xl font-black text-navy">{plan.usd}</span>
                 <span className="text-gray-400 text-sm">{plan.period}</span>
               </div>
-              <p className="text-sm text-gray-400 mb-3">{plan.subtext}</p>
+              <p className="text-sm text-gray-400 mb-3">Billed annually · USD only</p>
               <span className="inline-block bg-blue-50 text-brand text-xs font-bold px-3 py-1 rounded-full mb-4">
                 ≈ {plan.perAssessment} per assessment
               </span>
