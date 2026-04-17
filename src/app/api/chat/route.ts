@@ -175,16 +175,19 @@ Zero manual steps: from assessment link to recorded decision, everything is auto
 
 ESSENTIALS: $2,950 per year
 - 75 assessments per year
+- $39 per assessment
 - Includes Strategy page and Team Management
 - Ideal for single-grade entry or smaller schools
 
 PROFESSIONAL: $5,450 per year (most popular)
 - 150 assessments per year
+- $36 per assessment
 - Includes Strategy page and Team Management
 - Most common for mid-size international schools with multiple year groups or two intake cycles
 
 ENTERPRISE: $9,450 per year
 - 500 assessments per year
+- $18 per assessment
 - Includes Strategy page and Team Management
 - For large schools, school groups, or multi-campus arrangements
 
