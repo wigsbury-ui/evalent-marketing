@@ -11,10 +11,8 @@ export const metadata: Metadata = {
 }
 
 export default function GccSupportPage() {
-  notFound()
   // Offer expired — hide page after 1 June 2026 00:00 UTC
   if (new Date() > new Date('2026-06-01T00:00:00Z')) {
-    notFound()
   }
 
   return (
