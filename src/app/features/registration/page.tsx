@@ -83,8 +83,8 @@ export default function Page() {
           <div className="space-y-3">
             {[
               { n: '1', text: "Enter the student's name, email, grade and curriculum", cls: 'border-brand/20 bg-blue-50', tc: 'text-brand' },
-              { n: '2', text: 'Evalent sends the secure assessment link automatically', cls: 'border-green-200 bg-green-50', tc: 'text-green-700' },
-              { n: '3', text: 'You receive the completed report. Nothing else to do', cls: 'border-purple-200 bg-purple-50', tc: 'text-purple-700' },
+              { n: '2', text: 'Evalent sends the secure assessment link automatically', cls: 'border-green-200 bg-green-50', tc: \'text-green-700' },
+              { n: '3', text: 'You receive the completed report. Nothing else to do', cls: 'border-purple-200 bg-purple-50', tc: \'text-purple-700' },
             ].map(({ n, text, cls, tc }) => (
               <div key={n} className={`flex items-start gap-3 border rounded-xl p-4 ${cls}`}>
                 <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-black flex-shrink-0 ${tc} border-current`}>{n}</span>

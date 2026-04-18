@@ -72,7 +72,7 @@ const FAQ = [
   { q: 'Does the student need to install anything?', a: 'No. The assessment runs in any modern web browser on a laptop, tablet, or desktop. No app, no account, no software installation required.' },
   { q: 'What happens if the student loses their internet connection?', a: 'Progress is automatically saved. Students can return to their assessment link and continue from where they stopped, provided the link has not yet expired.' },
   { q: 'Can the assessment be supervised or taken at home?', a: 'Both. Many schools use Evalent as a remote pre-visit assessment. Others run it on a supervised school device on campus. The platform supports either approach.' },
-  { q: 'Are Evalent assessments curriculum-aligned?', a: 'Yes. Every assessment is calibrated to the entry grade and your school's curriculum. IB, British, American, Australian, and New Zealand curricula are all supported across Grades 3 to 10.' },
+  { q: 'Are Evalent assessments curriculum-aligned?', a: 'Yes. Every assessment is calibrated to the entry grade and your school\'s curriculum. IB, British, American, Australian, and New Zealand curricula are all supported across Grades 3 to 10.' },
 ]
 
   return (

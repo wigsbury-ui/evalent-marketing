@@ -32,8 +32,8 @@ export default function Page() {
   '@type': 'FAQPage',
   mainEntity: [
     { '@type': 'Question', name: 'How long does it take to receive the Evalent report?', acceptedAnswer: { '@type': 'Answer', text: 'The report is generated automatically within five minutes of submission. Your assessor receives it by email immediately, with no manual steps required.' } },
-    { '@type': 'Question', name: 'What does an Evalent admissions report include?', acceptedAnswer: { '@type': 'Answer', text: 'Every report includes domain scores for English, Mathematics, and Reasoning; writing evaluation with band and commentary; Mindset lens; Motivation and School Fit lens; an executive summary; and the student's written responses verbatim.' } },
-    { '@type': 'Question', name: 'What are the Evalent recommendation bands?', acceptedAnswer: { '@type': 'Answer', text: 'Evalent uses four bands: Ready to Admit, Admit with Support, Borderline, and Not Yet Ready, each calculated against your school's own entrance thresholds.' } },
+    { '@type': 'Question', name: 'What does an Evalent admissions report include?', acceptedAnswer: { '@type': 'Answer', text: 'Every report includes domain scores for English, Mathematics, and Reasoning; writing evaluation with band and commentary; Mindset lens; Motivation and School Fit lens; an executive summary; and the student\'s written responses verbatim.' } },
+    { '@type': 'Question', name: 'What are the Evalent recommendation bands?', acceptedAnswer: { '@type': 'Answer', text: 'Evalent uses four bands: Ready to Admit, Admit with Support, Borderline, and Not Yet Ready, each calculated against your school\'s own entrance thresholds.' } },
     { '@type': 'Question', name: 'Can thresholds be set differently for each grade?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. English, Mathematics, and Reasoning thresholds are configured independently per grade.' } },
     { '@type': 'Question', name: 'Can Evalent reports be shared with parents?', acceptedAnswer: { '@type': 'Answer', text: 'Reports can be shared via a secure time-limited link. They are written in accessible language suitable for parent communication.' } },
   ],
@@ -41,8 +41,8 @@ export default function Page() {
 
 const FAQ = [
   { q: 'How long does it take to receive the report after a student submits?', a: 'The report is generated automatically within five minutes of submission. Your designated assessor receives it by email immediately, with no manual steps required.' },
-  { q: 'What does an Evalent admissions report include?', a: 'Every report includes: domain scores for English, Mathematics, and Reasoning versus your thresholds; writing evaluation with band and commentary; Mindset lens; Motivation and School Fit lens; an AI executive summary; and the student's written responses verbatim.' },
-  { q: 'What are the Evalent recommendation bands?', a: 'Evalent uses four bands: Ready to Admit, Admit with Support, Borderline, and Not Yet Ready. Each is calculated against your school's own entrance thresholds, not national norms.' },
+  { q: 'What does an Evalent admissions report include?', a: 'Every report includes: domain scores for English, Mathematics, and Reasoning versus your thresholds; writing evaluation with band and commentary; Mindset lens; Motivation and School Fit lens; an AI executive summary; and the student\'s written responses verbatim.' },
+  { q: 'What are the Evalent recommendation bands?', a: 'Evalent uses four bands: Ready to Admit, Admit with Support, Borderline, and Not Yet Ready. Each is calculated against your school\'s own entrance thresholds, not national norms.' },
   { q: 'Can entrance thresholds be set differently for each grade?', a: 'Yes. English, Mathematics, and Reasoning thresholds are configured independently per grade. A Grade 3 entry uses different thresholds from a Grade 10 entry.' },
   { q: 'Can reports be shared with parents?', a: 'Reports can be shared via a secure time-limited link. They are written in accessible language. Schools should apply their own judgement on what to share with families and when.' },
 ]
