@@ -16,6 +16,7 @@ export default function Page() {
     { label: 'Mathematics', desc: 'Core knowledge (MCQ) + applied problem-solving' },
     { label: 'Reasoning', desc: 'Non-verbal and verbal pattern recognition (MCQ)' },
     { label: 'Mindset', desc: 'Growth mindset and values inventory (short response)' },
+    { label: 'School Fit', desc: 'Personal statement: why this school? Evaluated for authenticity and motivation' },
   ]
 
   const domainCards = [
@@ -61,7 +62,7 @@ export default function Page() {
             <span className="text-blue-300">From any device. In 45 minutes.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            The applicant clicks their secure link, completes four structured domains, and submits. No software to install. No invigilator required. Automatically scored the moment it ends.
+            The applicant clicks their secure link, completes five structured sections, and submits. No software to install. No invigilator required. Automatically scored the moment it ends.
           </p>
           <HeroTrialButton />
         </div>
@@ -114,7 +115,7 @@ export default function Page() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">WHAT WE ASSESS</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight">Four domains. One complete picture.</h2>
+            <h2 className="text-2xl font-black text-navy tracking-tight">Five components. One complete picture.</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-5">
             {domainCards.map((d) => (
@@ -139,7 +140,7 @@ export default function Page() {
       <section className="py-10 px-6 bg-navy">
         <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6 text-center">
           <div><div className="text-3xl font-black text-white">45 min</div><div className="text-sm text-blue-300 mt-1">Total assessment time</div></div>
-          <div><div className="text-3xl font-black text-white">4</div><div className="text-sm text-blue-300 mt-1">Domains assessed</div></div>
+          <div><div className="text-3xl font-black text-white">5</div><div className="text-sm text-blue-300 mt-1">Assessment sections</div></div>
           <div><div className="text-3xl font-black text-white">Any device</div><div className="text-sm text-blue-300 mt-1">No software needed</div></div>
         </div>
       </section>

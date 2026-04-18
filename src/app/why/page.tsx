@@ -14,6 +14,7 @@ const BENEFITS = [
   { href: '/why/defensibility', title: 'Defensibility', desc: 'Structured, reproducible assessments with documented evidence that satisfies accreditation and governance expectations.', icon: '🛡️' },
   { href: '/why/conversion', title: 'Conversion & Speed', desc: 'From assessment link to admissions decision in under five minutes, with automated reminders that keep applications moving.', icon: '⚡' },
   { href: '/why/data-security', title: 'Data Security', desc: 'UAE data protection law compliant. School is the data controller. Student data is never used to train language models.', icon: '🔒' },
+  { href: '/why/fit-and-motivation', title: 'Fit & Motivation', desc: 'Every student explains why they want to join your school. Evalent evaluates authenticity, school knowledge, and genuine motivation — and surfaces coaching when it sees it.', icon: '⭐' },
 ]
 
 export default function Page() {
@@ -25,7 +26,7 @@ export default function Page() {
         <div className="max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">WHY EVALENT</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">Built for how independent schools actually work.</h1>
-          <p className="text-blue-300 text-base leading-relaxed">Five reasons schools choose Evalent over the alternatives.</p>
+          <p className="text-blue-300 text-base leading-relaxed">Eight reasons schools choose Evalent over the alternatives.</p>
         </div>
       </section>
 
