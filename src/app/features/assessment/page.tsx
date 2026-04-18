@@ -40,6 +40,18 @@ export default function Page() {
       parts: ['Growth mindset inventory: 10 short items', 'Values alignment: how the student approaches challenge', 'Scored 0–4: strong / developing / needs support'],
       why: 'Mindset data is contextual, not a gatekeeper. Strong growth orientation with borderline academic scores can still support an offer.',
     },
+    {
+      domain: 'School Fit',
+      weight: 'Contextual',
+      color: 'border-pink-200 bg-pink-50',
+      tc: 'text-pink-700',
+      parts: [
+        'Open personal statement: why this school?',
+        'Evaluated for authenticity, specificity, and school knowledge',
+        'Scored 0–4 with full AI narrative in the report',
+      ],
+      why: 'Evalent identifies coached responses, authentic motivation, and consistency with the rest of the assessment. Context your panel can actually use.',
+    },
   ]
 
   const faqs = [
