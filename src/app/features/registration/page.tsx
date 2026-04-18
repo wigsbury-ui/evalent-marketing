@@ -116,7 +116,7 @@ export default function Page() {
             {[
               { step: '0s',    title: 'Link generated',       desc: 'A unique, secure, time-limited assessment link is created for this student.',          color: 'border-blue-200 bg-blue-50',   tc: 'text-brand' },
               { step: '~5s',   title: 'Email dispatched',     desc: 'The applicant receives a personalised email with their link and instructions.',         color: 'border-green-200 bg-green-50', tc: 'text-green-700' },
-              { step: 'Day 2', title: 'Reminder sent',        desc: 'If the student hasn’t started, Evalent sends a friendly reminder automatically.',  color: 'border-yellow-200 bg-yellow-50',tc: 'text-yellow-700' },
+              { step: 'Day 2', title: 'Reminder sent',        desc: 'If the student has not started, Evalent sends a friendly reminder automatically.',  color: 'border-yellow-200 bg-yellow-50',tc: 'text-yellow-700' },
               { step: 'Done',  title: 'Report delivered',     desc: 'On completion, the report and one-click decision email are sent to your assessor.',     color: 'border-purple-200 bg-purple-50',tc: 'text-purple-700' },
             ].map(({ step, title, desc, color, tc }) => (
               <div key={step} className={`border rounded-2xl p-5 ${color}`}>
