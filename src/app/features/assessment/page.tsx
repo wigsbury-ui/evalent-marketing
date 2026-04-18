@@ -4,7 +4,6 @@ import Footer from '@/components/Footer'
 import AssessmentDemo from '@/components/features/AssessmentDemo'
 import ReportSlider from '@/components/features/ReportSlider'
 import Link from 'next/link'
-import FaqAccordion from '@/components/FaqAccordion'
 
 export const metadata = {
   title: 'The Assessment | Evalent Features',
@@ -55,31 +54,122 @@ export default function Page() {
     },
   ]
 
-  const assessmentFaqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How long does the Evalent assessment take?', acceptedAnswer: { '@type': 'Answer', text: 'Approximately 45 minutes, covering five sections: English reading and writing, Mathematics, Reasoning, Mindset, and a personal School Fit statement.' } },
-    { '@type': 'Question', name: 'Does the student need to install anything?', acceptedAnswer: { '@type': 'Answer', text: 'No. The assessment runs in any modern web browser on a laptop, tablet, or desktop. No app, no account, no software installation required.' } },
-    { '@type': 'Question', name: 'What happens if the student loses their internet connection?', acceptedAnswer: { '@type': 'Answer', text: 'Progress is automatically saved. Students can return to their link and continue from where they stopped, provided the link has not expired.' } },
-    { '@type': 'Question', name: 'Can the assessment be supervised or taken at home?', acceptedAnswer: { '@type': 'Answer', text: 'Both. Many schools use Evalent as a remote pre-visit assessment. Others run it on a supervised school device. The platform supports either approach.' } },
-    { '@type': 'Question', name: 'Are Evalent assessments curriculum-aligned?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every assessment is calibrated to the entry grade and curriculum — IB, British, American, Australian, and New Zealand, Grades 3 to 10.' } },
-  ],
-}
-
-const FAQ = [
-  { q: 'How long does the Evalent assessment take?', a: 'Approximately 45 minutes, covering five sections: English reading comprehension, an extended writing task, Mathematics, Reasoning, Mindset, and a personal School Fit statement.' },
-  { q: 'Does the student need to install anything?', a: 'No. The assessment runs in any modern web browser on a laptop, tablet, or desktop. No app, no account, no software installation required.' },
-  { q: 'What happens if the student loses their internet connection?', a: 'Progress is automatically saved. Students can return to their assessment link and continue from where they stopped, provided the link has not yet expired.' },
-  { q: 'Can the assessment be supervised or taken at home?', a: 'Both. Many schools use Evalent as a remote pre-visit assessment. Others run it on a supervised school device on campus. The platform supports either approach.' },
-  { q: 'Are Evalent assessments curriculum-aligned?', a: 'Yes. Every assessment is calibrated to the entry grade and your school\'s curriculum. IB, British, American, Australian, and New Zealand curricula are all supported across Grades 3 to 10.' },
-]
+  const faqs = [
+    ['Does the student need to create an account?', 'No. The assessment is accessed via the secure link sent to their email. No account, no password, no app download.'],
+    ['What happens if the student loses connection mid-assessment?', 'Progress is auto-saved. They can re-open the link and continue from where they left off, as long as the 72-hour window has not expired.'],
+    ['Can the assessment be taken at home?', 'Yes. Evalent is designed as a remote, unsupervised assessment. Schools can arrange in-person supervision if preferred, but it is not required.'],
+    ['Are questions randomised to prevent copying?', 'Question order is randomised per student, significantly reducing the risk of shared answers.'],
+    ['What if a student has learning support needs?', 'Extended time and other accommodations can be configured per student in the dashboard before the link is sent.'],
+  ]
 
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Nav />
 
-      <FaqAccordion faqs={FAQ} />
+      <section className="bg-navy py-16 px-6 text-center">
+        <div className="max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">FEATURE 3 OF 7</div>
+          <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+            A professional assessment.<br/>
+            <span className="text-blue-300">From any device. In 45 minutes.</span>
+          </h1>
+          <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
+            The applicant clicks their secure link, completes five structured sections, and submits. No software to install. No invigilator required. Automatically scored the moment it ends.
+          </p>
+          <HeroTrialButton />
+        </div>
+      </section>
+
+      {/* VIDEO — directly under hero */}
+      <section className="px-6 pt-10 pb-0 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1175799185?badge=0&autopause=0&player_id=0&app_id=58479"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              title="Evalent | The Assessment"
+            />
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
+        </div>
+      </section>
+
+      {/* INTRO CONTENT */}
+      <section className="py-14 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">THE APPLICANT EXPERIENCE</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Designed to reveal ability, not test familiarity with test formats</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-3">
+              Evalent assessments are built around the curriculum your school uses, whether IB, British, or American. Questions are calibrated to the entry grade, so a Grade 4 applicant is not faced with secondary-level language or concepts.
+            </p>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              The extended writing tasks give your assessors something a multiple-choice score never can: a real sample of how the student thinks and constructs an argument under time pressure.
+            </p>
+          </div>
+          <div className="space-y-2">
+            {domains.map(({ label, desc }) => (
+              <div key={label} className="flex items-start gap-3 border border-brand/20 bg-blue-50 rounded-xl px-4 py-3">
+                <span className="text-xs font-black text-brand w-24 flex-shrink-0 pt-0.5">{label}</span>
+                <span className="text-xs text-gray-600 leading-relaxed">{desc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      
+      <ReportSlider />
+
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">WHAT WE ASSESS</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight">Five components. One complete picture.</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
+            {domainCards.map((d) => (
+              <div key={d.domain} className={`border-2 rounded-2xl p-5 ${d.color}`}>
+                <div className="flex items-center justify-between mb-3">
+                  <div className={`text-base font-black ${d.tc}`}>{d.domain}</div>
+                  <div className={`text-xs font-bold px-2 py-0.5 rounded-full bg-white/60 ${d.tc}`}>{d.weight} of overall score</div>
+                </div>
+                <ul className="space-y-1 mb-3">
+                  {d.parts.map(p => <li key={p} className="text-xs text-gray-700 flex items-start gap-1.5"><span className={`${d.tc} flex-shrink-0 mt-0.5`}>•</span>{p}</li>)}
+                </ul>
+                <div className="border-t border-white/60 pt-3">
+                  <div className="text-[10px] font-bold text-gray-400 tracking-widest mb-1">WHY IT MATTERS</div>
+                  <div className="text-xs text-gray-600 leading-relaxed italic">{d.why}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 px-6 bg-navy">
+        <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6 text-center">
+          <div><div className="text-3xl font-black text-white">45 min</div><div className="text-sm text-blue-300 mt-1">Total assessment time</div></div>
+          <div><div className="text-3xl font-black text-white">5</div><div className="text-sm text-blue-300 mt-1">Assessment sections</div></div>
+          <div><div className="text-3xl font-black text-white">Any device</div><div className="text-sm text-blue-300 mt-1">No software needed</div></div>
+        </div>
+      </section>
+
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-black text-navy tracking-tight mb-6">Common questions</h2>
+          <div className="space-y-4">
+            {faqs.map(([q, a]) => (
+              <div key={q} className="border border-gray-200 rounded-xl p-4">
+                <div className="text-sm font-bold text-navy mb-1.5">{q}</div>
+                <div className="text-sm text-gray-600 leading-relaxed">{a}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">
         <div className="max-w-5xl mx-auto flex justify-between items-center flex-wrap gap-3">
@@ -87,8 +177,6 @@ const FAQ = [
           <Link href="/features/reports" className="text-brand font-semibold hover:underline text-sm">Next: Report Generation →</Link>
         </div>
       </div>
-      
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(assessmentFaqSchema) }} />
       <Footer />
     </div>
   )

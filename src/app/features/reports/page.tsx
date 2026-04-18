@@ -3,7 +3,6 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ReportsDemo from '@/components/features/ReportsDemo'
 import Link from 'next/link'
-import FaqAccordion from '@/components/FaqAccordion'
 
 export const metadata = {
   title: 'Report Generation | Evalent Features',
@@ -27,31 +26,120 @@ export default function Page() {
     { band: 'Not yet ready',                  cls: 'border-red-200 bg-red-50',      tc: 'text-red-700',   icon: '✕', desc: 'Multiple domains are significantly below threshold. The report supports a clear, defensible decision with enough detail to explain to families.' },
   ]
 
-  const reportsFaqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How long does it take to receive the Evalent report?', acceptedAnswer: { '@type': 'Answer', text: 'The report is generated automatically within five minutes of submission. Your assessor receives it by email immediately, with no manual steps required.' } },
-    { '@type': 'Question', name: 'What does an Evalent admissions report include?', acceptedAnswer: { '@type': 'Answer', text: 'Every report includes domain scores for English, Mathematics, and Reasoning; writing evaluation with band and commentary; Mindset lens; Motivation and School Fit lens; an executive summary; and the student\'s written responses verbatim.' } },
-    { '@type': 'Question', name: 'What are the Evalent recommendation bands?', acceptedAnswer: { '@type': 'Answer', text: 'Evalent uses four bands: Ready to Admit, Admit with Support, Borderline, and Not Yet Ready, each calculated against your school\'s own entrance thresholds.' } },
-    { '@type': 'Question', name: 'Can thresholds be set differently for each grade?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. English, Mathematics, and Reasoning thresholds are configured independently per grade.' } },
-    { '@type': 'Question', name: 'Can Evalent reports be shared with parents?', acceptedAnswer: { '@type': 'Answer', text: 'Reports can be shared via a secure time-limited link. They are written in accessible language suitable for parent communication.' } },
-  ],
-}
-
-const FAQ = [
-  { q: 'How long does it take to receive the report after a student submits?', a: 'The report is generated automatically within five minutes of submission. Your designated assessor receives it by email immediately, with no manual steps required.' },
-  { q: 'What does an Evalent admissions report include?', a: 'Every report includes: domain scores for English, Mathematics, and Reasoning versus your thresholds; writing evaluation with band and commentary; Mindset lens; Motivation and School Fit lens; an AI executive summary; and the student\'s written responses verbatim.' },
-  { q: 'What are the Evalent recommendation bands?', a: 'Evalent uses four bands: Ready to Admit, Admit with Support, Borderline, and Not Yet Ready. Each is calculated against your school\'s own entrance thresholds, not national norms.' },
-  { q: 'Can entrance thresholds be set differently for each grade?', a: 'Yes. English, Mathematics, and Reasoning thresholds are configured independently per grade. A Grade 3 entry uses different thresholds from a Grade 10 entry.' },
-  { q: 'Can reports be shared with parents?', a: 'Reports can be shared via a secure time-limited link. They are written in accessible language. Schools should apply their own judgement on what to share with families and when.' },
-]
+  const faqs = [
+    ['Can we add our school logo to the report?', 'Yes. Your school name and logo are configured once in your Evalent settings and appear automatically on every report.'],
+    ['Can thresholds be set differently per grade?', 'Yes. Each grade level has its own configurable threshold. A Grade 3 entry and Grade 10 entry have different expectations by design.'],
+    ['Is the writing commentary always accurate?', "Evalent's writing evaluation is calibrated to grade level and curriculum. It is a structured starting point that saves your assessors significant time, not a replacement for professional judgement."],
+    ['Can we share reports with parents?', 'Reports are designed to be parent-readable when needed. They explain the domains assessed and what the recommendation means without jargon.'],
+  ]
 
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Nav />
 
-      <FaqAccordion faqs={FAQ} />
+      <section className="bg-navy py-16 px-6 text-center">
+        <div className="max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">FEATURE 4 OF 7</div>
+          <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+            A report your assessors<br/>
+            <span className="text-blue-300">can act on immediately.</span>
+          </h1>
+          <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
+            Every completed assessment triggers an automatic pipeline that scores, analyses, and formats a professional admissions report, ready in under 5 minutes, without any human involvement.
+          </p>
+          <HeroTrialButton />
+        </div>
+      </section>
+
+      {/* VIDEO — directly under hero */}
+      <section className="px-6 pt-10 pb-0 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1175800177?badge=0&autopause=0&player_id=0&app_id=58479"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              title="Evalent | Report Generation"
+            />
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
+        </div>
+      </section>
+
+      {/* INTRO CONTENT */}
+      <section className="py-14 px-6 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHAT YOU RECEIVE</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Not just scores. A complete admissions picture</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-3">
+              The Evalent report gives your assessors everything they need to make a confident, defensible decision, with domain-level commentary, the student's actual written responses, and a clear recommendation calibrated to your school's entrance thresholds.
+            </p>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Reports are school-branded and look like they came from your institution. This makes them suitable to share with parents when a decision needs to be explained.
+            </p>
+          </div>
+          <div className="space-y-2">
+            {reportItems.map(item => (
+              <div key={item} className="flex items-start gap-2 text-sm text-gray-700 bg-gray-50 border border-gray-100 rounded-xl px-4 py-3">
+                <span className="text-green-500 font-bold flex-shrink-0 mt-0.5">✓</span>{item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto mb-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">LIVE DEMO</div>
+          <h2 className="text-2xl font-black text-navy tracking-tight mb-2">Watch the pipeline run</h2>
+          <p className="text-gray-500 text-sm">Click the button to see the full automated report pipeline from submission to delivery.</p>
+        </div>
+        <ReportsDemo />
+      </section>
+
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">RECOMMENDATION BANDS</div>
+            <h2 className="text-2xl font-black text-navy tracking-tight mb-2">What the recommendation means</h2>
+            <p className="text-gray-500 text-sm max-w-xl mx-auto">Recommendations are calculated against your school&apos;s own thresholds, not national norms.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            {bands.map((b) => (
+              <div key={b.band} className={`border-2 rounded-2xl p-5 ${b.cls}`}>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className={`text-sm font-black ${b.tc}`}>{b.icon} {b.band}</span>
+                </div>
+                <div className="text-xs text-gray-700 leading-relaxed">{b.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 px-6 bg-navy">
+        <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6 text-center">
+          <div><div className="text-3xl font-black text-white">&lt;5 min</div><div className="text-sm text-blue-300 mt-1">Submission to report</div></div>
+          <div><div className="text-3xl font-black text-white">100%</div><div className="text-sm text-blue-300 mt-1">Automatic</div></div>
+          <div><div className="text-3xl font-black text-white">Branded</div><div className="text-sm text-blue-300 mt-1">Every report</div></div>
+        </div>
+      </section>
+
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-black text-navy tracking-tight mb-6">Common questions</h2>
+          <div className="space-y-4">
+            {faqs.map(([q, a]) => (
+              <div key={q} className="border border-gray-200 rounded-xl p-4">
+                <div className="text-sm font-bold text-navy mb-1.5">{q}</div>
+                <div className="text-sm text-gray-600 leading-relaxed">{a}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">
         <div className="max-w-5xl mx-auto flex justify-between items-center flex-wrap gap-3">
@@ -59,8 +147,6 @@ const FAQ = [
           <Link href="/features/decisions" className="text-brand font-semibold hover:underline text-sm">Next: Decision Workflow →</Link>
         </div>
       </div>
-      
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reportsFaqSchema) }} />
       <Footer />
     </div>
   )
