@@ -7,7 +7,7 @@ import TrialModal from './TrialModal'
 import {
   UserPlus, LayoutDashboard, ClipboardList, FileText,
   CheckSquare, TrendingUp, Users, Sparkles, Heart,
-  Eye, Shield, Zap, Lock, Target, type LucideIcon,
+  Eye, Shield, Zap, Lock, Target, Star, type LucideIcon,
 } from 'lucide-react'
 
 interface NavLink {
