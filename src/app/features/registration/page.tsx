@@ -11,24 +11,12 @@ export const metadata = {
 }
 
 
-const registrationFaqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'Does the student need to create an account?', acceptedAnswer: { '@type': 'Answer', text: 'No. Students access their assessment via a secure personal link sent to their email. No account, password, or app download is required.' } },
-    { '@type': 'Question', name: 'How is the assessment link delivered?', acceptedAnswer: { '@type': 'Answer', text: 'The moment you register a student, Evalent automatically generates a personalised link and emails it directly with full instructions.' } },
-    { '@type': 'Question', name: 'What if the student has not completed after the first day?', acceptedAnswer: { '@type': 'Answer', text: 'Evalent sends an automatic reminder if the student has not started. You can also resend manually at any time from the admin panel.' } },
-    { '@type': 'Question', name: 'Can I register multiple students at once?', acceptedAnswer: { '@type': 'Answer', text: 'Individual registration takes under 60 seconds per student. Bulk import is on the development roadmap.' } },
-    { '@type': 'Question', name: 'How is student data protected?', acceptedAnswer: { '@type': 'Answer', text: 'All data is stored in secure, encrypted infrastructure. Student data is never used to train language models and is governed under UAE Federal Data Protection Law with GDPR alignment.' } },
-  ],
-}
-
 const FAQ = [
   { q: 'Does the student need to create an account?', a: 'No. Students access their assessment via a secure personal link sent to their email. No account, password, or app download is required.' },
-  { q: 'How is the assessment link delivered to the student?', a: 'The moment you register a student, Evalent automatically generates a personalised link and emails it directly with instructions. No manual steps required.' },
+  { q: 'How is the assessment link delivered?', a: 'The moment you register a student, Evalent automatically generates a personalised link and emails it directly. No manual steps required.' },
   { q: 'What if the student has not completed after the first day?', a: 'Evalent sends an automatic reminder if the student has not started. The dashboard flags outstanding links and you can resend manually at any time from the admin panel.' },
   { q: 'Can I register multiple students at once?', a: 'Individual registration takes under 60 seconds per student. Bulk import is on the development roadmap for future releases.' },
-  { q: 'How is student data protected?', a: 'All data is stored in secure, encrypted infrastructure. Student data is never used to train language models and is governed under UAE Federal Data Protection Law with GDPR alignment.' },
+  { q: 'How is student data protected?', a: 'All data is stored in secure encrypted infrastructure. Student data is never used to train language models and is governed under UAE Federal Data Protection Law with GDPR alignment.' },
 ]
 
 export default function Page() {
@@ -83,8 +71,8 @@ export default function Page() {
           <div className="space-y-3">
             {[
               { n: '1', text: "Enter the student's name, email, grade and curriculum", cls: 'border-brand/20 bg-blue-50', tc: 'text-brand' },
-              { n: '2', text: 'Evalent sends the secure assessment link automatically', cls: 'border-green-200 bg-green-50', tc: \'text-green-700' },
-              { n: '3', text: 'You receive the completed report. Nothing else to do', cls: 'border-purple-200 bg-purple-50', tc: \'text-purple-700' },
+              { n: '2', text: 'Evalent sends the secure assessment link automatically', cls: 'border-green-200 bg-green-50', tc: 'text-green-700' },
+              { n: '3', text: 'You receive the completed report. Nothing else to do', cls: 'border-purple-200 bg-purple-50', tc: 'text-purple-700' },
             ].map(({ n, text, cls, tc }) => (
               <div key={n} className={`flex items-start gap-3 border rounded-xl p-4 ${cls}`}>
                 <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-black flex-shrink-0 ${tc} border-current`}>{n}</span>
@@ -116,7 +104,7 @@ export default function Page() {
             {[
               { step: '0s',    title: 'Link generated',       desc: 'A unique, secure, time-limited assessment link is created for this student.',          color: 'border-blue-200 bg-blue-50',   tc: 'text-brand' },
               { step: '~5s',   title: 'Email dispatched',     desc: 'The applicant receives a personalised email with their link and instructions.',         color: 'border-green-200 bg-green-50', tc: 'text-green-700' },
-              { step: 'Day 2', title: 'Reminder sent',        desc: 'If the student has not started, Evalent sends a friendly reminder automatically.',  color: 'border-yellow-200 bg-yellow-50',tc: 'text-yellow-700' },
+              { step: 'Day 2', title: 'Reminder sent',        desc: 'If the student hasn’t started, Evalent sends a friendly reminder automatically.',  color: 'border-yellow-200 bg-yellow-50',tc: 'text-yellow-700' },
               { step: 'Done',  title: 'Report delivered',     desc: 'On completion, the report and one-click decision email are sent to your assessor.',     color: 'border-purple-200 bg-purple-50',tc: 'text-purple-700' },
             ].map(({ step, title, desc, color, tc }) => (
               <div key={step} className={`border rounded-2xl p-5 ${color}`}>
@@ -138,7 +126,6 @@ export default function Page() {
         </div>
       </section>
 
-      
       <FaqAccordion faqs={FAQ} />
 
       {/* NAV FOOTER */}
@@ -149,8 +136,6 @@ export default function Page() {
         </div>
       </div>
 
-      
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(registrationFaqSchema) }} />
       <Footer />
     </div>
   )
