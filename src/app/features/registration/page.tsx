@@ -3,11 +3,33 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import RegistrationDemo from '@/components/features/RegistrationDemo'
 import Link from 'next/link'
+import FaqAccordion from '@/components/FaqAccordion'
 
 export const metadata = {
   title: 'Student Registration | Evalent Features',
   description: 'Register students in seconds. Evalent automatically sends assessment links, tracks completion, and notifies you the moment results are ready.',
 }
+
+
+const registrationFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Does the student need to create an account?', acceptedAnswer: { '@type': 'Answer', text: 'No. Students access their assessment via a secure personal link sent to their email. No account, password, or app download is required.' } },
+    { '@type': 'Question', name: 'How is the assessment link delivered?', acceptedAnswer: { '@type': 'Answer', text: 'The moment you register a student, Evalent automatically generates a personalised link and emails it directly with full instructions.' } },
+    { '@type': 'Question', name: 'What if the student has not completed after the first day?', acceptedAnswer: { '@type': 'Answer', text: 'Evalent sends an automatic reminder if the student has not started. You can also resend manually at any time from the admin panel.' } },
+    { '@type': 'Question', name: 'Can I register multiple students at once?', acceptedAnswer: { '@type': 'Answer', text: 'Individual registration takes under 60 seconds per student. Bulk import is on the development roadmap.' } },
+    { '@type': 'Question', name: 'How is student data protected?', acceptedAnswer: { '@type': 'Answer', text: 'All data is stored in secure, encrypted infrastructure. Student data is never used to train language models and is governed under UAE Federal Data Protection Law with GDPR alignment.' } },
+  ],
+}
+
+const FAQ = [
+  { q: 'Does the student need to create an account?', a: 'No. Students access their assessment via a secure personal link sent to their email. No account, password, or app download is required.' },
+  { q: 'How is the assessment link delivered to the student?', a: 'The moment you register a student, Evalent automatically generates a personalised link and emails it directly with instructions. No manual steps required.' },
+  { q: 'What if the student has not completed after the first day?', a: 'Evalent sends an automatic reminder if the student has not started. The dashboard flags outstanding links and you can resend manually at any time from the admin panel.' },
+  { q: 'Can I register multiple students at once?', a: 'Individual registration takes under 60 seconds per student. Bulk import is on the development roadmap for future releases.' },
+  { q: 'How is student data protected?', a: 'All data is stored in secure, encrypted infrastructure. Student data is never used to train language models and is governed under UAE Federal Data Protection Law with GDPR alignment.' },
+]
 
 export default function Page() {
   return (
@@ -116,25 +138,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-14 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-black text-navy tracking-tight mb-6">Common questions</h2>
-          <div className="space-y-4">
-            {[
-              ['Can I register multiple students at once?', 'Not yet via the interface, but bulk import via CSV is on the roadmap. For most schools, individual registration takes under 30 seconds per student.'],
-              ['What does the student receive?', 'A personalised email explaining the assessment, how long it takes, and a secure link. The link expires after 72 hours and auto-submits when the timer runs out.'],
-              ['What if I enter the wrong grade or curriculum?', 'You can edit the student record before the assessment is started. Once an assessment is in progress, contact support to amend the record.'],
-              ['Is the student’s data stored securely?', 'All data is stored in encrypted Supabase infrastructure. Evalent does not share applicant data with any third party.'],
-            ].map(([q, a]) => (
-              <div key={q} className="border border-gray-200 rounded-xl p-4">
-                <div className="text-sm font-bold text-navy mb-1.5">{q}</div>
-                <div className="text-sm text-gray-600 leading-relaxed">{a}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
+      <FaqAccordion faqs={FAQ} />
 
       {/* NAV FOOTER */}
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">
@@ -144,6 +149,8 @@ export default function Page() {
         </div>
       </div>
 
+      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(registrationFaqSchema) }} />
       <Footer />
     </div>
   )

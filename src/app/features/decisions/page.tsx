@@ -3,6 +3,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import DecisionsDemo from '@/components/features/DecisionsDemo'
 import Link from 'next/link'
+import FaqAccordion from '@/components/FaqAccordion'
 
 export const metadata = {
   title: 'Decision Workflow | Evalent Features',
@@ -32,147 +33,31 @@ export default function Page() {
     { time: '10:31:44', event: 'Dashboard updated',     detail: 'Status: Decision made · Admit',          status: 'auto' },
   ]
 
-  const faqs = [
-    ['What if the assessor never clicks a button?', 'A follow-up reminder is sent after 48 hours. The dashboard flags unactioned reports. You can reassign the decision to another assessor if needed.'],
-    ['Can a decision be changed after clicking?', 'Yes, decisions can be amended by a school admin user from the dashboard. The audit log records both the original and the amendment with timestamps.'],
-    ['Can we add notes to the decision?', 'Free-text notes can be added to any applicant record from the dashboard and are stored alongside the decision in the audit log.'],
-    ["What happens to the applicant's data after a decision?", 'Data is retained according to your school’s configured retention period. Evalent supports GDPR-compliant deletion requests at any time.'],
-  ]
+  const decisionsFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Does the assessor need to log in to record a decision?', acceptedAnswer: { '@type': 'Answer', text: 'No. The report email contains four decision buttons. One click records the decision without any portal login.' } },
+    { '@type': 'Question', name: 'What if the assessor does not respond?', acceptedAnswer: { '@type': 'Answer', text: 'A follow-up reminder is sent automatically after 48 hours. School admins can reassign the decision to another assessor at any time.' } },
+    { '@type': 'Question', name: 'Can a decision be changed after it is recorded?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. School admin users can amend decisions from the dashboard. Both decisions are recorded in the audit log with timestamps.' } },
+    { '@type': 'Question', name: 'Is every admissions decision permanently recorded?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every decision is timestamped, attributed to the assessor, and stored in a tamper-proof audit log that is exportable.' } },
+    { '@type': 'Question', name: 'Can notes be added to an applicant record?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Free-text notes can be added to any applicant record from the dashboard and stored alongside the decision in the audit log.' } },
+  ],
+}
+
+const FAQ = [
+  { q: 'Does the assessor need to log in to record a decision?', a: 'No. The report email contains four decision buttons — Admit, Admit with Support, Waitlist, Do Not Admit. One click records the decision without any portal login.' },
+  { q: 'What if the assessor does not respond?', a: 'A follow-up reminder is sent automatically after 48 hours. The dashboard flags unactioned reports and school admins can reassign the decision to another assessor at any time.' },
+  { q: 'Can a decision be changed after it is recorded?', a: 'Yes. School admin users can amend decisions from the dashboard. Both the original and amended decision are recorded in the audit log with timestamps and attribution.' },
+  { q: 'Is every decision permanently recorded for compliance?', a: 'Yes. Every decision is timestamped, attributed to the assessor, and stored in a tamper-proof audit log. This is exportable and can be retained for as long as your school requires.' },
+  { q: 'Can notes be added to an applicant record?', a: 'Yes. Free-text notes can be added to any applicant record from the dashboard and stored alongside the decision in the audit log.' },
+]
 
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Nav />
 
-      <section className="bg-navy py-16 px-6 text-center">
-        <div className="max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">FEATURE 5 OF 7</div>
-          <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
-            One click.<br/>
-            <span className="text-blue-300">Decision recorded. Done.</span>
-          </h1>
-          <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
-            When the report is ready, your assessor receives an email with the full summary and four decision buttons. One click, no login, and the decision is permanently recorded.
-          </p>
-          <HeroTrialButton />
-        </div>
-      </section>
-
-      {/* VIDEO — directly under hero */}
-      <section className="px-6 pt-10 pb-0 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1175803459?badge=0&autopause=0&player_id=0&app_id=58479"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent | Decision Workflow"
-            />
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
-        </div>
-      </section>
-
-      {/* INTRO CONTENT */}
-      <section className="py-14 px-6 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">WHY IT MATTERS</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">The lowest-friction decision process in admissions</h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-3">
-              Most admissions workflows require an assessor to log into a portal, find the student, read the report, navigate to a decision screen, and record the outcome. That's five steps, and most assessors are busy teachers who find every additional click a reason to delay.
-            </p>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Evalent reduces this to one step. The report summary is in the email. The decision buttons are in the email. The assessor never leaves their inbox.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            {featureGrid.map(f => (
-              <div key={f.label} className="bg-gray-50 border border-gray-200 rounded-xl p-3">
-                <div className="text-xs font-bold text-navy mb-0.5">✓ {f.label}</div>
-                <div className="text-xs text-gray-500">{f.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto mb-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">LIVE DEMO</div>
-          <h2 className="text-2xl font-black text-navy tracking-tight mb-2">Click a decision button below</h2>
-          <p className="text-gray-500 text-sm">This is what your assessor receives. Try clicking any of the four decision buttons.</p>
-        </div>
-        <DecisionsDemo />
-      </section>
-
-      <section className="py-14 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-3">DECISION OPTIONS</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight">Four outcomes. All covered.</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4">
-            {decisions.map(d => (
-              <div key={d.label} className={`border-2 rounded-2xl p-5 ${d.cls}`}>
-                <div className={`text-sm font-black mb-2 ${d.tc}`}>{d.label}</div>
-                <div className="text-xs text-gray-700 leading-relaxed">{d.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">GOVERNANCE &amp; COMPLIANCE</div>
-            <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Every decision is defensible</h2>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              International schools increasingly face scrutiny over admissions decisions, from parents, boards, and in some cases regulatory bodies. Evalent creates a complete, tamper-proof record of every assessment and decision.
-            </p>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              The audit log records who assessed, which report they received, which button they clicked, and when. This is exportable and can be retained as long as your school requires.
-            </p>
-          </div>
-          <div className="space-y-3">
-            {auditLog.map((entry, i) => (
-              <div key={i} className="flex items-start gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3">
-                <span className="text-[10px] font-mono text-gray-400 w-16 flex-shrink-0 pt-0.5">{entry.time}</span>
-                <div className="flex-1 min-w-0">
-                  <div className="text-xs font-bold text-navy">{entry.event}</div>
-                  <div className="text-xs text-gray-400">{entry.detail}</div>
-                </div>
-                <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full flex-shrink-0 ${entry.status === 'decision' ? 'bg-green-100 text-green-700' : entry.status === 'tracked' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'}`}>
-                  {entry.status === 'auto' ? 'AUTO' : entry.status === 'tracked' ? 'TRACKED' : 'RECORDED'}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-10 px-6 bg-navy">
-        <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6 text-center">
-          <div><div className="text-3xl font-black text-white">1 click</div><div className="text-sm text-blue-300 mt-1">To record any decision</div></div>
-          <div><div className="text-3xl font-black text-white">0</div><div className="text-sm text-blue-300 mt-1">Portal logins needed</div></div>
-          <div><div className="text-3xl font-black text-white">100%</div><div className="text-sm text-blue-300 mt-1">Audit-logged</div></div>
-        </div>
-      </section>
-
-      <section className="py-14 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-black text-navy tracking-tight mb-6">Common questions</h2>
-          <div className="space-y-4">
-            {faqs.map(([q, a]) => (
-              <div key={q} className="border border-gray-200 rounded-xl p-4">
-                <div className="text-sm font-bold text-navy mb-1.5">{q}</div>
-                <div className="text-sm text-gray-600 leading-relaxed">{a}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqAccordion faqs={FAQ} />
 
       <section className="bg-navy py-16 px-6 text-center">
         <div className="max-w-xl mx-auto">
@@ -191,6 +76,8 @@ export default function Page() {
           <Link href="/features/strategy" className="text-brand font-semibold hover:underline text-sm">Next: Strategy & Enrolment →</Link>
         </div>
       </div>
+      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(decisionsFaqSchema) }} />
       <Footer />
     </div>
   )
