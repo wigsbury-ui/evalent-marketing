@@ -1,3 +1,5 @@
+'use client'
+import { useState } from 'react'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -10,6 +12,7 @@ export const metadata = {
 }
 
 export default function Page() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
   const features = [
     { label: 'Live updates', desc: 'Status changes instantly on completion' },
     { label: 'Score breakdown', desc: 'English, Maths, Reasoning per student' },
@@ -27,10 +30,11 @@ export default function Page() {
   ]
 
   const faqs = [
-    ['Can I filter by grade or curriculum?', 'Yes, the dashboard can be filtered by grade, curriculum, and status. Particularly useful for schools running assessments across multiple entry points simultaneously.'],
-    ['Can multiple admin users see the dashboard?', 'All school admin users on your Evalent account have dashboard access. Permissions can be configured by role.'],
-    ['Can I export the data?', 'CSV export is available from the dashboard. Useful for integration with your admissions CRM or for sharing with board members.'],
-    ['How quickly do scores appear after completion?', 'Scores are calculated and the dashboard updates within seconds of the student submitting their assessment.'],
+    ['How quickly does the dashboard update after a student completes?', 'Instantly. Domain scores, the writing band, and the Evalent recommendation appear on the dashboard within seconds of the student submitting.'],
+    ['Can I filter applicants by grade, status, or curriculum?', 'Yes. The dashboard can be filtered by grade, curriculum, and pipeline status, useful for schools running assessments across multiple entry grades simultaneously.'],
+    ['Can multiple team members access the dashboard?', 'Yes. All authorised users on your school account have dashboard access, governed by their assigned role group and permission settings.'],
+    ['Can I export applicant data from the dashboard?', 'Yes. CSV export is available covering all registered applicants with their current status, domain scores, and decisions.'],
+    ['What happens when an assessment link expires without completion?', 'The student status updates to Expired on the dashboard and you are notified. You can send a new link from the admin panel at any time.'],
   ]
 
   return (
@@ -129,12 +133,24 @@ export default function Page() {
 
       <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-black text-navy tracking-tight mb-6">Common questions</h2>
-          <div className="space-y-4">
-            {faqs.map(([q, a]) => (
-              <div key={q} className="border border-gray-200 rounded-xl p-4">
-                <div className="text-sm font-bold text-navy mb-1.5">{q}</div>
-                <div className="text-sm text-gray-600 leading-relaxed">{a}</div>
+          <h2 className="text-2xl font-black text-navy text-center mb-8">Frequently asked questions</h2>
+          <div className="space-y-3">
+            {faqs.map(([q, a], i) => (
+              <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full text-left px-6 py-4 font-semibold text-navy flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
+                >
+                  {q}
+                  <svg className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 16 16">
+                    <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {openFaq === i && (
+                  <div className="px-6 py-4 text-sm text-gray-600 border-t border-gray-100 bg-white leading-relaxed">
+                    {a}
+                  </div>
+                )}
               </div>
             ))}
           </div>

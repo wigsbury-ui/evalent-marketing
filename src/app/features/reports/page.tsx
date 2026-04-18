@@ -1,3 +1,5 @@
+'use client'
+import { useState } from 'react'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -10,9 +12,10 @@ export const metadata = {
 }
 
 export default function Page() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
   const reportItems = [
     'Domain scores: English, Mathematics, Reasoning (% vs your threshold)',
-    'Writing band: Excellent / Good / Developing / Limited with commentary',
+    'Writing band: Excellent / Good / Developing / Emerging / Insufficient with commentary',
     'Evalent recommendation: Ready to admit, Admit with support, Borderline, Not yet ready',
     "Student's actual written responses, verbatim",
     'Mindset and values lens summary',
@@ -27,10 +30,11 @@ export default function Page() {
   ]
 
   const faqs = [
-    ['Can we add our school logo to the report?', 'Yes. Your school name and logo are configured once in your Evalent settings and appear automatically on every report.'],
-    ['Can thresholds be set differently per grade?', 'Yes. Each grade level has its own configurable threshold. A Grade 3 entry and Grade 10 entry have different expectations by design.'],
-    ['Is the writing commentary always accurate?', "Evalent's writing evaluation is calibrated to grade level and curriculum. It is a structured starting point that saves your assessors significant time, not a replacement for professional judgement."],
-    ['Can we share reports with parents?', 'Reports are designed to be parent-readable when needed. They explain the domains assessed and what the recommendation means without jargon.'],
+    ['How long does it take to receive the report after submission?', 'The report is generated automatically within five minutes of the student submitting. Your assessor receives it by email immediately with no manual steps required.'],
+    ['What does an Evalent admissions report include?', 'Every report includes domain scores for English, Mathematics, and Reasoning versus your thresholds; writing evaluation with band and commentary; Mindset lens; Motivation and School Fit lens; an AI executive summary; and the student written responses verbatim.'],
+    ['What are the Evalent recommendation bands?', 'Evalent uses four bands: Ready to Admit, Admit with Support, Borderline, and Not Yet Ready. Each is calculated against your school entrance thresholds, not national norms.'],
+    ['Can entrance thresholds be set differently for each grade?', 'Yes. English, Mathematics, and Reasoning thresholds are configured independently per grade. A Grade 3 entry uses different thresholds from a Grade 10 entry.'],
+    ['Can reports be shared with parents?', 'Reports can be shared via a secure time-limited link. They are written in accessible language. Schools should apply their own judgement on what to share with families and when.'],
   ]
 
   return (
@@ -129,12 +133,24 @@ export default function Page() {
 
       <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-black text-navy tracking-tight mb-6">Common questions</h2>
-          <div className="space-y-4">
-            {faqs.map(([q, a]) => (
-              <div key={q} className="border border-gray-200 rounded-xl p-4">
-                <div className="text-sm font-bold text-navy mb-1.5">{q}</div>
-                <div className="text-sm text-gray-600 leading-relaxed">{a}</div>
+          <h2 className="text-2xl font-black text-navy text-center mb-8">Frequently asked questions</h2>
+          <div className="space-y-3">
+            {faqs.map(([q, a], i) => (
+              <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full text-left px-6 py-4 font-semibold text-navy flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
+                >
+                  {q}
+                  <svg className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 16 16">
+                    <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {openFaq === i && (
+                  <div className="px-6 py-4 text-sm text-gray-600 border-t border-gray-100 bg-white leading-relaxed">
+                    {a}
+                  </div>
+                )}
               </div>
             ))}
           </div>

@@ -9,6 +9,8 @@ const teamFaqSchema = {
   ]
 }
 
+'use client'
+import { useState } from 'react'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import TeamDemo from '@/components/features/TeamDemo'
 import Nav from '@/components/Nav'
@@ -21,6 +23,7 @@ export const metadata = {
 }
 
 export default function Page() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
   const features = [
     { label: 'Four role groups',      desc: 'Admissions Team, Senior Leadership, Board Chair, Board Members, each with tailored presets' },
     { label: 'Six permissions',       desc: 'Register students, send assessments, dashboard, reports, strategy, executive reports' },
@@ -29,10 +32,11 @@ export default function Page() {
   ]
 
   const faqs = [
-    ['Can I adjust individual permissions beyond the role preset?', 'Yes. Any permission can be overridden at the individual level. Modified permissions are shown with an amber indicator so your admissions head can see at a glance who has a custom setup.'],
-    ['Do board members see individual student data?', 'No. Board Member and Board Chair roles do not have access to student-level reports by default. They see enrolment position and strategy, the big picture only.'],
+    ['Can I adjust individual permissions beyond the role preset?', 'Yes. Any permission can be overridden at the individual level. Modified permissions are highlighted with an amber indicator so your admissions head can see at a glance who has a custom setup.'],
+    ['Can board members see individual student data?', 'No. Board Member and Board Chair roles do not have access to student-level reports by default. They see enrolment KPIs, strategic signals, and executive reports only.'],
     ['How do I invite a new team member?', 'From the Team page, click Add Team Member, enter their name and email, assign their role group, and send the invitation. They receive a secure welcome email with login instructions.'],
-    ['Is there an audit trail for permission changes?', 'Yes. All permission changes are logged with timestamp and actor, giving you a complete record for governance and compliance purposes.'],
+    ['Is there an audit trail for permission changes?', 'Yes. All permission changes are logged with timestamp and attribution, giving you a complete record for governance and compliance purposes.'],
+    ['Is there a limit on the number of team members?', 'No. There is no limit on team members per school. Each person is assigned to a role group and can have individual permission overrides as needed.'],
   ]
 
   return (
@@ -124,12 +128,24 @@ export default function Page() {
       {/* FAQ */}
       <section className="py-14 px-6 bg-white border-t border-gray-100">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-black text-navy tracking-tight mb-6">Common questions</h2>
-          <div className="space-y-4">
-            {faqs.map(([q, a]) => (
-              <div key={q} className="border border-gray-200 rounded-xl p-4">
-                <div className="text-sm font-bold text-navy mb-1.5">{q}</div>
-                <div className="text-sm text-gray-600 leading-relaxed">{a}</div>
+          <h2 className="text-2xl font-black text-navy text-center mb-8">Frequently asked questions</h2>
+          <div className="space-y-3">
+            {faqs.map(([q, a], i) => (
+              <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full text-left px-6 py-4 font-semibold text-navy flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
+                >
+                  {q}
+                  <svg className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 16 16">
+                    <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {openFaq === i && (
+                  <div className="px-6 py-4 text-sm text-gray-600 border-t border-gray-100 bg-white leading-relaxed">
+                    {a}
+                  </div>
+                )}
               </div>
             ))}
           </div>
