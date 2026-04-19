@@ -134,6 +134,7 @@ export default function Home() {
     const ev = evRef.current!
     if (!el || !ev) return
     let alive = true
+    let firstRun = true
     const delay = (ms: number) => new Promise<void>(r => setTimeout(r, ms))
     const FI = 650, HOLD = 2600, FO = 650, GAP = 180, EV_HOLD = 10500
     async function animate() {
@@ -141,9 +142,15 @@ export default function Home() {
         for (let i = 0; i < phrases.length; i++) {
           if (!alive) return
           el.textContent = 'Know ' + phrases[i]
-          await delay(GAP); if (!alive) return
-          el.style.opacity = '1'
-          await delay(FI + HOLD); if (!alive) return
+          if (firstRun && i === 0) {
+            el.style.opacity = '1'
+            await delay(HOLD); if (!alive) return
+          } else {
+            await delay(GAP); if (!alive) return
+            el.style.opacity = '1'
+            await delay(FI + HOLD); if (!alive) return
+          }
+          firstRun = false
           el.style.opacity = '0'
           await delay(FO + GAP)
         }
@@ -155,7 +162,7 @@ export default function Home() {
         await delay(FO + GAP)
       }
     }
-    const t = setTimeout(() => { if (alive) animate() }, 800)
+    const t = setTimeout(() => { if (alive) animate() }, 300)
     return () => { alive = false; clearTimeout(t) }
   }, [])
   // Auto-open TrialModal if ?signup=1 is in the URL
@@ -201,19 +208,18 @@ export default function Home() {
             10 FREE TRIAL REPORTS | NO CARD NEEDED
           </div>
           <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-5">
-            <span className="block relative">
+            <span className="relative" style={{ display: 'flex', justifyContent: 'center', minHeight: '1.2em' }}>
               <span
                 ref={l1Ref}
-                className="block"
-                style={{ opacity: 0, transition: 'opacity 0.65s ease', whiteSpace: 'nowrap' }}
+                style={{ opacity: 1, transition: 'opacity 0.65s ease', whiteSpace: 'nowrap', flexShrink: 0 }}
               >Know who&apos;s ready.</span>
               <span
                 ref={evRef}
                 className="absolute inset-0 flex items-center justify-center"
-                style={{ opacity: 0, transition: 'opacity 0.7s ease', letterSpacing: '-0.03em' }}
+                style={{ opacity: 0, transition: 'opacity 0.7s ease', letterSpacing: '-0.03em', whiteSpace: 'nowrap' }}
               >Evalent.</span>
             </span>
-            <span className="block text-blue-300" style={{ whiteSpace: 'nowrap' }}>Admissions Intelligence.</span>
+            <span className="block text-blue-300 text-center" style={{ whiteSpace: 'nowrap' }}>Admissions Intelligence.</span>
           </h1>
           <p className="text-lg text-blue-300 max-w-xl mx-auto mb-8 leading-relaxed">
             Structured assessments. Evalent-evaluated reports. One-click decisions. Live enrolment intelligence. From first application to board report. All automatic.
