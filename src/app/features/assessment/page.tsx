@@ -1,11 +1,10 @@
-'use client'
-import { useState } from 'react'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import AssessmentDemo from '@/components/features/AssessmentDemo'
 import ReportSlider from '@/components/features/ReportSlider'
 import Link from 'next/link'
+import FaqAccordion from '@/components/features/FaqAccordion'
 
 export const metadata = {
   title: 'The Assessment | Evalent Features',
@@ -13,7 +12,6 @@ export const metadata = {
 }
 
 export default function Page() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
   const domains = [
     { label: 'English', desc: 'Reading comprehension (MCQ) + extended writing task' },
     { label: 'Mathematics', desc: 'Core knowledge (MCQ) + applied problem-solving' },
@@ -57,7 +55,7 @@ export default function Page() {
     },
   ]
 
-  const faqs = [
+  const faqs: [string, string][] = [
     ['How long does the Evalent assessment take?', 'Approximately 45 minutes covering five sections: English reading comprehension, an extended writing task, Mathematics, Reasoning, Mindset, and a personal School Fit statement.'],
     ['Does the student need to install anything?', 'No. The assessment runs in any modern web browser on a laptop, tablet, or desktop. No app, no account, no software installation required.'],
     ['What happens if the student loses their internet connection?', 'Progress is automatically saved. Students can return to their link and continue from where they stopped, provided the link has not expired.'],
@@ -160,31 +158,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-14 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-black text-navy text-center mb-8">Frequently asked questions</h2>
-          <div className="space-y-3">
-            {faqs.map(([q, a], i) => (
-              <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full text-left px-6 py-4 font-semibold text-navy flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
-                >
-                  {q}
-                  <svg className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 16 16">
-                    <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-                {openFaq === i && (
-                  <div className="px-6 py-4 text-sm text-gray-600 border-t border-gray-100 bg-white leading-relaxed">
-                    {a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqAccordion faqs={faqs} />
 
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">
         <div className="max-w-5xl mx-auto flex justify-between items-center flex-wrap gap-3">

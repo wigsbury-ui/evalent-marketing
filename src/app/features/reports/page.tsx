@@ -1,10 +1,9 @@
-'use client'
-import { useState } from 'react'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ReportsDemo from '@/components/features/ReportsDemo'
 import Link from 'next/link'
+import FaqAccordion from '@/components/features/FaqAccordion'
 
 export const metadata = {
   title: 'Report Generation | Evalent Features',
@@ -12,7 +11,6 @@ export const metadata = {
 }
 
 export default function Page() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
   const reportItems = [
     'Domain scores: English, Mathematics, Reasoning (% vs your threshold)',
     'Writing band: Excellent / Good / Developing / Emerging / Insufficient with commentary',
@@ -29,12 +27,12 @@ export default function Page() {
     { band: 'Not yet ready',                  cls: 'border-red-200 bg-red-50',      tc: 'text-red-700',   icon: '✕', desc: 'Multiple domains are significantly below threshold. The report supports a clear, defensible decision with enough detail to explain to families.' },
   ]
 
-  const faqs = [
-    ['How long does it take to receive the report after submission?', 'The report is generated automatically within five minutes of the student submitting. Your assessor receives it by email immediately with no manual steps required.'],
+  const faqs: [string, string][] = [
+    ['How long does it take to receive the report after submission?', 'The report is generated automatically within five minutes. Your assessor receives it by email immediately with no manual steps required.'],
     ['What does an Evalent admissions report include?', 'Every report includes domain scores for English, Mathematics, and Reasoning versus your thresholds; writing evaluation with band and commentary; Mindset lens; Motivation and School Fit lens; an AI executive summary; and the student written responses verbatim.'],
     ['What are the Evalent recommendation bands?', 'Evalent uses four bands: Ready to Admit, Admit with Support, Borderline, and Not Yet Ready. Each is calculated against your school entrance thresholds, not national norms.'],
     ['Can entrance thresholds be set differently for each grade?', 'Yes. English, Mathematics, and Reasoning thresholds are configured independently per grade. A Grade 3 entry uses different thresholds from a Grade 10 entry.'],
-    ['Can reports be shared with parents?', 'Reports can be shared via a secure time-limited link. They are written in accessible language. Schools should apply their own judgement on what to share with families and when.'],
+    ['Can reports be shared with parents?', 'Reports can be shared via a secure time-limited link written in accessible language. Schools should apply their own judgement on what to share with families and when.'],
   ]
 
   return (
@@ -131,31 +129,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-14 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-black text-navy text-center mb-8">Frequently asked questions</h2>
-          <div className="space-y-3">
-            {faqs.map(([q, a], i) => (
-              <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full text-left px-6 py-4 font-semibold text-navy flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
-                >
-                  {q}
-                  <svg className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 16 16">
-                    <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-                {openFaq === i && (
-                  <div className="px-6 py-4 text-sm text-gray-600 border-t border-gray-100 bg-white leading-relaxed">
-                    {a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqAccordion faqs={faqs} />
 
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">
         <div className="max-w-5xl mx-auto flex justify-between items-center flex-wrap gap-3">
