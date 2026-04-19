@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import TrialSection from '@/components/TrialSection'
@@ -115,6 +115,49 @@ const howToSchema = {
 
 export default function Home() {
   const [trialOpen, setTrialOpen] = useState(false)
+  const l1Ref = useRef<HTMLSpanElement>(null)
+  const evRef  = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    const phrases = [
+      "who's ready.",
+      "the child, not the score.",
+      "before you decide.",
+      "that it was fair.",
+      "the child who is waiting to succeed.",
+      "that the right decision was made.",
+      "where enrolment is heading.",
+      "what your leaders need to act.",
+      "the difference."
+    ]
+    const el = l1Ref.current
+    const ev = evRef.current
+    if (!el || !ev) return
+    let alive = true
+    const delay = (ms: number) => new Promise<void>(r => setTimeout(r, ms))
+    const FI = 650, HOLD = 2600, FO = 650, GAP = 180, EV_HOLD = 10500
+    async function animate() {
+      while (alive) {
+        for (let i = 0; i < phrases.length; i++) {
+          if (!alive) return
+          el.textContent = 'Know ' + phrases[i]
+          await delay(GAP); if (!alive) return
+          el.style.opacity = '1'
+          await delay(FI + HOLD); if (!alive) return
+          el.style.opacity = '0'
+          await delay(FO + GAP)
+        }
+        if (!alive) return
+        await delay(250)
+        ev.style.opacity = '1'
+        await delay(FI + EV_HOLD); if (!alive) return
+        ev.style.opacity = '0'
+        await delay(FO + GAP)
+      }
+    }
+    const t = setTimeout(() => { if (alive) animate() }, 800)
+    return () => { alive = false; clearTimeout(t) }
+  }, [])
   // Auto-open TrialModal if ?signup=1 is in the URL
   useEffect(() => {
     if (typeof window !== 'undefined' && window.location.search.includes('signup=1')) {
@@ -158,8 +201,19 @@ export default function Home() {
             10 FREE TRIAL REPORTS | NO CARD NEEDED
           </div>
           <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-5">
-            Know your applicants.<br/>
-            <span className="text-blue-300">Know your school.</span>
+            <span className="block relative">
+              <span
+                ref={l1Ref}
+                className="block"
+                style={{ opacity: 0, transition: 'opacity 0.65s ease', whiteSpace: 'nowrap' }}
+              >Know who&apos;s ready.</span>
+              <span
+                ref={evRef}
+                className="absolute inset-0 flex items-center justify-center"
+                style={{ opacity: 0, transition: 'opacity 0.7s ease', letterSpacing: '-0.03em' }}
+              >Evalent.</span>
+            </span>
+            <span className="block text-blue-300" style={{ whiteSpace: 'nowrap' }}>Admissions Intelligence.</span>
           </h1>
           <p className="text-lg text-blue-300 max-w-xl mx-auto mb-8 leading-relaxed">
             Structured assessments. Evalent-evaluated reports. One-click decisions. Live enrolment intelligence. From first application to board report. All automatic.
