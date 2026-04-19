@@ -213,36 +213,31 @@ export default function Home() {
         </div>
       </section>
       {/* THREE CAPABILITIES */}
-      <section className="py-8 px-6 bg-white border-b border-gray-100">
+      <section className="py-14 px-6 bg-white border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
-            <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-2">Everything your admissions operation needs</p>
-            <h2 className="text-2xl font-black text-navy tracking-tight">One platform. Three layers of intelligence.</h2>
+            <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-3">THE PLATFORM</p>
+            <h2 className="text-3xl font-black text-navy tracking-tight mb-3">One workflow from invitation<br className="hidden md:block" /> to defensible decision.</h2>
+            <p className="text-gray-500 text-sm max-w-xl mx-auto leading-relaxed">Three tightly-integrated steps that replace the ad-hoc paper test, the subjective discussion, and the spreadsheet.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
-            <Link href="/features/assessment" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-brand transition-colors">
-                <svg className="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-              </div>
-              <h3 className="text-sm font-bold text-navy mb-2">Assessment &amp; Decisions</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">Structured assessments for every applicant. Professional reports in under 5 minutes. One-click decisions delivered to your assessor's inbox.</p>
-              <span className="text-xs font-semibold text-brand">See how it works →</span>
+            <Link href="/features/assessment" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all flex flex-col">
+              <div className="text-xs font-bold text-gray-300 tracking-widest mb-4">01 / ASSESSMENT</div>
+              <h3 className="text-lg font-black text-navy mb-3 leading-snug">A structured 45-minute assessment.</h3>
+              <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">The applicant clicks their secure link and completes five sections: English reading and writing, Mathematics, Reasoning, Mindset, and a personal School Fit statement. Scored automatically the moment it ends.</p>
+              <span className="text-sm font-semibold text-brand group-hover:underline">Explore the assessment →</span>
             </Link>
-            <Link href="/features/strategy" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-brand transition-colors">
-                <svg className="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
-              </div>
-              <h3 className="text-sm font-bold text-navy mb-2">Enrolment Intelligence</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">Six live KPI cards across every grade. Evalent-generated signals. 8-week trend tracking. Executive reports your board can act on, in one click.</p>
-              <span className="text-xs font-semibold text-brand">See the Strategy page →</span>
+            <Link href="/features/reports" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all flex flex-col">
+              <div className="text-xs font-bold text-gray-300 tracking-widest mb-4">02 / REPORT</div>
+              <h3 className="text-lg font-black text-navy mb-3 leading-snug">A professional report in under 5 minutes.</h3>
+              <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">Domain scores, writing evaluation, Mindset and School Fit lenses, an AI executive summary, and a clear recommendation band — all calibrated to your school&apos;s own entrance thresholds.</p>
+              <span className="text-sm font-semibold text-brand group-hover:underline">See a sample report →</span>
             </Link>
-            <Link href="/features/team" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-brand transition-colors">
-                <svg className="w-5 h-5 text-brand group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              </div>
-              <h3 className="text-sm font-bold text-navy mb-2">Team &amp; Governance</h3>
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">Four role groups. Six permissions. Every stakeholder, including admissions team, senior leadership, board chair and governors, sees exactly what they need.</p>
-              <span className="text-xs font-semibold text-brand">See Team Management →</span>
+            <Link href="/features/decisions" className="group rounded-2xl border border-gray-200 bg-white p-6 hover:border-brand hover:shadow-md transition-all flex flex-col">
+              <div className="text-xs font-bold text-gray-300 tracking-widest mb-4">03 / DECISION</div>
+              <h3 className="text-lg font-black text-navy mb-3 leading-snug">One click. Decision recorded. Done.</h3>
+              <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">Your assessor receives the report by email with four decision buttons. No portal login. No manual entry. The decision is timestamped, attributed, and audit-logged automatically.</p>
+              <span className="text-sm font-semibold text-brand group-hover:underline">See the decision workflow →</span>
             </Link>
           </div>
         </div>
