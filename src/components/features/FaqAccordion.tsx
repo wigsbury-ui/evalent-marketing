@@ -1,9 +1,9 @@
 'use client'
 import { useState } from 'react'
 
-type FaqTuple = [string, string]
+type FaqTuple = string[]
 
-export default function FaqAccordion({ faqs }: { faqs: FaqTuple[] }) {
+export default function FaqAccordion({ faqs }: { faqs: string[][] }) {
   const [open, setOpen] = useState<number | null>(null)
   return (
     <section className="py-16 px-6 bg-white border-t border-gray-100">
