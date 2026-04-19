@@ -130,8 +130,8 @@ export default function Home() {
       "what your leaders need to act.",
       "the difference."
     ]
-    const el = l1Ref.current
-    const ev = evRef.current
+    const el = l1Ref.current!
+    const ev = evRef.current!
     if (!el || !ev) return
     let alive = true
     const delay = (ms: number) => new Promise<void>(r => setTimeout(r, ms))
