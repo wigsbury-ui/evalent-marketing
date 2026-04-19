@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import HeroTrialButton from '@/components/HeroTrialButton'
+import FaqAccordion from '@/components/features/FaqAccordion'
 
 export const metadata = {
   title: 'Frequently Asked Questions | Evalent',
@@ -178,6 +179,50 @@ export default function FAQPage() {
           <HeroTrialButton />
         </div>
       </section>
+
+      {/* FAQ sections */}
+      <section className="py-14 px-6 bg-white">
+        <div className="max-w-3xl mx-auto space-y-12">
+          {sections.map((section) => (
+            <div key={section.heading}>
+              <h2 className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-5 border-b border-gray-100 pb-3">{section.heading}</h2>
+              <div className="space-y-5">
+                {section.questions.map(({ q, a, link }) => (
+                  <div key={q} className="border border-gray-200 rounded-xl p-5">
+                    <h3 className="text-sm font-bold text-navy mb-2">{q}</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-2">{a}</p>
+                    {link && (
+                      <Link
+                        href={link.href}
+                        className="text-xs font-semibold text-brand hover:underline"
+                      >
+                        {link.label} &rarr;
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-10 px-6 bg-blue-50 border-t border-blue-100 text-center">
+        <div className="max-w-xl mx-auto">
+          <p className="text-navy font-bold text-lg mb-2">Still have a question?</p>
+          <p className="text-gray-600 text-sm mb-5">Email <a href="mailto:hello@evalent.io" className="text-brand font-semibold">hello@evalent.io</a> and we respond personally. Or start a free trial and explore the platform yourself.</p>
+          <a href="https://app.evalent.io/signup" className="inline-block bg-brand text-white font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-800 transition-colors">
+            Start free trial &rarr;
+          </a>
+        </div>
+      </section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Footer />
+    </div>
+  )
+}<FaqAccordion faqs={faqs} />
 
       {/* FAQ sections */}
       <section className="py-14 px-6 bg-white">

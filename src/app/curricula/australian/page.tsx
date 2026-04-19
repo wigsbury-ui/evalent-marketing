@@ -2,6 +2,7 @@ import HeroTrialButton from '@/components/HeroTrialButton'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import FaqAccordion from '@/components/features/FaqAccordion'
 
 export const metadata = {
   title: 'Australian Curriculum | Evalent',
@@ -142,19 +143,7 @@ export default function AustralianPage() {
         </div>
       </section>
 
-      <section className="py-14 px-6 bg-white border-t border-gray-100">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-black text-navy tracking-tight mb-6">Common questions from Australian schools</h2>
-          <div className="space-y-4">
-            {faqs.map(([q, a]) => (
-              <div key={q} className="border border-gray-200 rounded-xl p-4">
-                <div className="text-sm font-bold text-navy mb-1.5">{q}</div>
-                <div className="text-sm text-gray-600 leading-relaxed">{a}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqAccordion faqs={faqs} />
 
       <section className="bg-green-50 py-12 px-6 border-t border-green-100 text-center">
         <div className="max-w-xl mx-auto">

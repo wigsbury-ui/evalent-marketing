@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
+import FaqList from '@/components/features/FaqList'
 
 export const metadata = {
   title: 'Evalent for UK Independent Schools',
@@ -150,15 +151,7 @@ export default function Page() {
           </div>
           <div>
             <div className="inline-flex items-center gap-2 bg-gray-100 text-gray-600 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">COMMON QUESTIONS</div>
-            <div className="space-y-3">
-              {faqs.map(([q, a]) => (
-                <div key={q} className="border border-gray-200 rounded-xl p-4">
-                  <div className="text-sm font-bold text-navy mb-1.5">{q}</div>
-                  <div className="text-sm text-gray-600 leading-relaxed">{a}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+            <FaqList faqs={faqs} />
         </div>
       </section>
 
