@@ -152,6 +152,7 @@ export default function Page() {
           <div>
             <div className="inline-flex items-center gap-2 bg-gray-100 text-gray-600 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">COMMON QUESTIONS</div>
             <FaqList faqs={faqs} />
+          </div>
         </div>
       </section>
 
