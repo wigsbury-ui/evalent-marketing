@@ -36,7 +36,7 @@ export default function DemoPage() {
           </p>
         </div>
       </section>
-      <section className="px-6 bg-white pt-10 pb-6">
+      <section className="px-6 bg-white pt-10 pb-2">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
             <iframe
@@ -53,8 +53,8 @@ export default function DemoPage() {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-gray-50">
-<EvalDemo />
+      <section className="pt-0 pb-12 px-4 bg-white">
+        <EvalDemo />
         {/* Post-evaluation CTA — appears after demo */}
         <div className="max-w-2xl mx-auto mt-10 bg-white border-2 border-brand rounded-2xl p-8 text-center shadow-lg">
           <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">
