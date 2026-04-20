@@ -124,10 +124,13 @@ export default function Home() {
       "the child, not the score.",
       "before you decide.",
       "that it was fair.",
+      "that they were impressed.",
       "the child who is waiting to succeed.",
       "that the right decision was made.",
+      "that you were the quickest.",
       "where enrolment is heading.",
       "what your leaders need to act.",
+      "that you did your best.",
       "the difference."
     ]
     const el = l1Ref.current!
