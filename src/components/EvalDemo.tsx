@@ -48,6 +48,7 @@ export default function EvalDemo() {
   const [commentary, setCommentary] = useState('')
   const [barWidths, setBarWidths] = useState({ task: 0, org: 0, vocab: 0, acc: 0 })
   const resultRef = useRef<HTMLDivElement>(null)
+  const ivRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   const gradeLabel = (g: string) => {
     const n = parseInt(g.replace('G', ''))
@@ -59,20 +60,29 @@ export default function EvalDemo() {
 
   useEffect(() => {
     if (state === 'done' && result) {
-      setTimeout(() => {
+      const t = setTimeout(() => {
         setBarWidths({ task: result.task, org: result.organisation, vocab: result.vocabulary, acc: result.accuracy })
         streamCommentary(result.commentary)
         resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }, 200)
+      return () => {
+        clearTimeout(t)
+        if (ivRef.current) { clearInterval(ivRef.current); ivRef.current = null }
+      }
     }
   }, [state, result])
 
   function streamCommentary(text: string) {
+    if (ivRef.current) { clearInterval(ivRef.current); ivRef.current = null }
     setCommentary('')
     let i = 0
     const speed = Math.max(12, Math.min(28, 2800 / text.length))
-    const iv = setInterval(() => {
-      if (i >= text.length) { setCommentary(text); clearInterval(iv); return }
+    ivRef.current = setInterval(() => {
+      if (i >= text.length) {
+        setCommentary(text)
+        if (ivRef.current) { clearInterval(ivRef.current); ivRef.current = null }
+        return
+      }
       setCommentary(text.slice(0, i + 1))
       i++
     }, speed)
