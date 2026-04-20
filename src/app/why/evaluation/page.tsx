@@ -54,11 +54,7 @@ export default function DemoPage() {
       </section>
 
       <section className="py-12 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center mb-8">
-          <h2 className="text-3xl font-black text-navy tracking-tight mb-2">Now try it yourself</h2>
-          <p className="text-gray-500 text-sm">Choose a grade, write a response, and watch Evalent evaluate it in seconds.</p>
-        </div>
-        <EvalDemo />
+<EvalDemo />
         {/* Post-evaluation CTA — appears after demo */}
         <div className="max-w-2xl mx-auto mt-10 bg-white border-2 border-brand rounded-2xl p-8 text-center shadow-lg">
           <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">
