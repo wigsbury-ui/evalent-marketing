@@ -68,7 +68,7 @@ export default function GccSupportPage() {
             The last thing you need is more friction in your processes.
           </p>
           <p className="text-gray-600 text-base leading-relaxed">
-            So we wanted to do something concrete. Every international school in the GCC can use Evalent free for a
+            So we wanted to do something concrete. Every accredited international school in the GCC in good standing can use Evalent free for a
             full year, no charge, and no commitment beyond one thing: if it helps, we ask that you
             share your experience with us.
           </p>
@@ -84,7 +84,7 @@ export default function GccSupportPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              ['Up to 100 assessments', 'Send up to 100 assessments to applicants across all grades during your free year.'],
+              ['Up to 75 assessments', 'Send up to 75 assessments to applicants across all grades during your free year.'],
               ['Evalent-generated reports', 'Each completed assessment produces a professional report ready for your assessor within minutes.'],
               ['Full admissions workflow', 'Register students, track progress, record decisions, and maintain a full audit trail.'],
               ['All grades 3–10', 'Assessments calibrated to each grade level for every curriculum you teach.'],
@@ -208,6 +208,8 @@ export default function GccSupportPage() {
           <ul className="space-y-2">
             {[
               'This offer is available to international schools physically located in the United Arab Emirates, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, or Jordan.',
+                'Eligible schools must hold current accreditation from a recognised international accrediting body (such as CIS, NEASC, IBO, or equivalent) and must be in good standing with that accrediting body at the time of application.',
+                'Eligible schools must hold current accreditation from a recognised international accrediting body (such as CIS, NEASC, IBO, or equivalent) and must be in good standing with that accrediting body at the time of application.',
               'To qualify, your international school must register and activate a subscription using coupon code GCC2026 before 11:59 pm (GST) on 31 May 2026.',
               'The offer provides 12 months of the Essentials plan at no charge. After 12 months, your subscription will automatically renew at the standard Essentials rate unless cancelled.',
               'A valid payment method is required at checkout. No charge will be made during the free 12-month period.',
