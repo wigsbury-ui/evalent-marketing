@@ -138,7 +138,7 @@ export default function EvalDemo() {
   ]
 
   return (
-    <section style={{ background: '#ffffff', paddingTop: '96px', paddingBottom: '96px', borderTop: '1px solid #f0f0f0' }}>
+    <section style={{ background: '#ffffff', paddingTop: '32px', paddingBottom: '96px' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 24px' }}>
 
         {/* Header row */}
