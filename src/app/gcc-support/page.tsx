@@ -188,12 +188,7 @@ export default function GccSupportPage() {
           <p className="text-gray-500 text-sm mb-6">
             Use code <strong className="text-navy font-mono tracking-widest">GCC2026</strong> at checkout after signing up.
           </p>
-          <div className="flex gap-3 justify-center flex-wrap">
-            <CtaTrialButton />
-            <Link href="/pricing" className="bg-white text-gray-600 font-semibold text-sm px-6 py-3 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors">
-              View Essentials features
-            </Link>
-          </div>
+          <CtaTrialButton />
           <p className="text-xs text-gray-400 mt-6">
             Questions? Email <a href="mailto:team@evalent.io" className="text-brand">team@evalent.io</a>. We respond personally.
           </p>
