@@ -18,6 +18,7 @@ const features = [
       { title: 'IB, British & American', desc: 'Curriculum-aware questions and writing prompts. No configuration needed. Select your curriculum once.' },
       { title: '45-minute timed format', desc: 'Browser-based. Runs on school devices. Auto-submits on timer expiry. No software to install.' },
       { title: 'Four domains', desc: 'English (MCQ + writing), Mathematics (core + applied), Reasoning, and Mindset & Values.' },
+      { title: 'Crafted question sets', desc: 'Every question set is individually calibrated to grade level and curriculum — IB, British, American, Australian, and NZ. Five domains: academic, mindset, and motivation.', link: '/features/question-sets' },
     ],
   },
   {

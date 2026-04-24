@@ -7,7 +7,7 @@ import TrialModal from './TrialModal'
 import {
   UserPlus, LayoutDashboard, ClipboardList, FileText,
   CheckSquare, TrendingUp, Users, Sparkles, Heart,
-  Eye, Shield, Zap, Lock, Target, Star, Briefcase, type LucideIcon,
+  Eye, Shield, Zap, Lock, Target, Star, Briefcase, BookOpen, type LucideIcon,
 } from 'lucide-react'
 
 interface NavLink {
@@ -21,6 +21,7 @@ const FEATURE_LINKS: NavLink[] = [
   { href: '/features/registration', label: 'Student Registration',  desc: 'Register students and configure your school',      icon: UserPlus },
   { href: '/features/dashboard',    label: 'Assessment Dashboard',  desc: 'Track every applicant in real time',               icon: LayoutDashboard },
   { href: '/features/assessment',   label: 'The Assessment',        desc: 'What students experience',                         icon: ClipboardList },
+  { href: '/features/question-sets', label: 'Crafted Question Sets', desc: 'Grade and curriculum-calibrated across 5 domains',   icon: BookOpen },
   { href: '/features/reports',      label: 'Report Generation',     desc: 'From submission to PDF in minutes',                icon: FileText },
   { href: '/features/decisions',    label: 'Decision Workflow',     desc: 'One-click decisions from your inbox',              icon: CheckSquare },
   { href: '/features/strategy',     label: 'Strategy & Enrolment', desc: 'Live enrolment KPIs and Evalent grade signals',         icon: TrendingUp },
