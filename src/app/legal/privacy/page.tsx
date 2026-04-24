@@ -76,9 +76,11 @@ export default function Page() {
           </p>
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">7. Retention</h2>
-          <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          <p className="text-sm text-gray-600 leading-relaxed mb-3">
             School admin account data is retained for the duration of your subscription plus 12 months. Assessment data is retained according to your school&apos;s configured retention period. You may request deletion at any time by contacting hello@evalent.io.
           </p>
+          <p className="text-sm text-gray-600 leading-relaxed mb-2"><strong>Free trial accounts that do not convert to a paid plan:</strong> Where a school registers for a free trial and does not proceed to a paid subscription, all student applicant data — including names, assessment responses, and generated reports — is automatically and permanently deleted 90 days after the trial period ends. School administrator account credentials are deleted at the same time. No student data from trial accounts is retained beyond this period.</p>
+          <p className="text-sm text-gray-600 leading-relaxed mb-4">Schools may request earlier deletion of trial data at any time by contacting hello@evalent.io. Deletion requests are processed within 5 business days.</p>
 
           <h2 className="text-lg font-black text-navy mt-8 mb-3">8. Your Rights</h2>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
