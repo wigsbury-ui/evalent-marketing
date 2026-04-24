@@ -15,7 +15,7 @@ const features = [
     items: [
       { title: 'Grades 3–10', desc: 'Fully calibrated assessments for every entry grade. Each is tailored to the relevant curriculum level.' },
       { title: 'IB, British & American', desc: 'Curriculum-aware questions and writing prompts. No configuration needed. Select your curriculum once.' },
-      { title: '45-minute timed format', desc: 'Browser-based. Works on any device. Auto-submits on timer expiry. No software to install.' },
+      { title: '45-minute timed format', desc: 'Browser-based. Runs on school devices. Auto-submits on timer expiry. No software to install.' },
       { title: 'Four domains', desc: 'English (MCQ + writing), Mathematics (core + applied), Reasoning, and Mindset & Values.' },
     ],
   },

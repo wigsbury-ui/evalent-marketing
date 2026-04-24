@@ -59,7 +59,7 @@ export default function Page() {
     ['How long does the Evalent assessment take?', 'Approximately 45 minutes covering five sections: English reading comprehension, an extended writing task, Mathematics, Reasoning, Mindset, and a personal School Fit statement.'],
     ['Does the student need to install anything?', 'No. The assessment runs in any modern web browser on a laptop, tablet, or desktop. No app, no account, no software installation required.'],
     ['What happens if the student loses their internet connection?', 'Progress is automatically saved. Students can return to their link and continue from where they stopped, provided the link has not expired.'],
-    ['Can the assessment be supervised or taken at home?', 'Both. Many schools use Evalent as a remote pre-visit assessment. Others run it on a supervised school device. The platform supports either approach.'],
+    ['How is the assessment delivered?', 'In school, on a device configured by the admissions team. Schools schedule a supervised assessment session and send the student their unique link. No software or account is required.'],
     ['Are Evalent assessments curriculum-aligned?', 'Yes. Every assessment is calibrated to the entry grade and curriculum. IB, British, American, Australian, and New Zealand curricula are all supported across Grades 3 to 10.'],
   ]
 
@@ -72,7 +72,7 @@ export default function Page() {
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">FEATURE 3 OF 7</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             A professional assessment.<br/>
-            <span className="text-blue-300">From any device. In 45 minutes.</span>
+            <span className="text-blue-300">In school. In 45 minutes.</span>
           </h1>
           <p className="text-blue-300 text-lg leading-relaxed max-w-xl mx-auto">
             The applicant clicks their secure link, completes five structured sections, and submits. No software to install. No invigilator required. Automatically scored the moment it ends.

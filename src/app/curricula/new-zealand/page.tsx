@@ -30,7 +30,7 @@ export default function NZCPage() {
   const faqs = [
     ['What year groups are covered?', 'Year 4 through Year 10. Each year group has its own calibrated question set mapped to the appropriate NZC curriculum level. Year 3 entry is on the product roadmap.'],
     ['How does the NZC level mapping work?', 'Year 4 maps to NZC Level 2, Years 5–6 to Level 3, Years 7–8 to Level 4, and Years 9–10 to Level 5. The assessment content and report language reflect the appropriate level automatically.'],
-    ['Can we use Evalent for international students applying to NZ schools?', 'Yes. The assessment link can be sent to any email address worldwide. Students complete it on any device, making it well-suited for families applying from overseas or from other regions of New Zealand.'],
+    ['Can we use Evalent for international students applying to NZ schools?', 'Yes. Schools schedule an in-person assessment session as part of the applicant’s campus visit. The structured format ensures consistent results regardless of the applicant’s background.'],
     ['Is there a national admissions standard Evalent aligns to?', 'New Zealand has no national independent school admissions standard. Evalent provides the structured, documented assessment record that individual schools need to make consistent, evidenced decisions against their own entry criteria.'],
     ['Can we set our own entry thresholds?', 'Yes. You configure your school’s entrance thresholds by year group and by domain. Evalent reflects your standards, not a national benchmark.'],
     ['Does Evalent use Year or Grade labels?', 'Year labels throughout, from Year 4 to Year 10. Grade labels do not appear anywhere in the assessment or report.'],

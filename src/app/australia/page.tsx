@@ -12,7 +12,7 @@ export const metadata = {
 export default function Page() {
   const challenges = [
     { title: 'NAPLAN is a population measure, not an admissions tool', desc: 'NAPLAN results arrive late, measure a narrow band of skills, and were never designed for school-to-school entry decisions. Many Australian independent schools have no structured alternative for assessing candidates who have not yet sat NAPLAN.' },
-    { title: 'Mid-year and out-of-cycle enrolments are hard to assess', desc: 'A family arriving from interstate or overseas cannot sit a scheduled assessment day. Evalent sends a link, the student completes it from wherever they are, within a 72-hour window.' },
+    { title: 'Mid-year and out-of-cycle enrolments are hard to assess', desc: 'Families enrolling mid-year or out of cycle can be assessed during a scheduled school visit. Evalent runs on a supervised school device — no assessment day required, no disruption to the school calendar.' },
     { title: 'International enrolments require a comparable baseline', desc: 'Australian independent schools attract families from Southeast Asia, the Middle East, and Europe. Comparing an application from Singapore to one from regional New South Wales requires a common assessment, which Evalent provides.' },
     { title: 'Scholarship assessment is resource-intensive', desc: 'Most Australian private schools run scholarship programmes with significant logistical overhead. Evalent streamlines the first-pass assessment so your scholarship committee focuses on the shortlist.' },
   ]
@@ -23,12 +23,12 @@ export default function Page() {
     ['Primary / secondary framing', 'Foundation–Year 6 and Years 7–10 are assessed and reported with different expectations, consistent with the ACARA band structure.'],
     ['Proficiency strand language', 'Maths reports reference ACARA’s four proficiency strands: understanding, fluency, problem-solving, and reasoning.'],
     ['No UK or US terminology', 'Key Stage, SATs, Common Core, and GCSE language are explicitly excluded. Your assessors see reports written for an Australian context.'],
-    ['Remote-first design', 'Australia’s geography makes remote assessment essential. Evalent was built for secure, unsupervised completion on any device, anywhere.'],
+    ['School-based assessment', 'Evalent assessments are completed in school on supervised devices. Schools schedule assessment sessions as part of their admissions process.'],
   ]
 
   const faqs = [
     ['Can we use Evalent alongside ACER scholarship tests?', 'Yes. ACER provides norm-referenced scholarship ranking; Evalent provides criterion-referenced entry profiling. Many schools use Evalent for general enrolment and ACER specifically for scholarship selection.'],
-    ['Is Evalent suitable for boarding school applicants?', 'Particularly well-suited. Boarding applicants often cannot attend assessment days in person. Evalent’s remote-first model means a student in rural Queensland or based in Singapore completes the same assessment as a local day applicant.'],
+    ['Is Evalent suitable for boarding school applicants?', 'Yes. Schools schedule an in-person assessment session for boarding applicants when they visit campus, or as part of the enrolment day. The structured format means every applicant sits the same assessment under the same conditions.'],
     ['What year groups are covered?', 'Year 4 through Year 10. Year 3 entry is on the roadmap.'],
     ['Can we configure our own entry thresholds?', 'Yes. Each school sets its own pass thresholds per domain per year group.'],
     ['Does Evalent cover senior secondary pathway readiness?', 'For Year 10 entry, the report includes academic maturity indicators relevant to ATAR, IB, and IGCSE pathway readiness.'],

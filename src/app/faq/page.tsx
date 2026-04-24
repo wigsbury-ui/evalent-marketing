@@ -15,7 +15,7 @@ const faqSchema = {
   "mainEntity": [
     { "@type": "Question", "name": "What is Evalent?", "acceptedAnswer": { "@type": "Answer", "text": "Evalent is an admissions intelligence platform for international and independent schools. It provides structured assessments for applicants at Grades 3-10, generates professional reports in under 5 minutes, and gives leadership teams live enrolment intelligence across every grade." } },
     { "@type": "Question", "name": "How long does the free trial last?", "acceptedAnswer": { "@type": "Answer", "text": "The free trial gives you 10 complete assessment reports with no time limit and no credit card required. You are not charged until you explicitly select and confirm a paid plan." } },
-    { "@type": "Question", "name": "How long does the assessment take?", "acceptedAnswer": { "@type": "Answer", "text": "Approximately 45 minutes for most grades. Younger grades (3-4) take slightly less time. The assessment covers English, Mathematics, Reasoning, and Mindset and runs in a browser on any device." } },
+    { "@type": "Question", "name": "How long does the assessment take?", "acceptedAnswer": { "@type": "Answer", "text": "Approximately 45 minutes for most grades. Younger grades (3-4) take slightly less time. The assessment covers English, Mathematics, Reasoning, and Mindset and runs in a browser on a school device." } },
     { "@type": "Question", "name": "How quickly is the report delivered?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 90 seconds to 4 minutes after the student submits. The report is emailed directly to the assessor as a professional PDF with one-click decision buttons." } },
     { "@type": "Question", "name": "Which curricula does Evalent support?", "acceptedAnswer": { "@type": "Answer", "text": "Evalent supports IB (PYP and MYP), British National Curriculum, American Common Core, Australian ACARA, and New Zealand NZC. Reports use the language and framing of the curriculum you select." } },
     { "@type": "Question", "name": "How much does Evalent cost?", "acceptedAnswer": { "@type": "Answer", "text": "Essentials is $2,900 per year (100 assessments). Professional is $5,500 per year (250 assessments). Enterprise is $9,500 per year (500+ assessments). All plans include the Strategy page and Team Management." } },
@@ -57,7 +57,7 @@ const sections = [
     questions: [
       {
         q: "How long does the assessment take?",
-        a: "Approximately 45 minutes for most grades. Younger grades (3-4) take slightly less. The assessment covers English, Mathematics, Reasoning, and Mindset and runs in a browser on any device.",
+        a: "Approximately 45 minutes for most grades. Younger grades (3-4) take slightly less. The assessment covers English, Mathematics, Reasoning, and Mindset and runs in a browser on a school device.",
         link: { href: "/features/assessment", label: "See the assessment" },
       },
       {
@@ -66,8 +66,8 @@ const sections = [
         link: null,
       },
       {
-        q: "Can the assessment be taken at home?",
-        a: "Yes. The assessment is designed for remote, unsupervised completion. In-person supervision on campus is also supported if preferred.",
+        q: "Does the assessment need to be completed in school?",
+        a: "Yes. Evalent assessments are completed in school on supervised devices configured by the admissions team. This ensures writing responses are authentic and the environment is controlled.",
         link: null,
       },
       {

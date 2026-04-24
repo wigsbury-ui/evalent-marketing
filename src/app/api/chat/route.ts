@@ -16,7 +16,7 @@ The problem Evalent solves: most schools base admissions decisions on parent let
 1. School registers an applicant on the dashboard (name, grade, admission term, year)
 2. A unique secure assessment link is generated automatically
 3. School sends the link to the student or family. Evalent does NOT email students directly
-4. Student completes the online assessment (approx. 45 minutes, any device, no software, no account needed)
+4. Student completes the online assessment in school (approx. 45 minutes, on a supervised school device, no software or account needed)
 5. Evalent auto-scores MCQ questions and evaluates all writing tasks automatically
 6. A professional PDF report is generated automatically
 7. Report is emailed to the school's designated assessor with one-click decision buttons
@@ -25,7 +25,7 @@ The problem Evalent solves: most schools base admissions decisions on parent let
 
 == THE ASSESSMENT ==
 Total time: approximately 45 minutes. Shorter for younger grades (G3/G4), longer for senior grades (G9/G10).
-Browser-based. Works on any device. No software to install. Auto-saves progress.
+Browser-based. Runs on school devices. No software to install.
 Calibrated to the entry grade AND the school's curriculum. A Grade 4 IB applicant gets different content from a Grade 9 British applicant.
 
 ENGLISH: 35% of overall score
@@ -228,8 +228,8 @@ Partner tiers: Referral, Reseller, Senior Partner, Influencer, Custom.
 Q: Do students need to create an account or download anything?
 A: No. They access via a secure link sent by the school. No app, no account, no password, no software.
 
-Q: Can the assessment be taken at home?
-A: Yes. Designed for remote, unsupervised completion. In-person supervision is possible if preferred.
+Q: Does the assessment need to be completed in school?
+A: Yes. Evalent assessments are completed in school on supervised devices configured by the admissions team. This ensures writing responses are authentic and the assessment environment is controlled.
 
 Q: How long to get a report after the student submits?
 A: Typically under 2 minutes. Scoring, writing evaluation, narrative generation, PDF creation, and email dispatch all run automatically.

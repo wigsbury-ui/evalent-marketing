@@ -29,7 +29,7 @@ export default function Page() {
   const faqs = [
     ['Do UK independent schools actually use this?', 'Yes. Prep schools and senior schools both use Evalent for entry at Year 3 through Year 11. It is particularly useful for mid-year entry, sixth form feeder assessment, and schools that do not sit Common Entrance.'],
     ['Can we use Evalent alongside our existing interview process?', 'Absolutely. Most schools use Evalent as a structured first stage before interview. The report gives the interviewer something concrete to explore rather than going in blind.'],
-    ['Is the assessment supervised or unsupervised?', 'Evalent is designed as a secure, remote assessment. The student takes it at home or at school via a unique link. Question order is randomised to reduce sharing. Schools can choose to invigilate if preferred.'],
+    ['Is the assessment supervised?', 'Yes. Evalent assessments are completed in school on devices configured and supervised by the admissions team. Question order is randomised across the paper to protect integrity.'],
     ['What year groups are covered?', 'Year 4 through Year 11. Year 3 entry is on the roadmap.'],
     ['How does Evalent handle SEND candidates?', 'Extended time and other reasonable adjustments can be configured per student in the dashboard before the assessment link is sent.'],
   ]
@@ -134,7 +134,7 @@ export default function Page() {
               {[
                 ['Application received', 'Family submits enquiry or application form to your registrar.'],
                 ['Evalent link sent', 'Registrar registers the student in Evalent. Secure assessment link sent automatically. Takes under 60 seconds.'],
-                ['Student completes assessment', 'At home or at school, on any device. 25–60 minutes depending on year group.'],
+                ['Student completes assessment', 'In school, on a supervised device configured by the school. 25–60 minutes depending on year group.'],
                 ['Report delivered', 'Your assessor receives the full report by email within 5 minutes of submission. No login required.'],
                 ['Interview', 'Interviewer reviews the Evalent report in advance. Has specific areas to explore. Goes in prepared.'],
                 ['Decision recorded', 'One-click decision from the email. Audit trail created automatically.'],

@@ -14,7 +14,7 @@ export default function Page() {
     { title: 'No national admissions assessment standard', desc: 'New Zealand has no equivalent to Common Entrance or SSAT. Each independent school designs its own admissions process. Evalent gives you a structured, consistent assessment that is immediately credible to families and professionally documented for governance purposes.' },
     { title: 'The NZC is competency-based, not content-based', desc: 'Generic assessment tools built for British or American curricula fail to reflect the inquiry-based, competency-oriented philosophy of New Zealand schooling. Evalent’s NZC configuration uses the language of the key competencies and the values the curriculum names explicitly.' },
     { title: 'Families are making significant financial commitments', desc: 'New Zealand independent school fees represent a substantial family investment. These families expect the school’s admissions process to match the quality of the education they are paying for. A rigorous, professional assessment signals that standard.' },
-    { title: 'International enrolments need a consistent baseline', desc: 'New Zealand independent schools attract families from Asia, the Pacific, and further afield. A student applying from Hong Kong, South Korea, or the UK can complete the same Evalent assessment as a local applicant, on any device, from anywhere.' },
+    { title: 'International enrolments need a consistent baseline', desc: 'New Zealand independent schools attract families from Asia, the Pacific, and further afield. Evalent gives every applicant — local or international — the same structured, curriculum-calibrated assessment, ensuring consistent and comparable results.' },
   ]
 
   const differences = [
@@ -30,7 +30,7 @@ export default function Page() {
     ['Which New Zealand schools is Evalent suited to?', 'State-integrated and fully independent schools from Year 4 entry upward. Particularly used by schools with selective entry, boarding programmes, and schools attracting international students.'],
     ['How does Evalent relate to the NZC?', 'Evalent is an admissions assessment tool built to be consistent with the NZC’s values, language, and philosophy. It is not a curriculum delivery tool.'],
     ['What year groups are covered?', 'Year 4 through Year 10. Year 3 entry is on the roadmap.'],
-    ['Can we use Evalent for overseas applicants?', 'Yes. The assessment is delivered via a secure link that can be sent to any email address in any country. The student completes it on any device within a 72-hour window.'],
+    ['Can we use Evalent for overseas applicants?', 'Yes. Schools schedule an Evalent assessment session as part of the applicant’s campus visit. The consistent, structured format ensures all results are comparable regardless of the applicant’s background.'],
     ['Does Evalent support te reo Māori?', 'Not yet. English-medium assessment only at this stage. Te reo Māori support is on the product roadmap.'],
   ]
 

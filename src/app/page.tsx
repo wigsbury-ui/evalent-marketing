@@ -107,7 +107,7 @@ const howToSchema = {
   "step": [
     {"@type": "HowToStep", "position": 1, "name": "Register the applicant", "text": "Sign in to the Evalent dashboard and register the student with their name, grade, and admission term. A unique secure assessment link is generated automatically."},
     {"@type": "HowToStep", "position": 2, "name": "Send the assessment link", "text": "Send the secure link to the student or family. No account or software is needed to complete the assessment."},
-    {"@type": "HowToStep", "position": 3, "name": "Student completes the assessment", "text": "The student completes a 45-minute structured assessment covering English, Mathematics, Reasoning, and Mindset on any device."},
+    {"@type": "HowToStep", "position": 3, "name": "Student completes the assessment", "text": "The student completes a 45-minute structured assessment covering English, Mathematics, Reasoning, and Mindset on a supervised school device."},
     {"@type": "HowToStep", "position": 4, "name": "Receive the professional report", "text": "Within 5 minutes of submission, a professional PDF report is automatically emailed to the assessor with domain scores, written commentary, and a clear recommendation."},
     {"@type": "HowToStep", "position": 5, "name": "Record your decision", "text": "The assessor clicks Admit, Admit with Support, Waitlist, or Do Not Admit directly from the email. No portal login required. The decision is recorded instantly."}
   ]
@@ -615,7 +615,7 @@ export default function Home() {
       {/* Mobile: simple CTA button */}
       <section className="md:hidden bg-blue-50 py-12 px-6 text-center">
         <h2 className="text-2xl font-black text-navy tracking-tight mb-3">10 free reports.<br/>No credit card.</h2>
-        <p className="text-gray-500 text-sm mb-6 leading-relaxed">Set up in minutes. Works on any device.</p>
+        <p className="text-gray-500 text-sm mb-6 leading-relaxed">Set up in minutes. Runs on school devices.</p>
         <a onClick={(e) => { e.preventDefault(); setTrialOpen(true) }} href="#" className="inline-block bg-brand text-white font-bold text-base px-8 py-4 rounded-xl hover:bg-blue-800 transition-colors">
           Start your free trial →
         </a>
