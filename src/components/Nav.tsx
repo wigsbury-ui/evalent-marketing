@@ -35,7 +35,7 @@ const WHY_LINKS: NavLink[] = [
   { href: '/why/conversion',    label: 'Conversion & Speed',     desc: 'Faster decisions, higher yield',                icon: Zap },
   { href: '/why/data-security',    label: 'Data Security',            desc: 'UAE and GDPR-aligned · student data protected',       icon: Lock },
   { href: '/why/decision-making',  label: 'Informed Decision Making', desc: 'Intelligence for leaders and governors',         icon: Target },
-  { href: '/why/fit-and-motivation', label: 'Fit & Motivation',           desc: 'Authentic motivation and school-fit signals from every applicant', icon: Star },
+  { href: '/why/fit-and-motivation', label: 'Motivation & School Fit',           desc: 'Authentic motivation and school-fit signals from every applicant', icon: Star },
 ]
 
 const CURRICULA_LINKS: NavLink[] = [

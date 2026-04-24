@@ -191,12 +191,9 @@ export default function Page() {
 
       {/* PREV / NEXT */}
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">
-        <div className="max-w-5xl mx-auto flex justify-between items-center flex-wrap gap-3">
+        <div className="max-w-5xl mx-auto flex items-center flex-wrap gap-3">
           <Link href="/why/decision-making" className="text-gray-400 hover:text-brand text-sm">
             ← Informed Decision Making
-          </Link>
-          <Link href="/why" className="text-brand font-semibold hover:underline text-sm">
-            All Why Evalent pages →
           </Link>
         </div>
       </div>

@@ -14,7 +14,7 @@ const BENEFITS = [
   { href: '/why/defensibility', title: 'Defensibility', desc: 'Structured, reproducible assessments with documented evidence that satisfies accreditation and governance expectations.', icon: '🛡️' },
   { href: '/why/conversion', title: 'Conversion & Speed', desc: 'From assessment link to admissions decision in under five minutes, with automated reminders that keep applications moving.', icon: '⚡' },
   { href: '/why/data-security', title: 'Data Security', desc: 'UAE data protection law compliant. School is the data controller. Student data is never used to train language models.', icon: '🔒' },
-  { href: '/why/fit-and-motivation', title: 'Fit & Motivation', desc: 'Every student explains why they want to join your school. Evalent evaluates authenticity, school knowledge, and genuine motivation — and surfaces coaching when it sees it.', icon: '⭐' },
+  { href: '/why/fit-and-motivation', title: 'Motivation & School Fit', desc: 'Every student explains why they want to join your school. Evalent evaluates authenticity, school knowledge, and genuine motivation — and surfaces coaching when it sees it.', icon: '⭐' },
 ]
 
 export default function Page() {
