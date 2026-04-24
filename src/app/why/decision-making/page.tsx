@@ -62,9 +62,9 @@ export default function Page() {
             </div>
 
             <div className="border border-indigo-100 rounded-xl p-5">
-              <h3 className="text-sm font-bold text-navy mb-2">Evalent signals that surface what matters</h3>
+              <h3 className="text-sm font-bold text-navy mb-2">Automatic alerts when your enrolment data needs attention</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Evalent&apos;s strategic signals engine analyses your enrolment data and generates specific, grade-level intelligence, organised into three categories: Enrolment &amp; Capacity, Retention, and Pipeline. Leaders don&apos;t have to hunt for problems. The system surfaces them, with recommended actions, so attention goes where it&apos;s needed most.
+                Evalent continuously monitors your enrolment data and fires specific, grade-level alerts across three categories: Enrolment &amp; Capacity, Retention, and Pipeline. When a grade is at risk of under-filling, retention is declining, or pipeline is thinning, an alert appears automatically — with a plain-English summary and a recommended next action. Leaders see the issue and what to do about it, without digging through a single spreadsheet.
               </p>
             </div>
 
