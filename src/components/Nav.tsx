@@ -7,7 +7,7 @@ import TrialModal from './TrialModal'
 import {
   UserPlus, LayoutDashboard, ClipboardList, FileText,
   CheckSquare, TrendingUp, Users, Sparkles, Heart,
-  Eye, Shield, Zap, Lock, Target, Star, type LucideIcon,
+  Eye, Shield, Zap, Lock, Target, Star, Briefcase, type LucideIcon,
 } from 'lucide-react'
 
 interface NavLink {
@@ -35,6 +35,7 @@ const WHY_LINKS: NavLink[] = [
   { href: '/why/conversion',    label: 'Conversion & Speed',     desc: 'Faster decisions, higher yield',                icon: Zap },
   { href: '/why/data-security',    label: 'Data Security',            desc: 'UAE and GDPR-aligned · student data protected',       icon: Lock },
   { href: '/why/decision-making',  label: 'Informed Decision Making', desc: 'Intelligence for leaders and governors',         icon: Target },
+  { href: '/why/operational-benefits', label: 'Operational Benefits', desc: 'Smooth admissions through summer — automated, remote, zero staffing dependency', icon: Briefcase },
   { href: '/why/fit-and-motivation', label: 'Motivation & School Fit',           desc: 'Authentic motivation and school-fit signals from every applicant', icon: Star },
 ]
 
