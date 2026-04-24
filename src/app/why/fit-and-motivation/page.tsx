@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import HeroTrialButton from '@/components/HeroTrialButton'
+import CtaTrialButton from '@/components/CtaTrialButton'
 
 export const metadata = {
   title: 'Fit & Motivation | Why Evalent',
@@ -185,11 +186,7 @@ export default function Page() {
           </p>
           <p className="text-blue-400 text-sm mb-7">10 free reports. No credit card. Set up in 5 minutes.</p>
           <a
-            href="https://app.evalent.io/signup"
-            className="inline-block bg-white text-brand font-bold text-sm px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors"
-          >
-            Start your free trial →
-          </a>
+            <CtaTrialButton variant="light" />
         </div>
       </section>
 

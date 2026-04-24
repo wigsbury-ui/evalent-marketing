@@ -8,6 +8,7 @@ import PostCard from '@/components/blog/PostCard'
 import { fetchPostBySlug, fetchPosts, CATEGORIES, Post, formatDate } from '@/lib/blog'
 import ShareButtons from '@/components/blog/ShareButtons'
 import BlogCTA from '@/components/blog/BlogCTA'
+import CtaTrialButton from '@/components/CtaTrialButton'
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>()
@@ -141,9 +142,7 @@ export default function BlogPost() {
               <div className="bg-navy rounded-2xl p-8 text-center">
                 <p className="text-white font-black text-xl mb-2">Try Evalent free</p>
                 <p className="text-blue-200 text-sm mb-5">10 free reports. No credit card. Set up in 5 minutes.</p>
-                <a href="https://app.evalent.io/signup" className="inline-flex items-center gap-2 bg-brand text-white font-bold px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors text-sm">
-                  Start free trial →
-                </a>
+                <CtaTrialButton />
               </div>
             </div>
 

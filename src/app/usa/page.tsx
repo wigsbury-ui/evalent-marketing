@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
 import FaqList from '@/components/features/FaqList'
+import CtaTrialButton from '@/components/CtaTrialButton'
 
 export const metadata = {
   title: 'Evalent for US Independent Schools',
@@ -137,7 +138,7 @@ export default function Page() {
           <h2 className="text-2xl font-black text-navy tracking-tight mb-3">Try Evalent free with your next 10 applicants.</h2>
           <p className="text-gray-600 text-sm mb-6">No credit card. No contract. Set up in 5 minutes.</p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <a href="/#trial" className="bg-brand text-white font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-800 transition-colors">Start free trial →</a>
+            <CtaTrialButton />
             <a href="mailto:hello@evalent.io" className="bg-white text-gray-600 font-semibold text-sm px-6 py-3 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors">Talk to us</a>
           </div>
         </div>

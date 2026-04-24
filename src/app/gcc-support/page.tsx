@@ -4,6 +4,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
+import CtaTrialButton from '@/components/CtaTrialButton'
 
 export const metadata: Metadata = {
   title: 'Standing with GCC International Schools',
@@ -188,9 +189,7 @@ export default function GccSupportPage() {
             Use code <strong className="text-navy font-mono tracking-widest">GCC2026</strong> at checkout after signing up.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <a href="https://app.evalent.io/school" className="bg-brand text-white font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-800 transition-colors">
-              Start free trial →
-            </a>
+            <CtaTrialButton />
             <Link href="/pricing" className="bg-white text-gray-600 font-semibold text-sm px-6 py-3 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors">
               View Essentials features
             </Link>

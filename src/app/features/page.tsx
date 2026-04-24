@@ -1,6 +1,7 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import CtaTrialButton from '@/components/CtaTrialButton'
 
 export const metadata = {
   title: 'Features | Evalent',
@@ -116,7 +117,7 @@ export default function FeaturesPage() {
           <h2 className="text-3xl font-black text-white tracking-tight mb-3">Ready to try it?</h2>
           <p className="text-blue-300 mb-7">10 free reports. No credit card. Set up in 5 minutes.</p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <a href="/#trial" className="bg-white text-brand font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors">Start free trial →</a>
+            <CtaTrialButton variant="light" />
             <Link href="/demo" className="bg-white/10 text-white font-bold text-sm px-6 py-3 rounded-xl border border-white/20 hover:bg-white/20 transition-colors">Try the Evalent evaluator</Link>
           </div>
         </div>

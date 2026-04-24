@@ -3,6 +3,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import FaqAccordion from '@/components/features/FaqAccordion'
+import CtaTrialButton from '@/components/CtaTrialButton'
 
 export const metadata = {
   title: 'American Curriculum | Evalent',
@@ -151,7 +152,7 @@ export default function AmericanPage() {
           <h2 className="text-2xl font-black text-navy tracking-tight mb-3">Ready to try Evalent for your American school?</h2>
           <p className="text-gray-600 text-sm mb-6">10 free trial reports. No credit card. Set up in 5 minutes.</p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <a href="/#trial" className="bg-brand text-white font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-800 transition-colors">Start free trial →</a>
+            <CtaTrialButton />
             <Link href="/curricula/ib" className="bg-white text-gray-600 font-semibold text-sm px-6 py-3 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors">IB curriculum →</Link>
           </div>
         </div>

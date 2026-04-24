@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import HeroTrialButton from '@/components/HeroTrialButton'
+import CtaTrialButton from '@/components/CtaTrialButton'
 
 export const metadata = {
   title: 'Frequently Asked Questions | Evalent',
@@ -216,9 +217,7 @@ export default function FAQPage() {
         <div className="max-w-xl mx-auto">
           <p className="text-navy font-bold text-lg mb-2">Still have a question?</p>
           <p className="text-gray-600 text-sm mb-5">Email <a href="mailto:hello@evalent.io" className="text-brand font-semibold">hello@evalent.io</a> and we respond personally. Or start a free trial and explore the platform yourself.</p>
-          <a href="https://app.evalent.io/signup" className="inline-block bg-brand text-white font-bold text-sm px-6 py-3 rounded-xl hover:bg-blue-800 transition-colors">
-            Start free trial &rarr;
-          </a>
+          <CtaTrialButton />
         </div>
       </section>
 

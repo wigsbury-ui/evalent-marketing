@@ -1,6 +1,7 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import EvalDemo from '@/components/EvalDemo'
+import CtaTrialButton from '@/components/CtaTrialButton'
 
 export const metadata = {
   title: 'Try the Live Evalent Writing Evaluator | Evalent',
@@ -62,9 +63,7 @@ export default function DemoPage() {
           </div>
           <h3 className="text-2xl font-black text-navy tracking-tight mb-2">Get 10 free reports for your school</h3>
           <p className="text-gray-500 text-sm mb-6">Use Evalent with your next real applicants. No credit card, no commitment. Just results.</p>
-          <a href="https://app.evalent.io/signup" className="inline-block bg-brand text-white font-bold px-8 py-3.5 rounded-xl hover:bg-blue-800 transition-colors text-sm">
-            Start your free trial →
-          </a>
+          <CtaTrialButton />
           <p className="text-xs text-gray-400 mt-3">10 free reports · No credit card · Set up in 5 minutes</p>
         </div>
       </section>
@@ -73,9 +72,7 @@ export default function DemoPage() {
           <h2 className="text-3xl font-black text-white tracking-tight mb-3">This is what every applicant experiences.</h2>
           <p className="text-blue-300 mb-3">The same evaluation, structured, fair, and curriculum-aligned, for every candidate at your school.</p>
           <p className="text-blue-400 text-sm mb-7">Start with 10 free reports. No credit card required.</p>
-          <a href="https://app.evalent.io/signup" className="inline-block bg-white text-brand font-bold text-sm px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
-            Start your free trial →
-          </a>
+          <CtaTrialButton variant="light" />
         </div>
       </section>
       <Footer />
