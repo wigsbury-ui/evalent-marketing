@@ -25,7 +25,8 @@ const pricingFaqSchema = {
     {"@type": "Question", "name": "How much does Evalent cost?", "acceptedAnswer": {"@type": "Answer", "text": "Evalent offers three plans: Essentials at $2,950 per year (75 assessments), Professional at $5,450 per year (150 assessments), and Enterprise at $9,450 per year (500 assessments). All plans include a 10-report free trial with no credit card required."}},
     {"@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Evalent offers 10 free assessment reports with no credit card required. The trial includes full access to all features including the Strategy page and Team Management."}},
     {"@type": "Question", "name": "What is included in all plans?", "acceptedAnswer": {"@type": "Answer", "text": "All plans include full report generation, school branding, admin dashboard, assessor email workflow, automated reminders, Strategy page with live enrolment KPIs, Team Management with role-based access, and support."}},
-    {"@type": "Question", "name": "Can we get a refund?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Evalent offers a 14-day full refund on the first paid payment. Email hello@evalent.io with your account email and Paddle order reference."}}
+    {"@type": "Question", "name": "Can we get a refund?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Evalent offers a 14-day full refund on the first paid payment. Email hello@evalent.io with your account email and Paddle order reference."}},
+    {"@type": "Question", "name": "How can we pay?", "acceptedAnswer": {"@type": "Answer", "text": "All major credit and debit cards are accepted, as well as PayPal and Apple Pay. Payments are processed securely by Paddle. Schools requiring invoice or purchase order payment can contact hello@evalent.io to arrange this."}}
   ]
 }
 
@@ -105,6 +106,10 @@ const FAQ = [
   {
     q: 'Which plan is right for us?',
     a: 'Essentials suits schools assessing up to 75 candidates a year. Professional is ideal for schools with multiple grades or 75–150 applicants. Enterprise is for large schools or networks above 150 per year.',
+  },
+  {
+    q: 'How can we pay?',
+    a: 'All major credit and debit cards are accepted, as well as PayPal and Apple Pay. Payments are processed securely by Paddle, our merchant of record, who handles VAT and invoicing automatically. Schools that require purchase order or invoice-based payment can contact us at hello@evalent.io to arrange this.',
   },
 ]
 
