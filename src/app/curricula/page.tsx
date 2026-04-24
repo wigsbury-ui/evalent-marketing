@@ -130,7 +130,6 @@ export default function CurriculaPage() {
           <p className="text-blue-300 text-sm mb-6 leading-relaxed">You select your curriculum once when setting up. If your school runs two programmes, contact us, multi-curriculum accounts are supported.</p>
           <div className="flex gap-3 justify-center flex-wrap">
             <CtaTrialButton variant="light" />
-            <a href="mailto:hello@evalent.io" className="bg-white/10 text-white font-bold text-sm px-6 py-3 rounded-xl border border-white/20 hover:bg-white/20 transition-colors">Talk to us</a>
           </div>
         </div>
       </section>

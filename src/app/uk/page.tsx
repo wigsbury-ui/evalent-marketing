@@ -163,7 +163,6 @@ export default function Page() {
           <p className="text-gray-600 text-sm mb-6 leading-relaxed">No credit card. No contract. Set up in 5 minutes. Use with real candidates from day one.</p>
           <div className="flex gap-3 justify-center flex-wrap">
             <CtaTrialButton />
-            <a href="mailto:hello@evalent.io" className="bg-white text-gray-600 font-semibold text-sm px-6 py-3 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors">Talk to us</a>
           </div>
         </div>
       </section>
