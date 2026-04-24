@@ -154,9 +154,66 @@ export default function Page() {
         <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6 text-center">
           <div><div className="text-3xl font-black text-white">45 min</div><div className="text-sm text-blue-300 mt-1">Total assessment time</div></div>
           <div><div className="text-3xl font-black text-white">5</div><div className="text-sm text-blue-300 mt-1">Assessment sections</div></div>
-          <div><div className="text-3xl font-black text-white">Any device</div><div className="text-sm text-blue-300 mt-1">No software needed</div></div>
+          <div><div className="text-3xl font-black text-white">School device</div><div className="text-sm text-blue-300 mt-1">No software needed</div></div>
         </div>
       </section>
+
+      <section className="py-14 px-6 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-blue-50 text-brand text-xs font-bold tracking-widest px-3 py-1.5 rounded-full mb-4">SHARE WITH SCHOOL</div>
+              <h2 className="text-2xl font-black text-navy tracking-tight mb-4">Student still enrolled elsewhere? Send the assessment to their school.</h2>
+              <p className="text-gray-600 text-sm leading-relaxed mb-3">
+                When an applicant cannot visit your campus, use the Share with School feature. After registering the student, enter the name and email of a contact at their current school. Evalent sends them a branded email with everything they need to run the assessment on your behalf.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-5">
+                The contact receives the unique assessment link, a numbered step-by-step guide, and device-specific instructions for disabling spellcheck. They supervise the session. The report comes back to you automatically.
+              </p>
+              <div className="space-y-3">
+                {[
+                  ["Register the student", "Generate their unique assessment link as normal."],
+                  ["Click Share with School", "Enter the contact's name and email at their current school."],
+                  ["They receive everything", "A branded email with the link, guide, and device setup instructions."],
+                  ["Report returns to you", "Automatically, within minutes of submission — no follow-up needed."],
+                ].map(([title, desc], i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="w-6 h-6 min-w-[24px] rounded-full bg-brand text-white text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</div>
+                    <div>
+                      <p className="text-sm font-bold text-navy">{title}</p>
+                      <p className="text-sm text-gray-500">{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-gray-50 rounded-2xl border border-gray-100 p-6 space-y-4">
+              <div className="flex items-center gap-3 pb-4 border-b border-gray-200">
+                <div className="w-8 h-8 rounded-lg bg-brand/10 flex items-center justify-center">
+                  <svg className="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-navy">Share with School</p>
+                  <p className="text-xs text-gray-500">Ask the student&apos;s current school to run the assessment</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <label className="block text-xs font-medium text-gray-600">Contact name</label>
+                <div className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-400">e.g. Jane Smith</div>
+              </div>
+              <div className="space-y-2">
+                <label className="block text-xs font-medium text-gray-600">Contact email</label>
+                <div className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-400">e.g. jsmith@school.edu</div>
+              </div>
+              <div className="w-full rounded-lg bg-brand text-white text-sm font-medium py-2.5 text-center">
+                Send Request
+              </div>
+              <p className="text-xs text-gray-400 text-center">A branded email with the link and full instructions is sent immediately</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <FaqAccordion faqs={faqs} />
 

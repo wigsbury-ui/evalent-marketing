@@ -231,6 +231,9 @@ A: No. They access via a secure link sent by the school. No app, no account, no 
 Q: Does the assessment need to be completed in school?
 A: Yes. Evalent assessments are completed in school on supervised devices configured by the admissions team. This ensures writing responses are authentic and the assessment environment is controlled.
 
+Q: What if the student is still at another school and cannot easily come to our campus?
+A: Evalent has a Share with School feature for exactly this situation. After registering the student, click Share with School on the registration success page. Enter the name and email of a contact at the student's current school. They receive a branded email with the assessment link, a step-by-step guide, and device setup instructions. They run the supervised session on a school device and the results come back to you automatically.
+
 Q: How long to get a report after the student submits?
 A: Typically under 2 minutes. Scoring, writing evaluation, narrative generation, PDF creation, and email dispatch all run automatically.
 

@@ -71,6 +71,11 @@ const sections = [
         link: null,
       },
       {
+        q: "What if the student is still at another school and cannot visit our campus?",
+        a: "Use the Share with School feature. After registering the student, click Share with School on the success page and enter a contact at their current school. They receive an email with the assessment link, a step-by-step guide, and device setup instructions so they can run the supervised session on your behalf.",
+        link: null,
+      },
+      {
         q: "What if a student loses connection mid-assessment?",
         a: "Progress is auto-saved. The student can re-open the link and continue from where they left off, as long as the link has not expired.",
         link: null,
