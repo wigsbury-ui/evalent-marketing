@@ -56,16 +56,7 @@ export default function DemoPage() {
 
       <section className="pt-0 pb-12 px-4 bg-white">
         <EvalDemo />
-        {/* Post-evaluation CTA — appears after demo */}
-        <div className="max-w-2xl mx-auto mt-10 bg-white border-2 border-brand rounded-2xl p-8 text-center shadow-lg">
-          <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4">
-            <span className="w-1.5 h-1.5 bg-green-500 rounded-full" /> Like what you see?
-          </div>
-          <h3 className="text-2xl font-black text-navy tracking-tight mb-2">Get 10 free reports for your school</h3>
-          <p className="text-gray-500 text-sm mb-6">Use Evalent with your next real applicants. No credit card, no commitment. Just results.</p>
-          <CtaTrialButton />
-          <p className="text-xs text-gray-400 mt-3">10 free reports · No credit card · Set up in 5 minutes</p>
-        </div>
+
       </section>
       <section className="py-16 px-6 bg-navy text-center">
         <div className="max-w-xl mx-auto">
