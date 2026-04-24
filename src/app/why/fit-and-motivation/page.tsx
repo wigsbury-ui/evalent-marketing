@@ -185,8 +185,7 @@ export default function Page() {
             The Motivation &amp; School Fit lens is included in every report, at every tier.
           </p>
           <p className="text-blue-400 text-sm mb-7">10 free reports. No credit card. Set up in 5 minutes.</p>
-          <a
-            <CtaTrialButton variant="light" />
+          <CtaTrialButton variant="light" />
         </div>
       </section>
 
