@@ -41,7 +41,7 @@ export default function Page() {
 
       <section className="bg-navy py-16 px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">FEATURE 4 OF 7</div>
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-300 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full mb-5">FEATURE 5 OF 9</div>
           <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
             A report your assessors<br/>
             <span className="text-blue-300">can act on immediately.</span>
@@ -134,7 +134,7 @@ export default function Page() {
       <div className="bg-gray-50 py-8 px-6 border-t border-gray-100">
         <div className="max-w-5xl mx-auto flex justify-between items-center flex-wrap gap-3">
           <Link href="/features/assessment" className="text-gray-400 hover:text-brand text-sm">← The Assessment</Link>
-          <Link href="/features/decisions" className="text-brand font-semibold hover:underline text-sm">Next: Decision Workflow →</Link>
+          <Link href="/features/report-card-evaluation" className="text-brand font-semibold hover:underline text-sm">Next: Report Card Evaluation →</Link>
         </div>
       </div>
       <Footer />
