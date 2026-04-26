@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import EvalDemo from '@/components/EvalDemo'
 import CtaTrialButton from '@/components/CtaTrialButton'
+import VimeoEmbed from '@/components/VimeoEmbed'
 
 export const metadata = {
   title: 'Try the Live Evalent Writing Evaluator | Evalent',
@@ -37,22 +38,7 @@ export default function DemoPage() {
           </p>
         </div>
       </section>
-      <section className="px-6 bg-white pt-10 pb-2">
-        <div className="max-w-4xl mx-auto">
-          <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1175949806?badge=0&autopause=0&player_id=0&app_id=58479"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent | Intelligent Evaluation"
-            />
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
-          <h2 className="text-center text-xl font-bold text-navy mt-4">Assessment that measures how students think, not just what they recall</h2>
-          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Evalent goes beyond multiple choice. Extended writing tasks evaluated by Evalent give your assessors a real sample of how each student reasons and communicates, the same standard applied to every candidate, every time.</p>
-        </div>
-      </section>
+      <VimeoEmbed videoId="1175949806" title="Evalent | Intelligent Evaluation" />
 
       <section className="pt-0 pb-12 px-4 bg-white">
         <EvalDemo />

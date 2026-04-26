@@ -5,6 +5,7 @@ import AssessmentDemo from '@/components/features/AssessmentDemo'
 import ReportSlider from '@/components/features/ReportSlider'
 import Link from 'next/link'
 import FaqAccordion from '@/components/features/FaqAccordion'
+import VimeoEmbed from '@/components/VimeoEmbed'
 
 export const metadata = {
   title: 'The Assessment | Evalent Features',
@@ -80,22 +81,7 @@ export default function Page() {
           <HeroTrialButton />
         </div>
       </section>
-
-      {/* VIDEO — directly under hero */}
-      <section className="px-6 pt-10 pb-0 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1175799185?badge=0&autopause=0&player_id=0&app_id=58479"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent | The Assessment"
-            />
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
-        </div>
-      </section>
+      <VimeoEmbed videoId="1175799185" title="Evalent | The Assessment" />
 
       {/* INTRO CONTENT */}
       <section className="py-14 px-6 bg-white border-b border-gray-100">

@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
 import CtaTrialButton from '@/components/CtaTrialButton'
+import VimeoEmbed from '@/components/VimeoEmbed'
 
 export const metadata = {
   title: 'Student Wellbeing | Why Evalent',
@@ -22,22 +23,7 @@ export default function Page() {
           <HeroTrialButton />
         </div>
       </section>
-      <section className="px-6 bg-white pt-10 pb-2">
-        <div className="max-w-4xl mx-auto">
-          <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1175948689?badge=0&autopause=0&player_id=0&app_id=58479"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent | Wellbeing"
-            />
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
-          <h2 className="text-center text-xl font-bold text-navy mt-4">An assessment experience that reflects well on your school</h2>
-          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">For many applicants, Evalent is the first formal assessment they have ever sat. Video guides, grade-appropriate content, and a consistent structure ensure every student feels prepared and supported throughout. Students who feel calm perform closer to their actual ability, giving your assessors better evidence and families a better impression.</p>
-        </div>
-      </section>
+      <VimeoEmbed videoId="1175948689" title="Evalent | Wellbeing" />
 
       <section className="py-14 px-6 bg-white">
         <div className="max-w-3xl mx-auto">

@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
 import CtaTrialButton from '@/components/CtaTrialButton'
+import VimeoEmbed from '@/components/VimeoEmbed'
 
 export const metadata = {
   title: 'Transparency | Why Evalent',
@@ -22,22 +23,7 @@ export default function Page() {
           <HeroTrialButton />
         </div>
       </section>
-      <section className="px-6 bg-white pt-10 pb-2">
-        <div className="max-w-4xl mx-auto">
-          <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1175948548?badge=0&autopause=0&player_id=0&app_id=58479"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent | Transparency"
-            />
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-2">Watch this 90-second video</p>
-          <h2 className="text-center text-xl font-bold text-navy mt-4">Complete visibility from registration to decision</h2>
-          <p className="text-center text-sm text-gray-500 leading-relaxed mt-2 max-w-2xl mx-auto">Evalent gives every member of your admissions team a real-time view of every applicant at every stage. Every action is logged, every decision attributed, and every piece of evidence permanently stored. Nothing happens in the dark, and nothing can be quietly changed.</p>
-        </div>
-      </section>
+      <VimeoEmbed videoId="1175948548" title="Evalent | Transparency" />
 
       <section className="py-14 px-6 bg-white">
         <div className="max-w-3xl mx-auto">

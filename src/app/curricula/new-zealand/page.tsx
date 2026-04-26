@@ -4,6 +4,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import FaqAccordion from '@/components/features/FaqAccordion'
 import CtaTrialButton from '@/components/CtaTrialButton'
+import VimeoEmbed from '@/components/VimeoEmbed'
 
 export const metadata = {
   title: 'New Zealand Curriculum | Evalent',
@@ -81,19 +82,7 @@ export default function NZCPage() {
               ))}
             </div>
           </div>
-          <div className="pt-20">
-            <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/1175969395?badge=0&autopause=0&player_id=0&app_id=58479"
-                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                title="Evalent | New Zealand Curriculum"
-              />
-            </div>
-            <p className="text-center text-xs text-gray-400 mt-2">Watch this 2-minute walkthrough</p>
-          </div>
-        </div>
+      <VimeoEmbed videoId="1175969395" title="Evalent | New Zealand Curriculum" />
       </section>
 
       <section className="py-14 px-6 bg-gray-50 border-t border-gray-100">

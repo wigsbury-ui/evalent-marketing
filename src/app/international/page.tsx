@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
 import FaqList from '@/components/features/FaqList'
+import VimeoEmbed from '@/components/VimeoEmbed'
 
 export const metadata = {
   title: 'Evalent for International Schools',
@@ -64,22 +65,7 @@ export default function Page() {
           <HeroTrialButton />
         </div>
       </section>
-
-      {/* VIDEO */}
-      <section className="px-6 bg-white pt-10 pb-2">
-        <div className="max-w-4xl mx-auto">
-          <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1183729955?autoplay=0&title=0&byline=0&portrait=0&texttrack=en"
-              className="absolute inset-0 w-full h-full"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              title="Evalent for International Schools"
-            />
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-2">90-second walkthrough</p>
-        </div>
-      </section>
+      <VimeoEmbed videoId="1183729955" title="Evalent for International Schools" />
 
       {/* CURRICULUM STRIP */}
       <section className="py-8 px-6 bg-white border-b border-gray-100">
