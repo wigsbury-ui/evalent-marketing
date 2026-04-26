@@ -67,6 +67,9 @@ Report contents:
 - Values, Creativity, Motivation pages (if completed): qualitative Evalent commentary
 Reports are professional enough to share with parents when explaining decisions.
 
+PREVIOUS SCHOOL REPORTS APPENDIX (Professional and Enterprise plans):
+Schools can upload up to 3 previous school report PDFs when registering a student. Evalent analyses them using AI and adds a two-page appendix to the report. Reports in any language are supported (Arabic, French, Mandarin, Spanish, etc.) — analysis is always returned in English. Files are never stored. The appendix covers: holistic academic summary and trajectory, subject-by-subject breakdown (English, Mathematics, Other Subjects), teacher observations, and a contextual note for the admissions panel. The cover page executive summary also cross-references the school reports with the Evalent assessment score, noting consistency or discrepancy.
+
 == RECOMMENDATION BANDS ==
 Set automatically based on the school's own configured pass thresholds:
 - "Ready to admit": all domains at or above threshold, mindset >= 3.0
@@ -269,6 +272,12 @@ A: Yes. School name and logo appear on reports and on the branded student comple
 
 Q: What if we need more than 500 assessments?
 A: Contact hello@evalent.io for custom Enterprise pricing.
+
+Q: Can Evalent incorporate previous school reports into the assessment report?
+A: Yes. On Professional and Enterprise plans, you can upload up to 3 previous school report PDFs when registering a student. Evalent analyses them and adds a dedicated two-page appendix to the report, covering academic trajectory, subject performance, teacher observations, and a contextual note for the admissions panel. Reports in any language are supported — Arabic, French, Mandarin, Spanish, and all others — with the analysis returned in English. Files are never stored.
+
+Q: Are school reports from other countries or in other languages supported?
+A: Yes. Evalent can read and analyse school reports in any language. The AI reads the documents in their original language and returns the full analysis in English. The language(s) detected are noted in the report appendix. This works for Arabic transcripts, French school reports, Mandarin report cards, and any other language.
 
 GUIDELINES:
 - Encourage free trial sign-up for interested schools: app.evalent.io/signup
