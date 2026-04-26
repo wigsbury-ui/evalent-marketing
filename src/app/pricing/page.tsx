@@ -32,6 +32,20 @@ const pricingFaqSchema = {
 
 const plans = [
   {
+    name: 'Free Trial',
+    usd: '$0',
+    period: '',
+    subtext: 'No credit card required',
+    perAssessment: null,
+    assessments: 10,
+    tagline: 'Try the full platform with 10 real assessment reports. No card required.',
+    popular: false,
+    cta: 'Start free trial',
+    isEnterprise: false,
+    isTrial: true,
+    hasSchoolReports: true,
+  },
+  {
     name: 'Essentials',
     usd: '$2,950',
     period: '/yr',
@@ -42,6 +56,8 @@ const plans = [
     popular: false,
     cta: 'Start free trial',
     isEnterprise: false,
+    isTrial: false,
+    hasSchoolReports: false,
   },
   {
     name: 'Professional',
@@ -54,6 +70,8 @@ const plans = [
     popular: true,
     cta: 'Start free trial',
     isEnterprise: false,
+    isTrial: false,
+    hasSchoolReports: true,
   },
   {
     name: 'Enterprise',
@@ -66,6 +84,8 @@ const plans = [
     popular: false,
     cta: 'Talk to us',
     isEnterprise: true,
+    isTrial: false,
+    hasSchoolReports: true,
   },
 ]
 
@@ -133,11 +153,11 @@ export default function Pricing() {
 
       {/* Pricing cards */}
       <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-start">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`bg-white rounded-2xl p-8 flex flex-col h-full ${
+              className={`bg-white rounded-2xl p-6 flex flex-col h-full ${
                 plan.popular
                   ? 'border-2 border-brand shadow-xl relative'
                   : 'border border-gray-200 shadow-sm'
@@ -156,17 +176,17 @@ export default function Pricing() {
                 <span className="text-4xl font-black text-navy">{plan.usd}</span>
                 <span className="text-gray-400 text-sm">{plan.period}</span>
               </div>
-              <p className="text-sm text-gray-400 mb-3">Billed annually · USD only</p>
-              <span className="inline-block bg-blue-50 text-brand text-xs font-bold px-3 py-1 rounded-full mb-4">
-                ≈ {plan.perAssessment} per assessment
-              </span>
+              {!plan.isTrial && <p className="text-sm text-gray-400 mb-3">Billed annually · USD only</p>}
+              {plan.perAssessment && (
+                <span className="inline-block bg-blue-50 text-brand text-xs font-bold px-3 py-1 rounded-full mb-4">
+                  ≈ {plan.perAssessment} per assessment
+                </span>
+              )}
 
               <p className="text-sm text-gray-600 mb-5">{plan.tagline}</p>
-
               <p className="font-bold text-navy mb-3 text-sm">
-                Up to {plan.assessments} assessments/year
+                {plan.isTrial ? `${plan.assessments} free assessment reports` : `Up to ${plan.assessments} assessments/year`}
               </p>
-
               <ul className="space-y-2 mb-6 flex-1">
                 {FEATURES.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-sm text-gray-700">
@@ -190,13 +210,12 @@ export default function Pricing() {
                     </svg>
                     Previous school reports
                   </li>
-                ))
-
+                )}
                 {plan.isEnterprise && (
                   <li className="text-xs text-gray-400 mt-2 pt-2 border-t border-gray-100">
                     Custom quote · Volume discounts available
                   </li>
-                ))
+                )}
               </ul>
 
               {plan.isEnterprise ? (
