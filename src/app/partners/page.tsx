@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import VimeoEmbed from '@/components/VimeoEmbed'
 
 export default function PartnersPage() {
 
@@ -61,7 +60,17 @@ export default function PartnersPage() {
       {/* PRODUCT VIDEO */}
       <section className="py-12 px-6 bg-white border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
-                <VimeoEmbed videoId="1176097774" title="Evalent | Admissions Intelligence Platform" />
+          <div className="rounded-2xl overflow-hidden shadow-xl" style={{ paddingTop: '56.25%', position: 'relative' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1176097774?badge=0&autopause=0&player_id=0&app_id=58479"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              title="Evalent | Admissions Intelligence Platform"
+            />
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-3">Two minutes. The complete picture.</p>
+        </div>
       </section>
 
       {/* WHY PARTNER */}
