@@ -5,7 +5,7 @@
   "installCommand": "npm install",
   "headers": [
     {
-      "source": "/(.*)\\.(?:png|jpg|jpeg|gif|webp|svg|ico|woff|woff2)",
+      "source": "/:path*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|woff|woff2)",
       "headers": [
         {
           "key": "Cache-Control",
