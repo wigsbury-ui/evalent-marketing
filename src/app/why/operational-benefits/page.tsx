@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import HeroTrialButton from '@/components/HeroTrialButton'
 import Link from 'next/link'
 import CtaTrialButton from '@/components/CtaTrialButton'
+import VimeoEmbed from '@/components/VimeoEmbed'
 
 export const metadata = {
   title: 'Operational Benefits | Why Evalent',
@@ -23,21 +24,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* VIDEO */}
-      <section className="px-6 pt-10 pb-0 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1186679534?badge=0&autopause=0&player_id=0&app_id=58479"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent | Operational Benefits"
-            />
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
-        </div>
-      </section>
+      <VimeoEmbed videoId="1186679534" title="Evalent | Operational Benefits" />
 
       <section className="px-6 bg-white pt-10 pb-2">
         <div className="max-w-4xl mx-auto">
