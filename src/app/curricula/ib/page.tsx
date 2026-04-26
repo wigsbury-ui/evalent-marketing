@@ -4,6 +4,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import FaqAccordion from '@/components/features/FaqAccordion'
 import CtaTrialButton from '@/components/CtaTrialButton'
+import VimeoEmbedInner from '@/components/VimeoEmbedInner'
 
 export const metadata = {
   title: 'IB Curriculum | Evalent',
@@ -75,15 +76,7 @@ export default function IBPage() {
             </div>
           </div>
           <div className="pt-20">
-            <div className="rounded-2xl overflow-hidden relative" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1175778276?badge=0&autopause=0&player_id=0&app_id=58479"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent | IB Curriculum"
-            />
-            </div>
+            <VimeoEmbedInner videoId="1175778276" title="Evalent | IB Curriculum" />
             <p className="text-center text-xs text-gray-400 mt-3">Watch this 2-minute walkthrough</p>
           </div>
         </div>

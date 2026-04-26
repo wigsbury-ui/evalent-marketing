@@ -6,6 +6,7 @@ import TrialSection from '@/components/TrialSection'
 import Link from 'next/link'
 import EvalDemo from '@/components/EvalDemo'
 import TrialModal from '@/components/TrialModal'
+import VimeoEmbedInner from '@/components/VimeoEmbedInner'
 
 
 const faqSchema = {
@@ -248,14 +249,7 @@ export default function Home() {
       <section className="hidden md:block px-6 py-12 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-black text-navy tracking-tight text-center mb-6">50 seconds. The complete picture.</h2>
-          <div className="rounded-2xl overflow-hidden relative shadow-xl w-full" style={{ paddingTop: '56.25%' }}>
-            <iframe src="https://player.vimeo.com/video/1175812373?badge=0&autopause=0&player_id=0&app_id=58479"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent | Admissions Intelligence"
-            />
-          </div>
+          <VimeoEmbedInner videoId="1175812373" title="Evalent | Admissions Intelligence" />
           <p className="text-center text-xs text-gray-400 mt-3">Watch this 50-second overview to see Evalent in action</p>
         </div>
       </section>
