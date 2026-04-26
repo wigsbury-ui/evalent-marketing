@@ -38,7 +38,7 @@ const plans = [
     subtext: 'No credit card required',
     perAssessment: null,
     assessments: 10,
-    tagline: 'Try the full platform with 10 real assessment reports. No card required.',
+    tagline: '10 free reports. Full platform access. No card needed.',
     popular: false,
     cta: 'Start free trial',
     isEnterprise: false,
@@ -80,7 +80,7 @@ const plans = [
     subtext: 'Billed annually',
     perAssessment: '$18',
     assessments: 500,
-    tagline: 'For larger schools, multi-campus groups, and networks with high volumes or complex requirements.',
+    tagline: 'For larger and multi-campus schools.',
     popular: false,
     cta: 'Talk to us',
     isEnterprise: true,
@@ -157,7 +157,7 @@ export default function Pricing() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`bg-white rounded-2xl p-6 flex flex-col h-full ${
+              className={`bg-white rounded-2xl p-6 flex flex-col ${plan.isTrial ? '' : 'h-full'} ${
                 plan.popular
                   ? 'border-2 border-brand shadow-xl relative'
                   : 'border border-gray-200 shadow-sm'
@@ -197,18 +197,18 @@ export default function Pricing() {
                   </li>
                 ))}
                 {plan.hasSchoolReports ? (
-                  <li className="flex items-center gap-2 text-sm font-semibold text-indigo-700 bg-indigo-50 rounded-lg px-2 py-1.5 -mx-2 mt-1">
-                    <svg className="w-4 h-4 text-indigo-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <li className="flex items-center gap-2 text-sm font-semibold text-green-700 bg-green-50 rounded-lg px-2 py-1.5 -mx-2 mt-1">
+                    <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                     </svg>
-                    Previous school reports
+                    Previous school report evaluation
                   </li>
                 ) : (
                   <li className="flex items-center gap-2 text-sm text-gray-300">
                     <svg className="w-4 h-4 text-gray-200 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6"/>
                     </svg>
-                    Previous school reports
+                    Previous school report evaluation
                   </li>
                 )}
                 {plan.isEnterprise && (
