@@ -4,6 +4,7 @@ import Footer from '@/components/Footer'
 import ReportsDemo from '@/components/features/ReportsDemo'
 import Link from 'next/link'
 import FaqAccordion from '@/components/features/FaqAccordion'
+import VimeoEmbed from '@/components/VimeoEmbed'
 
 export const metadata = {
   title: 'Report Generation | Evalent Features',
@@ -53,21 +54,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* VIDEO — directly under hero */}
-      <section className="px-6 pt-10 pb-0 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="rounded-2xl overflow-hidden relative shadow-xl" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1175800177?badge=0&autopause=0&player_id=0&app_id=58479"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="Evalent | Report Generation"
-            />
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-3 mb-0">Watch this 90-second walkthrough</p>
-        </div>
-      </section>
+            <VimeoEmbed videoId="1175800177" title="Evalent | Report Generation" />
 
       {/* INTRO CONTENT */}
       <section className="py-14 px-6 bg-white border-b border-gray-100">
