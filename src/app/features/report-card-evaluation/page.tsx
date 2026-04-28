@@ -3,6 +3,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import FaqAccordion from '@/components/features/FaqAccordion'
+import ReportCardDemo from '@/components/features/ReportCardDemo'
 import VimeoEmbed from '@/components/VimeoEmbed'
 
 export const metadata = {
@@ -144,6 +145,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <ReportCardDemo />
 
       {/* What appears in the report */}
       <section className="py-14 px-6 bg-white border-b border-gray-100">
