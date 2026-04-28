@@ -123,15 +123,15 @@ export default function Home() {
     const phrases = [
       "who's ready.",
       "the child, not the score.",
-      "before you decide.",
-      "that it was fair.",
-      "that they were impressed.",
+      "before the decision is made.",
+      "every decision was defensible.",
+      "that every parent got an explanation.",
       "the child who is waiting to succeed.",
-      "that the right decision was made.",
-      "that you were the quickest.",
+      "who deserves a place.",
+      "before your competitors do.",
       "where enrolment is heading.",
-      "what your leaders need to act.",
-      "that you did your best.",
+      "what your board needs to act.",
+      "your summer pipeline is secure.",
       "the difference."
     ]
     const el = l1Ref.current!
