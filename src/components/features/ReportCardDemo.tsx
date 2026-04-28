@@ -57,7 +57,7 @@ export default function ReportCardDemo() {
         <div className="flex flex-wrap gap-2.5 justify-center mb-8">
           {REPORTS.map((rep, i) => (
             <button key={rep.id} onClick={() => pick(i)}
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold transition-all focus:outline-none ${i === sel ? 'bg-navy border-navy text-white' : 'bg-white border-gray-200 text-gray-600 hover:border-gray-400 hover:text-gray-900'}`}>
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold transition-all focus:outline-none ${i === sel ? 'bg-brand border-brand text-white' : 'bg-white border-gray-200 text-gray-600 hover:border-gray-400 hover:text-gray-900'}`}>
               <span className="text-base leading-none">{rep.flag}</span>
               {rep.pill}
               <span className={`text-xs font-normal ${i === sel ? 'text-blue-200' : 'text-gray-400'}`}>{rep.sub}</span>
@@ -81,7 +81,7 @@ export default function ReportCardDemo() {
                 <span className="w-2 h-2 rounded-full bg-gray-300" />
                 <span className="text-xs font-semibold tracking-wider text-gray-400 uppercase">Original report card</span>
               </div>
-              <div className="p-3 bg-gray-50 overflow-y-auto" style={{ maxHeight: 580 }}>
+              <div className="p-3 bg-gray-50">
                 <div className="relative w-full rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                   <Image src={`/report-demos/${r.id}.jpg`} alt={`Report from ${r.school}`} width={1120} height={1583} className="w-full h-auto" />
                 </div>
@@ -93,7 +93,7 @@ export default function ReportCardDemo() {
                 <span className="w-2 h-2 rounded-full bg-blue-400" />
                 <span className="text-xs font-semibold tracking-wider text-gray-400 uppercase">Evalent analysis</span>
               </div>
-              <div className="p-5 overflow-y-auto" style={{ maxHeight: 580 }}>
+              <div className="p-5">
                 <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold mb-4 ${r.trajCls}`}>
                   <span className="w-1.5 h-1.5 rounded-full bg-current opacity-60" />{r.traj}
                 </span>
